@@ -236,6 +236,7 @@
       <object>objects\obj_hand</object>
     </objects>
     <object>objects\object5</object>
+    <object>objects\obj_guardado</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Final_Level</room>
