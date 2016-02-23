@@ -32,6 +32,7 @@ else {
     ini_write_string("Bossess","Boss1","Culo");
     ini_close();
     }
+}
 </string>
           </argument>
         </arguments>
