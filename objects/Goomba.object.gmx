@@ -140,11 +140,12 @@ if(place_meeting(x+(hsp*direction_facing), y, Terreno) ||
 //if(place_meeting(x-1, y, object5)) looking_right = true;
 if(place_meeting(x, y, object5)) looking_right *= -1;
 //Comprobamos que se pueda volver loco
-if (nivel = "Nivel_Nieve" &amp;&amp; distance_to_object(object5) &lt; 100 &amp;&amp;
-    goombaloco = false){
-    goombaloco = true;
-    msp = 4;    //Ajustamos la velocidad
-    alarm[0]=100;
+if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
+    if(distance_to_object(object5) &lt; 100 &amp;&amp; goombaloco = false){
+        goombaloco = true;
+        msp = 4;    //Ajustamos la velocidad
+        alarm[0]=100;
+    }
 }
 //Si esta loco buscamos al prota
 if (goombaloco = true) {

@@ -230,17 +230,22 @@
       <object>objects\obl_hud</object>
       <object>objects\obj_niebla</object>
       <object>objects\obj_healthbar</object>
+      <object>objects\obj_preload</object>
     </objects>
     <objects name="BossFinal Pruebas">
       <object>objects\Player1</object>
       <object>objects\Player2</object>
       <object>objects\obj_head</object>
       <object>objects\obj_hand</object>
+      <object>objects\obj_phase2_god</object>
     </objects>
     <object>objects\object5</object>
     <object>objects\obj_guardado</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_preload</room>
+    <room>rooms\god_room_2</room>
+    <room>rooms\god_room_1</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\Room_FinalBoss1</room>
@@ -256,7 +261,6 @@
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Continuara</room>
     <room>rooms\Credits</room>
-    <room>rooms\god_test_room</room>
     <room>rooms\TEST_ROOM</room>
   </rooms>
   <help>

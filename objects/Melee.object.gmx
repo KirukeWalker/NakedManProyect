@@ -160,14 +160,16 @@ if ((distance_to_object (object5)&lt; 30 &amp;&amp; object5.status_dead = 0)
 if (sprite_index = disparando &amp;&amp; image_index = 20) 
     sprite_index = moverse;
 //Detectar al prota para saltar (a partir del cuarto nivel)
-if(distance_to_object(object5) &lt;= 150 &amp;&amp; nivel = "Nivel_Nieve" = true &amp;&amp;
-    place_meeting(x, y+1, Terreno) &amp;&amp; status_dead = 0 &amp;&amp; object5.status_dead = 0) 
-{
-    if(x &lt; object5.x) direction_facing = +1;
-    else direction_facing = -1;
-    vsp -= jump_speed;
-    status_jumping = true;
-    //Aqui pondremos el cambio de sprite
+if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
+    if(distance_to_object(object5) &lt;= 150 &amp;&amp;
+        place_meeting(x, y+1, Terreno) &amp;&amp; status_dead = 0 &amp;&amp; object5.status_dead = 0) 
+    {
+        if(x &lt; object5.x) direction_facing = +1;
+        else direction_facing = -1;
+        vsp -= jump_speed;
+        status_jumping = true;
+        //Aqui pondremos el cambio de sprite
+    }
 }
 </string>
           </argument>

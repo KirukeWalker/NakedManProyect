@@ -127,15 +127,15 @@ draw_text (view_xview+100, view_yview+130, "THE CLOTHES")
 
 ini_open("LocalMapTxtSystem.ini")
 if ini_section_exists ('Qm9zc2Vz') {
-draw_text (view_xview+20,view_yview+20, "Hay Tema");
-if ini_key_exists('Qm9zc2Vz','Qm9zczI') {
-draw_text (view_xview+20,view_yview+20, "Hay Tema XXXXXX");
+    draw_text (view_xview+20,view_yview+20, "Hay Tema");
+    if ini_key_exists('Qm9zc2Vz','Qm9zczI') {
+        draw_text (view_xview+20,view_yview+20, "Hay Tema XXXXXX");
+    }
 }
-}
-ini_close()
-        draw_text (view_xview+40, view_yview+20, global.BossMuerto);
+ini_close() //Te dejo comentado esto, perra, que hace cascar el juego
+        /*draw_text (view_xview+40, view_yview+20, global.BossMuerto);
         if global.BossMuerto = 1 { 
-        draw_text (view_xview+20,view_yview+20, "Caraculo");
+            draw_text (view_xview+20,view_yview+20, "Caraculo");
         }
     
 

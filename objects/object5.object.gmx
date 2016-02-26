@@ -42,11 +42,6 @@ complete_death = 0;
 status_sliding = false; //El personahe se desliza
 gamepad_set_axis_deadzone(0,0.7)
 
-//Pussy_mode para pruebas (quitar para compilar)
-globalvar pussy_mode;
-pussy_mode = false;
-global.muertes = 0;
-global.muertes_registro = 0;
 </string>
           </argument>
         </arguments>
@@ -157,7 +152,8 @@ else //Y trabaje normalmente en los demás
             place_meeting(x, y, FinalBoss5) ||
             place_meeting(x, y, obj_lightball) ||
             place_meeting(x, y, obj_mega_laser) || 
-            place_meeting(x ,y, obj_hand) )
+            place_meeting(x ,y, obj_hand) ||
+            place_meeting(x, y, obj_phase2_god) )
         {
             global.vida -= 1;
             status_knockback = true;
