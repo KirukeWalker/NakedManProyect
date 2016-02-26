@@ -213,13 +213,13 @@
       <object>objects\obj_txt_intro_1</object>
       <object>objects\obj_txt_interludio</object>
       <object>objects\obj_pause</object>
-      <object>objects\obj_portal_bosque</object>
       <object>objects\obj_pause_bosque</object>
+      <object>objects\obj_pause_nieve</object>
+      <object>objects\obj_portal_bosque</object>
       <object>objects\obj_game_over</object>
       <object>objects\obj_game_over_Nieve</object>
       <object>objects\obj_game_over_Bosque</object>
       <object>objects\obj_oscureitor</object>
-      <object>objects\obj_pause_nieve</object>
       <object>objects\obj_menu</object>
       <object>objects\obj_snow</object>
       <object>objects\obj_lluvia</object>
@@ -241,7 +241,6 @@
     <object>objects\obj_guardado</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\god_test_room</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\Room_FinalBoss1</room>
@@ -257,6 +256,7 @@
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Continuara</room>
     <room>rooms\Credits</room>
+    <room>rooms\god_test_room</room>
     <room>rooms\TEST_ROOM</room>
   </rooms>
   <help>

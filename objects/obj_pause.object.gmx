@@ -31,66 +31,38 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="81">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>pause</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>11</kind>
-            <room>Menu</room>
+            <kind>1</kind>
+            <string>if (keyboard_check_pressed(vk_escape)) || (gamepad_button_check_pressed(0,gp_start)) {
+if (!pause) {
+    pause = 1;
+    instance_deactivate_all(true);
+}
+else {
+    pause = 0;
+    instance_activate_all();
+    }
+}
+
+if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face2)) || keyboard_check_pressed(ord('Q'))) {
+    room_goto(Menu);
+    }
+</string>
           </argument>
         </arguments>
       </action>
@@ -124,36 +96,6 @@
     draw_text(view_xview + 230,view_yview + 250,"Try C to shoot, feggit");
     //if(pussy_mode == true)
     draw_set_color(c_black);
-    }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="27">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (!pause) {
-    pause = 1;
-    instance_deactivate_all(true);
-}
-else {
-    pause = 0;
-    instance_activate_all();
     }
 </string>
           </argument>

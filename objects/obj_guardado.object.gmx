@@ -28,10 +28,9 @@
             <string>if file_exists("System96.txt") {
 }
 else {
-    ini_open("System96.txt") {
+    ini_open("System96.txt") 
     ini_write_string("Bossess","Boss1","Culo");
     ini_close();
-    }
 }
 </string>
           </argument>

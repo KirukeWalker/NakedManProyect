@@ -32,12 +32,13 @@ checkpoint = true;
 global.muertes_registro = global.muertes;
 //muertes_registro = muertes;
 global.muertes = 0;
+alarm[0] = 250
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="32">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,7 +56,34 @@ global.muertes = 0;
           <argument>
             <kind>1</kind>
             <string>obj_fade.fadeIn = false;
+obj_fade.alarm[1] = room_speed * 0.05;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (keyboard_check_pressed(vk_enter)) || (keyboard_check_pressed(vk_space)) || (gamepad_button_check_pressed(0,gp_start)) || (gamepad_button_check_pressed(0,gp_face1)){
+    obj_fade.fadeIn = false;
     obj_fade.alarm[1] = room_speed * 0.05;
+    }
+    
 </string>
           </argument>
         </arguments>
