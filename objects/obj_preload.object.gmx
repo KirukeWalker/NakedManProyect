@@ -19,7 +19,7 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -30,10 +30,26 @@ globalvar pussy_mode;
 pussy_mode = false;
 global.muertes = 0;
 global.muertes_registro = 0;
+//Declaracion de glovalvars desbloqueables
+global.quemaduras = 0;
+globalvar cabezallamas;
+globalvar botecrema;
+globalvar capa;
+globalvar paraguas;
+globalvar camuflaje;
+globalvar munnieve;
+globalvar papanoel;
+globalvar ciborg;
+globalvar visor;
+globalvar tunica;
+globalvar dorada;
+globalvar HD;
 //Variable de checkpoint
 globalvar checkpoint;
 checkpoint = false;
 global.muertes_registro = 0;
+
+
 
 //Cargamos la siguiente escena
 room_goto_next();

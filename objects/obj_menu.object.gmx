@@ -29,8 +29,9 @@
 if(checkpoint = false) menu[0] = "Start";
 if(checkpoint = true)  menu[0] = "Continue";
 menu[1] = "Pussy Mode";
-menu[2] = "Meet the crew";
-menu[3] = "Fuck off";
+menu[2] = "Prizes"
+menu[3] = "Meet the crew";
+menu[4] = "Fuck off";
 //Variables para posiciones
 space = 50;
 mpos = 0; 
