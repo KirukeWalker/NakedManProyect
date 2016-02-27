@@ -142,6 +142,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_menu2.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_intro</font>
@@ -240,6 +241,7 @@
       <object>objects\obj_phase2_god</object>
     </objects>
     <object>objects\object5</object>
+    <object>objects\obj_menu2</object>
     <object>objects\obj_guardado</object>
   </objects>
   <rooms name="rooms">
@@ -260,6 +262,7 @@
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Continuara</room>
+    <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
     <room>rooms\TEST_ROOM</room>
   </rooms>
