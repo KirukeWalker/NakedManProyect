@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Declaración de globalvars
+global.offline = 1;
 globalvar pussy_mode;
 pussy_mode = false;
 global.muertes = 0;
