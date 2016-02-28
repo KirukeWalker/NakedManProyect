@@ -26,21 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>//Variables para el menú
-if(checkpoint = false) menu[0] = "Start";
-if(checkpoint = true)  menu[0] = "Continue";
-menu[1] = "Pussy Mode";
-menu[2] = "Prizes"
-menu[3] = "Meet the crew";
-menu[4] = "Fuck off";
+menu2[0,0] = "Premio1";
+menu2[0,1] = "Premio2";
+menu2[0,2] = "Premio3";
+menu2[0,3] = "Premio4";
+menu2[0,4] = "Premio5";
+menu2[1,0] = "Premio6";
+menu2[1,1] = "Premio7";
+menu2[1,2] = "Premio8";
+menu2[1,3] = "Premio9";
+menu2[1,4] = "Premio10";
 //Variables para posiciones
 space = 50;
 mpos = 0; 
-
-    ini_open("LocalMapTxtSystem.ini")
-    if ini_key_exists('Qm9zc2Vz','Qm9zczI=') {
-        global.BossMuerto = 1;  
-    }
-    ini_close()  
+npos = 0;
 </string>
           </argument>
         </arguments>
@@ -64,8 +63,14 @@ mpos = 0;
           <argument>
             <kind>1</kind>
             <string>var move = 0;
+var move2 = 0;
+
+move2 -= max(keyboard_check_pressed(vk_right), keyboard_check_pressed(ord("D")), 0);
+move2 += max(keyboard_check_pressed(vk_left), keyboard_check_pressed(ord("A")), 0);
+
 move -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
 move += max(keyboard_check_pressed(vk_down), keyboard_check_pressed(ord("S")), 0);
+
 if (gamepad_button_check_pressed(0,gp_padd)) {
     move += 1;
     }
@@ -75,8 +80,15 @@ if (gamepad_button_check_pressed(0,gp_padu)) {
 if(move != 0)
 {
     mpos += move;
-    if(mpos &lt; 0) mpos = array_length_1d(menu) - 1;
-    if(mpos &gt; array_length_1d(menu) - 1) mpos = 0;
+    if(mpos &lt; 0) mpos = 5 - 1;
+    if(mpos &gt; 5 - 1) mpos = 0;
+}
+
+if(move2 != 0)
+{
+    npos += move2;
+    if(npos &lt; 0) npos = 1;
+    if(npos &gt; 1) npos = 0;
 }
 
 var push;
@@ -113,32 +125,22 @@ draw_set_font(fnt_creditos_peque);
 draw_set_color(c_black);
 
 var m;
-for (m = 0; m &lt; array_length_1d(menu); m += 1)
+var n;
+for (m = 0; m &lt; 5; m += 1)
 {
-    draw_text(x + space + 55, y + (m * space), string(menu[m]))
-}
-
-draw_sprite(sprite_index, 0, x + 40, y + mpos * space);
-
-draw_set_font (fnt_titulo_negrita)
-draw_text (view_xview+130, view_yview+30, "NAKED MAN")
-draw_text (view_xview+206, view_yview+80, "VS")
-draw_text (view_xview+100, view_yview+130, "THE CLOTHES")
-
-
-ini_open("LocalMapTxtSystem.ini")
-if ini_section_exists ('Qm9zc2Vz') {
-    draw_text (view_xview+20,view_yview+20, "Hay Tema");
-    if ini_key_exists('Qm9zc2Vz','Qm9zczI') {
-        draw_text (view_xview+20,view_yview+20, "Hay Tema XXXXXX");
-    }
-}
-ini_close() //Te dejo comentado esto, perra, que hace cascar el juego
-        /*draw_text (view_xview+40, view_yview+20, global.BossMuerto);
-        if global.BossMuerto = 1 { 
-            draw_text (view_xview+20,view_yview+20, "Caraculo");
+    for (n = 0; n &lt; 2; n += 1){
+        if n = 0 {
+        draw_text(x + (space) + 55, y + (m * space), string(menu2[n,m]))
         }
-    
+        else {
+        draw_text(x + (space+200) + 55, y + (m * space), string(menu2[n,m]))
+        }
+        }
+
+}
+
+draw_sprite(sprite_index, 0, x + 40 + npos * 250, y + mpos * space);
+
 
 </string>
           </argument>

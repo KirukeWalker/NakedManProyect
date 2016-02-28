@@ -139,6 +139,10 @@ if (place_meeting (x,y, obj_cacota)) {
 //Morir del todo
 if (global.vidaboss = 0)
 { 
+    ini_open("SystemNM.txt")
+    ini_key_delete("NhTPahPmx","TibsGhsbEhuU")
+    ini_write_string("NhTPahPmx","TibsGHsbEhuU","KjjyFtLTgjY")
+    ini_close()
     global.muertes += 1;
     obj_fade.fadeIn = false;
     obj_fade.alarm[1] = room_speed * 0.05;
