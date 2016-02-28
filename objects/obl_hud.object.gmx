@@ -33,6 +33,7 @@ draw_set_color(c_white);
 draw_set_font(fnt_creditos_peque);
 if (pussy_mode == true) draw_text(view_xview+350,view_yview+20,"Pussy Mode");
 
+
 //Controlm de muertes
 //draw_text(view_xview+80,view_yview+50,global.muertes);
 //draw_text(view_xview+80,view_yview+80,global.muertes_registro);

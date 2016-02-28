@@ -19,28 +19,63 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>obj_menu2</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
             <string>ini_open("SystemNM.txt");
-if ini_key_exists("NhTPahPmx","MeFjgPfREndg") {
+if ini_key_exists("NhTPahPmx","rgSHhbDRrsEF") { //Done
     global.quemaduras = 1;
+    }
+if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Done
+    global.cabezallamas = 1;
+    }
+if ini_key_exists("NhTPahPmx","ygNYRbdETjSa") { //Done
+    global.botecrema = 1;
+    }
+if ini_key_exists("NhTPahPmx","KSgfhSRKWenv") { //Done
+    global.capa = 1;
+    }
+if ini_key_exists("NhTPahPmx","Esyi4Nne5NrE") { //Done
+    global.paraguas = 1;
+    }
+if ini_key_exists("NhTPahPmx","sbSDLgaSbsQn") { //Done
+    global.camuflaje = 1;
+    }
+if ini_key_exists("NhTPahPmx","jrTbDReTSJrN") { //Done
+    global.munnieve = 1;
+    }
+if ini_key_exists("NhTPahPmx","ALsdvEhsWnvp") { //Done
+    global.papanoel = 1;
+    }
+if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Done
+    global.ciborg = 1;
+    }
+if ini_key_exists("NhTPahPmx","YFrBuGdeTSYU") { //Done
+    global.visor = 1;
+    }
+if ini_key_exists("NhTPahPmx","MeFjgPfREndg2") {
+    global.tunica = 1;
+    }
+if ini_key_exists("NhTPahPmx","FDtldtHSVDJg") { //Done
+    global.dorada = 1;
     }
 ini_close();
 //Variables para el menú
-menu2[0,0] = "Premio1"
-menu2[0,1] = ""
-menu2[0,2] = "Premio3";
-menu2[0,3] = "Premio4";
-menu2[0,4] = "Premio5";
-menu2[1,0] = "Premio6";
-menu2[1,1] = "Premio7";
-menu2[1,2] = "Premio8";
-menu2[1,3] = "Premio9";
-menu2[1,4] = "Premio10";
+menu2[0,0] = "";
+menu2[0,1] = "";
+menu2[0,2] = "";
+menu2[0,3] = "";
+menu2[0,4] = "";
+menu2[0,5] = "Premio6";
+menu2[1,0] = "";
+menu2[1,1] = "";
+menu2[1,2] = "";
+menu2[1,3] = "";
+menu2[1,4] = "";
+menu2[1,5] = "Premio12";
 //Variables para posiciones
 space = 50;
 mpos = 0; 
@@ -85,8 +120,8 @@ if (gamepad_button_check_pressed(0,gp_padu)) {
 if(move != 0)
 {
     mpos += move;
-    if(mpos &lt; 0) mpos = 5 - 1;
-    if(mpos &gt; 5 - 1) mpos = 0;
+    if(mpos &lt; 0) mpos = 5;
+    if(mpos &gt; 5) mpos = 0;
 }
 
 if(move2 != 0)
@@ -132,18 +167,130 @@ if keyboard_check_pressed(vk_escape) {
 draw_set_valign(fa_middle);
 draw_set_font(fnt_creditos_peque);
 draw_set_color(c_black);
-if global.offline = 1 &amp;&amp; global.quemaduras = 1{
-    draw_sprite(sprite2,0, x+50+55, y+50);
+//DIBUJAR SPROTES PA CA COSA
+//COSA1
+if global.cabezallamas2 = 1 &amp;&amp; global.cabezallamas = 1{
+    draw_sprite(sprite2,0, view_xview+250,view_yview+50);
     }
-if global.offline = 0 &amp;&amp; global.quemaduras = 1{
-    draw_sprite(spr_heart,0,x+105+40,y+50);
+if global.cabezallamas2 = 0 &amp;&amp; global.cabezallamas = 1{
+    draw_sprite(spr_heart,0,view_xview+250,view_yview+50);
+    }
+if global.cabezallamas = 0 {
+    draw_sprite(sprite1,0,view_xview+250,view_yview+50);
+    }
+//COSA2
+if global.botecrema2 = 1 &amp;&amp; global.botecrema = 1{
+    draw_sprite(sprite2,0, view_xview+250,view_yview+100);
+    }
+if global.botecrema2 = 0 &amp;&amp; global.botecrema = 1{
+    draw_sprite(spr_heart,0,view_xview+250,view_yview+100);
+    }
+if global.botecrema2 = 0 {
+    draw_sprite(sprite1,0,view_xview+250,view_yview+100);
+    }
+//COSA3
+if global.paraguas2 = 1 &amp;&amp; global.paraguas = 1{
+    draw_sprite(sprite2,0, view_xview+250,view_yview+150);
+    }
+if global.paraguas2 = 0 &amp;&amp; global.paraguas = 1{
+    draw_sprite(spr_heart,0,view_xview+250,view_yview+150);
+    }
+if global.paraguas2 = 0 {
+    draw_sprite(sprite1,0,view_xview+250,view_yview+150);
+    }
+//COSA4 - 
+if global.papanoel2 = 1 &amp;&amp; global.papanoel = 1{
+    draw_sprite(sprite2,0, view_xview+250,view_yview+200);
+    }
+if global.papanoel2 = 0 &amp;&amp; global.papanoel = 1{
+    draw_sprite(spr_heart,0,view_xview+250,view_yview+200);
+    }
+if global.papanoel2 = 0 {
+    draw_sprite(sprite1,0,view_xview+250,view_yview+200);
+    }
+//COSA5
+if global.visor2 = 1 &amp;&amp; global.visor = 1{
+    draw_sprite(sprite2,0, view_xview+250,view_yview+250);
+    }
+if global.visor2 = 0 &amp;&amp; global.visor = 1{
+    draw_sprite(spr_heart,0,view_xview+250,view_yview+250);
+    }
+if global.visor2 = 0 {
+    draw_sprite(sprite1,0,view_xview+250,view_yview+250);
+    }
+//COSA6
+if global.dorada2 = 1 &amp;&amp; global.dorada = 1{
+    draw_sprite(sprite2,0, view_xview+250,view_yview+300);
+    }
+if global.dorada2 = 0 &amp;&amp; global.dorada = 1{
+    draw_sprite(spr_heart,0,view_xview+250,view_yview+300);
+    }
+if global.dorada = 0 {
+    draw_sprite(sprite1,0,view_xview+250,view_yview+300);
+    }
+//COSA7
+if global.quemaduras2 = 1 &amp;&amp; global.quemaduras = 1{
+    draw_sprite(sprite2,0, view_xview+500,view_yview+50);
+    }
+if global.quemaduras2 = 0 &amp;&amp; global.quemaduras = 1{
+    draw_sprite(spr_heart,0,view_xview+500,view_yview+50);
     }
 if global.quemaduras = 0 {
-    draw_sprite(sprite1,0,x+50+55,y+50);
+    draw_sprite(sprite1,0,view_xview+500,view_yview+50);
+    }
+//COSA8
+if global.capa2 = 1 &amp;&amp; global.capa = 1{
+    draw_sprite(sprite2,0, view_xview+500,view_yview+100);
+    }
+if global.capa2 = 0 &amp;&amp; global.capa = 1{
+    draw_sprite(spr_heart,0,view_xview+500,view_yview+100);
+    }
+if global.capa2 = 0 {
+    draw_sprite(sprite1,0,view_xview+500,view_yview+100);
+    }
+//COSA9
+if global.camuflaje = 1 &amp;&amp; global.camuflaje = 1{
+    draw_sprite(sprite2,0, view_xview+500,view_yview+150);
+    }
+if global.camuflaje = 0 &amp;&amp; global.camuflaje = 1{
+    draw_sprite(spr_heart,0,view_xview+500,view_yview+150);
+    }
+if global.camuflaje = 0 {
+    draw_sprite(sprite1,0,view_xview+500,view_yview+150);
+    }
+//COSA10
+if global.munnieve2 = 1 &amp;&amp; global.munnieve = 1{
+    draw_sprite(sprite2,0, view_xview+500,view_yview+200);
+    }
+if global.munnieve2 = 0 &amp;&amp; global.munnieve = 1{
+    draw_sprite(spr_heart,0,view_xview+500,view_yview+200);
+    }
+if global.munnieve2 = 0 {
+    draw_sprite(sprite1,0,view_xview+500,view_yview+200);
+    }
+//COSA11
+if global.ciborg2 = 1 &amp;&amp; global.ciborg = 1{
+    draw_sprite(sprite2,0, view_xview+500,view_yview+250);
+    }
+if global.ciborg2 = 0 &amp;&amp; global.ciborg = 1{
+    draw_sprite(spr_heart,0,view_xview+500,view_yview+250);
+    }
+if global.ciborg2 = 0 {
+    draw_sprite(sprite1,0,view_xview+500,view_yview+250);
+    }
+//COSA12
+if global.tunica2 = 1 &amp;&amp; global.tunica = 1{
+    draw_sprite(sprite2,0, view_xview+500,view_yview+300);
+    }
+if global.tunica2 = 0 &amp;&amp; global.tunica = 1{
+    draw_sprite(spr_heart,0,view_xview+500,view_yview+300);
+    }
+if global.tunica = 0 {
+    draw_sprite(sprite1,0,view_xview+500,view_yview+300);
     }
 var m;
 var n;
-for (m = 0; m &lt; 5; m += 1)
+for (m = 0; m &lt; 6; m += 1)
 {
     for (n = 0; n &lt; 2; n += 1){
         if n = 0 {

@@ -42,6 +42,59 @@ complete_death = 0;
 status_sliding = false; //El personahe se desliza
 gamepad_set_axis_deadzone(0,0.7)
 
+//Seteamos cronómetro
+reloj = 0;
+alarm[1]=30;
+cronometro = 0;
+switch (nivel)
+{
+    case "Nivel_1": {
+        cronometro = 1;
+        break;
+    }
+    
+    case "Nivel_Playa": {
+        cronometro = 2;
+        break;
+    }
+    
+    case "Nivel_Bosque": {
+        cronometro = 3;
+        break;
+    }
+    case "Nivel_Nieve": {
+        cronometro = 4;
+        break;
+    }
+    case "Final_Level": {
+        cronometro = 5;
+        break;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>reloj += 1;
+alarm[1] = 30;
 </string>
           </argument>
         </arguments>
@@ -325,7 +378,36 @@ if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2))  {
         alarm[0] = 15;
     }
 }
-            
+if ((cronometro = 1) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal))) {
+    ini_open("SystemNM.txt");
+    ini_key_delete("NhTPahPmx","rgShhbDRrsEF")
+    ini_write_string("NhTPahPmx","rgSHhbDRrsEF","sBedfESFJkm")
+    ini_close();
+    }
+if ((cronometro = 2) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal))) {
+    ini_open("SystemNM.txt");
+    ini_key_delete("NhTPahPmx","ygnYRbdETjSa")
+    ini_write_string("NhTPahPmx","ygNYRbdETjSa","rdklGUytnfR")
+    ini_close();
+    }
+if ((cronometro = 3) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal_bosque))) {
+    ini_open("SystemNM.txt");
+    ini_key_delete("NhTPahPmx","Esyi4nne5NrE")
+    ini_write_string("NhTPahPmx","Esyi4Nne5NrE","vhbkybtdRVS")
+    ini_close();
+    }
+if ((cronometro = 4) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal_nieve))) {
+    ini_open("SystemNM.txt");
+    ini_key_delete("NhTPahPmx","jrTbDRETSJrN")
+    ini_write_string("NhTPahPmx","jrTbDReTSJrN","DRybSETAHNY")
+    ini_close();
+    }
+if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal))) {
+    ini_open("SystemNM.txt");
+    ini_key_delete("NhTPahPmx","YFrBuGdETSYU")
+    ini_write_string("NhTPahPmx","YFrBuGdeTSYU","rtwKBTlgjyV")
+    ini_close();
+    }
 </string>
           </argument>
         </arguments>
