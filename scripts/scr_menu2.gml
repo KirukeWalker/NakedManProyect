@@ -45,6 +45,7 @@ switch(mpos)
         global.dorada2 = 0;
         global.tunica2 = 0;
         } 
+    break;
     
     case 3: 
     if global.papanoel2 = 1 && global.papanoel = 1{
@@ -134,7 +135,7 @@ switch(mpos)
     break;
   
     case 2:
-    if global.camuflaje = 1 && global.camuflaje = 1{
+    if global.camuflaje2 = 1 && global.camuflaje = 1{
         global.camuflaje2 = 0;
         } 
        else if (global.camuflaje2 = 0) && global.camuflaje = 1{
