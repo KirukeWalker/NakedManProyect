@@ -42,30 +42,7 @@ status = 0;
 //Inciamos la alarma
 alarm[0] = 30;
 //Inciamos la variable para invocar
-summon = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>summon = true;
+can_summon = false;
 </string>
           </argument>
         </arguments>
@@ -90,22 +67,20 @@ summon = false;
             <kind>1</kind>
             <string>//Decidimos aletoriamente
 option = int64(random(4));
-if(option &gt; 0){
+if(option &gt; 0 || can_summon = false){
     //Lo encaramos hacia el prota
     direction = point_direction(x,y,object5.x,object5.y);
     if(x &lt; object5.x)   image_xscale = -1;
     else                image_xscale = 1;
     //Y lo lanzamos
     status = 1;
+    can_summon = true;
 }
 else{
-    //Lo mandamos al centro del escenario para que empiece a spamear
+    //Lo mandamos hacia centro del escenario para que empiece a spamear
     status = 2;
-    x = room_width/2;
-    y = room_height/2;
-    alarm[0] = 90;
-    //Iniciamos la alarma de invocar
-    alarm[1] = 1;
+    direction = point_direction(x,y,room_width/2,room_height/2);
+    speed = 6;
 }
 </string>
           </argument>
@@ -147,14 +122,17 @@ switch(status){
         }
         break;
     case 2:
-        //Spameamos enemigos
-        if(summon = true){
-            goomba1 = instance_create(spam_pos1_x,spam_pos_y, Goomba);
-            goomba2 = instance_create(spam_pos2_x,spam_pos_y, Goomba);
-            melee1 = instance_create(spam_pos1_x,spam_pos_y, Melee);
-            melee2 = instance_create(spam_pos2_x,spam_pos_y, Melee);
-            alarm[1] = 30;
-            summon = false;
+        if(distance_to_point(room_width/2, room_height/2) &lt; 1){
+            speed = 0;
+            if(can_summon = true){
+                //Spameamos enemigos
+                goomba1 = instance_create(spam_pos1_x,spam_pos_y, Goomba);
+                goomba2 = instance_create(spam_pos2_x,spam_pos_y, Goomba);
+                melee1 = instance_create(spam_pos1_x,spam_pos_y, Melee);
+                melee2 = instance_create(spam_pos2_x,spam_pos_y, Melee);
+                can_summon = false;
+                alarm[0] = 120;
+            }
         }
         break;
 }
