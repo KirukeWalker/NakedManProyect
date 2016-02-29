@@ -11,6 +11,11 @@ switch(mpos)
         global.paraguas2 = 0;
         global.papanoel2 = 0;
         global.visor2 = 0;
+        global.quemaduras2 = 0;
+        global.capa2 = 0;
+        global.camuflaje2 = 0;
+        global.munnieve2 = 0;
+        global.ciborg2 = 0;
         global.dorada2 = 0;
         global.tunica2 = 0;
         } 
@@ -26,6 +31,11 @@ switch(mpos)
         global.paraguas2 = 0;
         global.papanoel2 = 0;
         global.visor2 = 0;
+        global.quemaduras2 = 0;
+        global.capa2 = 0;
+        global.camuflaje2 = 0;
+        global.munnieve2 = 0;
+        global.ciborg2 = 0;
         global.dorada2 = 0;
         global.tunica2 = 0;
         } 
@@ -42,6 +52,11 @@ switch(mpos)
         global.paraguas2 = 1;
         global.papanoel2 = 0;
         global.visor2 = 0;
+        global.quemaduras2 = 0;
+        global.capa2 = 0;
+        global.camuflaje2 = 0;
+        global.munnieve2 = 0;
+        global.ciborg2 = 0;
         global.dorada2 = 0;
         global.tunica2 = 0;
         } 
@@ -57,6 +72,11 @@ switch(mpos)
         global.paraguas2 = 0;
         global.papanoel2 = 1;
         global.visor2 = 0;
+        global.quemaduras2 = 0;
+        global.capa2 = 0;
+        global.camuflaje2 = 0;
+        global.munnieve2 = 0;
+        global.ciborg2 = 0;
         global.dorada2 = 0;
         global.tunica2 = 0;
         } 
@@ -72,6 +92,11 @@ switch(mpos)
         global.paraguas2 = 0;
         global.papanoel2 = 0;
         global.visor2 = 1;
+        global.quemaduras2 = 0;
+        global.capa2 = 0;
+        global.camuflaje2 = 0;
+        global.munnieve2 = 0;
+        global.ciborg2 = 0;
         global.dorada2 = 0;
         global.tunica2 = 0;
         } 
@@ -109,6 +134,11 @@ switch(mpos)
         global.quemaduras2 = 0;
         } 
        else if (global.quemaduras2 = 0) && global.quemaduras = 1{
+        global.cabezallamas2 = 0;
+        global.botecrema2 = 0;
+        global.paraguas2 = 0;
+        global.papanoel2 = 0;
+        global.visor2 = 0;
         global.quemaduras2 = 1;
         global.capa2 = 0;
         global.camuflaje2 = 0;
@@ -124,6 +154,11 @@ switch(mpos)
         global.capa2 = 0;
         } 
        else if (global.capa2 = 0) && global.capa = 1{
+        global.cabezallamas2 = 0;
+        global.botecrema2 = 0;
+        global.paraguas2 = 0;
+        global.papanoel2 = 0;
+        global.visor2 = 0;
         global.quemaduras2 = 0;
         global.capa2 = 1;
         global.camuflaje2 = 0;
@@ -139,6 +174,11 @@ switch(mpos)
         global.camuflaje2 = 0;
         } 
        else if (global.camuflaje2 = 0) && global.camuflaje = 1{
+        global.cabezallamas2 = 0;
+        global.botecrema2 = 0;
+        global.paraguas2 = 0;
+        global.papanoel2 = 0;
+        global.visor2 = 0;
         global.quemaduras2 = 0;
         global.capa2 = 0;
         global.camuflaje2 = 1;
@@ -154,6 +194,11 @@ switch(mpos)
         global.munnieve2 = 0;
         } 
        else if (global.munnieve2 = 0) && global.munnieve = 1{
+        global.cabezallamas2 = 0;
+        global.botecrema2 = 0;
+        global.paraguas2 = 0;
+        global.papanoel2 = 0;
+        global.visor2 = 0;
         global.quemaduras2 = 0;
         global.capa2 = 0;
         global.camuflaje2 = 0;
@@ -168,6 +213,11 @@ switch(mpos)
         global.ciborg2 = 0;
         } 
        else if (global.ciborg2 = 0) && global.ciborg = 1{
+        global.cabezallamas2 = 0;
+        global.botecrema2 = 0;
+        global.paraguas2 = 0;
+        global.papanoel2 = 0;
+        global.visor2 = 0;
         global.quemaduras2 = 0;
         global.capa2 = 0;
         global.camuflaje2 = 0;

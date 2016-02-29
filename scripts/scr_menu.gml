@@ -4,8 +4,7 @@ globalvar pussy_mode;
 //globalvar muertes_registro;
 //Según la opción elegida
 global.muertes = 0;
-switch(mpos)
-{
+switch(mpos){
     case 0: 
     {
         pussy_mode = false;
@@ -24,10 +23,10 @@ switch(mpos)
         break;
     }
     case 2: room_goto (Menu2); break;
-    
+   
     case 3: room_goto (Credits); break;
     
     case 4: game_end(); break;
+        
     default: break;
-    
 }

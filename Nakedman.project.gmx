@@ -246,7 +246,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\god_room_2</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\Nivel_1</room>
@@ -262,6 +261,7 @@
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Continuara</room>
     <room>rooms\god_room_1</room>
+    <room>rooms\god_room_2</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
     <room>rooms\TEST_ROOM</room>

@@ -26,15 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>//Variables para el menú
-if(checkpoint = false) menu[0] = "Start";
-if(checkpoint = true)  menu[0] = "Continue";
-menu[1] = "Pussy Mode";
-menu[2] = "Prizes"
-menu[3] = "Meet the crew";
-menu[4] = "Fuck off";
+if(checkpoint = false) menu[0,0] = "Start";
+if(checkpoint = true)  menu[0,0] = "Continue";
+menu[0,1] = "Pussy Mode";
+menu[0,2] = "Prizes"
+menu[0,3] = "Meet the crew";
+menu[0,4] = "Fuck off";
 //Variables para posiciones
 space = 50;
 mpos = 0; 
+npos = 0;
 </string>
           </argument>
         </arguments>
@@ -58,6 +59,10 @@ mpos = 0;
           <argument>
             <kind>1</kind>
             <string>var move = 0;
+var move2 = 0;
+
+move2 -= max(keyboard_check_pressed(vk_right), keyboard_check_pressed(ord("D")), 0);
+move2 += max(keyboard_check_pressed(vk_left), keyboard_check_pressed(ord("A")), 0);
 move -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
 move += max(keyboard_check_pressed(vk_down), keyboard_check_pressed(ord("S")), 0);
 if (gamepad_button_check_pressed(0,gp_padd)) {
@@ -69,8 +74,14 @@ if (gamepad_button_check_pressed(0,gp_padu)) {
 if(move != 0)
 {
     mpos += move;
-    if(mpos &lt; 0) mpos = array_length_1d(menu) - 1;
-    if(mpos &gt; array_length_1d(menu) - 1) mpos = 0;
+    if(mpos &lt; 0) mpos = 4;
+    if(mpos &gt; 4) mpos = 0;
+}
+if(move2 != 0)
+{
+    npos += move2;
+    if(npos &lt; 0) npos = 1;
+    if(npos &gt; 1) npos = 0;
 }
 
 var push;
@@ -101,23 +112,25 @@ if(push = 1) scr_menu();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_creditos_peque);
 draw_set_color(c_black);
 
-var m;
-for (m = 0; m &lt; array_length_1d(menu); m += 1)
-{
-    draw_text(x + space + 55, y + (m * space), string(menu[m]))
-}
-
-draw_sprite(sprite_index, 0, x + 40, y + mpos * space);
 
 draw_set_font (fnt_titulo_negrita)
-draw_text (view_xview+130, view_yview+30, "NAKED MAN")
-draw_text (view_xview+206, view_yview+80, "VS")
-draw_text (view_xview+100, view_yview+130, "THE CLOTHES")
+draw_text (x, view_yview+20, "NAKED MAN")
+draw_text (x, view_yview+70, "VS")
+draw_text (x, view_yview+120, "THE CLOTHES")
+
+//draw_set_halign(fa_left);
+draw_set_font(fnt_creditos_peque);
+var m;
+for (m = 0; m &lt; 5; m += 1)
+{
+    draw_text(x, y + (m * space) - 20, string(menu[m]))
+}
+
+draw_sprite(sprite_index, 0, x - 150, y -20  + mpos * space);
 
 
 

@@ -69,13 +69,13 @@ menu2[0,1] = "";
 menu2[0,2] = "";
 menu2[0,3] = "";
 menu2[0,4] = "";
-menu2[0,5] = "Premio6";
+menu2[0,5] = "";
 menu2[1,0] = "";
 menu2[1,1] = "";
 menu2[1,2] = "";
 menu2[1,3] = "";
 menu2[1,4] = "";
-menu2[1,5] = "Premio12";
+menu2[1,5] = "";
 //Variables para posiciones
 space = 50;
 mpos = 0; 
@@ -185,7 +185,7 @@ if global.botecrema2 = 1 &amp;&amp; global.botecrema = 1{
 if global.botecrema2 = 0 &amp;&amp; global.botecrema = 1{
     draw_sprite(spr_heart,0,view_xview+250,view_yview+100);
     }
-if global.botecrema2 = 0 {
+if global.botecrema = 0 {
     draw_sprite(sprite1,0,view_xview+250,view_yview+100);
     }
 //COSA3
@@ -195,7 +195,7 @@ if global.paraguas2 = 1 &amp;&amp; global.paraguas = 1{
 if global.paraguas2 = 0 &amp;&amp; global.paraguas = 1{
     draw_sprite(spr_heart,0,view_xview+250,view_yview+150);
     }
-if global.paraguas2 = 0 {
+if global.paraguas = 0 {
     draw_sprite(sprite1,0,view_xview+250,view_yview+150);
     }
 //COSA4 - 
@@ -205,7 +205,7 @@ if global.papanoel2 = 1 &amp;&amp; global.papanoel = 1{
 if global.papanoel2 = 0 &amp;&amp; global.papanoel = 1{
     draw_sprite(spr_heart,0,view_xview+250,view_yview+200);
     }
-if global.papanoel2 = 0 {
+if global.papanoel = 0 {
     draw_sprite(sprite1,0,view_xview+250,view_yview+200);
     }
 //COSA5
@@ -215,7 +215,7 @@ if global.visor2 = 1 &amp;&amp; global.visor = 1{
 if global.visor2 = 0 &amp;&amp; global.visor = 1{
     draw_sprite(spr_heart,0,view_xview+250,view_yview+250);
     }
-if global.visor2 = 0 {
+if global.visor = 0 {
     draw_sprite(sprite1,0,view_xview+250,view_yview+250);
     }
 //COSA6
@@ -245,14 +245,14 @@ if global.capa2 = 1 &amp;&amp; global.capa = 1{
 if global.capa2 = 0 &amp;&amp; global.capa = 1{
     draw_sprite(spr_heart,0,view_xview+500,view_yview+100);
     }
-if global.capa2 = 0 {
+if global.capa = 0 {
     draw_sprite(sprite1,0,view_xview+500,view_yview+100);
     }
 //COSA9
-if global.camuflaje = 1 &amp;&amp; global.camuflaje = 1{
+if global.camuflaje2 = 1 &amp;&amp; global.camuflaje = 1{
     draw_sprite(sprite2,0, view_xview+500,view_yview+150);
     }
-if global.camuflaje = 0 &amp;&amp; global.camuflaje = 1{
+if global.camuflaje2 = 0 &amp;&amp; global.camuflaje = 1{
     draw_sprite(spr_heart,0,view_xview+500,view_yview+150);
     }
 if global.camuflaje = 0 {
@@ -265,7 +265,7 @@ if global.munnieve2 = 1 &amp;&amp; global.munnieve = 1{
 if global.munnieve2 = 0 &amp;&amp; global.munnieve = 1{
     draw_sprite(spr_heart,0,view_xview+500,view_yview+200);
     }
-if global.munnieve2 = 0 {
+if global.munnieve = 0 {
     draw_sprite(sprite1,0,view_xview+500,view_yview+200);
     }
 //COSA11
@@ -275,7 +275,7 @@ if global.ciborg2 = 1 &amp;&amp; global.ciborg = 1{
 if global.ciborg2 = 0 &amp;&amp; global.ciborg = 1{
     draw_sprite(spr_heart,0,view_xview+500,view_yview+250);
     }
-if global.ciborg2 = 0 {
+if global.ciborg = 0 {
     draw_sprite(sprite1,0,view_xview+500,view_yview+250);
     }
 //COSA12
