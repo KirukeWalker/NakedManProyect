@@ -2957,6 +2957,18 @@
     <instance objName="obj_acido" x="3392" y="352" name="inst_5C5E531E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_acido" x="3424" y="352" name="inst_4A39DEE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_acido" x="3456" y="352" name="inst_CF766CBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="224" y="1728" name="inst_D01D017B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="416" y="1728" name="inst_2C31A02C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="480" y="1632" name="inst_C8340D0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="576" y="1824" name="inst_20875ECC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="544" y="1888" name="inst_B3E8C506" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="320" y="1824" name="inst_5F0CE483" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="320" y="1632" name="inst_6825860E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="480" y="1728" name="inst_F58979DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="640" y="1632" name="inst_66417C4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="704" y="1824" name="inst_87F6A72D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="64" y="1824" name="inst_0AAC2D8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Luces_locas" x="448" y="1952" name="inst_C0797494" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
