@@ -36,11 +36,13 @@ disparo = 0;
 nivel = room_get_name (room);
 status_knockback = false; //Declaramos knockback
 knockback_distance = 5;
-global.vida = 3; //Vida del personaje
+global.vida = 5; //Vida del personaje
 status_dead = 0;
 complete_death = 0;
-status_sliding = false; //El personahe se desliza
 gamepad_set_axis_deadzone(0,0.7)
+status_blocking = false;    //Añadimos bloqueo para la pelea final
+hit = 0;    //Para recibir los golpes
+
 
 //Seteamos cronómetro
 reloj = 0;
@@ -159,21 +161,13 @@ else move = key_left + key_right;        //Aplicamos los valores de las teclas d
 if(move != 0 &amp;&amp; actual_speed &lt; movespeed) actual_speed += 1;
 else if(move = 0 &amp;&amp; actual_speed &gt; 0)   actual_speed -= 1;
 //Movimiento con la aceleración actual
-if (status_sliding = false){
 hsp = move * actual_speed;
-}
-else hsp = movespeed * 3 * image_xscale
-if(vsp &lt; 10) vsp += grav;       //Aplicamos gravedad
+//Hacemos que se mueva mas despacio hacia atrás
+if(sign(hsp)!=sign(move)) hsp /= 2;
+//Aplicamos gravedad
+if(vsp &lt; 10) vsp += grav;       
 //Salto
-if((
-    place_meeting(x,y+1,Terreno) || 
-    place_meeting(x,y+1,obj_arena) ||
-    place_meeting(x,y+1,obj_suelo_hojas) ||
-    place_meeting(x,y,Agua)      ||       //Comprobamos que este en el agua
-    place_meeting(x,y+1,obj_suelo_bosque) ||
-    place_meeting(x,y+1,obj_platform) ||
-    place_meeting(x,y+1,obj_nubes)
-    ) 
+if(place_meeting(x,y+1,Terreno)             //Habrá que cambiarlo por nubes
     &amp;&amp; key_jump &gt; 0                         //Y que el boton de salto esté pulsado
     &amp;&amp; status_dead = 0)
 {
@@ -184,62 +178,21 @@ if(vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp = max(vsp, -jumpspeed/4)
 
 //Desplazamos al personaje (controlando colisiones)
 //Colision con enemigos
-if(status_knockback == true &amp;&amp; pussy_mode == true){} //Que no haga nada en este caso
-else //Y trabaje normalmente en los demás
-{
+if(hit = 1 &amp;&amp; status_knockback == false){   //Esta vez le metemos el knockback desde el ataque
     if(status_dead = 0)
     {
-        //Knockback
-        if(place_meeting(x, y, Goomba) || 
-            place_meeting(x, y, Volador) || 
-            place_meeting(x, y, obj_vodka) ||
-            place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead = 0)|| 
-            place_meeting(x, y, serpiente_to_flama) || 
-            place_meeting(x,y, obj_sneksot) || 
-            place_meeting(x, y, FinalBoss1) ||
-            place_meeting(x, y, FinalBoss2) ||
-            place_meeting(x, y, obj_anchor) ||
-            place_meeting(x, y, FinalBoss3) ||
-            place_meeting(x, y, FinalBoss3_Body) ||
-            place_meeting(x, y, FinalBoss4) ||
-            place_meeting(x, y, FinalBoss5) ||
-            place_meeting(x, y, obj_lightball) ||
-            place_meeting(x, y, obj_mega_laser) || 
-            place_meeting(x ,y, obj_hand) ||
-            place_meeting(x, y, obj_phase2_god) )
-        {
-            global.vida -= 1;
-            status_knockback = true;
-            vsp = -jumpspeed
-            //if(place_meeting(x+1, y, Goomba)) move = -2
-            //if(place_meeting(x-1, y, Goomba)) move = 2
-            move = -image_xscale;
-        }
+        global.vida -= 1;
+        status_knockback = true;
+        vsp = -jumpspeed
+        move = -image_xscale;
     }
 }
-//Comprobamos suelo hielo
-if(place_meeting(x,y+1,obj_hielo))
-{
-//Character speed during the slide
-    
-    status_sliding = true;
-    
-}
-else status_sliding = false
 
 //Horizontal collision (Terreno sólido)
-if(place_meeting(x+hsp,y,Terreno) || 
-    place_meeting(x+hsp,y,obj_arena) ||
-    place_meeting(x+hsp,y,obj_suelo_bosque) ||
-    place_meeting(x+hsp,y,obj_nubes)
-    )
+if(place_meeting(x+hsp,y,Terreno))
 {
     
-    while(!place_meeting(x+sign(hsp), y, Terreno) &amp;&amp; 
-        !place_meeting(x+sign(hsp), y,obj_arena) &amp;&amp;
-        !place_meeting(x+sign(hsp), y,obj_suelo_bosque) &amp;&amp;
-        !place_meeting(x+sign(hsp), y,obj_nubes)
-        )
+    while(!place_meeting(x+sign(hsp), y, Terreno))
     {
         x+=sign(hsp);
     }
@@ -250,23 +203,16 @@ x += hsp;
 x = clamp(x, 15, room_width-15);
 
 //Vertical collision
-if(place_meeting(x,y+vsp, Terreno) || 
-    place_meeting(x,y+vsp,obj_arena) ||
-    place_meeting(x,y+vsp,obj_suelo_bosque) ||
-    place_meeting(x,y+vsp,obj_nubes)
-    )
+if(place_meeting(x,y+vsp, Terreno))
 {
   
-    while(!place_meeting(x, y+sign(vsp), Terreno) &amp;&amp; 
-            !place_meeting(x,y+sign(vsp),obj_arena) &amp;&amp;
-            !place_meeting(x,y+sign(vsp),obj_suelo_bosque) &amp;&amp;
-            !place_meeting(x,y+sign(vsp),obj_nubes)
-            )
+    while(!place_meeting(x, y+sign(vsp), Terreno))
     {
         y+=sign(vsp);
     }
     vsp=0;
     status_knockback = false;
+    hit = false;
 }
 //Comprobación aparte para suelo atravesable
 if(place_meeting(x,y+vsp,obj_suelo_hojas) &amp;&amp; 
@@ -296,13 +242,13 @@ vsp &gt; 0 &amp;&amp; key_down = 0)
 y += vsp;
 
 
-//Giro
-if (move!=0 &amp;&amp; status_sliding = false) image_xscale = move;
+//Giro, en principio siempre estará mirando a su oponente
+//if (move!=0) image_xscale = move;
+if(x &lt; dark_naked_man.x)    image_xscale = 1;
+else                        image_xscale = -1;
 
 //Animaciones
-if(/*place_meeting(x, y+1, Terreno) || 
-    place_meeting(x,y+1,obj_arena)*/
-    vsp = 0)
+if(vsp = 0)
 {
     if(status_dead = 1 &amp;&amp; complete_death = 0) {
         sprite_index = spr_death;
@@ -326,85 +272,26 @@ else
     if (disparo &gt; 0) sprite_index = spr_jumpshoot;
     else if(vsp &lt; 0) sprite_index = spr_jump;
     else if (vsp &gt; 0) sprite_index = spr_fall;
-    //sprite_index = spr_jump
-}
-//Control de muerte
-if (position_meeting (x,y,Lava)) global.vida = 0 ;
-if (position_meeting (x,y,obj_acido)) global.vida = 0;
-if (position_meeting(x,y,obj_pincho)) global.vida = 0;
-if (x &lt; 10) global.vida = 0;
-if(nivel != "Nivel_Nieve" &amp;&amp; nivel != "Final_Level")
-{ 
-    if(y &gt; 480) global.vida = 0;
 }
 
+//Control de muerte
 if(global.vida &lt;= 0)
 {
     status_dead = 1;
 }
 
-//Entrando al agua
-
-if(place_meeting(x,y,Agua))
-{
-    grav = 0.2; 
-    jumpspeed = 5;
-    movespeed = 1.5;
-}
-
-//Saliendo del agua
-
-if(!place_meeting(x,y,Agua))
-{
-    grav = 1; 
-    jumpspeed = 20;
-    movespeed = 6;
-}
-
-//Disparo en codigo
+//Realizamos el ataque melée
 if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2))  {
     if(disparo = 0 &amp;&amp; status_dead = 0) {
-        proyectil = instance_create(x,y+3,obj_cacota);
-        proyectil.speed = 15;
-        proyectil.direction = 90-(90*image_xscale);
-        proyectil.image_xscale = image_xscale;
-        //if image_xscale = 1 proyectil.direction = 0;
-        //else                proyectil.direction = 180;
-        disparo = 1
+        ataque = instance_create(x,y,obj_medium_attack);
+        //proyectil.direction = 90-(90*image_xscale);
+        ataque.image_xscale = image_xscale;
+        ataque.attack_user = 0;  //Le decimos que lo realiza Super Naked Man
+        //De momento utilizarmos la cadencia del disparo
+        disparo = 1;
         alarm[0] = 15;
     }
 }
-//Cronoemtros para logros
-if ((cronometro = 1) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal))) {
-    ini_open("SystemNM.txt");
-    ini_key_delete("NhTPahPmx","rgShhbDRrsEF")
-    ini_write_string("NhTPahPmx","rgSHhbDRrsEF","sBedfESFJkm")
-    ini_close();
-    }
-if ((cronometro = 2) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal))) {
-    ini_open("SystemNM.txt");
-    ini_key_delete("NhTPahPmx","ygnYRbdETjSa")
-    ini_write_string("NhTPahPmx","ygNYRbdETjSa","rdklGUytnfR")
-    ini_close();
-    }
-if ((cronometro = 3) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal_bosque))) {
-    ini_open("SystemNM.txt");
-    ini_key_delete("NhTPahPmx","Esyi4nne5NrE")
-    ini_write_string("NhTPahPmx","Esyi4Nne5NrE","vhbkybtdRVS")
-    ini_close();
-    }
-if ((cronometro = 4) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal_nieve))) {
-    ini_open("SystemNM.txt");
-    ini_key_delete("NhTPahPmx","jrTbDRETSJrN")
-    ini_write_string("NhTPahPmx","jrTbDReTSJrN","DRybSETAHNY")
-    ini_close();
-    }
-if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_portal))) {
-    ini_open("SystemNM.txt");
-    ini_key_delete("NhTPahPmx","YFrBuGdETSYU")
-    ini_write_string("NhTPahPmx","YFrBuGdeTSYU","rtwKBTlgjyV")
-    ini_close();
-    }
 </string>
           </argument>
         </arguments>
