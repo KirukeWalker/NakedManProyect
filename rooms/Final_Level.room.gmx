@@ -712,7 +712,7 @@
     <instance objName="Terreno" x="3456" y="384" name="inst_FCAF299E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="3488" y="384" name="inst_4F08A69A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="3520" y="960" name="inst_518F94BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="128" y="1952" name="inst_A0A475E5" locked="0" code="" scaleX="1" scaleY="0.819999992847443" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="3424" y="1920" name="inst_A0A475E5" locked="0" code="" scaleX="1" scaleY="0.819999992847443" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="256" y="1888" name="inst_9196A564" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="288" y="1888" name="inst_E385FB6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="320" y="1888" name="inst_B407D3B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -2969,6 +2969,7 @@
     <instance objName="Luces_locas" x="704" y="1824" name="inst_87F6A72D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luces_locas" x="64" y="1824" name="inst_0AAC2D8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luces_locas" x="448" y="1952" name="inst_C0797494" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jetstream_sam" x="3712" y="1536" name="inst_B8B14DCE" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

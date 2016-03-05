@@ -37,6 +37,7 @@
       <sprite>sprites\spr_pinchos_ciudad_izquierda</sprite>
       <sprite>sprites\spr_rayos</sprite>
       <sprite>sprites\veneno</sprite>
+      <sprite>sprites\spr_jetstream_sam</sprite>
     </sprites>
     <sprites name="Prota">
       <sprite>sprites\spr_idle</sprite>
@@ -191,6 +192,7 @@
       <object>objects\obj_pinchos_ciudad_derecha</object>
       <object>objects\obj_pinchos_ciudad_izquierda</object>
       <object>objects\obj_rayos</object>
+      <object>objects\obj_jetstream_sam</object>
     </objects>
     <objects name="Enemigos">
       <object>objects\serpiente_to_flama</object>
