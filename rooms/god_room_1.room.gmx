@@ -51,7 +51,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_head" x="288" y="64" name="inst_744EEDB2" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_head" x="288" y="0" name="inst_744EEDB2" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="object5" x="256" y="320" name="inst_297B1AA5" locked="0" code="" scaleX="1" scaleY="0.839999973773956" colour="4294967295" rotation="0"/>
     <instance objName="obl_hud" x="32" y="32" name="inst_3B22DDE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="64" y="32" name="inst_857ADCC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -117,6 +117,9 @@
     <instance objName="obj_nubes" x="576" y="384" name="inst_A9FE4A72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade" x="32" y="96" name="inst_66B1936A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_healthbar" x="32" y="128" name="inst_7827FBB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_arm" x="-32" y="384" name="inst_85B9E4AE" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_arm" x="608" y="384" name="inst_C19626FD" locked="0" code="" scaleX="-2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_body" x="288" y="288" name="inst_ADED9E40" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

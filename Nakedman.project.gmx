@@ -146,6 +146,9 @@
       <sprite>sprites\spr_palm</sprite>
       <sprite>sprites\spr_high_attack</sprite>
       <sprite>sprites\spr_low_attack</sprite>
+      <sprite>sprites\spr_arm</sprite>
+      <sprite>sprites\spr_body</sprite>
+      <sprite>sprites\spr_god_big</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -266,6 +269,8 @@
       <object>objects\obj_glory_bar</object>
       <object>objects\obj_high_attack</object>
       <object>objects\obj_low_attack</object>
+      <object>objects\obj_arm</object>
+      <object>objects\obj_body</object>
     </objects>
     <object>objects\object5</object>
     <object>objects\obj_menu2</object>
@@ -273,6 +278,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\god_room_1</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\Nivel_1</room>
@@ -287,7 +293,6 @@
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Continuara</room>
-    <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
     <room>rooms\Menu2</room>
