@@ -2970,6 +2970,7 @@
     <instance objName="Luces_locas" x="64" y="1824" name="inst_0AAC2D8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luces_locas" x="448" y="1952" name="inst_C0797494" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jetstream_sam" x="3712" y="1536" name="inst_B8B14DCE" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_platform" x="3232" y="1888" name="inst_B08346BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

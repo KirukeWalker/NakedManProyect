@@ -193,8 +193,8 @@ else //Y trabaje normalmente en los demás
         if(place_meeting(x, y, Goomba) || 
             place_meeting(x, y, Volador) || 
             place_meeting(x, y, obj_vodka) ||
-            place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead = 0)|| 
-            place_meeting(x, y, serpiente_to_flama) || 
+            place_meeting(x, y, Melee) &amp;&amp; (Melee.sprite_index = Melee.disparando)|| 
+            place_meeting(x, y, serpiente_to_flama) &amp;&amp; (serpiente_to_flama.status_dead = 0) || 
             place_meeting(x,y, obj_sneksot) || 
             place_meeting(x, y, FinalBoss1) ||
             place_meeting(x, y, FinalBoss2) ||
@@ -333,10 +333,7 @@ if (position_meeting (x,y,Lava)) global.vida = 0 ;
 if (position_meeting (x,y,obj_acido)) global.vida = 0;
 if (position_meeting(x,y,obj_pincho)) global.vida = 0;
 if (x &lt; 10) global.vida = 0;
-if(nivel != "Nivel_Nieve" &amp;&amp; nivel != "Final_Level")
-{ 
-    if(y &gt; 480) global.vida = 0;
-}
+if (y &gt; room_height) global.vida = 0;
 
 if(global.vida &lt;= 0)
 {

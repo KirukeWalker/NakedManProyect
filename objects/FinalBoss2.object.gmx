@@ -169,20 +169,18 @@ if(status = 3){
 }
 if(status = 4){
     //Lo desatascamos si se atasca
+    //Si la tiene por abajo
     if(place_meeting(x,y+1,obj_arena)){
         while(place_meeting(x,y,obj_arena)){
             y-=1;
         }
     }
+    //Si la tiene por arriba
     else if(place_meeting(x,y-1,obj_arena)){
         while(place_meeting(x,y,obj_arena)){
             y+=1;
         }
-    }    
-    /*if(x &gt; 0 || x &lt; 600 || y &lt; 0 || y &gt; 480){
-        x = 300;
-        y = 240;
-    }*/
+    } 
     status = 0;
 }
 //Recibir ataque

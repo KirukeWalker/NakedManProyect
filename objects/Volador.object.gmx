@@ -45,11 +45,12 @@ switch (nivel)
     }
     case "Nivel_Bosque": {
         sprite_index = spr_manoplas3;
+        break;
     }
     case "Nivel_Nieve": {
         sprite_index = spr_manoplas4;
         break;
-        }
+    }
 }      
 </string>
           </argument>
