@@ -149,6 +149,8 @@
       <sprite>sprites\spr_arm</sprite>
       <sprite>sprites\spr_body</sprite>
       <sprite>sprites\spr_god_big</sprite>
+      <sprite>sprites\spr_god_side</sprite>
+      <sprite>sprites\spr_god_front</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -278,7 +280,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss5</room>
+    <room>rooms\god_room_2</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\Nivel_1</room>
@@ -291,10 +293,10 @@
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4</room>
     <room>rooms\Final_Level</room>
-    <room>rooms\Continuara</room>
+    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
-    <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
+    <room>rooms\Continuara</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
   </rooms>
