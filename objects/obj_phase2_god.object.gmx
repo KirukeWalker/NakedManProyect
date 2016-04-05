@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//Variables
 global.vidaboss = 10;
-movement_speed = 15;
+movement_speed = 12;
 //Para spamear enemigos
 spam_pos1_x = -30;
 spam_pos2_x = 630;
@@ -116,24 +116,27 @@ switch(status){
             speed = movement_speed;
         else{
             //Lo hacemos recular un pco para evitar atascos
-            move_towards_point(room_width/2, room_height/2, speed); 
+            x = clamp(x,sprite_width/2+1,room_width-sprite_width/2-1);
+            y = clamp(y,sprite_height/2+1,room_height-sprite_height/2-1);
             status = 0;
             speed = 0;
             alarm[0] = 30;
-            x = clamp(x,1,room_width-1);
-            y = clamp(y,1,room_height-1);
         }
         break;
     case 2:
-        if(distance_to_point(room_width/2, room_height/2) &lt; 1){
+        if(distance_to_point(room_width/2, room_height/2) &lt; 10){
             speed = 0;
             sprite_index = spr_god_front;
             if(can_summon = true){
-                //Spameamos enemigos
-                goomba1 = instance_create(spam_pos1_x,spam_pos_y, Goomba);
-                goomba2 = instance_create(spam_pos2_x,spam_pos_y, Goomba);
-                melee1 = instance_create(spam_pos1_x,spam_pos_y, Melee);
-                melee2 = instance_create(spam_pos2_x,spam_pos_y, Melee);
+                //Spameamos enemigos "random"
+                if(x &gt; room_width/2){
+                    goomba = instance_create(spam_pos1_x,spam_pos_y, Goomba);
+                    melee = instance_create(spam_pos2_x,spam_pos_y, Melee);
+                }
+                else{
+                    goomba = instance_create(spam_pos2_x,spam_pos_y, Goomba);
+                    melee = instance_create(spam_pos1_x,spam_pos_y, Melee);
+                }
                 can_summon = false;
                 alarm[0] = 120;
             }

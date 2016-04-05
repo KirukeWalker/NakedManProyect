@@ -265,7 +265,6 @@
       <object>objects\Player2</object>
       <object>objects\obj_head</object>
       <object>objects\obj_hand</object>
-      <object>objects\obj_phase2_god</object>
       <object>objects\super_naked_man</object>
       <object>objects\dark_naked_man</object>
       <object>objects\obj_glory_bar</object>
@@ -273,6 +272,7 @@
       <object>objects\obj_low_attack</object>
       <object>objects\obj_arm</object>
       <object>objects\obj_body</object>
+      <object>objects\obj_phase2_god</object>
     </objects>
     <object>objects\object5</object>
     <object>objects\obj_menu2</object>
