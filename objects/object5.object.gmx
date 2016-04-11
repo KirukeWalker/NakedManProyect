@@ -193,9 +193,10 @@ else //Y trabaje normalmente en los demás
         if(place_meeting(x, y, Goomba) || 
             place_meeting(x, y, Volador) || 
             place_meeting(x, y, obj_vodka) ||
-            place_meeting(x, y, Melee) &amp;&amp; (Melee.sprite_index = Melee.disparando)|| 
+            place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead == false)|| 
             place_meeting(x, y, serpiente_to_flama) &amp;&amp; (serpiente_to_flama.status_dead = 0) || 
             place_meeting(x,y, obj_sneksot) || 
+            place_meeting(x, y, obj_boss_interactor) &amp;&amp; (obj_boss_interactor.attacking == true) ||
             place_meeting(x, y, FinalBoss1) ||
             place_meeting(x, y, FinalBoss2) ||
             place_meeting(x, y, obj_anchor) ||
@@ -210,7 +211,7 @@ else //Y trabaje normalmente en los demás
         {
             global.vida -= 1;
             status_knockback = true;
-            vsp = -jumpspeed
+            vsp = -jumpspeed;
             //if(place_meeting(x+1, y, Goomba)) move = -2
             //if(place_meeting(x-1, y, Goomba)) move = 2
             move = -image_xscale;
@@ -402,6 +403,35 @@ if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_
     ini_write_string("NhTPahPmx","YFrBuGdeTSYU","rtwKBTlgjyV")
     ini_close();
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Después de ajustarlo meteremos aqui las condiciones que no maten
+global.vida -= 1;
+status_knockback = true;
+vsp = -jumpspeed;
+//if(place_meeting(x+1, y, Goomba)) move = -2
+//if(place_meeting(x-1, y, Goomba)) move = 2
+move = -image_xscale;
 </string>
           </argument>
         </arguments>

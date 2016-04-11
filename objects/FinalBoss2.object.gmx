@@ -42,6 +42,8 @@ alarm[0] = 90;
 4 - Desatascando */
 status = 0;
 
+//Interactor for attacking animation
+interactor = instance_create(x,y,obj_boss_interactor);
 </string>
           </argument>
         </arguments>
@@ -120,15 +122,17 @@ if(status = 0){
     { 
         looking_left = true;
         image_xscale = 1;
-        //change = true;
+        interactor.image_xscale = 1;
     }
     if(x &lt; object5.x)
     {
         looking_left = false;
         image_xscale = -1;
+        interactor.image_xscale = -1;
     }
     //Comprobamos posición del prota para el encaramiento
-    if(x &lt; instance_position(x, y, object5)) looking_left = true;
+    if(x &lt; instance_position(x, y, object5)) 
+        looking_left = true;
     //Movemos el boss si no ataca o dispara
     if (sprite_index = spr_boss2_move || 
         sprite_index = spr_boss2_jump)
@@ -136,16 +140,20 @@ if(status = 0){
         if(looking_left = true &amp;&amp; !place_meeting(x-1, y, obj_arena)) x-=movespeed;
         else if (looking_left = false &amp;&amp; !place_meeting(x+1, y, obj_arena)) x+=movespeed;
     }
+    interactor.x = x;
+    interactor.y = y;
     //Solo si esta en el suelo
     //Atacar
     if ((distance_to_object (object5) &lt; 10)) 
     {
-        sprite_index = spr_boss2_attack
+        sprite_index = spr_boss2_attack;
+        interactor.attacking = true;
     }
     else //Volver a la normalidad
     {    
         if (sprite_index = spr_boss2_attack &amp;&amp; image_index = 8) 
         {
+            interactor.attacking = false;
             if(place_meeting(x, y+1, obj_arena))
                 sprite_index = spr_boss2_move;
             else  
@@ -169,18 +177,15 @@ if(status = 3){
 }
 if(status = 4){
     //Lo desatascamos si se atasca
-    //Si la tiene por abajo
-    if(place_meeting(x,y+1,obj_arena)){
-        while(place_meeting(x,y,obj_arena)){
-            y-=1;
-        }
+    direction = 0;
+    image_angle = 0;
+    if(place_meeting(x,y,obj_arena)){
+        check_mark = 1;
+        while(!place_free(x,y-1))
+            y++;
+        while(!place_free(x,y+1))
+            y--;
     }
-    //Si la tiene por arriba
-    else if(place_meeting(x,y-1,obj_arena)){
-        while(place_meeting(x,y,obj_arena)){
-            y+=1;
-        }
-    } 
     status = 0;
 }
 //Recibir ataque

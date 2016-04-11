@@ -154,7 +154,6 @@ if ((distance_to_object (object5)&lt; 30 &amp;&amp; object5.status_dead = 0)
     &amp;&amp; status_dead = 0) 
 {
     sprite_index = disparando;
-    
 }
 //Volver a la normalidad
 if (sprite_index = disparando &amp;&amp; image_index = 20) 

@@ -57,6 +57,8 @@ qeue_position = 0;
 if(place_meeting(x-FinalBoss3.move_speed, y, obj_suelo_bosque) || 
     place_meeting(x+FinalBoss3.move_speed, y, obj_suelo_bosque))
 {
+    while(place_free(x+h_direction,y))
+        x += h_direction;
     h_direction *= -1;
     //image_xscale *= -1;
 }
@@ -64,6 +66,8 @@ if(place_meeting(x-FinalBoss3.move_speed, y, obj_suelo_bosque) ||
 if(place_meeting(x, y-FinalBoss3.move_speed, obj_suelo_bosque) || 
     place_meeting(x, y+FinalBoss3.move_speed, obj_suelo_bosque))
 {
+    while(place_free(x,y+v_direction))
+        y += v_direction;
     v_direction *= -1;
     //image_yscale *= -1;
 }

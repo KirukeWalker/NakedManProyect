@@ -33,6 +33,9 @@ global.vidaboss = 10; //Vida del personaje
 looking_left = true;
 attack = 0;
 vsp = 0;
+
+//Create an interactor for the attacking animation
+interactor = instance_create(x,y,obj_boss_interactor);
 </string>
           </argument>
         </arguments>
@@ -80,22 +83,26 @@ if(x &gt; object5.x) //Comparamos la posición del boss con la del prota
 { 
     looking_left = true;
     image_xscale = 1;
-    //change = true;
+    interactor.image_xscale = 1;
 }
 if(x &lt; object5.x)
 {
     looking_left = false;
     image_xscale = -1;
-    //change = false;
+    interactor.image_xscale = -1;
 }
 //Comprobamos posición del prota para el encaramiento
-if(x &lt; instance_position(x, y, object5)) looking_left = true;
+if(x &lt; instance_position(x, y, object5)) 
+    looking_left = true;
 //Movemos el boss si no ataca
 if (sprite_index = spr_boss1_move || sprite_index=spr_boss1_jump)
 {
     if(looking_left = true &amp;&amp; !place_meeting(x-1, y, Terreno)) x-=movespeed;
     else if (looking_left = false &amp;&amp; !place_meeting(x+1, y, Terreno)) x+=movespeed;
 }
+//Movemos el interactor con el boss
+interactor.x = x;
+interactor.y = y;
 //Recibir ataque
 if (place_meeting (x,y, obj_cacota)) {
     global.vidaboss -=1;
@@ -117,14 +124,19 @@ if (global.vidaboss = 0)
 if(place_meeting(x, y+1, Terreno))
 {
     //Atacar
-    if ((distance_to_object (object5) &lt; 2)) 
+    if ((distance_to_object (object5) &lt; 20)) 
     {
-        sprite_index = spr_boss1_attack
+        sprite_index = spr_boss1_attack;
+        interactor.attacking = true;
     }
-    else
-    sprite_index = spr_boss1_move
+    else{
+        sprite_index = spr_boss1_move;
+    }
     //Volver a la normalidad
-    if (sprite_index = spr_melee_attack &amp;&amp; image_index = 3) sprite_index = spr_boss1_move;
+    if (sprite_index = spr_melee_attack &amp;&amp; image_index = 3){ 
+        sprite_index = spr_boss1_move;
+        interactor.attacking = false;
+    }
 }
 else  
     sprite_index = spr_boss1_jump;

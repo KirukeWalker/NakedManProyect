@@ -60,6 +60,7 @@
       <sprite>sprites\spr_laser_point</sprite>
       <sprite>sprites\spr_laser_kill</sprite>
       <sprite>sprites\spr_ball</sprite>
+      <sprite>sprites\spr_boss_interactor</sprite>
     </sprites>
     <sprites name="Enemigos Nieve">
       <sprite>sprites\spr_manoplas4</sprite>
@@ -162,6 +163,7 @@
     <background>background\background5</background>
     <background>background\background6</background>
     <background>background\background7</background>
+    <background>background\background8</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -221,6 +223,7 @@
       <object>objects\FinalBoss3_Body</object>
       <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss5</object>
+      <object>objects\obj_enemy</object>
     </objects>
     <objects name="Proyectil">
       <object>objects\obj_cacota</object>
@@ -231,6 +234,7 @@
       <object>objects\obj_marker_laser</object>
       <object>objects\obj_anchor</object>
       <object>objects\obj_chain_link</object>
+      <object>objects\obj_boss_interactor</object>
     </objects>
     <objects name="Utilidades">
       <object>objects\obj_fade</object>
@@ -280,9 +284,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\god_room_2</room>
-    <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
+    <room>rooms\Introduccion1</room>
     <room>rooms\Nivel_1</room>
     <room>rooms\Room_FinalBoss1</room>
     <room>rooms\Nivel_Playa</room>
@@ -295,6 +298,7 @@
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
+    <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
     <room>rooms\Continuara</room>
     <room>rooms\Menu2</room>
