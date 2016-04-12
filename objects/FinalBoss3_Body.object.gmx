@@ -54,8 +54,7 @@ qeue_position = 0;
             <kind>1</kind>
             <string>//Comprobamos paredes
 //Horizontales
-if(place_meeting(x-FinalBoss3.move_speed, y, obj_suelo_bosque) || 
-    place_meeting(x+FinalBoss3.move_speed, y, obj_suelo_bosque))
+if(place_meeting(x + (FinalBoss3.move_speed * h_direction), y, obj_suelo_bosque))
 {
     while(!place_meeting(x + h_direction, y, obj_suelo_bosque))
         x += h_direction;
@@ -63,8 +62,7 @@ if(place_meeting(x-FinalBoss3.move_speed, y, obj_suelo_bosque) ||
     //image_xscale *= -1;
 }
 //Verticales
-if(place_meeting(x, y-FinalBoss3.move_speed, obj_suelo_bosque) || 
-    place_meeting(x, y+FinalBoss3.move_speed, obj_suelo_bosque))
+if(place_meeting(x, y + (FinalBoss3.move_speed * v_direction), obj_suelo_bosque))
 {
     while(!place_meeting(x, y + v_direction, obj_suelo_bosque))
         y += v_direction;
