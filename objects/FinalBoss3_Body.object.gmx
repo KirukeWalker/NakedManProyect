@@ -57,7 +57,7 @@ qeue_position = 0;
 if(place_meeting(x-FinalBoss3.move_speed, y, obj_suelo_bosque) || 
     place_meeting(x+FinalBoss3.move_speed, y, obj_suelo_bosque))
 {
-    while(place_free(x+h_direction,y))
+    while(!place_meeting(x + h_direction, y, obj_suelo_bosque))
         x += h_direction;
     h_direction *= -1;
     //image_xscale *= -1;
@@ -66,7 +66,7 @@ if(place_meeting(x-FinalBoss3.move_speed, y, obj_suelo_bosque) ||
 if(place_meeting(x, y-FinalBoss3.move_speed, obj_suelo_bosque) || 
     place_meeting(x, y+FinalBoss3.move_speed, obj_suelo_bosque))
 {
-    while(place_free(x,y+v_direction))
+    while(!place_meeting(x, y + v_direction, obj_suelo_bosque))
         y += v_direction;
     v_direction *= -1;
     //image_yscale *= -1;
@@ -82,7 +82,8 @@ if (place_meeting (x,y, obj_cacota)) {
     instance_deactivate_object(obj_cacota);
 }
 //Chequeo para ver si se destruye
-if(global.vidaboss &lt;= qeue_position) instance_destroy();
+if(global.vidaboss &lt;= qeue_position) 
+    instance_destroy();
 </string>
           </argument>
         </arguments>

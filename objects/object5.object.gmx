@@ -193,8 +193,8 @@ else //Y trabaje normalmente en los demás
         if(place_meeting(x, y, Goomba) || 
             place_meeting(x, y, Volador) || 
             place_meeting(x, y, obj_vodka) ||
-            place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead == false)|| 
-            place_meeting(x, y, serpiente_to_flama) &amp;&amp; (serpiente_to_flama.status_dead = 0) || 
+            place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead == 0)|| 
+            place_meeting(x, y, serpiente_to_flama) &amp;&amp; (serpiente_to_flama.status_dead == 0) || 
             place_meeting(x,y, obj_sneksot) || 
             place_meeting(x, y, obj_boss_interactor) &amp;&amp; (obj_boss_interactor.attacking == true) ||
             place_meeting(x, y, FinalBoss1) ||

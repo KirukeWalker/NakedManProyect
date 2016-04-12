@@ -39,8 +39,8 @@ if (pussy_mode == true) draw_text(view_xview+350,view_yview+20,"Pussy Mode");
 //draw_text(view_xview+80,view_yview+80,global.muertes_registro);
 
 //Control de posición de boss
-//draw_text(view_xview+80,view_yview+50,obj_head.hands_off);
-//draw_text(view_xview+80,view_yview+80,FinalBoss2.y);
+//draw_text(view_xview+80,view_yview+50,FinalBoss3.x);
+//draw_text(view_xview+80,view_yview+80,FinalBoss3.y);
 </string>
           </argument>
         </arguments>

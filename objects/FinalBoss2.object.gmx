@@ -181,6 +181,12 @@ if(status = 4){
     image_angle = 0;
     if(place_meeting(x,y,obj_arena)){
         check_mark = 1;
+        //Primero horizontal
+        while(!place_free(x-1,y))
+            x++;
+        while(!place_free(x+1,y))
+            x--;
+        //Luego vertical
         while(!place_free(x,y-1))
             y++;
         while(!place_free(x,y+1))

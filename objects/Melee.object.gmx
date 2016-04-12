@@ -148,7 +148,9 @@ if (place_meeting(x, y, obj_cacota))
     instance_deactivate_object(obj_cacota);
 }
 //Morir del todo
-if(image_index = 58 &amp;&amp; status_dead = 1) instance_destroy();
+sprite_length = sprite_get_number(muerte);
+if(image_index = sprite_length-1 &amp;&amp; status_dead = 1) 
+    instance_destroy();
 //Atacar
 if ((distance_to_object (object5)&lt; 30 &amp;&amp; object5.status_dead = 0) 
     &amp;&amp; status_dead = 0) 
