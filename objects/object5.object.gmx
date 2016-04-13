@@ -193,7 +193,7 @@ else //Y trabaje normalmente en los demás
         if(place_meeting(x, y, Goomba) || 
             place_meeting(x, y, Volador) || 
             place_meeting(x, y, obj_vodka) ||
-            place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead == 0)|| 
+            //place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead == 0)|| 
             place_meeting(x, y, serpiente_to_flama) &amp;&amp; (serpiente_to_flama.status_dead == 0) || 
             place_meeting(x,y, obj_sneksot) || 
             place_meeting(x, y, obj_boss_interactor) &amp;&amp; (obj_boss_interactor.attacking == true) ||
@@ -426,12 +426,14 @@ if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_
           <argument>
             <kind>1</kind>
             <string>//Después de ajustarlo meteremos aqui las condiciones que no maten
-global.vida -= 1;
-status_knockback = true;
-vsp = -jumpspeed;
-//if(place_meeting(x+1, y, Goomba)) move = -2
-//if(place_meeting(x-1, y, Goomba)) move = 2
-move = -image_xscale;
+if(other.status_dead == 0){
+    global.vida -= 1;
+    status_knockback = true;
+    vsp = -jumpspeed;
+    //if(place_meeting(x+1, y, Goomba)) move = -2
+    //if(place_meeting(x-1, y, Goomba)) move = 2
+    move = -image_xscale;
+}
 </string>
           </argument>
         </arguments>
