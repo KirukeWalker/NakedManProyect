@@ -177,6 +177,7 @@ if(status = 3){
 }
 if(status = 4){
     //Lo desatascamos si se atasca
+    //Tirar de posiciones previas
     direction = 0;
     image_angle = 0;
     if(place_meeting(x,y,obj_arena)){
