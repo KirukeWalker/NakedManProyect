@@ -72,15 +72,6 @@ if(place_meeting(x,y,obj_arena)){
     speed = 0;
     FinalBoss2.status = 3;
 }
-if(place_meeting(x,y,FinalBoss2) &amp;&amp; FinalBoss2.status = 3){
-    FinalBoss2.speed = 0;
-    FinalBoss2.direction = 0;  //Lo volvemos a poner derecho
-    FinalBoss2.image_angle = 0;
-    FinalBoss2.sprite_index = spr_boss2_move;
-    FinalBoss2.status = 4;
-    FinalBoss2.alarm[0] = 90;
-    instance_destroy();
-}
 </string>
           </argument>
         </arguments>
@@ -104,13 +95,13 @@ if(place_meeting(x,y,FinalBoss2) &amp;&amp; FinalBoss2.status = 3){
           <argument>
             <kind>1</kind>
             <string>//Cuando la toque el jefe
-if(other.status = 3){
+if(other.status == 3){
     other.speed = 0;
-    other.direction = 0;  //Lo volvemos a poner derecho
-    other.image_angle = 0;
     other.sprite_index = spr_boss2_move;
     other.status = 4;
     other.alarm[0] = 90;
+    with(chain_link)
+        instance_destroy();
     instance_destroy();
 }
 </string>
