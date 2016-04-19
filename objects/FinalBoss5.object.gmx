@@ -94,6 +94,7 @@ if(teleport = true)
     //Reseteamos la alarma
     alarm[0] = stay_time;
     teleport = false;
+    //Ataques
     if(distance_to_object(object5) &lt;= 60)
     {
         //Aqui activaremos la animación de melée
@@ -129,7 +130,8 @@ if(teleport = true)
         else
         {
             sprite_index = spr_boss5_lcast;
-            disparo = instance_create(x, y, obj_marker_laser);
+            //Intentamos que lo dispare desde el ojo
+            disparo = instance_create(x+(-5*image_xscale), y-20, obj_marker_laser);
             //attack_type = 0;
         }
     }
