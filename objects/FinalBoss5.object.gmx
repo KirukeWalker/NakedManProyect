@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -35,6 +35,7 @@ teleporting = false;
 stay_time = 60;
 alarm[0] = stay_time;
 attack_type = 0;
+attack = false;
 /*Status
     0 - Resapareciendo
     1 - Apareciendo
@@ -88,7 +89,7 @@ randomize();
           <argument>
             <kind>1</kind>
             <string>//Estado normal
-if(teleporting == false)
+if(attack == true)
 {
     //Ataques
     if(distance_to_object(object5) &lt;= 60)
@@ -131,6 +132,7 @@ if(teleporting == false)
             //attack_type = 0;
         }
     }
+    attack = false;
 }
 //Teleportándose
 if(teleporting == true){
@@ -159,6 +161,7 @@ if(teleporting == true){
             alarm[0] = stay_time;
             teleporting = false;
             teleport_status = 0;
+            attack = true;
         }
     }
 }

@@ -184,9 +184,7 @@ if(vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp = max(vsp, -jumpspeed/4)
 
 //Desplazamos al personaje (controlando colisiones)
 //Colision con enemigos
-if(status_knockback == true &amp;&amp; pussy_mode == true){} //Que no haga nada en este caso
-else //Y trabaje normalmente en los demás
-{
+if(status_knockback == false){
     if(status_dead = 0)
     {
         //Knockback
@@ -426,13 +424,16 @@ if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_
           <argument>
             <kind>1</kind>
             <string>//Después de ajustarlo meteremos aqui las condiciones que no maten
-if(other.status_dead == 0){
-    global.vida -= 1;
-    status_knockback = true;
-    vsp = -jumpspeed;
-    //if(place_meeting(x+1, y, Goomba)) move = -2
-    //if(place_meeting(x-1, y, Goomba)) move = 2
-    move = -image_xscale;
+if(status_knockback == false){
+    if(other.status_dead == 0/* ||
+        other.teleporting == false*/){
+        global.vida -= 1;
+        status_knockback = true;
+        vsp = -jumpspeed;
+        //if(place_meeting(x+1, y, Goomba)) move = -2
+        //if(place_meeting(x-1, y, Goomba)) move = 2
+        move = -image_xscale;
+    }
 }
 </string>
           </argument>
