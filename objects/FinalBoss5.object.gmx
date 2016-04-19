@@ -31,10 +31,17 @@ min_pos_x = 50;
 max_pos_x = 550;
 min_pos_y = 50;
 max_pos_y = 400;
-teleport = false;
+teleporting = false;
 stay_time = 60;
 alarm[0] = stay_time;
 attack_type = 0;
+/*Status
+    0 - Resapareciendo
+    1 - Apareciendo
+*/
+teleport_status = 0;
+//
+randomize();
 </string>
           </argument>
         </arguments>
@@ -57,7 +64,7 @@ attack_type = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>teleport = true;
+            <string>teleporting = true;
 </string>
           </argument>
         </arguments>
@@ -80,20 +87,9 @@ attack_type = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Teletransporte
-if(teleport = true)
+            <string>//Estado normal
+if(teleporting == false)
 {
-    //Comprobamos que no aparezca encima del prota
-    do{
-        x = random_range(min_pos_x, max_pos_x);
-        y = random_range(min_pos_y, max_pos_y);
-    }until(distance_to_object(object5) &gt;= 50);
-    //Lo encaramos hacia él
-    if(x &lt; object5.x)   image_xscale = -1;
-    else                image_xscale = +1;
-    //Reseteamos la alarma
-    alarm[0] = stay_time;
-    teleport = false;
     //Ataques
     if(distance_to_object(object5) &lt;= 60)
     {
@@ -133,6 +129,36 @@ if(teleport = true)
             //Intentamos que lo dispare desde el ojo
             disparo = instance_create(x+(-5*image_xscale), y-20, obj_marker_laser);
             //attack_type = 0;
+        }
+    }
+}
+//Teleportándose
+if(teleporting == true){
+    //Empieza a desaparecer
+    if(teleport_status == 0){
+        image_xscale -= 0.2;
+        image_yscale *= 2;
+        if(image_xscale &lt;= 0){
+            //Comprobamos que no aparezca encima del prota
+            do{
+                x = random_range(min_pos_x, max_pos_x);
+                y = random_range(min_pos_y, max_pos_y);
+            }until(distance_to_object(object5) &gt;= 50);
+            //Lo encaramos hacia él
+            //if(x &lt; object5.x)   image_xscale = -1;
+            //else                image_xscale = +1;
+            teleport_status = 1;
+        }
+    }
+    else{
+        //Empieza a aparecer
+        image_xscale += 0.2;
+        image_yscale /= 2;
+        if(image_xscale &gt;= 1){
+            //Reseteamos la alarma
+            alarm[0] = stay_time;
+            teleporting = false;
+            teleport_status = 0;
         }
     }
 }
