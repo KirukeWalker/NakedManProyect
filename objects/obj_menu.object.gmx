@@ -26,12 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//Variables para el menú
-if(checkpoint = false) menu[0,0] = "Start";
-if(checkpoint = true)  menu[0,0] = "Continue";
-menu[0,1] = "Pussy Mode";
-menu[0,2] = "Prizes"
-menu[0,3] = "Meet the crew";
-menu[0,4] = "Fuck off";
+menu[0,0] = "Start";
+menu[0,1] = "Prizes"
+menu[0,2] = "Meet the crew";
+menu[0,3] = "Fuck off";
 //Variables para posiciones
 space = 50;
 mpos = 0; 
@@ -74,8 +72,8 @@ if (gamepad_button_check_pressed(0,gp_padu)) {
 if(move != 0)
 {
     mpos += move;
-    if(mpos &lt; 0) mpos = 4;
-    if(mpos &gt; 4) mpos = 0;
+    if(mpos &lt; 0) mpos = 3;
+    if(mpos &gt; 3) mpos = 0;
 }
 if(move2 != 0)
 {
@@ -125,12 +123,12 @@ draw_text (x, view_yview+120, "THE CLOTHES")
 //draw_set_halign(fa_left);
 draw_set_font(fnt_creditos_peque);
 var m;
-for (m = 0; m &lt; 5; m += 1)
+for (m = 0; m &lt; 4; m += 1)
 {
-    draw_text(x, y + (m * space) - 20, string(menu[m]))
+    draw_text(x, y + (m * space), string(menu[m]))
 }
 
-draw_sprite(sprite_index, 0, x - 150, y -20  + mpos * space);
+draw_sprite(sprite_index, 0, x - 150, y + mpos * space);
 
 
 

@@ -1,3 +1,9 @@
+//Checkeo de nivel
+ini_open("SystemNM.txt");
+if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Done
+    global.cabezallamas = 1;
+    }
+ini_close();
 //Variables
 globalvar pussy_mode;
 //globalvar muertes;
@@ -7,26 +13,16 @@ global.muertes = 0;
 switch(mpos){
     case 0: 
     {
-        pussy_mode = false;
-        if(checkpoint = true)   room_goto(Nivel_Nieve);
-        else
-        {                   
-            room_goto_next();
-        }
+        if(global.cabezallamas = 0)   room_goto(Introduccion1);
+        else room_goto(Room_FinalBoss5);
         break;
     }
     
-    case 1: 
-    {
-        pussy_mode = true;
-        room_goto_next();
-        break;
-    }
-    case 2: room_goto (Menu2); break;
+    case 1: room_goto (Menu2); break;
    
-    case 3: room_goto (Credits); break;
+    case 2: room_goto (Credits); break;
     
-    case 4: game_end(); break;
+    case 3: game_end(); break;
         
     default: break;
 }
