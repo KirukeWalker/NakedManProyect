@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>size = 350;
+            <string>size = 130;
 aumentar = true;
+alarm[0]=2;
 
 </string>
           </argument>
@@ -56,6 +57,7 @@ aumentar = true;
 if (aumentar = false) {
     size -= 10;
     }
+alarm[0]=2
 </string>
           </argument>
         </arguments>
@@ -80,9 +82,10 @@ if (aumentar = false) {
             <kind>1</kind>
             <string>draw_set_blend_mode(bm_subtract);
 surface_set_target(light);
-draw_ellipse_colour(x-size/2-view_xview+20, y-size/2-view_yview,
-                    x+size/2-view_xview, y+size/2-view_yview,
+draw_ellipse_colour(x-160/2-view_xview+20, y-size/2-view_yview,
+                    x+160/2-view_xview, y+130/2-view_yview,
                     c_green,c_black,false);
+                    
 
 surface_reset_target();
 draw_set_blend_mode(bm_normal);
@@ -108,13 +111,13 @@ draw_set_blend_mode(bm_normal);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if size = 350 {
+            <string> if size = 130 {
     aumentar = true
     }
-if size = 500 {
+if size = 250 {
     aumentar = false
     }
-alarm[0] = 1;
+
 </string>
           </argument>
         </arguments>
