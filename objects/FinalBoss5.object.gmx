@@ -166,7 +166,7 @@ if(teleporting == true){
     }
 }
 //Recibir ataque
-if (place_meeting (x,y, obj_cacota)) {
+if (place_meeting (x,y, obj_cacota) &amp;&amp; teleporting == false) {
     global.vidaboss -=1;
     instance_deactivate_object(obj_cacota);
 }
