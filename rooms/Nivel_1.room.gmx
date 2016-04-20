@@ -129,7 +129,6 @@
     <instance objName="Terreno" x="2432" y="288" name="inst_3E526914" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="2464" y="288" name="inst_2934954E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="2496" y="288" name="inst_CA1861A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="2144" y="288" name="inst_DF0EA82D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="0" y="320" name="inst_80A785A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="32" y="352" name="inst_DD4615D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="2528" y="320" name="inst_CA6586B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -170,8 +169,6 @@
     <instance objName="Terreno" x="4416" y="416" name="inst_CAF6CEBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="4448" y="416" name="inst_D67FDEB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="4480" y="416" name="inst_5D9167BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="4288" y="64" name="inst_544CDD6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="4320" y="64" name="inst_170F747A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="4352" y="64" name="inst_2F63F428" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="4384" y="64" name="inst_C766A52D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="4608" y="448" name="inst_B804BA1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -733,7 +730,6 @@
     <instance objName="FondoCueva" x="4608" y="128" name="inst_0CF1723A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4608" y="160" name="inst_FE10C4A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4608" y="192" name="inst_47248D8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4608" y="224" name="inst_E405429F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4608" y="256" name="inst_D90F6222" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4608" y="288" name="inst_C10D77A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4608" y="320" name="inst_5D2A61A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -755,7 +751,6 @@
     <instance objName="FondoCueva" x="4576" y="32" name="inst_3E4FD7FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4544" y="32" name="inst_33E39EF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4544" y="64" name="inst_123B785B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4544" y="96" name="inst_08064AEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4544" y="128" name="inst_5B70218C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4544" y="160" name="inst_42F8306C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4544" y="192" name="inst_2FC3A89A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -767,11 +762,9 @@
     <instance objName="FondoCueva" x="4544" y="384" name="inst_622294FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="384" name="inst_6CD47AB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="352" name="inst_8979BA2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4512" y="320" name="inst_19E75BED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="288" name="inst_1806F71B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="256" name="inst_E34CA439" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="224" name="inst_25D5F8E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4512" y="192" name="inst_D9B90F1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="160" name="inst_1CCC915C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="128" name="inst_8670FF9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4512" y="96" name="inst_91030026" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -790,12 +783,10 @@
     <instance objName="FondoCueva" x="4480" y="384" name="inst_2C33EA39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="384" name="inst_1ACEB270" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="352" name="inst_C090FE67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4448" y="320" name="inst_866F86D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="256" name="inst_B91BCCDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="224" name="inst_5351768D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="192" name="inst_2F94E5BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="160" name="inst_4968C452" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4448" y="128" name="inst_035E7E6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="96" name="inst_0F46E971" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4448" y="64" name="inst_FECE551E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4416" y="64" name="inst_21DCBF21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -803,36 +794,12 @@
     <instance objName="FondoCueva" x="4416" y="128" name="inst_8E7CE67B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4416" y="160" name="inst_0776D155" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4416" y="192" name="inst_F275BCEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4416" y="224" name="inst_03568777" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4416" y="256" name="inst_55F2C07B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4416" y="288" name="inst_86CBDD67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4416" y="320" name="inst_F5441E48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4416" y="352" name="inst_1E8BAEFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4416" y="384" name="inst_7C6D3A10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4384" y="352" name="inst_173EE1AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4384" y="320" name="inst_CE1E548B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4384" y="288" name="inst_4DC56934" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4384" y="256" name="inst_454755FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4384" y="224" name="inst_4624EB4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4384" y="192" name="inst_0B5AAB46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4384" y="160" name="inst_9A2E574C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4384" y="128" name="inst_B989A661" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4384" y="96" name="inst_FE545B5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4352" y="96" name="inst_F5D5AC29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4352" y="128" name="inst_8D494406" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4352" y="160" name="inst_B31F4148" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4352" y="192" name="inst_667CD770" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4352" y="224" name="inst_0F065904" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4352" y="256" name="inst_8E14539A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4320" y="224" name="inst_F55AE41C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4320" y="192" name="inst_0276D120" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4320" y="160" name="inst_F04DAD74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4320" y="128" name="inst_35E5E7F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FondoCueva" x="4320" y="96" name="inst_53A0D25A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4288" y="96" name="inst_3071AD6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4288" y="128" name="inst_4E38011B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4288" y="160" name="inst_E19D6FF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4288" y="192" name="inst_06AAE8BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="1504" y="288" name="inst_B81E71F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="3008" y="0" name="inst_D42E40FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="2976" y="0" name="inst_06768083" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -921,7 +888,6 @@
     <instance objName="FondoCueva" x="4864" y="416" name="inst_D0309C6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object5" x="96" y="352" name="inst_C44D381A" locked="0" code="" scaleX="1" scaleY="0.819999992847443" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade" x="0" y="32" name="inst_3B79C4B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="FondoCueva" x="4448" y="288" name="inst_02E2D62A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_over" x="32" y="64" name="inst_53D5194E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="800" y="352" name="inst_6144F508" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="0" y="64" name="inst_70541889" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1056,7 +1022,6 @@
     <instance objName="obj_terreno_profundo" x="2560" y="64" name="inst_75CA63EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="2560" y="32" name="inst_A3DBCE77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="2080" y="384" name="inst_31743A33" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="2112" y="416" name="inst_53AEBB1A" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_volcan" x="2080" y="384" name="inst_02B5A686" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_volcan" x="2048" y="352" name="inst_92155BD5" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="2144" y="352" name="inst_4E27C91A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
@@ -1083,6 +1048,97 @@
     <instance objName="Terreno" x="224" y="32" name="inst_FBFAA993" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="224" y="0" name="inst_D4185ADE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="serpiente_to_flama" x="242" y="294" name="inst_BAAB4477" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="2400" y="352" name="inst_1C55172C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="Terreno" x="2400" y="384" name="inst_587A76C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="Terreno" x="2400" y="416" name="inst_C0AF763C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_esquina_volcan" x="2432" y="416" name="inst_D225588B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_esquina_volcan" x="2464" y="448" name="inst_CEB07885" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_esquina_volcan" x="2880" y="384" name="inst_717743D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_esquina_volcan" x="3008" y="352" name="inst_616D68EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4384" y="320" name="inst_BD075CEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="4384" y="352" name="inst_844ED462" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="4320" y="64" name="inst_3E90EC2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4288" y="64" name="inst_65E6CD72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4288" y="32" name="inst_4710B6F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4352" y="0" name="inst_C16867C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4320" y="0" name="inst_B467B645" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4320" y="-32" name="inst_A8CFF689" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4352" y="-32" name="inst_23A869C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4384" y="-32" name="inst_E9B45262" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4416" y="-32" name="inst_832EFEF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4448" y="-32" name="inst_0DD24F03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4480" y="-32" name="inst_980CCAD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4512" y="-32" name="inst_03DC9F12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4544" y="-32" name="inst_A2928F29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4576" y="-32" name="inst_3B39B9E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4608" y="-32" name="inst_811AC3AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4640" y="-32" name="inst_7F9A2317" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4672" y="-32" name="inst_A38AD2ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4704" y="-32" name="inst_E86AF798" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4736" y="-32" name="inst_D85C149C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4768" y="-32" name="inst_09E3325F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4800" y="-32" name="inst_C2DB01BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4832" y="-32" name="inst_8C27B08C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4864" y="-32" name="inst_B824E504" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4896" y="-32" name="inst_78F4C405" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4928" y="-32" name="inst_4BC6BBAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4960" y="-32" name="inst_ECFBA023" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4992" y="-32" name="inst_7A458C02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4320" y="-64" name="inst_05FF9343" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4352" y="-64" name="inst_FEFBEC70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4384" y="-64" name="inst_7302A365" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4416" y="-64" name="inst_EF92A466" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4448" y="-64" name="inst_34E94FB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4480" y="-64" name="inst_FEE2C805" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4512" y="-64" name="inst_A79EAF61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4544" y="-64" name="inst_9B428C64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4576" y="-64" name="inst_59E905A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4608" y="-64" name="inst_B12260EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4640" y="-64" name="inst_CE2890CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4672" y="-64" name="inst_1D6D94F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4320" y="-96" name="inst_096E9EFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4352" y="-96" name="inst_3C130837" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4384" y="-96" name="inst_61BC9A6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4416" y="-96" name="inst_1574CA71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4448" y="-96" name="inst_46F5F08A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4480" y="-96" name="inst_4C2D92B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4512" y="-96" name="inst_3067291A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4544" y="-96" name="inst_434C778B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4576" y="-96" name="inst_50442870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4608" y="-96" name="inst_13619E47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4320" y="-128" name="inst_16C18CB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4352" y="-128" name="inst_1C87DF99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4384" y="-128" name="inst_E4FF0DF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4320" y="-160" name="inst_8CEDCCCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="4352" y="-160" name="inst_E013A0AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="3808" y="64" name="inst_62472D56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="3808" y="32" name="inst_0C803380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="3808" y="0" name="inst_2D5FE611" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="3840" y="32" name="inst_7C70F0C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="3840" y="0" name="inst_214CE0F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="3872" y="0" name="inst_31D1CD32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="3648" y="32" name="inst_D1CC7D8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="2592" y="384" name="inst_EAE0E7E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="2144" y="320" name="inst_1B891AF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="2144" y="256" name="inst_13B2D724" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="2144" y="288" name="inst_F8695949" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="obj_esquina_volcan" x="2144" y="352" name="inst_81A953F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="obj_esquina_volcan" x="2304" y="192" name="inst_6F838E30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_esquina_volcan" x="2208" y="224" name="inst_F1199EEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_esquina_volcan" x="1856" y="224" name="inst_F4F9D279" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1856" y="320" name="inst_BCAAB7FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1856" y="352" name="inst_BE8DBE3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1856" y="384" name="inst_1461204E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1856" y="416" name="inst_3BA7A9A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1792" y="128" name="inst_5DC75278" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1216" y="416" name="inst_EFC2959A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="Terreno" x="1376" y="352" name="inst_4FB97F25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1376" y="384" name="inst_ABBEC22B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1376" y="320" name="inst_F592CCF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="Terreno" x="1216" y="352" name="inst_6011B863" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="Terreno" x="1216" y="384" name="inst_DAF5FDC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_esquina_volcan" x="864" y="224" name="inst_D9ABE416" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_esquina_volcan" x="736" y="256" name="inst_CA988341" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
