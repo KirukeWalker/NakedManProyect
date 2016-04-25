@@ -51,7 +51,9 @@ objective = FinalBoss5;
           <argument>
             <kind>1</kind>
             <string>fly = true;
-direction = point_direction(x, y, objective.x, objective.y);
+//Control para cuando muere el boss
+if(object_exists(objective))
+    direction = point_direction(x, y, objective.x, objective.y);
 </string>
           </argument>
         </arguments>

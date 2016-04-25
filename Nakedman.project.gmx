@@ -101,7 +101,6 @@
       <sprite>sprites\spr_boss5_barrido</sprite>
       <sprite>sprites\spr_boss5_bcast</sprite>
       <sprite>sprites\spr_boss5_lprep</sprite>
-      <sprite>sprites\spr_boss5_prebarrido</sprite>
     </sprites>
     <sprites name="Enemigos Mar">
       <sprite>sprites\spr_goomba2</sprite>
@@ -200,7 +199,8 @@
       <object>objects\obj_tronco_arbol</object>
       <object>objects\obj_pinchos</object>
       <object>objects\obj_hielo</object>
-      <object>objects\obj_platform</object>
+      <object>objects\obj_mobile_platformH</object>
+      <object>objects\obj_mobile_platformV</object>
       <object>objects\obj_suelo_mar_pisable</object>
       <object>objects\obj_suelo_marnopisable</object>
       <object>objects\obj_esquina_mar</object>
@@ -214,6 +214,7 @@
       <object>objects\obj_pinchos_ciudad_izquierda</object>
       <object>objects\obj_rayos</object>
       <object>objects\obj_jetstream_sam</object>
+      <object>objects\obj_falling_clouds</object>
     </objects>
     <objects name="Enemigos">
       <object>objects\serpiente_to_flama</object>
@@ -287,7 +288,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss5</room>
+    <room>rooms\god_room_2</room>
+    <room>rooms\Final_Level</room>
     <room>rooms\Menu</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Nivel_1</room>
@@ -299,9 +301,8 @@
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4</room>
-    <room>rooms\Final_Level</room>
+    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
-    <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
     <room>rooms\Continuara</room>
     <room>rooms\Menu2</room>

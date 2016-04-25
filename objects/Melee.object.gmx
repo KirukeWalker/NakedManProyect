@@ -94,13 +94,13 @@ image_xscale = direction_facing;
 if(vsp &lt; 10) vsp += grav;
 if(place_meeting(x,y+vsp, Terreno) ||
     place_meeting(x,y+vsp, obj_arena) ||
-    place_meeting(x,y+vsp, obj_suelo_bosque) ||
+    place_meeting(x,y+vsp, obj_suelo_hojas) ||
     place_meeting(x,y+vsp, Terreno) //Aquí irá el de hielo
     )
 {
     while(!place_meeting(x, y+sign(vsp), Terreno) &amp;&amp;
             !place_meeting(x, y+sign(vsp), obj_arena) &amp;&amp;
-            !place_meeting(x, y+sign(vsp), obj_suelo_bosque) &amp;&amp;
+            !place_meeting(x, y+sign(vsp), obj_suelo_hojas) &amp;&amp;
             !place_meeting(x, y+sign(vsp), Terreno))    //Aquí irá el de hielo
     {
         y+=sign(vsp);
@@ -113,21 +113,21 @@ y += vsp;
 //Con las paredes
 if(place_meeting(x+(hsp*direction_facing), y, Terreno) ||
     place_meeting(x+(hsp*direction_facing), y, obj_arena) ||
-    place_meeting(x+(hsp*direction_facing), y, obj_suelo_bosque))
+    place_meeting(x+(hsp*direction_facing), y, obj_suelo_hojas))
 { 
     direction_facing *= -1;
 }
 //Con los vacios
 if(!place_meeting(x+25, y+1, Terreno) &amp;&amp;
     !place_meeting(x+25, y+1, obj_arena) &amp;&amp;
-    !place_meeting(x+25, y+1, obj_suelo_bosque) &amp;&amp;
+    !place_meeting(x+25, y+1, obj_suelo_hojas) &amp;&amp;
     status_jumping = false)
 {
     direction_facing = -1;
 }
 if(!place_meeting(x-25, y+1, Terreno) &amp;&amp;
     !place_meeting(x-25, y+1, obj_arena) &amp;&amp;
-    !place_meeting(x-25, y+1, obj_suelo_bosque) &amp;&amp;
+    !place_meeting(x-25, y+1, obj_suelo_hojas) &amp;&amp;
     status_jumping = false)
 {
     direction_facing = 1;
@@ -163,7 +163,9 @@ if (sprite_index = disparando &amp;&amp; image_index = 20)
 //Detectar al prota para saltar (a partir del cuarto nivel)
 if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
     if(distance_to_object(object5) &lt;= 150 &amp;&amp;
-        place_meeting(x, y+1, Terreno) &amp;&amp; status_dead = 0 &amp;&amp; object5.status_dead = 0) 
+        (place_meeting(x, y+1, Terreno) || place_meeting(x,y+1,obj_suelo_hojas)) &amp;&amp; 
+        status_dead = 0 &amp;&amp; 
+        object5.status_dead = 0) 
     {
         if(x &lt; object5.x) direction_facing = +1;
         else direction_facing = -1;

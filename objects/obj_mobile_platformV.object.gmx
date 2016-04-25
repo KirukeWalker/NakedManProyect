@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_suelo_hojas</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>dir = 1;
 movespeed = 3;
-hsp = 0;
+vsp = 0;
 
 </string>
           </argument>
@@ -51,29 +51,29 @@ hsp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hsp = dir * movespeed;
+            <string>vsp = dir * movespeed;
 
 //Horizontal collision (Terreno sólido)
-if(place_meeting(x+hsp,y,Terreno) || 
-    place_meeting(x+hsp,y,obj_arena) ||
-    place_meeting(x+hsp,y,obj_suelo_bosque)
+if(place_meeting(x,y+vsp,Terreno) || 
+    place_meeting(x,y+vsp,obj_arena) ||
+    place_meeting(x,y+vsp,obj_suelo_bosque)
     )
 {
     
-    while(!place_meeting(x+sign(hsp), y, Terreno) &amp;&amp; 
-        !place_meeting(x+sign(hsp), y,obj_arena) &amp;&amp;
-        !place_meeting(x+sign(hsp), y,obj_suelo_bosque)
+    while(!place_meeting(x, y+sign(vsp), Terreno) &amp;&amp; 
+        !place_meeting(x, y+sign(vsp), obj_arena) &amp;&amp;
+        !place_meeting(x, y+sign(vsp), obj_suelo_bosque)
         )
     {
-        x+=sign(hsp);
+        y+=sign(vsp);
     }
-    hsp=0;
+    vsp=0;
     dir *= -1;
 }
-x += hsp;
+y += vsp;
 
 //Mover al protra (encima)
-if (place_meeting(x,y-1,object5)) object5.x += hsp;
+if (place_meeting(x,y-1,object5)) object5.y += vsp;
 </string>
           </argument>
         </arguments>

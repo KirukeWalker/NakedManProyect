@@ -171,7 +171,8 @@ if((
     place_meeting(x,y+1,obj_suelo_hojas) ||
     place_meeting(x,y,Agua)      ||       //Comprobamos que este en el agua
     place_meeting(x,y+1,obj_suelo_bosque) ||
-    place_meeting(x,y+1,obj_platform) ||
+    place_meeting(x,y+1,obj_mobile_platformH) ||
+    place_meeting(x,y+1,obj_mobile_platformV) ||
     place_meeting(x,y+1,obj_nubes)
     ) 
     &amp;&amp; key_jump &gt; 0                         //Y que el boton de salto esté pulsado
@@ -204,8 +205,7 @@ if(status_knockback == false){
             place_meeting(x, y, FinalBoss5) ||
             place_meeting(x, y, obj_lightball) ||
             place_meeting(x, y, obj_mega_laser) || 
-            place_meeting(x ,y, obj_hand) ||
-            place_meeting(x, y, obj_phase2_god) )
+            place_meeting(x ,y, obj_hand)   )
         {
             global.vida -= 1;
             status_knockback = true;
@@ -280,8 +280,8 @@ vsp &gt; 0 &amp;&amp; key_down = 0)
     status_knockback = false;
 }
 
-//Comprobación aparte para suelo atravesable
-if(place_meeting(x,y+vsp,obj_platform) &amp;&amp; 
+//Comprobación aparte para plataformas moviles
+/*if(place_meeting(x,y+vsp,obj_mobile_platformH) &amp;&amp; 
 !place_meeting(x,y,obj_platform) &amp;&amp;
 vsp &gt; 0 &amp;&amp; key_down = 0)
 { 
@@ -290,7 +290,7 @@ vsp &gt; 0 &amp;&amp; key_down = 0)
         y+=sign(vsp);
     }
     vsp = 0;
-}
+}*/
 //Hacemos que descienda con lo sacado de las colisiones del suelo/techo
 y += vsp;
 
@@ -333,6 +333,7 @@ if (position_meeting (x,y,obj_acido)) global.vida = 0;
 if (position_meeting(x,y,obj_pincho)) global.vida = 0;
 if (x &lt; 10) global.vida = 0;
 if (y &gt; room_height) global.vida = 0;
+if (global.vida &lt; 0) global.vida = 0;
 
 if(global.vida &lt;= 0)
 {
@@ -406,40 +407,6 @@ if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemy">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Después de ajustarlo meteremos aqui las condiciones que no maten
-if(status_knockback == false){
-    if(other.status_dead == 0/* ||
-        other.teleporting == false*/){
-        global.vida -= 1;
-        status_knockback = true;
-        vsp = -jumpspeed;
-        //if(place_meeting(x+1, y, Goomba)) move = -2
-        //if(place_meeting(x-1, y, Goomba)) move = 2
-        move = -image_xscale;
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="FinalBoss5">
       <action>
         <libid>1</libid>
@@ -458,8 +425,10 @@ if(status_knockback == false){
           <argument>
             <kind>1</kind>
             <string>//If the boss is not teleporting
-if(other.teleporting == false){
-    script_execute(scr_knockback);
+if(status_knockback == false &amp;&amp; status_dead == false){
+    if(other.teleporting == false){
+        script_execute(scr_knockback);
+    }
 }
 </string>
           </argument>
@@ -484,8 +453,10 @@ if(other.teleporting == false){
           <argument>
             <kind>1</kind>
             <string>//
-if(other.status_dead == 0){
-    script_execute(scr_knockback);
+if(status_knockback == false &amp;&amp; status_dead == false){
+    if(other.status_dead == 0){
+        script_execute(scr_knockback);
+    }
 }
 </string>
           </argument>

@@ -126,9 +126,9 @@ if(attack == true)
         }
         else
         {
-            sprite_index = spr_boss5_lcast;
+            sprite_index = spr_boss5_lprep;
             //Intentamos que lo dispare desde el ojo
-            disparo = instance_create(x+(-5*image_xscale), y-20, obj_marker_laser);
+            disparo = instance_create(x+(-10*image_xscale), y-25, obj_marker_laser);
             //attack_type = 0;
         }
     }

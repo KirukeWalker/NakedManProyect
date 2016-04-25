@@ -102,12 +102,12 @@ sprite_index = skin;
 if(vsp &lt; 10) vsp += 7;
 if(place_meeting(x,y+vsp, Terreno) ||
     place_meeting(x,y+vsp, obj_arena) ||
-    place_meeting(x,y+vsp, obj_suelo_bosque)
+    place_meeting(x,y+vsp, obj_suelo_hojas)
     )
 {
     while(!place_meeting(x, y+sign(vsp), Terreno) &amp;&amp;
             !place_meeting(x, y+sign(vsp), obj_arena) &amp;&amp;
-            !place_meeting(x, y+sign(vsp), obj_suelo_bosque))
+            !place_meeting(x, y+sign(vsp), obj_suelo_hojas))
     {
         y+=sign(vsp);
     }
@@ -118,20 +118,20 @@ y += vsp;
 //Con las paredes
 if(place_meeting(x+msp, y, Terreno) || 
     place_meeting(x+msp, y, obj_arena) ||
-    place_meeting(x+msp, y, obj_suelo_bosque)) direction_walking *= -1;
+    place_meeting(x+msp, y, obj_suelo_hojas)) direction_walking *= -1;
 //Con los vacios
 if(!place_meeting(x+25, y+1, Terreno) &amp;&amp; 
     !place_meeting(x+25, y+1, obj_arena) &amp;&amp;
-    !place_meeting(x+25, y+1, obj_suelo_bosque))direction_walking = -1;
+    !place_meeting(x+25, y+1, obj_suelo_hojas))direction_walking = -1;
 if(!place_meeting(x-25, y+1, Terreno) &amp;&amp; 
     !place_meeting(x-25, y+1, obj_arena) &amp;&amp;
-    !place_meeting(x-25, y+1, obj_suelo_bosque))direction_walking = +1;
+    !place_meeting(x-25, y+1, obj_suelo_hojas))direction_walking = +1;
     
     //Controlamos cambio de sentido/giro
 //Con las paredes
 if(place_meeting(x+(hsp*direction_facing), y, Terreno) ||
     place_meeting(x+(hsp*direction_facing), y, obj_arena) ||
-    place_meeting(x+(hsp*direction_facing), y, obj_suelo_bosque))
+    place_meeting(x+(hsp*direction_facing), y, obj_suelo_hojas))
 { 
     direction_facing *= -1;
 }
