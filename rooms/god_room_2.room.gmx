@@ -165,6 +165,37 @@
     <instance objName="obj_falling_clouds" x="384" y="-1152" name="inst_F01B16DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_clouds" x="416" y="-1152" name="inst_DBFCB7FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_phase2_god" x="416" y="160" name="inst_CDB48505" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="-224" y="-1440" name="inst_2C4C6CAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="-192" y="-1440" name="inst_708F1DAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="-160" y="-1440" name="inst_02DBE5A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="-128" y="-1440" name="inst_F40F7D81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="-96" y="-1440" name="inst_F077D190" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="-64" y="-1440" name="inst_C536DABA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="-32" y="-1440" name="inst_A15E64AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="0" y="-1440" name="inst_CF0A0BAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="32" y="-1440" name="inst_54C0D996" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="64" y="-1440" name="inst_4DB39EFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="96" y="-1440" name="inst_55FF6090" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="128" y="-1440" name="inst_E2E9A730" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="160" y="-1440" name="inst_E867E5F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="192" y="-1440" name="inst_A8518B62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="224" y="-1440" name="inst_E127DCA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="256" y="-1440" name="inst_2AC84110" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="288" y="-1440" name="inst_A6381643" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="320" y="-1440" name="inst_5D79D691" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="352" y="-1440" name="inst_1A6205A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="384" y="-1440" name="inst_A6F5E361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="416" y="-1440" name="inst_07613994" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="448" y="-1440" name="inst_3E7B15BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="480" y="-1440" name="inst_D94C25B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="512" y="-1440" name="inst_97883D35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="544" y="-1440" name="inst_157D0B1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="576" y="-1440" name="inst_F35FBA23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="608" y="-1440" name="inst_8A5FB4F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="640" y="-1440" name="inst_787E523C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="672" y="-1440" name="inst_14DB90D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="704" y="-1440" name="inst_FF2FC8CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_final_clouds" x="736" y="-1440" name="inst_D6765713" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

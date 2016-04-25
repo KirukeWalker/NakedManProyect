@@ -39,6 +39,8 @@ status = 0;
 alarm[0] = 30;
 //Inciamos la variable para invocar
 can_summon = false;
+//
+finished = false;
 </string>
           </argument>
         </arguments>
@@ -61,10 +63,20 @@ can_summon = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Determinamos una posición y nos movemos hacia ella
+            <string>//Invoca enemigo antes de moverse
+enemySelection = int64(random(2));
+switch(enemySelection){
+    case 0:
+        enemy = instance_create(x,y,HeavenMelee);
+        break;
+    case 1:
+        enemy = instance_create(x,y,HeavenGoomba);
+        break;
+}
+//Determinamos una posición y nos movemos hacia ella
 status = 0;
 next_xPosition = random(room_width);
-next_yPosition = random(room_height);
+next_yPosition = random(200); //Que se mantenga en la zona alta
 direction = point_direction(x,y,next_xPosition,next_yPosition);
 speed = movement_speed;
 sprite_index = spr_god_side;
@@ -101,29 +113,14 @@ if(distance_to_point(next_xPosition, next_yPosition) &lt; 5 &amp;&amp; status ==
     speed = 0;
     alarm_set(0, room_speed * 1);
     sprite_index = spr_god_front;
-    enemySelection = int64(random(2));
-    switch(enemySelection){
-        case 0:
-            enemy = instance_create(x,y,Melee);
-            break;
-        case 1:
-            enemy = instance_create(x,y,Goomba);
-            break;
-    }
 }
 
-//Recibir ataque
-if (place_meeting (x,y, obj_cacota) &amp;&amp; status != 2) {
-    global.vidaboss -=1;
-    instance_deactivate_object(obj_cacota);
-}
-//Morir del todo
-if (global.vidaboss = 0)
-{ 
-    global.muertes += 1;
+//Concluir nivel
+if (finished == true){ 
+    //global.muertes += 1;
     obj_fade.fadeIn = false;
     obj_fade.alarm[1] = room_speed * 0.05;
-    instance_destroy();   
+    //instance_destroy();   
 }
 </string>
           </argument>

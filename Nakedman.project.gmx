@@ -215,12 +215,15 @@
       <object>objects\obj_rayos</object>
       <object>objects\obj_jetstream_sam</object>
       <object>objects\obj_falling_clouds</object>
+      <object>objects\obj_final_clouds</object>
     </objects>
     <objects name="Enemigos">
       <object>objects\serpiente_to_flama</object>
       <object>objects\Goomba</object>
+      <object>objects\HeavenGoomba</object>
       <object>objects\Volador</object>
       <object>objects\Melee</object>
+      <object>objects\HeavenMelee</object>
       <object>objects\FinalBoss1</object>
       <object>objects\FinalBoss2</object>
       <object>objects\FinalBoss3</object>
