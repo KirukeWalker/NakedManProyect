@@ -253,17 +253,6 @@ vsp &gt; 0 &amp;&amp; key_down = 0)
     status_knockback = false;
 }
 
-//Comprobación aparte para suelo atravesable
-if(place_meeting(x,y+vsp,obj_platform) &amp;&amp; 
-!place_meeting(x,y,obj_platform) &amp;&amp;
-vsp &gt; 0 &amp;&amp; key_down = 0)
-{ 
-    while(!place_meeting(x, y+sign(vsp), obj_platform))
-    {
-        y+=sign(vsp);
-    }
-    vsp = 0;
-}
 //Hacemos que descienda con lo sacado de las colisiones del suelo/techo
 y += vsp;
 

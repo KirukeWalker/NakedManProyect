@@ -39,8 +39,9 @@ status = 0;
 alarm[0] = 30;
 //Inciamos la variable para invocar
 can_summon = false;
-//
+//Varaibles para acabar el nivel
 finished = false;
+closing = false;
 </string>
           </argument>
         </arguments>
@@ -116,11 +117,12 @@ if(distance_to_point(next_xPosition, next_yPosition) &lt; 5 &amp;&amp; status ==
 }
 
 //Concluir nivel
-if (finished == true){ 
+if (finished == true &amp;&amp; closing == false){ 
     //global.muertes += 1;
     obj_fade.fadeIn = false;
     obj_fade.alarm[1] = room_speed * 0.05;
-    //instance_destroy();   
+    //instance_destroy();  
+    closing = true; 
 }
 </string>
           </argument>
