@@ -8,8 +8,8 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>31</bbox_right>
-  <bbox_top>16</bbox_top>
+  <bbox_right>223</bbox_right>
+  <bbox_top>0</bbox_top>
   <bbox_bottom>31</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -18,16 +18,10 @@
     <TextureGroup1>0</TextureGroup1>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>32</width>
+  <width>224</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\spr_fans_0.png</frame>
-    <frame index="1">images\spr_fans_1.png</frame>
-    <frame index="2">images\spr_fans_2.png</frame>
-    <frame index="3">images\spr_fans_3.png</frame>
-    <frame index="4">images\spr_fans_4.png</frame>
-    <frame index="5">images\spr_fans_5.png</frame>
-    <frame index="6">images\spr_fans_6.png</frame>
-    <frame index="7">images\spr_fans_7.png</frame>
+    <frame index="0">images\spr_mobile_platform_0.png</frame>
+    <frame index="1">images\spr_mobile_platform_1.png</frame>
   </frames>
 </sprite>

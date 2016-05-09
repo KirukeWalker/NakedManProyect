@@ -40,6 +40,8 @@
       <sprite>sprites\spr_jetstream_sam</sprite>
       <sprite>sprites\spr_fans</sprite>
       <sprite>sprites\spr_suelo_madero</sprite>
+      <sprite>sprites\spr_sliding_floor</sprite>
+      <sprite>sprites\spr_mobile_platform</sprite>
     </sprites>
     <sprites name="Prota">
       <sprite>sprites\spr_idle</sprite>
@@ -216,6 +218,7 @@
       <object>objects\obj_jetstream_sam</object>
       <object>objects\obj_falling_clouds</object>
       <object>objects\obj_final_clouds</object>
+      <object>objects\obj_ventiladores</object>
     </objects>
     <objects name="Enemigos">
       <object>objects\serpiente_to_flama</object>
@@ -291,7 +294,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\god_room_final</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Menu</room>
     <room>rooms\Introduccion1</room>
@@ -307,6 +309,7 @@
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
+    <room>rooms\god_room_final</room>
     <room>rooms\Continuara</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>

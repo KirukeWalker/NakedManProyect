@@ -36,6 +36,7 @@ disparo = 0;
 nivel = room_get_name (room);
 status_knockback = false; //Declaramos knockback
 knockback_distance = 5;
+knockback_duration = 30;
 global.vida = 3; //Vida del personaje
 status_dead = 0;
 complete_death = 0;
@@ -71,6 +72,30 @@ switch (nivel)
         break;
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Deshacemos el knockback
+status_knockback = false;
 </string>
           </argument>
         </arguments>
@@ -207,12 +232,15 @@ if(status_knockback == false){
             place_meeting(x, y, obj_mega_laser) || 
             place_meeting(x ,y, obj_hand)   )
         {
-            global.vida -= 1;
+            script_execute(scr_knockback);
+            /*global.vida -= 1;
             status_knockback = true;
+            //Le damos una duración determinada
+            alarm_set(2, knockback_duration);
             vsp = -jumpspeed;
             //if(place_meeting(x+1, y, Goomba)) move = -2
             //if(place_meeting(x-1, y, Goomba)) move = 2
-            move = -image_xscale;
+            move = -image_xscale;*/
         }
     }
 }
