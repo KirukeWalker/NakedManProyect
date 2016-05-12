@@ -25,11 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(ord('R')) || (gamepad_button_check(0,gp_face4))) &amp;&amp; (global.vida = 0){
+            <string>if (keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3))) &amp;&amp; (global.vida = 0){
     part_system_destroy(obj_snow.snow);
     room_goto(Menu);
     }
-
+if (keyboard_check(vk_enter) || (gamepad_button_check(0,gp_face4))) &amp;&amp; (global.vida = 0){
+    part_system_destroy(obj_snow.snow);
+    room_restart();
+    }
 </string>
           </argument>
         </arguments>

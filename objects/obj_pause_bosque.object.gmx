@@ -78,7 +78,7 @@ part_emitter_stream(rain,rain_emitter,raintear,5);     //Emitimos las partícula
 
 }
 
-if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face2)) || keyboard_check_pressed(ord('Q'))){
+if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face3)) || keyboard_check_pressed(ord('Q'))){
     room_goto(Menu);
     }
 </string>

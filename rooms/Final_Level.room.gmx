@@ -3080,6 +3080,18 @@
     <instance objName="Terreno" x="64" y="352" name="inst_0967DA31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="96" y="352" name="inst_28700BBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal" x="128" y="320" name="inst_A1DE9EB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Goomba" x="798" y="1678" name="inst_0A7FB961" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Volador" x="1312" y="1664" name="inst_17E3AB42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Volador" x="1952" y="1696" name="inst_1B8F06F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="serpiente_to_flama" x="3040" y="1696" name="inst_E7A12DA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Melee" x="3027" y="1944" name="inst_EF6327DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Goomba" x="2496" y="1344" name="inst_5789548A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Goomba" x="1792" y="1376" name="inst_3FB40E12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="serpiente_to_flama" x="1248" y="800" name="inst_2A889757" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="serpiente_to_flama" x="1536" y="800" name="inst_975715C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="serpiente_to_flama" x="1920" y="800" name="inst_7AE71AAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Melee" x="1344" y="768" name="inst_57A98E52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Goomba" x="2080" y="544" name="inst_5A1B3904" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
