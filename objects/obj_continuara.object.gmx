@@ -52,10 +52,12 @@
             <string>draw_set_halign (fa_center);
 draw_set_font (fnt_creditos_peque);
 draw_set_colour (c_white);
-draw_text (x,y, "");
-draw_text (x,y+40, "");
-draw_text (x,y+80, "To be fucking continued...");
-draw_text (x,y+120, "lol no");
+draw_text (x,y, "Thanks for playing, #see you in the final version!");
+draw_text (x,y+80, "Gracias por jugar, #¡Nos vemos en la versión final!");
+draw_text (x,y+170, "Facebook - 4FreaksFiction");
+draw_text (x,y+200, "Twitter - @4FreaksFiction");
+draw_text (x,y+230, "Instagram -  4FreaksFiction");
+draw_text (x,y+280, "Proximamente en Steam Greenlight");
 
 </string>
           </argument>

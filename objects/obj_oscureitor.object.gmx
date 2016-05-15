@@ -49,11 +49,13 @@ light = surface_create(view_wview,view_hview);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//col = $C0C0C0;
+            <string>light = surface_create(view_wview,view_hview);
+//col = $C0C0C0;
 col = $666666;
 surface_set_target(light);
 draw_set_color(col);
-draw_rectangle(0,0,view_wview,view_hview,false);
+//draw_rectangle(0,0,view_wview,view_hview,false);
+draw_rectangle(0,0,room_width,room_height,false);
 surface_reset_target();
 </string>
           </argument>
@@ -77,9 +79,16 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_subtract);
-draw_surface(light,view_xview,view_yview);
+            <string>if surface_exists(light){
+draw_set_blend_mode(bm_subtract);
+draw_surface(light,view_xview[0],view_yview[0]);
 draw_set_blend_mode(bm_normal);
+surface_reset_target();
+}
+else {
+
+}
+
 </string>
           </argument>
         </arguments>
