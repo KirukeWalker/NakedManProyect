@@ -15,7 +15,7 @@ switch(mpos){
     {
         if(global.cabezallamas = 0)   room_goto(Introduccion1);
         //else room_goto(Room_FinalBoss5);
-        else room_goto(Introduccion1);
+        else room_goto(MenuNivel);
         break;
     }
     

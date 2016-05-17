@@ -68,6 +68,7 @@ global.HarcorAcceso = 0;
 globalvar checkpoint;
 checkpoint = false;
 global.muertes_registro = 0;
+global.poss=1;
 
 
 
