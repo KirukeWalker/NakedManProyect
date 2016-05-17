@@ -156,6 +156,12 @@
       <sprite>sprites\spr_god_side</sprite>
       <sprite>sprites\spr_god_front</sprite>
     </sprites>
+    <sprite>sprites\sprite130</sprite>
+    <sprite>sprites\sprite131</sprite>
+    <sprite>sprites\sprite133</sprite>
+    <sprite>sprites\sprite132</sprite>
+    <sprite>sprites\sprite129</sprite>
+    <sprite>sprites\sprite134</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_1</background>
@@ -167,6 +173,7 @@
     <background>background\background6</background>
     <background>background\background7</background>
     <background>background\background8</background>
+    <background>background\background9</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -273,21 +280,22 @@
       <object>objects\obj_niebla</object>
       <object>objects\obj_healthbar</object>
       <object>objects\obj_preload</object>
+      <object>objects\obj_pruebanivel</object>
       <object>objects\obj_camera</object>
-    </objects>
-    <objects name="BossFinal Pruebas">
-      <object>objects\Player1</object>
-      <object>objects\Player2</object>
-      <object>objects\obj_head</object>
-      <object>objects\obj_hand</object>
-      <object>objects\super_naked_man</object>
-      <object>objects\dark_naked_man</object>
-      <object>objects\obj_glory_bar</object>
-      <object>objects\obj_high_attack</object>
-      <object>objects\obj_low_attack</object>
-      <object>objects\obj_arm</object>
-      <object>objects\obj_body</object>
-      <object>objects\obj_phase2_god</object>
+      <objects name="BossFinal Pruebas">
+        <object>objects\Player1</object>
+        <object>objects\Player2</object>
+        <object>objects\obj_head</object>
+        <object>objects\obj_hand</object>
+        <object>objects\super_naked_man</object>
+        <object>objects\dark_naked_man</object>
+        <object>objects\obj_glory_bar</object>
+        <object>objects\obj_high_attack</object>
+        <object>objects\obj_low_attack</object>
+        <object>objects\obj_arm</object>
+        <object>objects\obj_body</object>
+        <object>objects\obj_phase2_god</object>
+      </objects>
     </objects>
     <object>objects\object5</object>
     <object>objects\obj_menu2</object>
@@ -296,6 +304,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\MenuNivel</room>
     <room>rooms\Menu</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Nivel_1</room>
@@ -309,11 +318,10 @@
     <room>rooms\Room_FinalBoss4</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
+    <room>rooms\Continuara</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
-    <room>rooms\MenuNivel</room>
-    <room>rooms\Continuara</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
   </rooms>

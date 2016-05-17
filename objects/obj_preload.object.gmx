@@ -57,6 +57,13 @@ global.ciborg2 = 0;
 global.visor2 = 0;
 global.tunica2 = 0;
 global.dorada2 = 0;
+global.Nivel1Acceso = 0; 
+global.Nivel2Acceso = 0; 
+global.Nivel3Acceso = 0;
+global.Nivel4Acceso = 0;
+global.Nivel5Acceso = 0;
+global.Nivel6Acceso = 0;
+global.HarcorAcceso = 0;
 //Variable de checkpoint
 globalvar checkpoint;
 checkpoint = false;

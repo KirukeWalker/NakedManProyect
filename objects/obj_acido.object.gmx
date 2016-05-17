@@ -84,8 +84,7 @@ alarm[0]=2
 surface_set_target(light);
 draw_ellipse_colour(x-160/2-view_xview+20, y-size/2-view_yview,
                     x+160/2-view_xview, y+130/2-view_yview,
-                    c_green,c_black,false);
-                    
+                    c_lime,c_black,false);
 
 surface_reset_target();
 draw_set_blend_mode(bm_normal);

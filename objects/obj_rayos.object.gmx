@@ -86,7 +86,7 @@ alarm[0]=1
             <kind>1</kind>
             <string>draw_set_blend_mode(bm_subtract);
 surface_set_target(light);
-draw_ellipse_colour(x-160/2-view_xview+20, y-size/2-view_yview-20,
+draw_ellipse_colour(x-160/2-view_xview+20, y-size/2-view_yview,
                     x+160/2-view_xview, y+size/2-view_yview,
                     c_aqua,c_black,false);
                     
