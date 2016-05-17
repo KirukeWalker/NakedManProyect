@@ -174,7 +174,7 @@ key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0)
 key_left = -(keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0) || (gamepad_button_check(0,gp_padl)));     //Para detectar la flecha izquierda
 key_jump = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1));
 key_jump_held = keyboard_check(vk_space) || (gamepad_button_check(0,gp_face1));
-key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &lt; 0) || (gamepad_button_check(0,gp_padu));
+key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0) || (gamepad_button_check(0,gp_padd));
 
 //React to imputs
 if(status_knockback) move = move;      //Si esta con el nockback no usamos las teclas horizontales
@@ -308,17 +308,6 @@ vsp &gt; 0 &amp;&amp; key_down = 0)
     status_knockback = false;
 }
 
-//Comprobación aparte para plataformas moviles
-/*if(place_meeting(x,y+vsp,obj_mobile_platformH) &amp;&amp; 
-!place_meeting(x,y,obj_platform) &amp;&amp;
-vsp &gt; 0 &amp;&amp; key_down = 0)
-{ 
-    while(!place_meeting(x, y+sign(vsp), obj_platform))
-    {
-        y+=sign(vsp);
-    }
-    vsp = 0;
-}*/
 //Hacemos que descienda con lo sacado de las colisiones del suelo/techo
 y += vsp;
 
