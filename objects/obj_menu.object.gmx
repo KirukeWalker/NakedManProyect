@@ -131,7 +131,6 @@ for (m = 0; m &lt; 4; m += 1)
 draw_sprite(sprite_index, 0, x - 150, y + mpos * space);
 
 
-
     
 
 </string>

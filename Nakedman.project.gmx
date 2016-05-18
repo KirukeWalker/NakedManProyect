@@ -156,12 +156,14 @@
       <sprite>sprites\spr_god_side</sprite>
       <sprite>sprites\spr_god_front</sprite>
     </sprites>
-    <sprite>sprites\sprite130</sprite>
-    <sprite>sprites\sprite131</sprite>
-    <sprite>sprites\sprite133</sprite>
-    <sprite>sprites\sprite132</sprite>
-    <sprite>sprites\sprite129</sprite>
-    <sprite>sprites\sprite135</sprite>
+    <sprite>sprites\spr_arrowright</sprite>
+    <sprite>sprites\spr_arrowleft</sprite>
+    <sprite>sprites\spr_levelblock</sprite>
+    <sprite>sprites\spr_level1</sprite>
+    <sprite>sprites\spr_level2</sprite>
+    <sprite>sprites\spr_level3</sprite>
+    <sprite>sprites\spr_level4</sprite>
+    <sprite>sprites\spr_level5</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_1</background>
@@ -299,17 +301,18 @@
     <object>objects\object5</object>
     <object>objects\obj_menu2</object>
     <object>objects\obj_MenuNivel</object>
-    <object>objects\obj_guardado</object>
     <object>objects\obj_pruebanivel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\Menu</room>
+    <room>rooms\MenuNivel</room>
     <room>rooms\Introduccion1</room>
-    <room>rooms\Nivel_Bosque</room>
     <room>rooms\Nivel_1</room>
     <room>rooms\Room_FinalBoss1</room>
     <room>rooms\Nivel_Playa</room>
     <room>rooms\Room_FinalBoss2</room>
+    <room>rooms\Nivel_Bosque</room>
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
@@ -320,8 +323,6 @@
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
-    <room>rooms\Menu</room>
-    <room>rooms\MenuNivel</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
   </rooms>

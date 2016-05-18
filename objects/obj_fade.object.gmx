@@ -57,8 +57,7 @@ alarm[0] = room_speed * 0.05;
         }
     else {
         alpha = 1;
-        if room=Continuara room_goto(Menu);
-        else room_goto_next();
+        room_goto_next();
         }
     }
 </string>

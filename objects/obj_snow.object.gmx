@@ -65,7 +65,7 @@ part_emitter_stream(snow,snow_emitter,snowflake,5);     //Emitimos las partícul
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>part_system_destroy(snow);
+            <string>/*part_system_destroy(snow);
 part_system_destroy(snow_emitte);
 part_system_destroy(snowflake);
 </string>

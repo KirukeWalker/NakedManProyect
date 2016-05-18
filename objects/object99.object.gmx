@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -29,6 +29,7 @@
 if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
     global.Nivel1Acceso = 1; 
     global.Nivel2Acceso = 1; 
+    global.cabezallamas = 1;
     }
 if ini_key_exists("NhTPahPmx","KSgfhSRKWenv") { //Nivel 2 Pasado
     global.Nivel3Acceso = 1;
@@ -112,41 +113,19 @@ if keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("SystemNM.txt")
-if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
-    global.Nivel1Acceso = 1; 
-    global.Nivel2Acceso = 1; 
-    }
-if ini_key_exists("NhTPahPmx","KSgfhSRKWenv") { //Nivel 2 Pasado
-    global.Nivel3Acceso = 1;
-    }
-if ini_key_exists("NhTPahPmx","sbSDLgaSbsQn") { //Nivel 3 Pasado
-    global.Nivel4Acceso = 1;
-    }
-if ini_key_exists("NhTPahPmx","ALsdvEhsWnvp") { //Nivel 4 Pasado
-    global.Nivel5Acceso = 2;
-    }
-if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Nivel 5 Pasado
-    global.Nivel6Acceso = 2;
-    }
-if ini_key_exists("NhTPahPmx","KSgfhSRKwenv") { //Nivel 6 Pasado
-    global.HarcorAcceso = 2;
-    }
-ini_close();
-
-draw_set_halign(fa_middle);
+            <string>draw_set_halign(fa_middle);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_creditos_grande);
 draw_set_color(c_black);
 
+draw_text(view_xview+240+80,view_yview+374,global.Nivel1Acceso)
+draw_text(view_xview+240+80+20,view_yview+374,global.cabezallamas)
+    
 
 if global.movemenu=0 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 1")
-    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
-    if global.Nivel1Acceso=1{
     draw_sprite(spr_level1,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
 }
 if global.movemenu=1 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 2")
@@ -160,47 +139,28 @@ if global.movemenu=1 {
 }
 if global.movemenu=2 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 3")
-    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
-    draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel3Acceso=1{
     draw_sprite(spr_level3,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
 }
 if global.movemenu=3 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 4")
-    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
-    draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel4Acceso=1{
     draw_sprite(spr_level4,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
 }
 if global.movemenu=4 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 5")
-    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
-    draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel5Acceso=1{
     draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
 }
 if global.movemenu=5 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 6")
+    draw_sprite(spr_level1,1,room_width/2,room_height/2-22)
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
-    draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel6Acceso=1{
-    draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }
 if global.movemenu=6 {
     draw_text(view_xview+240,view_yview+374,"HARDCORe MODE")
-    draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.HarcorAcceso=1{
-    draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    draw_sprite(spr_level1,1,room_width/2,room_height/2-22)
+    draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
 }
 </string>
           </argument>

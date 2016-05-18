@@ -56,7 +56,7 @@ if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Done
 if ini_key_exists("NhTPahPmx","YFrBuGdeTSYU") { //Done
     global.visor = 1;
     }
-if ini_key_exists("NhTPahPmx","MeFjgPfREndg2") {
+if ini_key_exists("NhTPahPmx","KSgfhSRKwenv") {
     global.tunica = 1;
     }
 if ini_key_exists("NhTPahPmx","FDtldtHSVDJg") { //Done

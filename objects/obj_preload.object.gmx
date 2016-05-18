@@ -68,10 +68,23 @@ global.HarcorAcceso = 0;
 globalvar checkpoint;
 checkpoint = false;
 global.muertes_registro = 0;
-global.poss=1;
-
-
-
+global.movemenu=0;
+if !file_exists("SystemNM.txt") {
+    ini_open("SystemNM.txt") 
+    ini_write_string("NhTPahPmx","MeFjgPFREndg","uFscFjgWfjE") //Boss1 - CabezaEnLlamas
+    ini_write_string("NhTPahPmx","KSgfhsRKWenv","njsESnsSAnQ") //Boss2 - Toalla
+    ini_write_string("NhTPahPmx","sbSDLGaSbsQn","ANabwjQnvsl") //Boss3 -  Camuflaje
+    ini_write_string("NhTPahPmx","ALSdvEhsWnvp","jSskfAwjhaW") //Boss4 -  PapaNoel
+    ini_write_string("NhTPahPmx","TibsGhsbEhuU","KjjyFtLTgjY") //Boss5 -  Ciborg
+    ini_write_string("NhTPahPmx","gJYfJdRluTDr","tCGJDerFTNf") //BossFinal - Tunica
+    ini_write_string("NhTPahPmx","rgShhbDRrsEF","sBedfESFJkm") //Nivel1 - Quemaduras
+    ini_write_string("NhTPahPmx","ygnYRbdETjSa","rdklGUytnfR") //Nivel2 - BoteCrema
+    ini_write_string("NhTPahPmx","Esyi4nne5NrE","vhbkybtdRVS") //Nivel3 - Paraguas
+    ini_write_string("NhTPahPmx","jrTbDRETSJrN","DRybSETAHNY") //Nivel4 - Nieve
+    ini_write_string("NhTPahPmx","YFrBuGdETSYU","rtwKBTlgjyV") //Nivel5 - Visor
+    ini_write_string("NhTPahPmx","FDtldthSVDJg","GVdGnjfSnkd") //Creditos -  BarraDorada
+    ini_close();
+}
 //Cargamos la siguiente escena
 room_goto_next();
 </string>
