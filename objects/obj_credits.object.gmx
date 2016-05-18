@@ -88,12 +88,6 @@ draw_text(x,y+140,"4FREAKSFICTION");
 draw_set_font(fnt_creditos_peque);
 draw_text(x,y+180,"PRODUCTION");
 
-draw_set_font(fnt_creditos_peque);
-draw_text(x,y+260,"IN ASSOCIATION WITH");
-
-draw_set_font(fnt_creditos_grande);
-draw_text(x,y+300,"TWIN BLONDES CORPORATION");
-
 draw_set_font(fnt_creditos_grande);
 draw_text(x,y+400,"KIRUKE WALKER");
 
@@ -116,10 +110,10 @@ draw_set_font(fnt_creditos_grande);
 draw_text(x,y+860,"UKI_BS");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+900,"PROGRAMMERS");
+draw_text(x,y+900,"PROGRAMMER");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+930,"CODE MOLESTERS");
+draw_text(x,y+930,"CODE MOLESTER");
 
 draw_set_font(fnt_creditos_grande);
 draw_text(x,y+1090,"CHUE3P0");
@@ -131,40 +125,47 @@ draw_set_font(fnt_creditos_peque_cursiva);
 draw_text(x,y+1160,"UN CORTADO CON SACARINA, POR FAVOR");
 
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+1320,"SPECIAL THX");
+draw_text(x,y+1090+160,"AMEBA");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1360,"PEPEPATATA");
+draw_text(x,y+1130+160,"COMUNITY MANAGER");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1390,"AMEBA");
-
-draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1420,"MZAMO");
+draw_text(x,y+1160+160,"CODE MOLESTER MOLESTER");
 
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+1550,"HONORABLE MENTIONS");
+draw_text(x,y+1320+160,"SPECIAL THX");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1590,"SAITAMA");
+draw_text(x,y+1360+160,"PEPEPATATA");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1620,"PITBULL");
+draw_text(x,y+1390+160,"MZAMO");
+
+
+draw_set_font(fnt_creditos_grande);
+draw_text(x,y+1550+160,"HONORABLE MENTIONS");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1650,"THE BALD FROM BRAZZERS");
+draw_text(x,y+1590+160,"SAITAMA");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1680,"DARCKET");
+draw_text(x,y+1620+160,"PITBULL");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1810,"AND YOU");
+draw_text(x,y+1650+160,"THE BALD FROM BRAZZERS");
+
+draw_set_font(fnt_creditos_peque);
+draw_text(x,y+1680+160,"DARCKET");
+
+draw_set_font(fnt_creditos_peque);
+draw_text(x,y+1810+160,"AND YOU");
 
 draw_set_font(fnt_creditos_grande_negrita);
-draw_text(x,y+1980,"THE PLAYER");
+draw_text(x,y+1980+160,"THE PLAYER");
 
 
-draw_sprite(spr_heart,0,x,y+1890);
+draw_sprite(spr_heart,0,x,y+1890+160);
 </string>
           </argument>
         </arguments>

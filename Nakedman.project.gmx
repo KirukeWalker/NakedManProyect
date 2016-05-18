@@ -141,6 +141,14 @@
       <sprite>sprites\spr_Invi</sprite>
       <sprite>sprites\sprite4</sprite>
       <sprite>sprites\spr_healthbar</sprite>
+      <sprite>sprites\spr_arrowright</sprite>
+      <sprite>sprites\spr_arrowleft</sprite>
+      <sprite>sprites\spr_levelblock</sprite>
+      <sprite>sprites\spr_level1</sprite>
+      <sprite>sprites\spr_level2</sprite>
+      <sprite>sprites\spr_level3</sprite>
+      <sprite>sprites\spr_level4</sprite>
+      <sprite>sprites\spr_level5</sprite>
       <sprite>sprites\spr_camera_ref</sprite>
     </sprites>
     <sprites name="BossFinal Pruebas">
@@ -156,14 +164,6 @@
       <sprite>sprites\spr_god_side</sprite>
       <sprite>sprites\spr_god_front</sprite>
     </sprites>
-    <sprite>sprites\spr_arrowright</sprite>
-    <sprite>sprites\spr_arrowleft</sprite>
-    <sprite>sprites\spr_levelblock</sprite>
-    <sprite>sprites\spr_level1</sprite>
-    <sprite>sprites\spr_level2</sprite>
-    <sprite>sprites\spr_level3</sprite>
-    <sprite>sprites\spr_level4</sprite>
-    <sprite>sprites\spr_level5</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_1</background>
@@ -274,14 +274,14 @@
       <object>objects\obj_snow</object>
       <object>objects\obj_lluvia</object>
       <object>objects\Luciernagas</object>
-      <object>objects\Luces_locas</object>
-      <object>objects\obj_nivel4</object>
       <object>objects\obj_credits</object>
       <object>objects\obj_continuara</object>
       <object>objects\obl_hud</object>
       <object>objects\obj_niebla</object>
       <object>objects\obj_healthbar</object>
       <object>objects\obj_preload</object>
+      <object>objects\obj_MenuNivel</object>
+      <object>objects\obj_menu2</object>
       <object>objects\obj_camera</object>
       <objects name="BossFinal Pruebas">
         <object>objects\Player1</object>
@@ -299,9 +299,6 @@
       </objects>
     </objects>
     <object>objects\object5</object>
-    <object>objects\obj_menu2</object>
-    <object>objects\obj_MenuNivel</object>
-    <object>objects\obj_pruebanivel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
