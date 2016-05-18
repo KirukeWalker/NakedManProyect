@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("SystemNM.txt");
+            <string>/*ini_open("SystemNM.txt");
 if ini_key_exists("NhTPahPmx","rgSHhbDRrsEF") { //Done
     global.quemaduras = 1;
     }
@@ -80,6 +80,7 @@ menu2[1,5] = "";
 space = 50;
 mpos = 0; 
 npos = 0;
+*/
 </string>
           </argument>
         </arguments>
@@ -102,7 +103,7 @@ npos = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var move = 0;
+            <string>/*var move = 0;
 var move2 = 0;
 
 move2 -= max(keyboard_check_pressed(vk_right), keyboard_check_pressed(ord("D")), 0);
@@ -136,11 +137,12 @@ push = max(keyboard_check_pressed(vk_enter), 0);
 if (gamepad_button_check_pressed(0,gp_face1)) {
     push += 1;
     }
-if(push = 1) scr_menu2();
+if(push = 1) scr_menu2();*/
 if keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2) {
     instance_destroy();
     room_goto(Menu);
     }
+
 </string>
           </argument>
         </arguments>
@@ -167,9 +169,10 @@ if keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2)
 draw_set_valign(fa_middle);
 draw_set_font(fnt_creditos_peque);
 draw_set_color(c_black);
+draw_sprite(spr_underconst, 0, room_width/2, room_height/2)
 //DIBUJAR SPROTES PA CA COSA
 //COSA1
-if global.cabezallamas2 = 1 &amp;&amp; global.cabezallamas = 1{
+/*if global.cabezallamas2 = 1 &amp;&amp; global.cabezallamas = 1{
     draw_sprite(sprite2,0, view_xview+250,view_yview+50);
     }
 if global.cabezallamas2 = 0 &amp;&amp; global.cabezallamas = 1{

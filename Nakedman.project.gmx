@@ -164,6 +164,7 @@
       <sprite>sprites\spr_god_side</sprite>
       <sprite>sprites\spr_god_front</sprite>
     </sprites>
+    <sprite>sprites\spr_underconst</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_1</background>
@@ -314,9 +315,9 @@
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4</room>
+    <room>rooms\Continuara</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
-    <room>rooms\Continuara</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
