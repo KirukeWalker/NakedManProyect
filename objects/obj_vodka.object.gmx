@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>//La hacemos caer
 y += 3;
+image_angle += 5;
 //Si toca suelo se destruye
 if(place_meeting(x,y,Terreno)) instance_destroy();
 </string>

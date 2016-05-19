@@ -70,10 +70,10 @@ ini_close();
             <kind>1</kind>
             <string>
 
-if ((gamepad_button_check_pressed(0,gp_padd) || keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) &amp;&amp; global.movemenu&lt;6) {
+if ((gamepad_button_check_pressed(0,gp_padr) || keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) &amp;&amp; global.movemenu&lt;6) {
     global.movemenu++;
     }
-if ((gamepad_button_check_pressed(0,gp_padu) || keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) &amp;&amp; global.movemenu&gt;0) {
+if ((gamepad_button_check_pressed(0,gp_padl) || keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) &amp;&amp; global.movemenu&gt;0) {
     global.movemenu--;
     }
 

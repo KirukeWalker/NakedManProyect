@@ -5,7 +5,12 @@
     <Config>Configs\Config1</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_shoot</sound>
+    <sound>sound\snd_die</sound>
+    <sound>sound\snd_knockback</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Terrenos">
       <sprite>sprites\spr_Terreno</sprite>
