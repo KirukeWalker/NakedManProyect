@@ -10,6 +10,14 @@
     <sound>sound\snd_shoot</sound>
     <sound>sound\snd_die</sound>
     <sound>sound\snd_knockback</sound>
+    <sound>sound\snd_lava</sound>
+    <sound>sound\snd_beach</sound>
+    <sound>sound\snd_snow</sound>
+    <sound>sound\snd_forest</sound>
+    <sound>sound\snd_lavalboss</sound>
+    <sound>sound\snd_city</sound>
+    <sound>sound\snd_credits</sound>
+    <sound>sound\snd_intro</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Terrenos">
@@ -155,6 +163,9 @@
       <sprite>sprites\spr_level4</sprite>
       <sprite>sprites\spr_level5</sprite>
       <sprite>sprites\spr_camera_ref</sprite>
+      <sprite>sprites\spr_x</sprite>
+      <sprite>sprites\spr_underconst</sprite>
+      <sprite>sprites\sprite139</sprite>
     </sprites>
     <sprites name="BossFinal Pruebas">
       <sprite>sprites\spr_stand</sprite>
@@ -169,7 +180,6 @@
       <sprite>sprites\spr_god_side</sprite>
       <sprite>sprites\spr_god_front</sprite>
     </sprites>
-    <sprite>sprites\spr_underconst</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_1</background>
@@ -263,6 +273,7 @@
       <object>objects\obj_boss_interactor</object>
     </objects>
     <objects name="Utilidades">
+      <object>objects\obj_music</object>
       <object>objects\obj_fade</object>
       <object>objects\obj_portal</object>
       <object>objects\obj_portal_nieve</object>
@@ -288,21 +299,22 @@
       <object>objects\obj_preload</object>
       <object>objects\obj_MenuNivel</object>
       <object>objects\obj_menu2</object>
+      <object>objects\obj_pcinst</object>
       <object>objects\obj_camera</object>
-      <objects name="BossFinal Pruebas">
-        <object>objects\Player1</object>
-        <object>objects\Player2</object>
-        <object>objects\obj_head</object>
-        <object>objects\obj_hand</object>
-        <object>objects\super_naked_man</object>
-        <object>objects\dark_naked_man</object>
-        <object>objects\obj_glory_bar</object>
-        <object>objects\obj_high_attack</object>
-        <object>objects\obj_low_attack</object>
-        <object>objects\obj_arm</object>
-        <object>objects\obj_body</object>
-        <object>objects\obj_phase2_god</object>
-      </objects>
+    </objects>
+    <objects name="BossFinal Pruebas">
+      <object>objects\Player1</object>
+      <object>objects\Player2</object>
+      <object>objects\obj_head</object>
+      <object>objects\obj_hand</object>
+      <object>objects\super_naked_man</object>
+      <object>objects\dark_naked_man</object>
+      <object>objects\obj_glory_bar</object>
+      <object>objects\obj_high_attack</object>
+      <object>objects\obj_low_attack</object>
+      <object>objects\obj_arm</object>
+      <object>objects\obj_body</object>
+      <object>objects\obj_phase2_god</object>
     </objects>
     <object>objects\object5</object>
   </objects>

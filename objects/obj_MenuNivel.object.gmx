@@ -195,7 +195,7 @@ if global.movemenu=5 {
     else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }
 if global.movemenu=6 {
-    draw_text(view_xview+240,view_yview+374,"HARDCORe MODE")
+    draw_text(view_xview+240,view_yview+374,"HARDCORE MODE")
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
     if global.HarcorAcceso=1{
     draw_sprite(spr_level5,1,room_width/2,room_height/2-22)

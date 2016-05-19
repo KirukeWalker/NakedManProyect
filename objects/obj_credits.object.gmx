@@ -43,7 +43,7 @@ else {
     }
 
     
-if (obj_credits.y &lt; view_yview-2100) || keyboard_check(vk_escape) || (gamepad_button_check(0,gp_face2)){
+if (obj_credits.y &lt; view_yview-2170) || keyboard_check(vk_escape) || (gamepad_button_check(0,gp_face2)){
     room_goto(Menu);
     }
     

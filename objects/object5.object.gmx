@@ -233,7 +233,7 @@ if(status_knockback == false){
             place_meeting(x, y, obj_mega_laser) || 
             place_meeting(x ,y, obj_hand)   )
         {
-            audio_play_sound(snd_knockback, 1, false);
+            
             script_execute(scr_knockback);
             /*global.vida -= 1;
             status_knockback = true;

@@ -53,9 +53,10 @@ if (!pause) {
     pause = 1;
     part_system_destroy(obj_snow.snow)
     instance_deactivate_all(true);
-
+    audio_pause_all();
 }
 else {
+    audio_resume_all();
     pause = 0;
     snow = part_system_create();    //Creamos el generador de nieve
 part_system_depth(snow, -60);   //Lo ponemos a profunidad -60
@@ -79,6 +80,8 @@ part_emitter_stream(snow,snow_emitter,snowflake,5);     //Emitimos las partícul
 }
 
 if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face3)) || keyboard_check_pressed(ord('Q'))){
+    audio_stop_all();
+    audio_play_sound(snd_intro,1,true);
     room_goto(Menu);
     }
 </string>
@@ -111,8 +114,8 @@ if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face3)) || keyboar
     draw_set_color(c_white);
     draw_text(view_xview + 230,view_yview + 100,"Game Paused");
     draw_set_font(fnt_creditos_peque);
-    draw_text(view_xview + 230,view_yview + 200,"Press Q to quit");
-    draw_text(view_xview + 230,view_yview + 250,"Try C to shoot, feggit");
+    draw_text(view_xview + 180+50+12,view_yview + 200,"Press Q or          to quit");
+    draw_sprite(spr_x,0,view_xview + 230 + 35,view_yview + 200)
     //if(pussy_mode == true)
     draw_set_color(c_black);
     }
