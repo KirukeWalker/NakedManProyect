@@ -86,17 +86,17 @@ if !(room==Room_FinalBoss1) {
     lavaBoss=0;
 }
 
-if (room==Nivel_Playa &amp;&amp; playa=0) {
+if ((room==Nivel_Playa || room==Room_FinalBoss2) &amp;&amp; playa=0) {
     audio_play_sound(snd_beach,1,true);
     playa=1;
     }
     
-if !(room==Nivel_Playa) {
+if !(room==Nivel_Playa || room==Room_FinalBoss2) {
     audio_stop_sound(snd_beach);
     playa=0;
 }
 
-if (room==Room_FinalBoss2 &amp;&amp; finalBoss2=0) {
+/*if (room==Room_FinalBoss2 &amp;&amp; finalBoss2=0) {
     audio_play_sound(snd_beach,1,true);
     finalBoss2=1;
     }
@@ -104,19 +104,19 @@ if (room==Room_FinalBoss2 &amp;&amp; finalBoss2=0) {
 if !(room==Room_FinalBoss2) {
     audio_stop_sound(snd_beach);
     finalBoss2=0;
-}
+}*/
 
-if (room==Nivel_Bosque &amp;&amp; bosque=0) {
+if ((room==Nivel_Bosque || room==Room_FinalBoss3) &amp;&amp; bosque=0) {
     audio_play_sound(snd_forest,1,true);
     bosque=1;
     }
     
-if !(room==Nivel_Bosque) {
+if !(room==Nivel_Bosque || room==Room_FinalBoss3) {
     audio_stop_sound(snd_forest);
     bosque=0;
 }
 
-if (room==Room_FinalBoss3 &amp;&amp; finalBoss3=0) {
+/*if (room==Room_FinalBoss3 &amp;&amp; finalBoss3=0) {
     audio_play_sound(snd_forest,1,true);
     finalBoss3=1;
     }
@@ -124,19 +124,19 @@ if (room==Room_FinalBoss3 &amp;&amp; finalBoss3=0) {
 if !(room==Room_FinalBoss3) {
     audio_stop_sound(snd_forest);
     finalBoss3=0;
-}
+}*/
 
-if (room==Nivel_Nieve &amp;&amp; nieve=0) {
+if ((room==Nivel_Nieve || room==Room_FinalBoss4) &amp;&amp; nieve=0) {
     audio_play_sound(snd_snow,1,true);
     nieve=1;
     }
     
-if !(room==Nivel_Nieve) {
+if !(room==Nivel_Nieve || room==Room_FinalBoss4) {
     audio_stop_sound(snd_snow);
     nieve=0;
 }
 
-if (room==Room_FinalBoss4 &amp;&amp; finalBoss4=0) {
+/*if (room==Room_FinalBoss4 &amp;&amp; finalBoss4=0) {
     audio_play_sound(snd_snow,1,true);
     finalBoss4=1;
     }
@@ -144,7 +144,7 @@ if (room==Room_FinalBoss4 &amp;&amp; finalBoss4=0) {
 if !(room==Room_FinalBoss4) {
     audio_stop_sound(snd_snow);
     finalBoss4=0;
-}
+}*/
 
 if (room==Credits &amp;&amp; credits=0) {
     audio_play_sound(snd_credits,1,true);
@@ -180,7 +180,7 @@ if !(room==Credits) {
           <argument>
             <kind>1</kind>
             <string>//draw_text(view_xview+20,view_yview+20,room)
-//draw_text(view_xview+20,view_yview+40,intro)
+//draw_text(view_xview+20,view_yview+40,playa)
 //draw_text(view_xview+20,view_yview+60,lava)
 
 
