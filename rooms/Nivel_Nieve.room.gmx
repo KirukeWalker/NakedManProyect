@@ -2177,18 +2177,9 @@
     <instance objName="serpiente_to_flama" x="2400" y="1632" name="inst_ACA1C777" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="serpiente_to_flama" x="2304" y="2016" name="inst_44F93F42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="serpiente_to_flama" x="864" y="832" name="inst_17339FF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="128" y="3968" name="inst_AE037420" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="96" y="3968" name="inst_E3BACB6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="64" y="3968" name="inst_AD3A3A36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="32" y="3968" name="inst_5637F2BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="384" y="3968" name="inst_6F634BC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="352" y="3968" name="inst_960C83B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="320" y="3968" name="inst_C3B2AA49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="288" y="3968" name="inst_9553D2A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="256" y="3968" name="inst_8A13B9B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="224" y="3968" name="inst_4CC144C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="192" y="3968" name="inst_D2F3F1AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="160" y="3968" name="inst_BFC93084" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="416" y="3968" name="inst_91279C3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="768" y="3968" name="inst_5F8FF210" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="736" y="3968" name="inst_CFA4130C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -2397,14 +2388,6 @@
     <instance objName="obj_hielo" x="320" y="3808" name="inst_67731E6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hielo" x="288" y="3808" name="inst_00BD2B1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hielo" x="352" y="3808" name="inst_9A765224" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="32" y="3968" name="inst_D79F4554" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="64" y="3968" name="inst_6FEE4D54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="128" y="3968" name="inst_7A11F9A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="160" y="3968" name="inst_B7B6B141" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="192" y="3968" name="inst_B6468E97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="224" y="3968" name="inst_84E6FB08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="256" y="3968" name="inst_A41B107C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="288" y="3968" name="inst_818588BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="320" y="3968" name="inst_F39673D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="352" y="3968" name="inst_A3D03812" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="384" y="3968" name="inst_95302CDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -4975,6 +4958,25 @@
     <instance objName="obj_pincho" x="832" y="2208" name="inst_B4A36680" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pincho" x="864" y="2208" name="inst_0923D4E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Melee" x="384" y="3904" name="inst_93F9D236" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="288" y="3968" name="inst_6685BBEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="256" y="3968" name="inst_CE511892" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="224" y="3968" name="inst_58EAC5EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="192" y="3968" name="inst_7B55F083" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="160" y="3968" name="inst_4D2EB97B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="128" y="3968" name="inst_8E3696CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="96" y="3968" name="inst_3D4B15CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="64" y="3968" name="inst_2527FC36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="32" y="3968" name="inst_34B97AF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="288" y="3968" name="inst_6FAE8CFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="256" y="3968" name="inst_6D9C0EC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="224" y="3968" name="inst_8FD91050" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="192" y="3968" name="inst_77ED8AF7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="160" y="3968" name="inst_B5B20306" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="128" y="3968" name="inst_0DC97A48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="96" y="3968" name="inst_B6345D95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="64" y="3968" name="inst_FD64EEB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="32" y="3968" name="inst_17F82CC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Terreno" x="896" y="3840" name="inst_E48C0F80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="288" y="3904" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_0C78A4FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
