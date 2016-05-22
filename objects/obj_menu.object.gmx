@@ -34,6 +34,32 @@ menu[0,3] = "Fuck off";
 space = 50;
 mpos = 0; 
 npos = 0;
+//
+joy_check = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+joy_check = true;
 </string>
           </argument>
         </arguments>
@@ -63,6 +89,17 @@ move2 -= max(keyboard_check_pressed(vk_right), keyboard_check_pressed(ord("D")),
 move2 += max(keyboard_check_pressed(vk_left), keyboard_check_pressed(ord("A")), 0);
 move -= max(keyboard_check_pressed(vk_up), keyboard_check_pressed(ord("W")), 0);
 move += max(keyboard_check_pressed(vk_down), keyboard_check_pressed(ord("S")), 0);
+//Control de joystick
+if(joystick_ypos(2) != 0 &amp;&amp; joy_check == true){
+    if(joystick_ypos(2) &gt; 0.5){
+        move += 1;
+    }
+    if(joystick_ypos(2) &lt; -0.5){
+        move -= 1;
+    }
+    joy_check = false;
+    alarm_set(0, 5);
+}
 if (gamepad_button_check_pressed(0,gp_padd)) {
     move += 1;
     }
@@ -84,7 +121,7 @@ if(move2 != 0)
 
 var push;
 push = max(keyboard_check_pressed(vk_enter), 0);
-if (gamepad_button_check_pressed(0,gp_face1)) {
+if (gamepad_button_check_pressed(0,gp_face1) || joystick_check_button(2, 3)) {
     push += 1;
     }
 if(push = 1) scr_menu();
@@ -130,9 +167,14 @@ for (m = 0; m &lt; 4; m += 1)
 
 draw_sprite(sprite_index, 0, x - 150, y + mpos * space);
 
+//Check for joysticks
+/*check1 = joystick_exists(1);
+check2 = joystick_exists(2);
+draw_text(10, 10, check1);
+draw_text(10, 30, check2);*/
 
-    
-
+//
+draw_text(10, 10, joy_check);
 </string>
           </argument>
         </arguments>

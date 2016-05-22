@@ -64,6 +64,8 @@ global.Nivel4Acceso = 0;
 global.Nivel5Acceso = 0;
 global.Nivel6Acceso = 0;
 global.HarcorAcceso = 0;
+//Variable de joystic
+global.joy_check = true;
 //Variable de checkpoint
 globalvar checkpoint;
 checkpoint = false;

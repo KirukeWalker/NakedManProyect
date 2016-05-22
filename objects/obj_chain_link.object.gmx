@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(other.status != 2) 
-    instance_destroy();
+            <string>if instance_exists(FinalBoss2){
+    if(other.status != 2) {
+        instance_destroy();
+    }
+}
 </string>
           </argument>
         </arguments>

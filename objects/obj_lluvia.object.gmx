@@ -31,7 +31,7 @@ part_system_depth(rain, -60);   //Lo ponemos a profunidad -60
 raintear = part_type_create();     //Creamos el tipo de particula
 part_type_shape(raintear,pt_shape_line);
 part_type_orientation(raintear,0,0,0,0,1);
-part_type_size(raintear,0.2,0.5,0,0);
+part_type_size(raintear,0.1,0.2,0,0);
 part_type_speed(raintear,15,20,0.05,0);
 part_type_direction(raintear,225,225,0,0);
 part_type_life(raintear,50,400);
@@ -40,7 +40,7 @@ rain_emitter = part_emitter_create(rain);   //Creamos el emisor
 part_emitter_region(rain,rain_emitter,0-100,
                     room_width+100,-10,-5,
                     ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
-part_emitter_stream(rain,rain_emitter,raintear,5);     //Emitimos las partículas de nieve
+part_emitter_stream(rain,rain_emitter,raintear,20);     //Emitimos las partículas de nieve
 
 </string>
           </argument>

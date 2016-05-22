@@ -32,10 +32,8 @@ switch (nivel)
     case "Nivel_Nieve": 
     {
        if place_meeting (x,y,object5) {
-
     sprite_index = spr_pinchos_sangre
     global.vida = 0
-    
     }
     }    
     case "Final_Level":

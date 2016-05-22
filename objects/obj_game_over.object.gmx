@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3))) &amp;&amp; (global.vida = 0){
+            <string>if (keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3) || joystick_check_button(2, 2))) &amp;&amp; (global.vida = 0){
     room_goto(Menu);
     }
-if (keyboard_check(vk_enter) || (gamepad_button_check(0,gp_face4))) &amp;&amp; (global.vida = 0){
+if (keyboard_check(vk_enter) || (gamepad_button_check(0,gp_face4) || joystick_check_button(2, 3))) &amp;&amp; (global.vida = 0){
     room_restart();
     }
 </string>

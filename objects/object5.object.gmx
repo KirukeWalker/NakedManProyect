@@ -170,11 +170,11 @@ alarm[1] = 30;
             <kind>1</kind>
             <string>//Get the players input
 //key_right = keyboard_check(ord("D"));   //Alternativa para las letras
-key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0) || (gamepad_button_check(0,gp_padr));   //Para detectar la flecha derecha
-key_left = -(keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0) || (gamepad_button_check(0,gp_padl)));     //Para detectar la flecha izquierda
-key_jump = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1));
-key_jump_held = keyboard_check(vk_space) || (gamepad_button_check(0,gp_face1));
-key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0) || (gamepad_button_check(0,gp_padd));
+key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0) || (gamepad_button_check(0,gp_padr) || joystick_xpos(2) &gt; 0.2);   //Para detectar la flecha derecha
+key_left = -(keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0) || (gamepad_button_check(0,gp_padl) || joystick_xpos(2) &lt; -0.2));     //Para detectar la flecha izquierda
+key_jump = keyboard_check_pressed(vk_space) || (gamepad_button_check_pressed(0,gp_face1) || joystick_check_button(2, 3));
+key_jump_held = keyboard_check(vk_space) || (gamepad_button_check(0,gp_face1) || joystick_check_button(2, 3));
+key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0) || (gamepad_button_check(0,gp_padd) || joystick_ypos(2) &gt; 0.2);
 
 //React to imputs
 if(status_knockback) move = move;      //Si esta con el nockback no usamos las teclas horizontales
@@ -379,7 +379,7 @@ if(!place_meeting(x,y,Agua))
 }
 
 //Disparo en codigo
-if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2))  {
+if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2))  {
     if(disparo = 0 &amp;&amp; status_dead = 0) {
         audio_play_sound(snd_shoot, 1, false);
         proyectil = instance_create(x,y+3,obj_cacota);

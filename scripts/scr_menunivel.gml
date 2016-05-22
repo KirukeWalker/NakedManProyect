@@ -43,6 +43,5 @@ switch(global.movemenu)
        }
     break;
     case 6:
-    break;
-    
+    break;   
 }

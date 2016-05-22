@@ -199,6 +199,8 @@ if (global.vidaboss = 0)
     ini_key_delete("NhTPahPmx","KSgfhsRKWenv")
     ini_write_string("NhTPahPmx","KSgfhSRKWenv","njsESnsSAnQ")
     ini_close()
+    with(obj_chain_link) instance_destroy();
+    with(obj_anchor) instance_destroy();
     global.muertes += 1;
     obj_fade.fadeIn = false;
     obj_fade.alarm[1] = room_speed * 0.05;
