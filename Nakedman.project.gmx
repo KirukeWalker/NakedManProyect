@@ -211,39 +211,45 @@
   </fonts>
   <objects name="objects">
     <objects name="Terrenos">
-      <object>objects\Terreno</object>
-      <object>objects\obj_esquina_volcan</object>
+      <objects name="Solidos">
+        <object>objects\obj_solid_terrain</object>
+        <object>objects\Terreno</object>
+        <object>objects\obj_esquina_volcan</object>
+        <object>objects\obj_arena</object>
+        <object>objects\obj_terreno_profundo</object>
+        <object>objects\obj_suelo_bosque</object>
+        <object>objects\obj_esquina_bosque</object>
+        <object>objects\obj_suelo_mar_pisable</object>
+        <object>objects\obj_suelo_marnopisable</object>
+        <object>objects\obj_esquina_mar</object>
+        <object>objects\obj_nieve_pisable</object>
+        <object>objects\obj_suelo_mar_pisable3puntas</object>
+        <object>objects\obj_suelo_pisableCiudad</object>
+        <object>objects\obj_nubes</object>
+      </objects>
+      <objects name="Atravesables">
+        <object>objects\obj_passable_terrain</object>
+        <object>objects\obj_suelo_hojas</object>
+        <object>objects\obj_mobile_platformH</object>
+        <object>objects\obj_mobile_platformV</object>
+        <object>objects\obj_falling_clouds</object>
+        <object>objects\obj_final_clouds</object>
+      </objects>
       <object>objects\Lava</object>
       <object>objects\obj_acido</object>
       <object>objects\obj_door</object>
       <object>objects\Agua</object>
-      <object>objects\obj_arena</object>
-      <object>objects\obj_terreno_profundo</object>
       <object>objects\FondoCueva</object>
       <object>objects\obj_sueloBosque_noPisable</object>
-      <object>objects\obj_suelo_bosque</object>
-      <object>objects\obj_esquina_bosque</object>
-      <object>objects\obj_suelo_hojas</object>
       <object>objects\obj_tronco_arbol</object>
       <object>objects\obj_pinchos</object>
       <object>objects\obj_hielo</object>
-      <object>objects\obj_mobile_platformH</object>
-      <object>objects\obj_mobile_platformV</object>
-      <object>objects\obj_suelo_mar_pisable</object>
-      <object>objects\obj_suelo_marnopisable</object>
-      <object>objects\obj_esquina_mar</object>
       <object>objects\obj_nieve_no_pisable</object>
-      <object>objects\obj_nieve_pisable</object>
       <object>objects\obj_pincho</object>
-      <object>objects\obj_suelo_mar_pisable3puntas</object>
-      <object>objects\obj_nubes</object>
-      <object>objects\obj_suelo_pisableCiudad</object>
       <object>objects\obj_pinchos_ciudad_derecha</object>
       <object>objects\obj_pinchos_ciudad_izquierda</object>
       <object>objects\obj_rayos</object>
       <object>objects\obj_jetstream_sam</object>
-      <object>objects\obj_falling_clouds</object>
-      <object>objects\obj_final_clouds</object>
       <object>objects\obj_ventiladores</object>
     </objects>
     <objects name="Enemigos">

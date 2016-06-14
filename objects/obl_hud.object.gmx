@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -26,12 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>//Pintamos los corazones
-draw_sprite(spr_hearts,global.vida, view_xview+40, view_yview+20);
+draw_sprite(spr_hearts,global.vida, 40, 20);
 //Escribimos la puntuación o pussy mode
 draw_set_halign(fa_center);
 draw_set_color(c_white);
 draw_set_font(fnt_creditos_peque);
-if (pussy_mode == true) draw_text(view_xview+350,view_yview+20,"Pussy Mode");
+//if (pussy_mode == true) draw_text(view_xview+350,view_yview+20,"Pussy Mode");
 
 
 //Controlm de muertes

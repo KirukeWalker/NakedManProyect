@@ -29,7 +29,7 @@
 grav = 1;         //gravity se usa para funciones
 hsp = 0;            //velocidad horizontal
 vsp = 0;            //velocidad vertical
-jumpspeed = 20;     //velocida de salto
+jumpspeed = 16;     //velocida de salto
 movespeed = 6;      //velocidad de movimiento
 actual_speed = 0;   //Variable para aceleración
 disparo = 0;
@@ -177,28 +177,33 @@ key_jump_held = keyboard_check(vk_space) || (gamepad_button_check(0,gp_face1) ||
 key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0) || (gamepad_button_check(0,gp_padd) || joystick_ypos(2) &gt; 0.2);
 
 //React to imputs
-if(status_knockback) move = move;      //Si esta con el nockback no usamos las teclas horizontales
-else if(disparo &gt; 0) || (status_dead = 1) move = 0;
-else move = key_left + key_right;        //Aplicamos los valores de las teclas de dirección
+if(status_knockback) 
+    move = move;      //Si esta con el nockback no usamos las teclas horizontales
+else if(disparo &gt; 0) || (status_dead = 1) 
+    move = 0;
+else 
+    move = key_left + key_right;        //Aplicamos los valores de las teclas de dirección
 //Acelaración
-if(move != 0 &amp;&amp; actual_speed &lt; movespeed) actual_speed += 1;
-else if(move = 0 &amp;&amp; actual_speed &gt; 0)   actual_speed -= 1;
+if(move != 0 &amp;&amp; actual_speed &lt; movespeed) 
+    actual_speed += 1;
+else if(move = 0 &amp;&amp; actual_speed &gt; 0)   
+    actual_speed -= 1;
 //Movimiento con la aceleración actual
 if (status_sliding = false){
-hsp = move * actual_speed;
+    hsp = move * actual_speed;
 }
-else hsp = movespeed * 3 * image_xscale;
-if(vsp &lt; 10) vsp += grav;       //Aplicamos gravedad
+else 
+    hsp = movespeed * 3 * image_xscale;
+//Aplicamos gravedad
+if(vsp &lt; 10) 
+    vsp += grav;       
 //Salto
 if((
-    place_meeting(x,y+1,Terreno) || 
-    place_meeting(x,y+1,obj_arena) ||
-    place_meeting(x,y+1,obj_suelo_hojas) ||
+    place_meeting(x,y+1,obj_solid_terrain) ||
+    (place_meeting(x,y+1,obj_suelo_hojas) &amp;&amp; !place_meeting(x, y, obj_suelo_hojas)) ||
     place_meeting(x,y,Agua)      ||       //Comprobamos que este en el agua
-    place_meeting(x,y+1,obj_suelo_bosque) ||
     place_meeting(x,y+1,obj_mobile_platformH) ||
-    place_meeting(x,y+1,obj_mobile_platformV) ||
-    place_meeting(x,y+1,obj_nubes)
+    place_meeting(x,y+1,obj_mobile_platformV)
     ) 
     &amp;&amp; key_jump &gt; 0                         //Y que el boton de salto esté pulsado
     &amp;&amp; status_dead = 0)
@@ -207,7 +212,8 @@ if((
     audio_play_sound(snd_jump, 1, false);
 }
 //Altura de salto variable
-if(vsp &lt; 0) &amp;&amp; (!key_jump_held) vsp = max(vsp, -jumpspeed/4)
+if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
+    vsp = max(vsp, -jumpspeed/4);
 
 //Desplazamos al personaje (controlando colisiones)
 //Colision con enemigos
@@ -217,8 +223,7 @@ if(status_knockback == false){
         //Knockback
         if(place_meeting(x, y, Goomba) || 
             place_meeting(x, y, Volador) || 
-            place_meeting(x, y, obj_vodka) ||
-            //place_meeting(x, y, Melee) &amp;&amp; (Melee.status_dead == 0)|| 
+            place_meeting(x, y, obj_vodka) || 
             place_meeting(x, y, serpiente_to_flama) &amp;&amp; (serpiente_to_flama.status_dead == 0) || 
             place_meeting(x,y, obj_sneksot) || 
             place_meeting(x, y, obj_boss_interactor) &amp;&amp; (obj_boss_interactor.attacking == true) ||
@@ -235,40 +240,23 @@ if(status_knockback == false){
         {
             
             script_execute(scr_knockback);
-            /*global.vida -= 1;
-            status_knockback = true;
-            //Le damos una duración determinada
-            alarm_set(2, knockback_duration);
-            vsp = -jumpspeed;
-            //if(place_meeting(x+1, y, Goomba)) move = -2
-            //if(place_meeting(x-1, y, Goomba)) move = 2
-            move = -image_xscale;*/
         }
     }
 }
 //Comprobamos suelo hielo
 if(place_meeting(x,y+1,obj_hielo))
 {
-//Character speed during the slide
-    
-    status_sliding = true;
-    
+    //Character speed during the slide
+    status_sliding = true;    
 }
-else status_sliding = false
+else 
+    status_sliding = false
 
 //Horizontal collision (Terreno sólido)
-if(place_meeting(x+hsp,y,Terreno) || 
-    place_meeting(x+hsp,y,obj_arena) ||
-    place_meeting(x+hsp,y,obj_suelo_bosque) ||
-    place_meeting(x+hsp,y,obj_nubes)
-    )
+if(place_meeting(x+hsp,y,obj_solid_terrain))
 {
     
-    while(!place_meeting(x+sign(hsp), y, Terreno) &amp;&amp; 
-        !place_meeting(x+sign(hsp), y,obj_arena) &amp;&amp;
-        !place_meeting(x+sign(hsp), y,obj_suelo_bosque) &amp;&amp;
-        !place_meeting(x+sign(hsp), y,obj_nubes)
-        )
+    while(!place_meeting(x+sign(hsp), y,obj_solid_terrain))
     {
         x+=sign(hsp);
     }
@@ -279,18 +267,10 @@ x += hsp;
 x = clamp(x, 15, room_width-15);
 
 //Vertical collision
-if(place_meeting(x,y+vsp, Terreno) || 
-    place_meeting(x,y+vsp,obj_arena) ||
-    place_meeting(x,y+vsp,obj_suelo_bosque) ||
-    place_meeting(x,y+vsp,obj_nubes)
-    )
+if(place_meeting(x,y+vsp,obj_solid_terrain))
 {
   
-    while(!place_meeting(x, y+sign(vsp), Terreno) &amp;&amp; 
-            !place_meeting(x,y+sign(vsp),obj_arena) &amp;&amp;
-            !place_meeting(x,y+sign(vsp),obj_suelo_bosque) &amp;&amp;
-            !place_meeting(x,y+sign(vsp),obj_nubes)
-            )
+    while(!place_meeting(x,y+sign(vsp),obj_solid_terrain))
     {
         y+=sign(vsp);
     }
@@ -315,12 +295,11 @@ y += vsp;
 
 
 //Giro
-if (move!=0 &amp;&amp; status_sliding = false) image_xscale = move;
+if (move != 0 &amp;&amp; status_sliding = false) 
+    image_xscale = move;
 
 //Animaciones
-if(/*place_meeting(x, y+1, Terreno) || 
-    place_meeting(x,y+1,obj_arena)*/
-    vsp = 0)
+if(vsp = 0)
 {
     if(status_dead = 1 &amp;&amp; complete_death = 0) {
         sprite_index = spr_death;
@@ -329,9 +308,9 @@ if(/*place_meeting(x, y+1, Terreno) ||
             complete_death = 1;
         }
     } 
-    else if (complete_death = 0){
-    
-        if(move != 0) sprite_index =spr_run; 
+    else if (complete_death = 0){    
+        if(move != 0) 
+            sprite_index = spr_run; 
         else 
         {
             if(disparo &gt; 0) sprite_index = spr_shoot;
@@ -349,7 +328,7 @@ else
 //Control de muerte
 if (position_meeting (x,y,Lava)) global.vida = 0 ;
 if (position_meeting (x,y,obj_acido)) global.vida = 0;
-if (position_meeting(x,y,obj_pincho)) global.vida = 0;
+if (position_meeting (x,y,obj_pincho)) global.vida = 0;
 if (x &lt; 10) global.vida = 0;
 if (y &gt; room_height) global.vida = 0;
 if (global.vida &lt; 0) global.vida = 0;
@@ -365,7 +344,7 @@ if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
 if(place_meeting(x,y,Agua))
 {
     grav = 0.2; 
-    jumpspeed = 5;
+    //jumpspeed = 5;
     movespeed = 1.5;
 }
 
@@ -374,7 +353,7 @@ if(place_meeting(x,y,Agua))
 if(!place_meeting(x,y,Agua))
 {
     grav = 1; 
-    jumpspeed = 20;
+    //jumpspeed = 20;
     movespeed = 6;
 }
 
