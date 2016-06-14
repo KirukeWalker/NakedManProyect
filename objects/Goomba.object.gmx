@@ -98,7 +98,12 @@ sprite_index = skin;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Gravedad
+            <string>//Volver a la normalidad
+if(distance_to_object(object5) &gt; 200){
+    goombaloco = false;
+    msp = 2;
+}
+//Gravedad
 if(vsp &lt; 10) vsp += 7;
 if(place_meeting(x,y+vsp, Terreno) ||
     place_meeting(x,y+vsp, obj_arena) ||
@@ -116,49 +121,47 @@ if(place_meeting(x,y+vsp, Terreno) ||
 y += vsp; 
 //Controlamos cambio de dirección
 //Con las paredes
-if(place_meeting(x+msp, y, Terreno) || 
-    place_meeting(x+msp, y, obj_arena) ||
-    place_meeting(x+msp, y, obj_suelo_hojas)) direction_walking *= -1;
+if(place_meeting(x+msp, y, obj_solid_terrain) ||
+    place_meeting(x+msp, y, obj_suelo_hojas)){
+    direction_walking *= -1;
+    if(goombaloco == true){
+        goombaloco = false;
+        msp = 2;
+    }
+}
 //Con los vacios
-if(!place_meeting(x+25, y+1, Terreno) &amp;&amp; 
-    !place_meeting(x+25, y+1, obj_arena) &amp;&amp;
-    !place_meeting(x+25, y+1, obj_suelo_hojas))direction_walking = -1;
-if(!place_meeting(x-25, y+1, Terreno) &amp;&amp; 
-    !place_meeting(x-25, y+1, obj_arena) &amp;&amp;
-    !place_meeting(x-25, y+1, obj_suelo_hojas))direction_walking = +1;
+if(!place_meeting(x+25, y+1, obj_solid_terrain) &amp;&amp; 
+    !place_meeting(x+25, y+1, obj_suelo_hojas) &amp;&amp;
+    goombaloco == false)
+    direction_walking = -1;
+if(!place_meeting(x-25, y+1, obj_solid_terrain) &amp;&amp; 
+    !place_meeting(x-25, y+1, obj_suelo_hojas) &amp;&amp;
+    goombaloco == false)
+    direction_walking = +1;
     
     //Controlamos cambio de sentido/giro
 //Con las paredes
-if(place_meeting(x+(hsp*direction_facing), y, Terreno) ||
-    place_meeting(x+(hsp*direction_facing), y, obj_arena) ||
+/*if(place_meeting(x+(hsp*direction_facing), y, obj_solid_terrain) ||
     place_meeting(x+(hsp*direction_facing), y, obj_suelo_hojas))
 { 
     direction_facing *= -1;
-}
+}*/
 //Con el prota
 //if(place_meeting(x+1, y, object5)) looking_right = false;
 //if(place_meeting(x-1, y, object5)) looking_right = true;
 if(place_meeting(x, y, object5)) looking_right *= -1;
-//Comprobamos que se pueda volver loco
+
+//Comprobamos que se pueda volver loco, y se dirija hacia el prota cuando lo haga
 if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
     if(distance_to_object(object5) &lt; 100 &amp;&amp; goombaloco = false){
         goombaloco = true;
         msp = 4;    //Ajustamos la velocidad
-        alarm[0]=100;
+        //alarm[0]=60;
+        if (x &gt; object5.x) direction_walking = -1;
+        else direction_walking = +1;
     }
 }
-//Si esta loco buscamos al prota
-if (goombaloco = true) {
-    if (x &gt; object5.x) direction_walking = -1;
-    else direction_walking = +1;
-}
-//Volver a la normalidad
-if(place_meeting(x+(msp * direction_walking),y,Terreno)) 
-{
-    goombaloco = false;
-    msp = 2;
-    direction_walking *= -1;
-}
+
 //Movemos el goomba
 x += msp * direction_walking;
 </string>
