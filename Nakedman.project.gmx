@@ -253,6 +253,7 @@
       <object>objects\obj_ventiladores</object>
     </objects>
     <objects name="Enemigos">
+      <object>objects\obj_enemy</object>
       <object>objects\serpiente_to_flama</object>
       <object>objects\Goomba</object>
       <object>objects\HeavenGoomba</object>
@@ -265,7 +266,6 @@
       <object>objects\FinalBoss3_Body</object>
       <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss5</object>
-      <object>objects\obj_enemy</object>
     </objects>
     <objects name="Proyectil">
       <object>objects\obj_cacota</object>
@@ -326,13 +326,13 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss2</room>
+    <room>rooms\Room_FinalBoss1</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
     <room>rooms\Nivel_1</room>
-    <room>rooms\Room_FinalBoss1</room>
     <room>rooms\Nivel_Playa</room>
+    <room>rooms\Room_FinalBoss2</room>
     <room>rooms\Nivel_Bosque</room>
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
