@@ -29,7 +29,7 @@
 grav = 2;         //gravity se usa para funciones
 jumpspeed = 10;     //velocida de salto
 movespeed = 1;      //velocidad de movimiento
-global.vidaboss = 10; //Vida del personaje
+global.vidaboss = 20; //Vida del personaje
 looking_left = true;
 attack = 0;
 vsp = 0;

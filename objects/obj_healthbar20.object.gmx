@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//For the bosses that have 10 health
-draw_sprite(spr_healthbar,global.vidaboss, view_xview+240, view_yview+380);
+draw_sprite(spr_healthbar,global.vidaboss/2, view_xview+240, view_yview+380);
 
 </string>
           </argument>

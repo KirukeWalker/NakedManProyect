@@ -257,7 +257,7 @@ if(place_meeting(x,y+vsp,obj_solid_terrain))
 //Comprobación aparte para suelo atravesable
 if(place_meeting(x,y+vsp,obj_suelo_hojas) &amp;&amp; 
 !place_meeting(x,y,obj_suelo_hojas) &amp;&amp;
-vsp &gt; 0 &amp;&amp; key_down = 0)
+vsp &gt;= 0 &amp;&amp; key_down = 0)
 { 
     while(!place_meeting(x, y+sign(vsp), obj_suelo_hojas))
     {
@@ -303,12 +303,17 @@ else
     //sprite_index = spr_jump
 }
 //Control de muerte
-if (position_meeting (x,y,Lava)) global.vida = 0 ;
-if (position_meeting (x,y,obj_acido)) global.vida = 0;
-if (position_meeting (x,y,obj_pincho)) global.vida = 0;
-if (x &lt; 10) global.vida = 0;
-if (y &gt; room_height) global.vida = 0;
-if (global.vida &lt; 0) global.vida = 0;
+if (position_meeting (x,y,Lava)) 
+    global.vida = 0 ;
+if (position_meeting (x,y,obj_acido)) 
+    global.vida = 0;
+if (position_meeting (x,y,obj_pincho)) 
+    global.vida = 0;
+if (y &gt; room_height) 
+    global.vida = 0;
+//Control de negativos
+if (global.vida &lt; 0) 
+    global.vida = 0;
 
 if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
 {
@@ -412,32 +417,6 @@ if(invincible == false &amp;&amp; status_dead == false){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemy">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Colision con enemigos
-if(invincible == false &amp;&amp; status_dead == 0){            
-    script_execute(scr_knockback);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="FinalBoss5">
       <action>
         <libid>1</libid>
@@ -516,6 +495,32 @@ if(invincible == false &amp;&amp; status_dead == false){
     if(other.status_dead == 0){
         script_execute(scr_knockback);
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Colision con enemigos
+if(invincible == false &amp;&amp; status_dead == 0){            
+    script_execute(scr_knockback);
 }
 </string>
           </argument>
