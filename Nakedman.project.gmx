@@ -305,6 +305,8 @@
       <object>objects\obj_healthbar20</object>
       <object>objects\obj_preload</object>
       <object>objects\obj_MenuNivel</object>
+      <object>objects\obj_MenuNivelCamera</object>
+      <object>objects\obj_MenuNivelAll</object>
       <object>objects\obj_menu2</object>
       <object>objects\obj_pcinst</object>
       <object>objects\obj_camera</object>
