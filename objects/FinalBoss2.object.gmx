@@ -66,11 +66,12 @@ interactor = instance_create(x,y,obj_boss_interactor);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(status = 0){
+            <string>//
+if(status == 0){
     status = 1;
-    alarm[0] = 30;
+    alarm[0] = 30 - (10 - global.vidaboss);
 }
-else if(status = 1){
+else if(status == 1){
     anchor = instance_create(x,y,obj_anchor);
     status = 2;
     sprite_index = spr_boss2_idle;
@@ -180,6 +181,9 @@ if(status = 4){
     if(looking_left == false)
         direction += 180;
     image_angle = 0;
+    //Comprobación para suelo del fondo (revisar en caso de cambiarlo)
+    while(y &gt; room_height - 64 - sprite_height/2)
+        y -= 1;
     move_outside_solid(direction,200);
     //Destruimos los eslabones que pudieran quedar
     with(obj_chain_link){
@@ -190,7 +194,8 @@ if(status = 4){
 //Recibir ataque
 if (place_meeting (x,y, obj_cacota)) {
     global.vidaboss -=1;
-    instance_deactivate_object(obj_cacota);
+    with(obj_cacota)
+        instance_destroy();
 }
 //Morir del todo
 if (global.vidaboss = 0)
