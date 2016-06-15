@@ -103,17 +103,17 @@ if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
     if(distance_to_object(object5) &lt; 100 &amp;&amp; goombaloco = false){
         goombaloco = true;
         msp = 4;    //Ajustamos la velocidad
-        //alarm[0]=60;
+        alarm[0]=30;
         if (x &gt; object5.x) direction_walking = -1;
         else direction_walking = +1;
     }
 }
 
 //Volver a la normalidad
-if(distance_to_object(object5) &gt; 200 &amp;&amp; place_meeting(x, y+1, obj_solid_terrain)){
+/*if(distance_to_object(object5) &gt; 200 &amp;&amp; place_meeting(x, y+1, obj_solid_terrain)){
     goombaloco = false;
     msp = 2;
-}
+}*/
 //Gravedad
 if(vsp &lt; 10) vsp += 7;
 if(place_meeting(x,y+vsp, Terreno) ||
@@ -132,8 +132,8 @@ if(place_meeting(x,y+vsp, Terreno) ||
 y += vsp; 
 //Controlamos cambio de dirección
 //Con las paredes
-if(place_meeting(x+msp, y, obj_solid_terrain) ||
-    place_meeting(x+msp, y, obj_suelo_hojas)){
+if(place_meeting(x+(msp*direction_walking), y, obj_solid_terrain) ||
+    place_meeting(x+(msp*direction_walking), y, obj_suelo_hojas)){
     direction_walking *= -1;
     if(goombaloco == true){
         goombaloco = false;
@@ -141,22 +141,17 @@ if(place_meeting(x+msp, y, obj_solid_terrain) ||
     }
 }
 //Con los vacios
-if(!place_meeting(x+25, y+1, obj_solid_terrain) &amp;&amp; 
-    !place_meeting(x+25, y+1, obj_suelo_hojas) &amp;&amp;
+if(!place_meeting(x+(sprite_width*direction_walking), y+1, obj_solid_terrain) &amp;&amp; 
+    //place_meeting(x, y+1, obj_solid_terrain) &amp;&amp; 
+    !place_meeting(x+(sprite_width*direction_walking), y+1, obj_suelo_hojas) &amp;&amp;
     goombaloco == false)
-    direction_walking = -1;
-if(!place_meeting(x-25, y+1, obj_solid_terrain) &amp;&amp; 
+    direction_walking *= -1;
+/*if(!place_meeting(x-25, y+1, obj_solid_terrain) &amp;&amp; 
     !place_meeting(x-25, y+1, obj_suelo_hojas) &amp;&amp;
     goombaloco == false)
     direction_walking = +1;
-    
-    //Controlamos cambio de sentido/giro
-//Con las paredes
-/*if(place_meeting(x+(hsp*direction_facing), y, obj_solid_terrain) ||
-    place_meeting(x+(hsp*direction_facing), y, obj_suelo_hojas))
-{ 
-    direction_facing *= -1;
-}*/
+ */   
+
 //Con el prota
 //if(place_meeting(x+1, y, object5)) looking_right = false;
 //if(place_meeting(x-1, y, object5)) looking_right = true;

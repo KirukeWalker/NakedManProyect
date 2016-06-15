@@ -34,7 +34,8 @@ movespeed = 6;      //velocidad de movimiento
 actual_speed = 0;   //Variable para aceleración
 disparo = 0;
 nivel = room_get_name (room);
-status_knockback = false; //Declaramos knockback
+status_knockback = false;   //Declaramos knockback
+invincible = false;         //Separamos invecibilidad del knockback
 knockback_distance = 5;
 knockback_duration = 30;
 global.vida = 3; //Vida del personaje
@@ -95,7 +96,10 @@ switch (nivel)
           <argument>
             <kind>1</kind>
             <string>//Deshacemos el knockback
-status_knockback = false;
+//status_knockback = false;
+
+//Deshacemos la invencibilidad
+invincible = false;
 </string>
           </argument>
         </arguments>
@@ -217,7 +221,7 @@ if(vsp &lt; 0 &amp;&amp; !key_jump_held)
 
 //Desplazamos al personaje (controlando colisiones)
 //Colision con enemigos
-if(status_knockback == false){
+if(invincible == false){
     if(status_dead = 0)
     {
         //Knockback
@@ -425,7 +429,7 @@ if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_
           <argument>
             <kind>1</kind>
             <string>//If the boss is not teleporting
-if(status_knockback == false &amp;&amp; status_dead == false){
+if(invincible == false &amp;&amp; status_dead == false){
     if(other.teleporting == false){
         script_execute(scr_knockback);
     }
@@ -453,7 +457,7 @@ if(status_knockback == false &amp;&amp; status_dead == false){
           <argument>
             <kind>1</kind>
             <string>//
-if(status_knockback == false &amp;&amp; status_dead == false){
+if(invincible == false &amp;&amp; status_dead == false){
     if(other.status_dead == 0){
         script_execute(scr_knockback);
     }
