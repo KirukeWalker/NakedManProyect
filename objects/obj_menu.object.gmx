@@ -173,8 +173,8 @@ check2 = joystick_exists(2);
 draw_text(10, 10, check1);
 draw_text(10, 30, check2);*/
 
-//
-draw_text(10, 10, joy_check);
+//Joystick check
+//draw_text(10, 10, joy_check);
 </string>
           </argument>
         </arguments>
