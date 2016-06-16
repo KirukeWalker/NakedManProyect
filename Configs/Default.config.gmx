@@ -225,7 +225,7 @@
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
-    <option_fullscreen>False</option_fullscreen>
+    <option_fullscreen>True</option_fullscreen>
     <option_gameguid>{B89A01ED-EC15-4418-B952-CC109C7F468E}</option_gameguid>
     <option_gameid>643957485</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
@@ -269,7 +269,7 @@
     <option_in_app_purchase_sandbox_mode>0</option_in_app_purchase_sandbox_mode>
     <option_in_app_purchase_server_url></option_in_app_purchase_server_url>
     <option_information></option_information>
-    <option_interpolate>True</option_interpolate>
+    <option_interpolate>False</option_interpolate>
     <option_ios_adcolony_enable_V4VC>0</option_ios_adcolony_enable_V4VC>
     <option_ios_advertising_enable>0</option_ios_advertising_enable>
     <option_ios_advertising_key></option_ios_advertising_key>
@@ -423,7 +423,7 @@
     <option_scaleprogress>true</option_scaleprogress>
     <option_sci_UseSCI>0</option_sci_UseSCI>
     <option_sci_serverLocation></option_sci_serverLocation>
-    <option_screenkey>True</option_screenkey>
+    <option_screenkey>False</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>
     <option_shortcircuit>True</option_shortcircuit>
     <option_showcursor>False</option_showcursor>

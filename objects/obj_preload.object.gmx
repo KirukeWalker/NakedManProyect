@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Declaración de globalvars
+            <string>//Desactivamos interpolación de texturas
+texture_set_interpolation(false);
+//Declaración de globalvars
 global.offline = 1;
 globalvar pussy_mode;
 pussy_mode = false;
