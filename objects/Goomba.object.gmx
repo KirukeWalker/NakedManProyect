@@ -100,7 +100,9 @@ sprite_index = skin;
             <kind>1</kind>
             <string>//Comprobamos que se pueda volver loco, y se dirija hacia el prota cuando lo haga
 if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
-    if(distance_to_object(object5) &lt; 100 &amp;&amp; goombaloco = false){
+    //if(distance_to_object(object5) &lt; 100 &amp;&amp; goombaloco = false){
+    nakedId = collision_line(x-150, y, x+150, y, object5, false, true);
+    if(nakedId != noone){
         goombaloco = true;
         msp = 4;    //Ajustamos la velocidad
         alarm[0]=30;
@@ -114,6 +116,7 @@ if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
     goombaloco = false;
     msp = 2;
 }*/
+
 //Gravedad
 if(vsp &lt; 10) vsp += 7;
 if(place_meeting(x,y+vsp, Terreno) ||

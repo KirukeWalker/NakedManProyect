@@ -95,8 +95,8 @@ switch (nivel)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Deshacemos el knockback
-//status_knockback = false;
+            <string>//Deshacemos el knockback (para el agua)
+status_knockback = false;
 
 //Deshacemos la invencibilidad
 invincible = false;

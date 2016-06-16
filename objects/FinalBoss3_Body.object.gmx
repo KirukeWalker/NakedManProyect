@@ -73,15 +73,37 @@ if(place_meeting(x, y + (FinalBoss3.move_speed * v_direction), obj_suelo_bosque)
 x += FinalBoss3.move_speed * h_direction;
 y += FinalBoss3.move_speed * v_direction;
 
-//Recibir ataque
-if (place_meeting (x,y, obj_cacota)) {
-    global.vidaboss -= 1; 
-    FinalBoss3.move_speed +=1;   
-    instance_deactivate_object(obj_cacota);
-}
-//Chequeo para ver si se destruye
-if(global.vidaboss &lt;= qeue_position) 
+//Chequeo para ver si se destruye (con 20 de vida)
+if(global.vidaboss &lt;= qeue_position*2) 
     instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_cacota">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Recibir ataque
+global.vidaboss -= 1; 
+FinalBoss3.move_speed +=1;   
+with(other)
+    instance_destroy();
+
 </string>
           </argument>
         </arguments>

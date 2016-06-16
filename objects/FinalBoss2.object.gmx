@@ -30,6 +30,7 @@ grav = 2;         //gravity se usa para funciones
 jumpspeed = 10;     //velocida de salto
 movespeed = 1;      //velocidad de movimiento
 global.vidaboss = 20; //Vida del personaje
+vida_inicial = global.vidaboss;
 looking_left = true;
 attack = 0;
 vsp = 0;
@@ -69,7 +70,7 @@ interactor = instance_create(x,y,obj_boss_interactor);
             <string>//
 if(status == 0){
     status = 1;
-    alarm[0] = 30 - (10 - global.vidaboss);
+    alarm[0] = 30 - (vida_inicial - global.vidaboss);
 }
 else if(status == 1){
     anchor = instance_create(x,y,obj_anchor);
@@ -191,12 +192,7 @@ if(status = 4){
     }
     status = 0;
 }
-//Recibir ataque
-if (place_meeting (x,y, obj_cacota)) {
-    global.vidaboss -=1;
-    with(obj_cacota)
-        instance_destroy();
-}
+
 //Morir del todo
 if (global.vidaboss = 0)
 { 
@@ -211,6 +207,32 @@ if (global.vidaboss = 0)
     obj_fade.alarm[1] = room_speed * 0.05;
     instance_destroy();   
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_cacota">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Recibir ataque
+    global.vidaboss -=1;
+    with(other)
+        instance_destroy();
 </string>
           </argument>
         </arguments>
