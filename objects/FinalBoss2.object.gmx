@@ -164,6 +164,21 @@ if(status = 0){
                 sprite_index = spr_boss2_jump;
         }
     }
+    //Controlamos cambio de dirección
+    if(int64(delta_time%5) == 0){
+        if(x &gt; object5.x) //Comparamos la posición del boss con la del prota
+        { 
+            looking_left = true;
+            image_xscale = 1;
+            interactor.image_xscale = 1;
+        }
+        else if(x &lt; object5.x)
+        {
+            looking_left = false;
+            image_xscale = -1;
+            interactor.image_xscale = -1;
+        }
+    }
 }
 //Apuntando para disparar el ancla
 if(status = 1){
