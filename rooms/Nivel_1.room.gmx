@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_camera" xview="0" yview="0" wview="600" hview="480" xport="0" yport="0" wport="600" hport="480" hborder="300" vborder="240" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="object5" xview="0" yview="0" wview="600" hview="480" xport="0" yport="0" wport="600" hport="480" hborder="300" vborder="240" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -607,7 +607,6 @@
     <instance objName="obj_terreno_profundo" x="1920" y="64" name="inst_60100B76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="1920" y="96" name="inst_BF3958C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="1920" y="64" name="inst_8FD5C9DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_camera" x="64" y="64" name="inst_33B50772" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="2400" y="352" name="inst_1C55172C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="Terreno" x="2400" y="384" name="inst_587A76C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="Terreno" x="2400" y="416" name="inst_C0AF763C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
