@@ -96,37 +96,32 @@ if (place_meeting(x, y, obj_cacota))
 if(image_index = 15 &amp;&amp; status_dead = 1) 
     instance_destroy();
 //Disparar
-if (distance_to_object(object5) &lt; 208 &amp;&amp; snakeshot == 0 &amp;&amp; status_dead == 0)
+if (distance_to_object(object5) &lt; 208 &amp;&amp; status_dead == 0)
 {
-    if(nivel != "Nivel_Nieve"){
+    //Comporbamos si acaba de localizar al prota
+    if(sprite_index == estatico){
         sprite_index = disparando;
-        if (image_index = image_number/2) 
-        {
+        image_index = image_number/2;
+    }
+    //Hacemos que dispare en la imagen indicada
+    if (image_index == image_number/2) 
+    {
+        shoot = instance_create (x-2,y+2, obj_sneksot)    
+        shoot.speed = 10;
+        shoot.direction = 180;
+        //Segundo proyectil
+        if(nivel == "Nivel_Nieve"){
             shoot = instance_create (x-2,y+2, obj_sneksot)    
             shoot.speed = 10;
-            shoot.direction = 180;
-            if (image_index = image_number) {
-                sprite_index = estatico;
-                snakeshot = 1;
-            }
+            shoot.direction = 135;
         }
     }
-    else {
-        sprite_index = disparando
-        if (image_index = image_number/2) 
-        {
-            for(i=0;i&lt;5;i++)
-                {
-                     parts[i] = instance_create(x-2,y+2, obj_sneksot);
-                     parts[i].direction += 45;
-                     parts[i].speed = 10;
-                }
-            }
-        if (image_index = image_number) {
-            sprite_index = estatico
-            snakeshot = 1
-            }
-    }
+}
+//Volver a estatico
+if(image_index == image_number-1 &amp;&amp; 
+    sprite_index == disparando &amp;&amp; 
+    distance_to_object(object5) &gt;= 208){
+    sprite_index = estatico;
 }
 </string>
           </argument>

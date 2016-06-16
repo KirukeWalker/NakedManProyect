@@ -25,15 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>goombaloco = false;
+            <string>//Variables
+goombaloco = false;
 looking_right = true;
 direction_facing = 1;
 direction_walking = 1; //Dirección en la que anda
 msp = 2; //Velocidad a la que se desplaza
-skin = spr_goomba;
-nivel = room_get_name (room);
 vsp = 0;
 hsp = 0;
+//Skin por nivel
+skin = spr_goomba;
+nivel = room_get_name (room);
 switch (nivel)
 {
     case "Nivel_Playa": {
@@ -50,8 +52,8 @@ switch (nivel)
     }
 }
 sprite_index = skin;
-
-
+//Cogemos el ancho de la skin
+skin_width = sprite_width;
 
 </string>
           </argument>
@@ -144,9 +146,9 @@ if(place_meeting(x+(msp*direction_walking), y, obj_solid_terrain) ||
     }
 }
 //Con los vacios
-if(!place_meeting(x+(sprite_width*direction_walking), y+1, obj_solid_terrain) &amp;&amp; 
+if(!place_meeting(x+(skin_width*direction_walking), y+1, obj_solid_terrain) &amp;&amp; 
     //place_meeting(x, y+1, obj_solid_terrain) &amp;&amp; 
-    !place_meeting(x+(sprite_width*direction_walking), y+1, obj_suelo_hojas) &amp;&amp;
+    !place_meeting(x+(skin_width*direction_walking), y+1, obj_suelo_hojas) &amp;&amp;
     goombaloco == false)
     direction_walking *= -1;
 /*if(!place_meeting(x-25, y+1, obj_solid_terrain) &amp;&amp; 
@@ -161,6 +163,9 @@ if(!place_meeting(x+(sprite_width*direction_walking), y+1, obj_solid_terrain) &a
 if(place_meeting(x, y, object5)) 
     looking_right *= -1;
 
+//Orientación del goomba
+image_xscale = -direction_walking;
+    
 //Movemos el goomba
 x += msp * direction_walking;
 </string>

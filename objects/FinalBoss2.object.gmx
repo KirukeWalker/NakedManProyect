@@ -69,6 +69,20 @@ interactor = instance_create(x,y,obj_boss_interactor);
             <kind>1</kind>
             <string>//
 if(status == 0){
+    //Controlamos cambio de dirección
+    if(x &gt; object5.x) //Comparamos la posición del boss con la del prota
+    { 
+        looking_left = true;
+        image_xscale = 1;
+        interactor.image_xscale = 1;
+    }
+    else if(x &lt; object5.x)
+    {
+        looking_left = false;
+        image_xscale = -1;
+        interactor.image_xscale = -1;
+    }
+    //
     status = 1;
     alarm[0] = 30 - (vida_inicial - global.vidaboss);
 }
@@ -119,19 +133,7 @@ if(status = 0){
             vsp = -jumpspeed;
         }
     }
-    //Controlamos cambio de dirección
-    if(x &gt; object5.x) //Comparamos la posición del boss con la del prota
-    { 
-        looking_left = true;
-        image_xscale = 1;
-        interactor.image_xscale = 1;
-    }
-    if(x &lt; object5.x)
-    {
-        looking_left = false;
-        image_xscale = -1;
-        interactor.image_xscale = -1;
-    }
+    
     //Comprobamos posición del prota para el encaramiento
     if(x &lt; instance_position(x, y, object5)) 
         looking_left = true;
@@ -188,8 +190,24 @@ if(status = 4){
     move_outside_solid(direction,200);
     //Destruimos los eslabones que pudieran quedar
     with(obj_chain_link){
-    instance_destroy();
+        instance_destroy();
     }
+    
+    //Controlamos cambio de dirección
+    if(x &gt; object5.x) //Comparamos la posición del boss con la del prota
+    { 
+        looking_left = true;
+        image_xscale = 1;
+        interactor.image_xscale = 1;
+    }
+    else if(x &lt; object5.x)
+    {
+        looking_left = false;
+        image_xscale = -1;
+        interactor.image_xscale = -1;
+    }
+    
+    //Volvemos al estado inicial
     status = 0;
 }
 
