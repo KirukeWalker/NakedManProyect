@@ -279,7 +279,9 @@
       <object>objects\obj_anchor</object>
       <object>objects\obj_chain_link</object>
       <object>objects\obj_boss_interactor</object>
+      <object>objects\obj_fire_splash</object>
       <object>objects\obj_fireball</object>
+      <object>objects\obj_shoot_pointer</object>
     </objects>
     <objects name="Utilidades">
       <object>objects\obj_music</object>
