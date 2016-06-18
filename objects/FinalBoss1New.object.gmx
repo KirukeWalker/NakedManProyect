@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
+global.vidaboss = 20;
 movement_speed = 3;
 sprint_speed = 10;
 grav = 0;
@@ -75,12 +76,13 @@ status = 0;
             <string>//Make the shoot
 pointer.x = shoot_counter * 96 + 640;
 pointer.y = 576;
-fireball = instance_create(x - 30, y, obj_fireball);
+fireball = instance_create(x + (30 * direction_looking), y, obj_fireball);
 shooting = false;
 shoot_counter ++;
+//Finalizar ronda disparos y pasar a otro estado
 if(shoot_counter &gt; 4){
     shoot_counter = 0;
-    status = 3;
+    status = 4;
 }
 </string>
           </argument>
@@ -125,41 +127,79 @@ switch(status){
             block[2].y += 8;
         }
         else
+            status = 2;
+    break;
+    //Intenta embestir al prota
+    case 2:
+        if(abs(hspeed) &lt; sprint_speed){
+            hspeed += direction_looking;
+        }
+        if(global.vidaboss &lt;=16)
             status = 3;
     break;
+    //Ve a una de las plataforas de los lados y sube
+    case 3:
+        if(x &lt; 576 || x &gt; 1056){
+            hspeed = 0;
+            direction_looking *= -1;
+            vspeed -= 20;
+            status = 4;
+        }
+    break;
     //Shoot to some balls to the floor
-    case 2:
+    case 4:
         if(shooting == false){
             shooting = true;
             alarm_set(0, time_between_shoots);
         }
-    break;
-    //
-    case 3:
-        if(abs(hspeed) &lt; sprint_speed){
-            hspeed += direction_looking;
-        }
-    break;
+    break;    
 }
 //Control colisiones vertical (solo hacia abajo)
 if(place_meeting(x, y + vspeed, obj_solid_terrain)){
     while(place_meeting(x, y + vspeed, obj_solid_terrain)
         &amp;&amp; vspeed &gt; 0){
-        y --;
+        vspeed --;
     }
-    vspeed = 0;
     grav = 0;
 }
 //Control colisiones vertical
-if(place_meeting(x + (hspeed * direction_looking), y, obj_solid_terrain)){
-    while(place_meeting(x + (hspeed * direction_looking), y, obj_solid_terrain)){
+if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
+    /*while(place_meeting(x + (hspeed * direction_looking), y, obj_solid_terrain)){
         x += -direction_looking;
-    }
+    }*/
     hspeed = 0;
     direction_looking *= -1;
 }
 //Encaramiento
 image_xscale = -direction_looking;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_cacota">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Destruye el proyectil y réstale vida
+if(status != 0){
+    with(other)
+        instance_destroy();
+    global.vidaboss --;
+}
 </string>
           </argument>
         </arguments>
@@ -183,8 +223,8 @@ image_xscale = -direction_looking;
           <argument>
             <kind>1</kind>
             <string>//Show boss stuff
-draw_text(30, 30, x);
-draw_text(30, 50, y);
+//draw_text(30, 30, x);
+//draw_text(30, 50, y);
 </string>
           </argument>
         </arguments>
