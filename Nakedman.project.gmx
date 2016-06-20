@@ -289,6 +289,7 @@
     <objects name="Utilidades">
       <object>objects\obj_music</object>
       <object>objects\obj_fade</object>
+      <object>objects\obj_fade_white</object>
       <object>objects\obj_portal</object>
       <object>objects\obj_portal_nieve</object>
       <object>objects\obj_txt_intro_1</object>
@@ -310,13 +311,14 @@
       <object>objects\obl_hud</object>
       <object>objects\obj_niebla</object>
       <object>objects\obj_healthbar</object>
-      <object>objects\obj_healthbar20</object>
+      <object>objects\obj_healthbar_forAll</object>
       <object>objects\obj_preload</object>
       <object>objects\obj_MenuNivel</object>
       <object>objects\obj_MenuNivelCamera</object>
       <object>objects\obj_MenuNivelAll</object>
       <object>objects\obj_menu2</object>
       <object>objects\obj_pcinst</object>
+      <object>objects\obj_camera2</object>
       <object>objects\obj_camera</object>
     </objects>
     <objects name="BossFinal Pruebas">

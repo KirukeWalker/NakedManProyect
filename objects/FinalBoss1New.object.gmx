@@ -47,7 +47,9 @@ pointer = instance_find(obj_shoot_pointer, 0);
 block[0] = instance_create(480, 416, Terreno);
 block[1] = instance_create(480, 448, Terreno);
 block[2] = instance_create(480, 480, Terreno);
-
+block[3] = instance_create(512, 416, Terreno);
+block[4] = instance_create(512, 448, Terreno);
+block[5] = instance_create(512, 480, Terreno);
 /*Status
     0 - Waiting
     1 - Closing the door
@@ -91,9 +93,11 @@ if(shoot_counter &gt; 4){
     //apply_gravity = false;
     
     //Borra el fuego de las plataformas
-    for(i = 0; i &lt; array_length_1d(fire); i++){
+    with(obj_fire_splash) instance_destroy();
+    /*for(i = 0; i &lt; array_length_1d(fire); i++){
         with(fire[i]) instance_destroy();
-    }
+    }*/
+    
     platform_fire_created = false;
 }
 </string>
@@ -119,7 +123,7 @@ if(shoot_counter &gt; 4){
           <argument>
             <kind>1</kind>
             <string>//Gravedad
-if(vspeed &lt;= 0 &amp;&amp; apply_gravity == true){
+if(vspeed &lt;= 10 &amp;&amp; apply_gravity == true){
     grav += 2;
     vspeed += grav;
 }
@@ -130,15 +134,19 @@ switch(status){
     case 0:
         if(player.x &gt; 544){
             status = 1;
-            health_bar = instance_create(10, 10, obj_healthbar20);
+            health_bar = instance_create(10, 10, obj_healthbar_forAll);
+            //
+            obj_camera2.following = false;
+            obj_camera2.x = 832;
+            obj_camera2.y = 384;
         }
     break;
     //Close the "door"
     case 1:
         if(block[0].y &lt; 512){
-            block[0].y += 16;
-            block[1].y += 16;
-            block[2].y += 16;
+            for(i = 0; i &lt; array_length_1d(block); i++){
+                block[i].y += 16;
+            }
         }
         else
             status = 2;
@@ -164,7 +172,7 @@ switch(status){
     break;
     //Ve a una de las plataforas de los lados y sube
     case 3:
-        if(x &lt; 572 || x &gt; 1048){
+        if(x &lt; 600 || x &gt; 1060){
             hspeed = 0;
             direction_looking *= -1;
             vspeed -= 40;
@@ -202,9 +210,6 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; status != 5){
 }
 //Control colisiones horizontal
 if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
-    /*while(place_meeting(x + (hspeed * direction_looking), y, obj_solid_terrain)){
-        x += -direction_looking;
-    }*/
     hspeed = 0;
     direction_looking *= -1;
 }
@@ -219,8 +224,8 @@ if (global.vidaboss = 0)
     ini_write_string("NhTPahPmx","MeFjgPfREndg","uFscFjgWfjE");
     ini_close()
     global.muertes += 1;
-    obj_fade.fadeIn = false;
-    obj_fade.alarm[1] = room_speed * 0.05;
+    obj_fade_white.fadeIn = false;
+    //obj_fade.alarm[1] = room_speed * 0.05;
     instance_destroy();   
 }
 </string>
