@@ -28,10 +28,37 @@
             <string>//Get the player
 player = instance_find(object5, 0);
 //Variables
-following = true;
+following_player = true;
 tremble = false;
+tremble_direction = -1;
 objectiveX = 0;
 objectiveY = 0;
+locked_on = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+tremble_direction *= -1;
+alarm_set(1, 5);
 </string>
           </argument>
         </arguments>
@@ -54,7 +81,7 @@ objectiveY = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
+            <string>//Apaga temblor con alarma
 tremble = false;
 </string>
           </argument>
@@ -79,17 +106,58 @@ tremble = false;
           <argument>
             <kind>1</kind>
             <string>//Follow the player if true
-if(following == true){
+if(following_player == true){
     x = player.x;
     y = player.y;
 }
 else{
-    
+    if(distance_to_point(objectiveX, objectiveY) &gt; 10)
+        move_towards_point(objectiveX, objectiveY, 10);
+    else if(locked_on == false){
+        x = objectiveX;
+        y = objectiveY;
+        locked_on = true;
+        speed = 0;
+    }
+    /*else{//Decrease speed
+        speed = distance_to_point(objectiveX, objectiveY);
+    }*/
 }
 //
-if(tremble == true){
-
+/*if(tremble == true &amp;&amp; locked_on == true){
+    speed = 5 
+    direction = tremble_direction * 90 + 180;
+    //tremble_direction *= -1;
 }
+else{
+    speed = 0;
+}*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Position stuff
+draw_set_color(c_white);
+draw_text(30, 30, x);
+draw_text(30, 50, y);
 </string>
           </argument>
         </arguments>

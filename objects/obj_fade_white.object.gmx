@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>fadeIn = true;
 alpha = 0;
-alarm[0] = room_speed * 0.05;
 </string>
           </argument>
         </arguments>

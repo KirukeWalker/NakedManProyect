@@ -39,6 +39,7 @@ time_to_shoot = false;
 apply_gravity = true;
 platform_fire_created = false;
 phase = 0;
+last_round = false;
 //Get the player
 player = instance_find(object5, 0);
 //Get the pointer
@@ -136,9 +137,9 @@ switch(status){
             status = 1;
             health_bar = instance_create(10, 10, obj_healthbar_forAll);
             //
-            obj_camera2.following = false;
-            obj_camera2.x = 832;
-            obj_camera2.y = 384;
+            obj_camera2.following_player = false;
+            obj_camera2.objectiveX = 832;
+            obj_camera2.objectiveY = 384;
         }
     break;
     //Close the "door"
@@ -174,7 +175,7 @@ switch(status){
     case 3:
         if(x &lt; 600 || x &gt; 1060){
             hspeed = 0;
-            direction_looking *= -1;
+            direction_looking = sign(800 - x);
             vspeed -= 40;
             status = 4;
         }
@@ -198,7 +199,34 @@ switch(status){
             status = 2;
             apply_gravity = false;
         }
-    break;   
+    break;  
+    //"Morir"
+    case 6:
+        obj_fade.fadeIn = false;
+        y = 1000;
+        if(obj_fade.alpha == 1){
+            global.vidaboss = 1;
+            last_round = true;
+            obj_fade.fadeIn = true;
+            with(Lava)instance_destroy();
+            for(i = 0; i &lt; 5; i++){
+                for(j = 0; j &lt; 18; j++){
+                     instance_create(j * 32 + 544, i * 32 + 640, Lava);
+                }
+            }
+            Lava.depth = -3;
+            lava_reference = instance_find(Lava, 0);
+            status = 7;
+        }
+    break; 
+    case 7:
+        if(lava_reference.y &gt; 480)
+            Lava.y -= 1;
+        if(global.vidaboss &lt; 20)
+            global.vidaboss += 0.25;
+        if(lava_reference.y == 480 &amp;&amp; global.vidaboss == 20)
+            status = 8;
+    break;
 }
 //Control colisiones vertical (solo hacia abajo)
 if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; status != 5){
@@ -208,22 +236,30 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; status != 5){
     }
     grav = 0;
 }
-//Control colisiones horizontal
+//Control colisiones horizontal (cuando embiste)
 if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
     hspeed = 0;
     direction_looking *= -1;
+    //Temblor de cámara
+    obj_camera2.tremble = true;
+    obj_camera2.alarm[0] = 10;
+    obj_camera2.alarm[1] = 5;
 }
 //Encaramiento
 image_xscale = -direction_looking;
+//"Morir"
+if(global.vidaboss == 0 &amp;&amp; last_round == false)
+    status = 6;
 
 //Morir del todo
-if (global.vidaboss = 0)
+if (global.vidaboss == 0 &amp;&amp; last_round == true)
 { 
     ini_open("SystemNM.txt")
     ini_key_delete("NhTPahPmx","MeFjgPFREndg")
     ini_write_string("NhTPahPmx","MeFjgPfREndg","uFscFjgWfjE");
     ini_close()
     global.muertes += 1;
+    //obj_fade.fadeIn = false;
     obj_fade_white.fadeIn = false;
     //obj_fade.alarm[1] = room_speed * 0.05;
     instance_destroy();   
@@ -254,7 +290,7 @@ if (global.vidaboss = 0)
 if(status != 0){
     with(other)
         instance_destroy();
-    global.vidaboss --;
+    global.vidaboss -= 20;
 }
 </string>
           </argument>
