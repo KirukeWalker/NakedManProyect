@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//For the bosses that have 10 health
-draw_sprite(spr_healthbar,global.vidaboss/2, view_xview+240, view_yview+380);
+image_to_show = (global.vidaboss + 1) / 2;
+draw_sprite(spr_healthbar,image_to_show, 340, 20);
 
 </string>
           </argument>

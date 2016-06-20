@@ -3,9 +3,9 @@
   <spriteName>spr_lava</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>Lava</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>event_inherited();
+//
+originalY = y;
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,7 +50,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>event_inherited();
+//
+if(y &lt; originalY + 16){
+    y ++;
+    //block.y ++;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="Terreno">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Borralo cuando haya bajado del todo
+//Ahora msimo no lo borrará
+if(y == originalY + 16){
+    with(other) instance_destroy();
+}
+</string>
           </argument>
         </arguments>
       </action>

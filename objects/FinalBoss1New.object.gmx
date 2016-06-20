@@ -3,10 +3,10 @@
   <spriteName>spr_boss1_move</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>obj_enemy</parentName>
-  <maskName>spr_boss1_move</maskName>
+  <maskName>spr_boss1_idle</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -35,7 +35,10 @@ time_between_shoots = 15;
 shoot_counter = 0;
 shooting = false;
 direction_looking = -1;
-
+time_to_shoot = false;
+apply_gravity = true;
+platform_fire_created = false;
+phase = 0;
 //Get the player
 player = instance_find(object5, 0);
 //Get the pointer
@@ -82,7 +85,16 @@ shoot_counter ++;
 //Finalizar ronda disparos y pasar a otro estado
 if(shoot_counter &gt; 4){
     shoot_counter = 0;
-    status = 4;
+    status = 5;
+    sprint_speed = 12;
+    time_to_shoot = false;
+    //apply_gravity = false;
+    
+    //Borra el fuego de las plataformas
+    for(i = 0; i &lt; array_length_1d(fire); i++){
+        with(fire[i]) instance_destroy();
+    }
+    platform_fire_created = false;
 }
 </string>
           </argument>
@@ -107,8 +119,8 @@ if(shoot_counter &gt; 4){
           <argument>
             <kind>1</kind>
             <string>//Gravedad
-if(vspeed &lt;= 0 /*&amp;&amp; status != */){
-    grav ++;
+if(vspeed &lt;= 0 &amp;&amp; apply_gravity == true){
+    grav += 2;
     vspeed += grav;
 }
 
@@ -116,15 +128,17 @@ if(vspeed &lt;= 0 /*&amp;&amp; status != */){
 switch(status){
     //Check the entrace of the player in the proper room
     case 0:
-        if(player.x &gt; 576)
+        if(player.x &gt; 544){
             status = 1;
+            health_bar = instance_create(10, 10, obj_healthbar20);
+        }
     break;
     //Close the "door"
     case 1:
         if(block[0].y &lt; 512){
-            block[0].y += 8;
-            block[1].y += 8;
-            block[2].y += 8;
+            block[0].y += 16;
+            block[1].y += 16;
+            block[2].y += 16;
         }
         else
             status = 2;
@@ -134,35 +148,59 @@ switch(status){
         if(abs(hspeed) &lt; sprint_speed){
             hspeed += direction_looking;
         }
-        if(global.vidaboss &lt;=16)
+        //Segun la vida que pierda pasamos a una fase u otra
+        if(global.vidaboss &lt;= 5 &amp;&amp; phase == 2){
+            script_execute(scr_create_flames);
+            phase = 3;
+        }
+        if(global.vidaboss &lt;= 10 &amp;&amp; phase == 1){
             status = 3;
+            phase = 2;
+        }
+        else if(global.vidaboss &lt;= 15 &amp;&amp; phase == 0){
+            status = 3;
+            phase = 1;
+        }
     break;
     //Ve a una de las plataforas de los lados y sube
     case 3:
-        if(x &lt; 576 || x &gt; 1056){
+        if(x &lt; 572 || x &gt; 1048){
             hspeed = 0;
             direction_looking *= -1;
-            vspeed -= 20;
+            vspeed -= 40;
             status = 4;
         }
     break;
     //Shoot to some balls to the floor
     case 4:
+        if(platform_fire_created == false){
+            script_execute(scr_create_flames);
+            //
+            platform_fire_created = true;
+        }
         if(shooting == false){
+            apply_gravity = true;
             shooting = true;
             alarm_set(0, time_between_shoots);
         }
-    break;    
+    break; 
+    //Baja de la plataforma
+    case 5:
+        if(y &gt; 560){
+            status = 2;
+            apply_gravity = false;
+        }
+    break;   
 }
 //Control colisiones vertical (solo hacia abajo)
-if(place_meeting(x, y + vspeed, obj_solid_terrain)){
+if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; status != 5){
     while(place_meeting(x, y + vspeed, obj_solid_terrain)
         &amp;&amp; vspeed &gt; 0){
         vspeed --;
     }
     grav = 0;
 }
-//Control colisiones vertical
+//Control colisiones horizontal
 if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
     /*while(place_meeting(x + (hspeed * direction_looking), y, obj_solid_terrain)){
         x += -direction_looking;
@@ -172,6 +210,19 @@ if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
 }
 //Encaramiento
 image_xscale = -direction_looking;
+
+//Morir del todo
+if (global.vidaboss = 0)
+{ 
+    ini_open("SystemNM.txt")
+    ini_key_delete("NhTPahPmx","MeFjgPFREndg")
+    ini_write_string("NhTPahPmx","MeFjgPfREndg","uFscFjgWfjE");
+    ini_close()
+    global.muertes += 1;
+    obj_fade.fadeIn = false;
+    obj_fade.alarm[1] = room_speed * 0.05;
+    instance_destroy();   
+}
 </string>
           </argument>
         </arguments>

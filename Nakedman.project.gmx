@@ -200,6 +200,7 @@
     <script>scripts\scr_menu2.gml</script>
     <script>scripts\scr_menunivel.gml</script>
     <script>scripts\scr_knockback.gml</script>
+    <script>scripts\scr_create_flames.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_intro</font>
@@ -279,7 +280,9 @@
       <object>objects\obj_anchor</object>
       <object>objects\obj_chain_link</object>
       <object>objects\obj_boss_interactor</object>
+      <object>objects\obj_rising_fire</object>
       <object>objects\obj_fire_splash</object>
+      <object>objects\obj_lava_splash</object>
       <object>objects\obj_fireball</object>
       <object>objects\obj_shoot_pointer</object>
     </objects>
