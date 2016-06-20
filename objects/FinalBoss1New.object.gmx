@@ -88,8 +88,14 @@ shoot_counter ++;
 //Finalizar ronda disparos y pasar a otro estado
 if(shoot_counter &gt; 4){
     shoot_counter = 0;
-    status = 5;
-    sprint_speed = 12;
+    //Ve a la ronda dependiendo de sgrwsgrs
+    if(last_round == false)
+        status = 5;
+    else{
+        status = 2;
+        apply_gravity = false;   
+    }
+    sprint_speed += 1;
     time_to_shoot = false;
     //apply_gravity = false;
     
@@ -180,7 +186,7 @@ switch(status){
             status = 4;
         }
     break;
-    //Shoot to some balls to the floor
+    //Shoot some balls to the floor
     case 4:
         if(platform_fire_created == false){
             script_execute(scr_create_flames);
@@ -219,14 +225,19 @@ switch(status){
             status = 7;
         }
     break; 
+    //Subida de lava y de vida
     case 7:
         if(lava_reference.y &gt; 480)
             Lava.y -= 1;
         if(global.vidaboss &lt; 20)
             global.vidaboss += 0.25;
-        if(lava_reference.y == 480 &amp;&amp; global.vidaboss == 20)
-            status = 8;
+        if(lava_reference.y == 480 &amp;&amp; global.vidaboss == 20){
+            y = 560;
+            x = 768;
+            status = 3;
+        }
     break;
+    //
 }
 //Control colisiones vertical (solo hacia abajo)
 if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; status != 5){
@@ -248,9 +259,11 @@ if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
 //Encaramiento
 image_xscale = -direction_looking;
 //"Morir"
-if(global.vidaboss == 0 &amp;&amp; last_round == false)
+if(global.vidaboss == 0 &amp;&amp; last_round == false){
     status = 6;
-
+    depth = -2;
+    with(obj_fire_splash) instance_destroy();
+}
 //Morir del todo
 if (global.vidaboss == 0 &amp;&amp; last_round == true)
 { 
@@ -290,7 +303,7 @@ if (global.vidaboss == 0 &amp;&amp; last_round == true)
 if(status != 0){
     with(other)
         instance_destroy();
-    global.vidaboss -= 20;
+    global.vidaboss -= 1;
 }
 </string>
           </argument>
