@@ -30,7 +30,8 @@ player = instance_find(object5, 0);
 //Variables
 following_player = true;
 tremble = false;
-tremble_direction = -1;
+tremble_direction = 1;
+tremble_speed = 2;
 objectiveX = 0;
 objectiveY = 0;
 locked_on = false;
@@ -124,12 +125,13 @@ else{
     }*/
 }
 //
-/*if(tremble == true &amp;&amp; locked_on == true){
-    speed = 5 
-    direction = tremble_direction * 90 + 180;
+if(tremble == true &amp;&amp; locked_on == true){
+    y += tremble_direction * tremble_speed;
+    //speed = 5;
+    //direction = tremble_direction * 90 + 180;
     //tremble_direction *= -1;
 }
-else{
+/*else{
     speed = 0;
 }*/
 </string>

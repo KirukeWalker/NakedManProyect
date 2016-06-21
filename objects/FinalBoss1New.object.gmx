@@ -242,12 +242,19 @@ switch(status){
             Lava.depth = -2;
             Terreno.depth = -1;
             depth = -1;
+            object5.depth = -1;
             lava_reference = instance_find(Lava, 0);
             status = 7;
         }
     break; 
     //Subida de lava y de vida
     case 7:
+        //Temblor de cámara
+        if(obj_camera2.tremble == false){
+            obj_camera2.tremble = true;
+            obj_camera2.alarm[0] = 10;
+            obj_camera2.alarm[1] = 5;
+        }
         if(lava_reference.y &gt; 480){
             for(i = 0; i &lt; 18; i++){
                 for(j = 0; j &lt; 18; j++){
@@ -330,7 +337,7 @@ if (global.vidaboss == 0 &amp;&amp; last_round == true)
 if(status != 0){
     with(other)
         instance_destroy();
-    global.vidaboss -= 5;
+    global.vidaboss -= 1;
 }
 </string>
           </argument>
