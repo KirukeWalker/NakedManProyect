@@ -126,7 +126,8 @@ else{
 }
 //
 if(tremble == true &amp;&amp; locked_on == true){
-    y += tremble_direction * tremble_speed;
+    x += tremble_direction * tremble_speed;
+    //y += tremble_direction * tremble_speed;
     //speed = 5;
     //direction = tremble_direction * 90 + 180;
     //tremble_direction *= -1;

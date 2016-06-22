@@ -81,7 +81,10 @@ status = 0;
             <kind>1</kind>
             <string>//Make the shoot
 pointer.x = shoot_counter * 96 + 640;
-pointer.y = 576;
+if(last_round == false)
+    pointer.y = 576;
+else
+    pointer.y = 480;
 fireball = instance_create(x + (30 * direction_looking), y, obj_fireball);
 shooting = false;
 shoot_counter ++;
@@ -89,9 +92,9 @@ shoot_counter ++;
 if(shoot_counter &gt; 4){
     shoot_counter = 0;
     //Ve a la ronda dependiendo de sgrwsgrs
-    if(last_round == false)
+    if(last_round == false &amp;&amp; phase != 3)
         status = 5;
-    else{
+    else if(last_round == true){
         status = 2;
         apply_gravity = false;   
     }
@@ -139,7 +142,7 @@ if(vspeed &lt;= 10 &amp;&amp; apply_gravity == true){
 switch(status){
     //Check the entrace of the player in the proper room
     case 0:
-        if(player.x &gt; 544){
+        if(player.x &gt; 554){
             status = 1;
             health_bar = instance_create(10, 10, obj_healthbar_forAll);
             //
@@ -166,7 +169,7 @@ switch(status){
         if(last_round == false){
             //Segun la vida que pierda pasamos a una fase u otra
             if(global.vidaboss &lt;= 5 &amp;&amp; phase == 2){
-                script_execute(scr_create_flames);
+                status = 3;
                 phase = 3;
             }
             if(global.vidaboss &lt;= 10 &amp;&amp; phase == 1){
@@ -204,7 +207,7 @@ switch(status){
     break;
     //Shoot some balls to the floor
     case 4:
-        if(platform_fire_created == false){
+        if(platform_fire_created == false &amp;&amp; phase != 3 &amp;&amp; last_round == false){
             script_execute(scr_create_flames);
             //
             platform_fire_created = true;
@@ -267,6 +270,7 @@ switch(status){
         if(lava_reference.y == 480 &amp;&amp; global.vidaboss == 20){
             y = 560;
             x = 768;
+            hspeed = 12 * direction_looking;
             status = 3;
             phase = 4;
         }
@@ -286,15 +290,21 @@ if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
     hspeed = 0;
     direction_looking *= -1;
     //Temblor de cámara
-    obj_camera2.tremble = true;
-    obj_camera2.alarm[0] = 10;
-    obj_camera2.alarm[1] = 5;
+    if(last_round == true){
+        obj_camera2.tremble = true;
+        obj_camera2.alarm[0] = 10;
+        obj_camera2.alarm[1] = 5;
+    }
 }
 //Encaramiento
 image_xscale = -direction_looking;
 //"Morir"
 if(global.vidaboss == 0 &amp;&amp; last_round == false){
     status = 6;
+    shoot_counter = 0;
+    //alarm_set(0, -1);
+    apply_gravity = false;
+    //time_to_shoot = false;
     depth = -2;
     with(obj_fire_splash) instance_destroy();
 }
@@ -311,6 +321,14 @@ if (global.vidaboss == 0 &amp;&amp; last_round == true)
     //obj_fade.alarm[1] = room_speed * 0.05;
     instance_destroy();   
 }
+
+//Control de sprites
+if(hspeed != 0)
+    sprite_index = spr_boss1_move;
+else if(vspeed != 0)
+    sprite_index = spr_boss1_jump;
+else
+    sprite_index = spr_boss1_idle;
 </string>
           </argument>
         </arguments>
@@ -364,6 +382,7 @@ if(status != 0){
             <string>//Show boss stuff
 //draw_text(30, 30, x);
 //draw_text(30, 50, y);
+draw_text(30, 70, status);
 </string>
           </argument>
         </arguments>
