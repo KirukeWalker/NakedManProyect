@@ -98,15 +98,17 @@ switch (nivel)
           <argument>
             <kind>1</kind>
             <string>//Controloamos distancia horizontal
-if (x &gt;= initial_position + max_distance)
-{
-    going_right = false;
-    image_xscale *= -1;
-}
-if (x &lt;= initial_position - max_distance)
-{ 
-    going_right = true;
-    image_xscale *= -1;
+if(!place_meeting(x, y, Agua)){
+    if (x &gt;= initial_position + max_distance)
+    {
+        going_right = false;
+        image_xscale *= -1;
+    }
+    if (x &lt;= initial_position - max_distance)
+    { 
+        going_right = true;
+        image_xscale *= -1;
+    }
 }
 //Controlamos distancia vertical
 if (y &gt;= initial_height + max_height) going_down = false;
@@ -115,7 +117,8 @@ if (y &lt;= initial_height - max_height) going_down = true;
 //En horizontal
 if(going_right) x+=2 else x-=2
 //En vertical
-if(going_down) y+=2 else y-=2
+if(!place_meeting(x, y, Agua)) height = 1; else height = 2;
+if(going_down) y+=height; else y-=height;
 //Hacemos que cague
 if(poop_shot = 0 &amp;&amp; nivel = "Nivel_Nieve")
 {
