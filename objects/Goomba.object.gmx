@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//Variables
 grav = 0;
-jumping = false;
+jumping = true;
 ready_to_jump = true;
 goombaloco = false;
 looking_right = true;
@@ -139,15 +139,19 @@ if(place_meeting(x, y, Agua) &amp;&amp; jumping == false &amp;&amp; ready_to_jum
             necessary_force = 0;
             distance_done = 0;
             grav_to_surpass = 0;
+            steps_to_next_jump = 0;
             while(distance_done &lt; distance_to_objective){
                 //Aplicamos modificador de gravedad
-                grav_to_surpass += 0.25;
+                grav_to_surpass += 0.1;
                 necessary_force += grav_to_surpass;
                 distance_done += necessary_force;
+                steps_to_next_jump ++;
             }
         vsp -= necessary_force;
         jumping = true;
         ready_to_jump = false;
+        //Set alarm for next jump
+        alarm_set(1, steps_to_next_jump * 2 + 10);
     }
 }
 
@@ -166,24 +170,25 @@ if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
 
 //Gravedad
 if(vsp &lt; 10){
-    if(place_meeting(x, y, Agua))
+    if(!place_meeting(x, y, Agua))
         grav += 1; 
     else
-        grav += 0.25;
+        grav = 1;
     vsp += grav;
 }
 if(place_meeting(x,y+vsp, obj_solid_terrain))
 {
+    //Si choca por arriba se sigue considerando en salto
+    if(vsp &gt; 0){
+        jumping = false;
+    }
     while(!place_meeting(x, y+sign(vsp), obj_solid_terrain))
     {
         y+=sign(vsp);
     }
     grav = 0;
     vsp = 0;
-    jumping = false;
-    //Set alarm for next jump
-    if(alarm[1] &lt; 1)
-        alarm_set(1, 30);
+    
 }
 y += vsp; 
 //Controlamos cambio de dirección
@@ -198,15 +203,9 @@ if(place_meeting(x+(msp*direction_walking), y, obj_solid_terrain) ||
 }
 //Con los vacios
 if(!place_meeting(x+(skin_width*direction_walking), y+1, obj_solid_terrain) &amp;&amp; 
-    //place_meeting(x, y+1, obj_solid_terrain) &amp;&amp; 
     !place_meeting(x+(skin_width*direction_walking), y+1, obj_suelo_hojas) &amp;&amp;
     goombaloco == false)
     direction_walking *= -1;
-/*if(!place_meeting(x-25, y+1, obj_solid_terrain) &amp;&amp; 
-    !place_meeting(x-25, y+1, obj_suelo_hojas) &amp;&amp;
-    goombaloco == false)
-    direction_walking = +1;
- */   
 
 //Con el prota
 //if(place_meeting(x+1, y, object5)) looking_right = false;
@@ -246,6 +245,30 @@ if(jumping == false)
 while(place_meeting(x, y, other)){
     x--;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Control stuff
+draw_text(30, 30, alarm[1]);
 </string>
           </argument>
         </arguments>

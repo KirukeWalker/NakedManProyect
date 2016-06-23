@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="object5" xview="0" yview="0" wview="600" hview="480" xport="0" yport="0" wport="600" hport="480" hborder="300" vborder="240" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="object5" xview="0" yview="0" wview="610" hview="480" xport="0" yport="0" wport="610" hport="480" hborder="305" vborder="240" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -2526,7 +2526,7 @@
     <instance objName="obj_suelo_mar_pisable" x="736" y="448" name="inst_06B05BEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="768" y="448" name="inst_B8CD2C4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="800" y="448" name="inst_0BC07C2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="80" y="412" name="inst_3E8549DF" locked="0" code="" scaleX="1" scaleY="0.839999973773956" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="256" y="416" name="inst_3E8549DF" locked="0" code="" scaleX="1" scaleY="0.839999973773956" colour="4294967295" rotation="0"/>
     <instance objName="Agua" x="192" y="320" name="inst_B0D3C377" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Agua" x="160" y="320" name="inst_3A1277A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Agua" x="160" y="352" name="inst_6AB66B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -2812,7 +2812,7 @@
     <instance objName="obj_suelo_mar_pisable" x="4928" y="448" name="inst_9FA72027" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="4960" y="448" name="inst_973F212D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="4992" y="448" name="inst_196C0D7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Goomba" x="384" y="256" name="inst_491F8B4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Goomba" x="160" y="416" name="inst_491F8B4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="160" y="192" name="inst_7272D052" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="192" y="192" name="inst_F65CB0C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="224" y="192" name="inst_C3FB8632" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -2828,7 +2828,7 @@
     <instance objName="Volador" x="384" y="96" name="inst_BE6AD5CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Volador" x="480" y="128" name="inst_830D0E65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Volador" x="512" y="192" name="inst_E69E02A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Melee" x="640" y="384" name="inst_6C4F7A13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Melee" x="697" y="400" name="inst_6C4F7A13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -159,9 +159,9 @@ draw_set_color(c_black);
 
 
 draw_set_font (fnt_titulo_negrita)
-draw_text (x, view_yview+20, "NAKED MAN")
-draw_text (x, view_yview+70, "VS")
-draw_text (x, view_yview+120, "THE CLOTHES")
+draw_text (x, 50, "NAKED MAN")
+draw_text (x, 100, "VS")
+draw_text (x, 170, "THE CLOTHES")
 
 //draw_set_halign(fa_left);
 draw_set_font(fnt_creditos_peque);

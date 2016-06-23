@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_camera2" xview="0" yview="0" wview="600" hview="480" xport="0" yport="0" wport="600" hport="480" hborder="300" vborder="240" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_camera2" xview="0" yview="0" wview="610" hview="480" xport="0" yport="0" wport="610" hport="480" hborder="305" vborder="240" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -111,7 +111,7 @@
     <instance objName="Terreno" x="480" y="416" name="inst_E3DEB7D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="480" y="384" name="inst_F38499C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="480" y="352" name="inst_708DC10E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="128" y="567" name="inst_8F112682" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="128" y="567" name="inst_8F112682" locked="0" code="" scaleX="1" scaleY="0.839999973773956" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_over" x="32" y="32" name="inst_9B6FE40E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="64" y="32" name="inst_523766BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obl_hud" x="96" y="32" name="inst_DADFC6AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

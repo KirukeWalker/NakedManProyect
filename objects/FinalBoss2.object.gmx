@@ -45,6 +45,36 @@ status = 0;
 
 //Interactor for attacking animation
 interactor = instance_create(x,y,obj_boss_interactor);
+
+//Alarma para cuadrar la cámara
+alarm_set(1, 1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Cuadra la camara
+camera = instance_find(obj_camera2, 0);
+camera.following_player = false;
+camera.objectiveX = room_width/2;
+camera.objectiveY = room_height/2;
 </string>
           </argument>
         </arguments>
@@ -117,9 +147,9 @@ else if(status == 1){
 if(status = 0){
     //Gravedad
     if(vsp &lt; 10) vsp += grav;
-    if(place_meeting(x,y+vsp, obj_arena))
+    if(place_meeting(x,y+vsp, obj_solid_terrain))
     {
-        while(!place_meeting(x, y+sign(vsp), obj_arena))
+        while(!place_meeting(x, y+sign(vsp), obj_solid_terrain))
         {
             y+=sign(vsp);
         }
@@ -141,8 +171,8 @@ if(status = 0){
     if (sprite_index = spr_boss2_move || 
         sprite_index = spr_boss2_jump)
     {
-        if(looking_left = true &amp;&amp; !place_meeting(x-1, y, obj_arena)) x-=movespeed;
-        else if (looking_left = false &amp;&amp; !place_meeting(x+1, y, obj_arena)) x+=movespeed;
+        if(looking_left = true &amp;&amp; !place_meeting(x-1, y, obj_solid_terrain)) x-=movespeed;
+        else if (looking_left = false &amp;&amp; !place_meeting(x+1, y, obj_solid_terrain)) x+=movespeed;
     }
     interactor.x = x;
     interactor.y = y;
@@ -158,7 +188,7 @@ if(status = 0){
         if (sprite_index = spr_boss2_attack &amp;&amp; image_index = 8) 
         {
             interactor.attacking = false;
-            if(place_meeting(x, y+1, obj_arena))
+            if(place_meeting(x, y+1, obj_solid_terrain))
                 sprite_index = spr_boss2_move;
             else  
                 sprite_index = spr_boss2_jump;
@@ -266,6 +296,32 @@ if (global.vidaboss = 0)
     global.vidaboss -=1;
     with(other)
         instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_solid_terrain">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+if(status == 3 || status == 4){
+    with(other) instance_destroy();
+}
 </string>
           </argument>
         </arguments>
