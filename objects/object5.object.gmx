@@ -327,7 +327,7 @@ if(place_meeting(x,y,Agua))
 {
     grav = 0.2; 
     jumpspeed = 8;
-    movespeed = 3;
+    movespeed = 4.5;
 }
 
 //Saliendo del agua

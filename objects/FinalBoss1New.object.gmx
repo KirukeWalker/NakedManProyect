@@ -144,7 +144,7 @@ switch(status){
     case 0:
         if(player.x &gt; 554){
             status = 1;
-            health_bar = instance_create(10, 10, obj_healthbar_forAll);
+            health_bar = instance_create(10, 10, obj_healthbar_anal);
             //
             obj_camera2.following_player = false;
             obj_camera2.objectiveX = 832;
@@ -266,9 +266,9 @@ switch(status){
                 }
             }
         }
-        if(global.vidaboss &lt; obj_healthbar_forAll.initialLife)
+        if(global.vidaboss &lt; obj_healthbar_anal.initialLife)
             global.vidaboss += 0.05;
-        if(lava_reference.y == 480 &amp;&amp; global.vidaboss == 20){
+        if(lava_reference.y == 480 &amp;&amp; global.vidaboss == obj_healthbar_anal.initialLife){
             y = 560;
             x = 768;
             hspeed = 12 * direction_looking;

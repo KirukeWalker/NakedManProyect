@@ -155,6 +155,7 @@
       <sprite>sprites\spr_Invi</sprite>
       <sprite>sprites\sprite4</sprite>
       <sprite>sprites\spr_healthbar</sprite>
+      <sprite>sprites\spr_healthbar_anal</sprite>
       <sprite>sprites\spr_arrowright</sprite>
       <sprite>sprites\spr_arrowleft</sprite>
       <sprite>sprites\spr_levelblock</sprite>
@@ -314,6 +315,7 @@
       <object>objects\obj_niebla</object>
       <object>objects\obj_healthbar</object>
       <object>objects\obj_healthbar_forAll</object>
+      <object>objects\obj_healthbar_anal</object>
       <object>objects\obj_preload</object>
       <object>objects\obj_MenuNivel</object>
       <object>objects\obj_MenuNivelCamera</object>
