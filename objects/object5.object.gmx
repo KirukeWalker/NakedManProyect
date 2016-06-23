@@ -326,7 +326,7 @@ if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
 if(place_meeting(x,y,Agua))
 {
     grav = 0.2; 
-    jumpspeed = 4;
+    jumpspeed = 8;
     movespeed = 1.5;
 }
 

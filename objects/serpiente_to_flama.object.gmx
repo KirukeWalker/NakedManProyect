@@ -79,10 +79,7 @@ sprite_index = estatico;
           <argument>
             <kind>1</kind>
             <string>//Gravedad
-if(!place_meeting(x, y+1, Terreno) &amp;&amp;
-    !place_meeting(x, y+1, obj_arena) &amp;&amp;
-    !place_meeting(x, y+1, obj_suelo_bosque) &amp;&amp;
-    !place_meeting(x, y+1, obj_suelo_hojas) )
+if(!place_meeting(x, y+1, obj_solid_terrain))
     y += 1;
 //Recibir ataque
 if (place_meeting(x, y, obj_cacota))
