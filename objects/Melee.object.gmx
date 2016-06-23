@@ -90,6 +90,15 @@ sprite_index = moverse;
             <kind>1</kind>
             <string>//Control de encaramiento
 image_xscale = direction_facing;
+
+//Comportamiento bajo el agua
+if(place_meeting(x, y, Agua)){
+    nakedId = collision_line(x-150, y, x+150, y, object5, false, true);;
+    if(nakedId != noone){
+        
+    }
+}
+
 //Gravedad
 if(vsp &lt; 10) vsp += grav;
 if(place_meeting(x,y+vsp, Terreno) ||

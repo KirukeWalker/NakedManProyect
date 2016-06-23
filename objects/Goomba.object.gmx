@@ -28,6 +28,7 @@
             <string>//Variables
 grav = 0;
 jumping = false;
+ready_to_jump = true;
 goombaloco = false;
 looking_right = true;
 direction_facing = 1;
@@ -57,6 +58,30 @@ sprite_index = skin;
 //Cogemos el ancho de la skin
 skin_width = sprite_width;
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Stuff
+ready_to_jump = true;
 </string>
           </argument>
         </arguments>
@@ -102,8 +127,8 @@ skin_width = sprite_width;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
-if(place_meeting(x, y, Agua) &amp;&amp; jumping = false){
+            <string>//Comportamiento bajo el maaar
+if(place_meeting(x, y, Agua) &amp;&amp; jumping == false &amp;&amp; ready_to_jump = true){
     nakedId = collision_rectangle(x-64, y-480, x+64, y, object5, false, true);
     //blockId = collision_line(x, y, x, y-480, obj_solid_terrain, false, true);
     distance_to_objective = 1;
@@ -122,6 +147,7 @@ if(place_meeting(x, y, Agua) &amp;&amp; jumping = false){
             }
         vsp -= necessary_force;
         jumping = true;
+        ready_to_jump = false;
     }
 }
 
@@ -132,7 +158,7 @@ if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
     if(nakedId != noone){
         goombaloco = true;
         msp = 4;    //Ajustamos la velocidad
-        alarm[0]=30;
+        alarm[0] = 30;
         if (x &gt; object5.x) direction_walking = -1;
         else direction_walking = +1;
     }
@@ -155,6 +181,9 @@ if(place_meeting(x,y+vsp, obj_solid_terrain))
     grav = 0;
     vsp = 0;
     jumping = false;
+    //Set alarm for next jump
+    if(alarm[1] &lt; 1)
+        alarm_set(1, 30);
 }
 y += vsp; 
 //Controlamos cambio de dirección
