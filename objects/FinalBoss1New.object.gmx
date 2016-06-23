@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
-global.vidaboss = 20;
+global.vidaboss = 16;
 movement_speed = 3;
 sprint_speed = 10;
 grav = 0;
@@ -168,29 +168,29 @@ switch(status){
         }
         if(last_round == false){
             //Segun la vida que pierda pasamos a una fase u otra
-            if(global.vidaboss &lt;= 5 &amp;&amp; phase == 2){
+            if(global.vidaboss &lt;= 4 &amp;&amp; phase == 2){
                 status = 3;
                 phase = 3;
             }
-            if(global.vidaboss &lt;= 10 &amp;&amp; phase == 1){
+            if(global.vidaboss &lt;= 8 &amp;&amp; phase == 1){
                 status = 3;
                 phase = 2;
             }
-            else if(global.vidaboss &lt;= 15 &amp;&amp; phase == 0){
+            else if(global.vidaboss &lt;= 12 &amp;&amp; phase == 0){
                 status = 3;
                 phase = 1;
             }
         }
         else{//Para el segundo asalto
-            if(global.vidaboss &lt;= 5 &amp;&amp; phase = 6){
+            if(global.vidaboss &lt;= 3 &amp;&amp; phase = 6){
                 status = 3;
                 phase = 7;
             }
-            if(global.vidaboss &lt;= 10 &amp;&amp; phase = 5){
+            if(global.vidaboss &lt;= 6 &amp;&amp; phase = 5){
                 status = 3;
                 phase = 6;
             }
-            if(global.vidaboss &lt;= 15 &amp;&amp; phase = 4){
+            if(global.vidaboss &lt;= 9 &amp;&amp; phase = 4){
                 status = 3;
                 phase = 5;
             }
@@ -199,6 +199,7 @@ switch(status){
     //Ve a una de las plataforas de los lados y sube
     case 3:
         if(x &lt; 600 || x &gt; 1060){
+            x = clamp(x, 600, 1060);
             hspeed = 0;
             direction_looking = sign(800 - x);
             vspeed -= 40;
@@ -265,8 +266,8 @@ switch(status){
                 }
             }
         }
-        if(global.vidaboss &lt; 20)
-            global.vidaboss += 0.2;
+        if(global.vidaboss &lt; obj_healthbar_forAll.initialLife)
+            global.vidaboss += 0.05;
         if(lava_reference.y == 480 &amp;&amp; global.vidaboss == 20){
             y = 560;
             x = 768;
@@ -302,11 +303,12 @@ image_xscale = -direction_looking;
 if(global.vidaboss == 0 &amp;&amp; last_round == false){
     status = 6;
     shoot_counter = 0;
-    //alarm_set(0, -1);
+    obj_healthbar_forAll.initialLife = 12;
     apply_gravity = false;
-    //time_to_shoot = false;
     depth = -2;
     with(obj_fire_splash) instance_destroy();
+    with(obj_fireball) instance_destroy();
+    with(obj_fire_column) instance_destroy();
 }
 //Morir del todo
 if (global.vidaboss == 0 &amp;&amp; last_round == true)

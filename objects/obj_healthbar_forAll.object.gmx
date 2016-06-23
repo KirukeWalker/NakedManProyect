@@ -51,7 +51,7 @@ initialLife = global.vidaboss;
             <kind>1</kind>
             <string>//For the bosses that have 10 health
 image_to_show = (global.vidaboss + 1) * 10 / initialLife;
-draw_sprite(spr_healthbar,image_to_show, 340, 20);
+draw_sprite(spr_healthbar,image_to_show, 320, 40);
 
 </string>
           </argument>
