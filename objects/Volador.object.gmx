@@ -31,6 +31,7 @@ initial_height = y;
 max_distance = 50;
 max_height = 10;
 going_right = false;
+direction_looking = -1;
 going_down = true;
 poop_shot = 0;      //Contador para la alarma
 
@@ -97,16 +98,11 @@ switch (nivel)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Controloamos distancia horizontal
+            <string>//Controloamos distancia horizontal (no bajo el agua)
 if(!place_meeting(x, y, Agua)){
-    if (x &gt;= initial_position + max_distance)
+    if (abs(x - initial_position) &gt;= max_distance)
     {
-        going_right = false;
-        image_xscale *= -1;
-    }
-    if (x &lt;= initial_position - max_distance)
-    { 
-        going_right = true;
+        direction_looking *= -1;
         image_xscale *= -1;
     }
 }
@@ -115,7 +111,7 @@ if (y &gt;= initial_height + max_height) going_down = false;
 if (y &lt;= initial_height - max_height) going_down = true;
 //Movemos las manoplas
 //En horizontal
-if(going_right) x+=2 else x-=2
+x += 2 * direction_looking;
 //En vertical
 if(!place_meeting(x, y, Agua)) height = 1; else height = 2;
 if(going_down) y+=height; else y-=height;
