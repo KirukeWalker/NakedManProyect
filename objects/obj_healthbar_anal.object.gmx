@@ -49,8 +49,11 @@ initialLife = global.vidaboss;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
-image_xscale = initialLife / global.vidaboss;
+            <string>//Controlar posición
+x = view_xview + 100;
+y = view_yview + 40;
+//
+image_xscale = global.vidaboss / initialLife;
 //
 if(image_xscale &lt; 0) image_xscale = 0;
 </string>

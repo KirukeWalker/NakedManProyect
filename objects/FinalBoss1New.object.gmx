@@ -144,7 +144,7 @@ switch(status){
     case 0:
         if(player.x &gt; 554){
             status = 1;
-            health_bar = instance_create(10, 10, obj_healthbar_anal);
+            health_bar = instance_create(608, 192, obj_healthbar_anal);
             //
             obj_camera2.following_player = false;
             obj_camera2.objectiveX = 832;
@@ -303,7 +303,7 @@ image_xscale = -direction_looking;
 if(global.vidaboss == 0 &amp;&amp; last_round == false){
     status = 6;
     shoot_counter = 0;
-    obj_healthbar_forAll.initialLife = 12;
+    obj_healthbar_anal.initialLife = 12;
     apply_gravity = false;
     depth = -2;
     with(obj_fire_splash) instance_destroy();
