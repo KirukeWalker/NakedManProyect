@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
+grav = 0;
+jumping = false;
 goombaloco = false;
 looking_right = true;
 direction_facing = 1;
@@ -100,7 +102,30 @@ skin_width = sprite_width;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Comprobamos que se pueda volver loco, y se dirija hacia el prota cuando lo haga
+            <string>//
+if(place_meeting(x, y, Agua) &amp;&amp; jumping = false){
+    nakedId = collision_rectangle(x-64, y-480, x+64, y, object5, false, true);
+    //blockId = collision_line(x, y, x, y-480, obj_solid_terrain, false, true);
+    distance_to_objective = 1;
+    while(!place_meeting(x, y - distance_to_objective, obj_solid_terrain))
+        distance_to_objective ++;
+    if(nakedId != noone){
+            //Calcula fuerza necesaria
+            necessary_force = 0;
+            distance_done = 0;
+            grav_to_surpass = 0;
+            while(distance_done &lt; distance_to_objective){
+                //Aplicamos modificador de gravedad
+                grav_to_surpass += 0.25;
+                necessary_force += grav_to_surpass;
+                distance_done += necessary_force;
+            }
+        vsp -= necessary_force;
+        jumping = true;
+    }
+}
+
+//Comprobamos que se pueda volver loco, y se dirija hacia el prota cuando lo haga
 if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
     //if(distance_to_object(object5) &lt; 100 &amp;&amp; goombaloco = false){
     nakedId = collision_line(x-150, y, x+150, y, object5, false, true);
@@ -113,26 +138,23 @@ if (nivel = "Nivel_Nieve" || nivel = "Final_Level" || nivel = "god_room_2"){
     }
 }
 
-//Volver a la normalidad
-/*if(distance_to_object(object5) &gt; 200 &amp;&amp; place_meeting(x, y+1, obj_solid_terrain)){
-    goombaloco = false;
-    msp = 2;
-}*/
-
 //Gravedad
-if(vsp &lt; 10) vsp += 7;
-if(place_meeting(x,y+vsp, Terreno) ||
-    place_meeting(x,y+vsp, obj_arena) ||
-    place_meeting(x,y+vsp, obj_suelo_hojas)
-    )
+if(vsp &lt; 10){
+    if(place_meeting(x, y, Agua))
+        grav += 1; 
+    else
+        grav += 0.25;
+    vsp += grav;
+}
+if(place_meeting(x,y+vsp, obj_solid_terrain))
 {
-    while(!place_meeting(x, y+sign(vsp), Terreno) &amp;&amp;
-            !place_meeting(x, y+sign(vsp), obj_arena) &amp;&amp;
-            !place_meeting(x, y+sign(vsp), obj_suelo_hojas))
+    while(!place_meeting(x, y+sign(vsp), obj_solid_terrain))
     {
         y+=sign(vsp);
     }
-    vsp=0;
+    grav = 0;
+    vsp = 0;
+    jumping = false;
 }
 y += vsp; 
 //Controlamos cambio de dirección
@@ -167,7 +189,8 @@ if(place_meeting(x, y, object5))
 image_xscale = -direction_walking;
     
 //Movemos el goomba
-x += msp * direction_walking;
+if(jumping == false)
+    x += msp * direction_walking;
 </string>
           </argument>
         </arguments>
@@ -194,6 +217,33 @@ x += msp * direction_walking;
 while(place_meeting(x, y, other)){
     x--;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+if(jumping == true)
+    draw_sprite(sprite_index, 0, x, y);
+else
+    draw_self();
 </string>
           </argument>
         </arguments>
