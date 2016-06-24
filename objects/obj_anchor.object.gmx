@@ -196,8 +196,10 @@ if(other.status == 3){
 }
 else if(returning == true){
     other.sprite_index = spr_boss2_move;
-    other.status = 4;
+    other.status = 5;
     other.alarm[0] = 90 - ((other.vida_inicial - global.vidaboss)*3);
+    with(chain_link)
+        instance_destroy();
     instance_destroy();
 }
 </string>

@@ -41,6 +41,7 @@
       <sprite>sprites\sprite59</sprite>
       <sprite>sprites\sprite64</sprite>
       <sprite>sprites\esquina_mar_3</sprite>
+      <sprite>sprites\spr_falling_rock</sprite>
       <sprite>sprites\spr_pinchos_sangre</sprite>
       <sprite>sprites\spr_esquina_bosque</sprite>
       <sprite>sprites\spr_esquina_volcan</sprite>
@@ -288,6 +289,7 @@
       <object>objects\obj_lava_splash</object>
       <object>objects\obj_fireball</object>
       <object>objects\obj_shoot_pointer</object>
+      <object>objects\obj_falling_rock</object>
     </objects>
     <objects name="Utilidades">
       <object>objects\obj_music</object>

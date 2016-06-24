@@ -169,26 +169,7 @@ else if(status == 1){
           <argument>
             <kind>1</kind>
             <string>//Actitud normal
-if(status = 0){
-    //Gravedad
-    if(vsp &lt; 10) vsp += grav;
-    if(place_meeting(x,y+vsp, obj_solid_terrain))
-    {
-        while(!place_meeting(x, y+sign(vsp), obj_solid_terrain))
-        {
-            y+=sign(vsp);
-        }
-        vsp=0;
-    }
-    y += vsp;
-    //Salto
-    if(y &gt; object5.y){
-        if(random(60) &lt;= 10)
-        { 
-            vsp = -jumpspeed;
-        }
-    }
-    
+if(status == 0){
     //Comprobamos posición del prota para el encaramiento
     if(x &lt; instance_position(x, y, object5)) 
         looking_left = true;
@@ -196,8 +177,10 @@ if(status = 0){
     if (sprite_index = spr_boss2_move || 
         sprite_index = spr_boss2_jump)
     {
-        if(looking_left = true &amp;&amp; !place_meeting(x-1, y, obj_solid_terrain)) x-=movespeed;
-        else if (looking_left = false &amp;&amp; !place_meeting(x+1, y, obj_solid_terrain)) x+=movespeed;
+        image_angle = point_direction(x, y, object5.x, object5.y);
+        if(looking_left = true) image_angle += 180; //Porque se comprueba desde la derecha del sprite
+        direction = image_angle;
+        speed = -image_xscale;
     }
     interactor.x = x;
     interactor.y = y;
@@ -237,18 +220,22 @@ if(status = 0){
 }
 //Apuntando para disparar el ancla
 if(status = 1){
+    speed = 0;
     image_angle = point_direction(x, y, object5.x, object5.y);
     if(looking_left = true) image_angle += 180; //Porque se comprueba desde la derecha del sprite
     direction = image_angle;
     sprite_index = spr_boss2_jump;
 }
+//Espera mientras avanza el ancla
 if(status = 2){
     //No hace nada    
 }
+//Tira palante
 if(status = 3){
     if(looking_left = true) speed = -10;
     else                    speed = 10;
 }
+//Ajsutarse tras el choque
 if(status = 4){
     //
     if(looking_left == false)
@@ -282,6 +269,21 @@ if(status = 4){
     alarm_set(2, 1);
     //Volvemos al estado inicial
     status = 0;
+}
+//Pisotón
+if(status == 5){
+    vspeed = 10;
+    if(place_meeting(x, y + vspeed, obj_solid_terrain)){
+        while(place_meeting(x, y + vspeed, obj_solid_terrain)){
+            vspeed --;
+        }
+        obj_camera2.tremble = true;
+        obj_camera2.alarm[0] = 10;
+        obj_camera2.alarm[1] = 5;
+        rock_position = irandom_range(2, 17) * 32;
+        falling_rock = instance_create(rock_position, 64, obj_falling_rock);
+        status = 0;
+    }
 }
 
 //Morir del todo
@@ -329,7 +331,7 @@ if (global.vidaboss = 0)
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_solid_terrain">
+    <event eventtype="4" ename="obj_suelo_marnopisable">
       <action>
         <libid>1</libid>
         <id>603</id>
