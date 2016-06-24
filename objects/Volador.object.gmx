@@ -28,7 +28,7 @@
             <string>//Variables
 initial_position = x;
 initial_height = y;
-max_distance = 50;
+max_distance = 48;
 max_height = 10;
 going_right = false;
 direction_looking = -1;

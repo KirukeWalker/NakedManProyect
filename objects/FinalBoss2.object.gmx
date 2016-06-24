@@ -34,6 +34,7 @@ vida_inicial = global.vidaboss;
 looking_left = true;
 attack = 0;
 vsp = 0;
+destroy_terrain = false;
 alarm[0] = 90;
 /* Estados
 0 - Normal
@@ -48,6 +49,30 @@ interactor = instance_create(x,y,obj_boss_interactor);
 
 //Alarma para cuadrar la cámara
 alarm_set(1, 1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+destroy_terrain = false;
 </string>
           </argument>
         </arguments>
@@ -225,14 +250,15 @@ if(status = 3){
     else                    speed = 10;
 }
 if(status = 4){
-    //Lo desatascamos si se atasca
+    //
     if(looking_left == false)
         direction += 180;
     image_angle = 0;
-    //Comprobación para suelo del fondo (revisar en caso de cambiarlo)
+    //Lo desatascamos si se atasca (ya no, ahora rompe)
+    /*//Comprobación para suelo del fondo (revisar en caso de cambiarlo)
     while(y &gt; room_height - 64 - sprite_height/2)
         y -= 1;
-    move_outside_solid(direction,200);
+    move_outside_solid(direction,200);*/
     //Destruimos los eslabones que pudieran quedar
     with(obj_chain_link){
         instance_destroy();
@@ -251,7 +277,9 @@ if(status = 4){
         image_xscale = -1;
         interactor.image_xscale = -1;
     }
-    
+    //Destruimos el terreno que tque
+    destroy_terrain = true;
+    alarm_set(2, 1);
     //Volvemos al estado inicial
     status = 0;
 }
@@ -319,7 +347,7 @@ if (global.vidaboss = 0)
           <argument>
             <kind>1</kind>
             <string>//
-if(status == 3 || status == 4){
+if(destroy_terrain == true){
     with(other) instance_destroy();
 }
 </string>

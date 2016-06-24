@@ -26,7 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
+touched = false;
 destroy_it = false;
+camera_tremble = false;
+returning = false;
 //Get the final boss
 finalBoss2 = instance_find(FinalBoss2, 0);
 //Stuff
@@ -42,6 +45,55 @@ else
 //Creamos el primer eslabón
 chain_link = instance_create(x,y,obj_chain_link);
 chain_link.image_angle = image_angle;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Que tarde 1 en destruirse para destruir las rocas
+instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Hacemos que se hunda un poco antes de parar
+speed = 0;
+FinalBoss2.status = 3;
 </string>
           </argument>
         </arguments>
@@ -69,12 +121,37 @@ if(speed != 0){
     chain_link = instance_create(x,y,obj_chain_link);
     chain_link.image_angle = image_angle;
 }
-
-if(place_meeting(x,y,obj_solid_terrain)){
-    speed = 0;
-    FinalBoss2.status = 3;
+//Comprobación de salida de pantalla
+if(x &lt; 0 || x &gt; room_width || y &lt; 0 || y &gt; room_height){
+    speed *= -1;
+    returning = true;
 }
-
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_chain_link">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+if(returning == true){
+    with(other) instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -98,24 +175,30 @@ if(place_meeting(x,y,obj_solid_terrain)){
           <argument>
             <kind>1</kind>
             <string>//Cuando la toque el jefe
-if(destroy_it == false){
-    if(other.status == 3){
-        other.speed = 0;
-        other.sprite_index = spr_boss2_move;
-        other.status = 4;
-        other.alarm[0] = 90 - ((other.vida_inicial - global.vidaboss)*3);
-        //Temblor de cámara
-        if(obj_camera2.tremble == false){
-            obj_camera2.tremble = true;
-            obj_camera2.alarm[0] = 10;
-            obj_camera2.alarm[1] = 5;
-        }
-        with(chain_link)
-            instance_destroy();
-        //Destroy itself with alarm
-        //instance_destroy();
-        destroy_it = true;
+if(other.status == 3){
+    other.speed = 0;
+    other.sprite_index = spr_boss2_move;
+    other.status = 4;
+    other.alarm[0] = 90 - ((other.vida_inicial - global.vidaboss)*3);
+    //Temblor de cámara
+    if(camera_tremble == false){
+        obj_camera2.tremble = true;
+        obj_camera2.alarm[0] = 10;
+        obj_camera2.alarm[1] = 5;
+        camera_tremble = true;
     }
+    with(chain_link)
+        instance_destroy();
+    //Destroy itself with alarm
+    //instance_destroy();
+    alarm_set(1, 2);
+    destroy_it = true;
+}
+else if(returning == true){
+    other.sprite_index = spr_boss2_move;
+    other.status = 4;
+    other.alarm[0] = 90 - ((other.vida_inicial - global.vidaboss)*3);
+    instance_destroy();
 }
 </string>
           </argument>
@@ -139,10 +222,14 @@ if(destroy_it == false){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
+            <string>//Hacemos que se hunda un poco en la roca
+if(touched == false){
+    touched = true;
+    alarm_set(0, 4);
+}
+//Y destruimos la roca
 if(destroy_it == true){
     with(other) instance_destroy();
-    instance_destroy();
 }
 </string>
           </argument>
