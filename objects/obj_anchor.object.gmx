@@ -39,9 +39,9 @@ if(finalBoss2.looking_left = true)
     image_angle += 180; //Porque se comprueba desde la derecha del sprite
 direction = image_angle;
 if(finalBoss2.looking_left = true)
-    speed = -10;
+    speed = -15;
 else
-    speed = 10;
+    speed = 15;
 //Creamos el primer eslabón
 chain_link = instance_create(x,y,obj_chain_link);
 chain_link.image_angle = image_angle;
@@ -182,9 +182,10 @@ if(other.status == 3){
     other.alarm[0] = 90 - ((other.vida_inicial - global.vidaboss)*3);
     //Temblor de cámara
     if(camera_tremble == false){
-        obj_camera2.tremble = true;
+        obj_camera2.status = 3;
         obj_camera2.alarm[0] = 10;
         obj_camera2.alarm[1] = 5;
+        obj_camera2.tremble_axis = 1;
         camera_tremble = true;
     }
     with(chain_link)
@@ -207,7 +208,7 @@ else if(returning == true){
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_solid_terrain">
+    <event eventtype="4" ename="obj_suelo_marnopisable">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -232,6 +233,33 @@ if(touched == false){
 //Y destruimos la roca
 if(destroy_it == true){
     with(other) instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_suelo_mar_pisable">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Hacemos que se hunda un poco en la roca
+if(touched == false){
+    touched = true;
+    alarm_set(0, 4);
 }
 </string>
           </argument>

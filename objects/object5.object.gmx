@@ -43,6 +43,8 @@ status_dead = 0;
 complete_death = 0;
 status_sliding = false; //El personahe se desliza
 gamepad_set_axis_deadzone(0,0.7)
+//Para los suckers
+suckers_sucking = 0;
 
 //Seteamos cronómetro
 reloj = 0;
@@ -522,6 +524,36 @@ if(invincible == false &amp;&amp; status_dead == false){
 if(invincible == false &amp;&amp; status_dead == 0){            
     script_execute(scr_knockback);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_solid_terrain">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Solo en los niveles con succionadores
+if(room == Room_FinalBoss2){
+//En horizontal
+    while(place_meeting(x + (sign(x - room_width/2)*suckers_sucking), 
+        y, obj_solid_terrain))
+        x -= sign(x - room_width/2);
+}
+suckers_sucking = 0;
 </string>
           </argument>
         </arguments>

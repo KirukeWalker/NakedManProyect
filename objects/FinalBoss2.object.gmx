@@ -28,14 +28,14 @@
             <string>//Initialize Variables
 grav = 2;         //gravity se usa para funciones
 jumpspeed = 10;     //velocida de salto
-movespeed = 1;      //velocidad de movimiento
+movespeed = 2;      //velocidad de movimiento
 global.vidaboss = 20; //Vida del personaje
 vida_inicial = global.vidaboss;
 looking_left = true;
 attack = 0;
 vsp = 0;
 destroy_terrain = false;
-alarm[0] = 90;
+alarm[0] = 60;
 /* Estados
 0 - Normal
 1 - Apuntando
@@ -97,7 +97,7 @@ destroy_terrain = false;
             <kind>1</kind>
             <string>//Cuadra la camara
 camera = instance_find(obj_camera2, 0);
-camera.following_player = false;
+camera.status = 0;
 camera.objectiveX = room_width/2;
 camera.objectiveY = room_height/2;
 </string>
@@ -139,7 +139,7 @@ if(status == 0){
     }
     //
     status = 1;
-    alarm[0] = 30 - (vida_inicial - global.vidaboss);
+    alarm[0] = 20 - (vida_inicial - global.vidaboss);
 }
 else if(status == 1){
     anchor = instance_create(x,y,obj_anchor);
@@ -232,8 +232,8 @@ if(status = 2){
 }
 //Tira palante
 if(status = 3){
-    if(looking_left = true) speed = -10;
-    else                    speed = 10;
+    if(looking_left = true) speed = -15;
+    else                    speed = 15;
 }
 //Ajsutarse tras el choque
 if(status = 4){
@@ -277,15 +277,20 @@ if(status == 5){
         while(place_meeting(x, y + vspeed, obj_solid_terrain)){
             vspeed --;
         }
-        obj_camera2.tremble = true;
+        obj_camera2.status = 3;
         obj_camera2.alarm[0] = 10;
         obj_camera2.alarm[1] = 5;
+        obj_camera2.tremble_axis = 2;
         rock_position = irandom_range(2, 17) * 32;
-        falling_rock = instance_create(rock_position, 64, obj_falling_rock);
+        falling_rock = instance_create(rock_position, 0, obj_falling_rock);
         status = 0;
     }
 }
-
+//Matar al rpota si llega a los bordes
+if( object5.x &lt; object5.sprite_width/2 || 
+    object5.x &gt; room_width - sprite_width/2 || 
+    object5.y &lt; sprite_height/2)
+    global.vida = 0;
 //Morir del todo
 if (global.vidaboss = 0)
 { 
@@ -349,9 +354,19 @@ if (global.vidaboss = 0)
           <argument>
             <kind>1</kind>
             <string>//
+if(x &lt; room_width/2){
+    sucker = instance_create(16, other.y + 16, obj_sucker_boss);
+    sucker.direction_sucking = 0; 
+}
+else{
+    sucker = instance_create(room_width - 16, other.y + 16, obj_sucker_boss);
+    sucker.direction_sucking = 2; 
+}
+//
 if(destroy_terrain == true){
     with(other) instance_destroy();
 }
+
 </string>
           </argument>
         </arguments>

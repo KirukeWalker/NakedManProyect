@@ -28,13 +28,22 @@
             <string>//Get the player
 player = instance_find(object5, 0);
 //Variables
-following_player = true;
-tremble = false;
 tremble_direction = 1;
 tremble_speed = 2;
 objectiveX = 0;
 objectiveY = 0;
-locked_on = false;
+/* Axis for the trembles
+    1 - Horizontal
+    2 - Vertical
+*/
+tremble_axis = 1;
+/* Status
+    0 - Static
+    1 - Following the player
+    2 - Going to a point
+    3 - Trembling
+*/
+status = 1;
 </string>
           </argument>
         </arguments>
@@ -83,7 +92,9 @@ alarm_set(1, 5);
           <argument>
             <kind>1</kind>
             <string>//Apaga temblor con alarma
-tremble = false;
+status = 0;
+alarm_set(1, -1);
+//locked_on = false;
 </string>
           </argument>
         </arguments>
@@ -106,35 +117,37 @@ tremble = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Follow the player if true
-if(following_player == true){
-    x = player.x;
-    y = player.y;
-}
-else{
-    if(distance_to_point(objectiveX, objectiveY) &gt; 10)
-        move_towards_point(objectiveX, objectiveY, 10);
-    else if(locked_on == false){
+            <string>//Status of the camera
+switch(status){
+    //Lock on the objective
+    case 0:
         x = objectiveX;
         y = objectiveY;
-        locked_on = true;
-        speed = 0;
-    }
-    /*else{//Decrease speed
-        speed = distance_to_point(objectiveX, objectiveY);
-    }*/
+    break;
+    //Follow the player
+    case 1:
+        x = player.x;
+        y = player.y;
+    break;
+    //Go to the indicated point
+    case 2:
+        if(distance_to_point(objectiveX, objectiveY) &gt; 10)
+            move_towards_point(objectiveX, objectiveY, 10);
+        else
+            status = 0;
+    break;
+    //Tremble
+    case 3:
+        switch(tremble_axis){
+            case 1:
+                x += tremble_direction * tremble_speed;
+            break;
+            case 2:
+                y += tremble_direction * tremble_speed;
+            break;
+        }
+    break;
 }
-//
-if(tremble == true &amp;&amp; locked_on == true){
-    x += tremble_direction * tremble_speed;
-    //y += tremble_direction * tremble_speed;
-    //speed = 5;
-    //direction = tremble_direction * 90 + 180;
-    //tremble_direction *= -1;
-}
-/*else{
-    speed = 0;
-}*/
 </string>
           </argument>
         </arguments>
@@ -158,9 +171,9 @@ if(tremble == true &amp;&amp; locked_on == true){
           <argument>
             <kind>1</kind>
             <string>//Position stuff
-//draw_set_color(c_white);
-//draw_text(30, 30, x);
-//draw_text(30, 50, y);
+draw_set_color(c_white);
+//draw_text(30, 30, alarm[0]);
+//draw_text(30, 50, alarm[1]);
 </string>
           </argument>
         </arguments>

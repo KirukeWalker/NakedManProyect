@@ -146,8 +146,8 @@ switch(status){
             status = 1;
             health_bar = instance_create(608, 192, obj_healthbar_anal);
             //
-            obj_camera2.following_player = false;
-            obj_camera2.objectiveX = 832;
+            obj_camera2.status = 2;
+            obj_camera2.objectiveX = 820;
             obj_camera2.objectiveY = 384;
         }
     break;
@@ -254,8 +254,8 @@ switch(status){
     //Subida de lava y de vida
     case 7:
         //Temblor de cámara
-        if(obj_camera2.tremble == false){
-            obj_camera2.tremble = true;
+        if(obj_camera2.status != 3){
+            obj_camera2.status = 3;
             obj_camera2.alarm[0] = 10;
             obj_camera2.alarm[1] = 5;
         }
@@ -292,7 +292,7 @@ if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
     direction_looking *= -1;
     //Temblor de cámara
     if(last_round == true){
-        obj_camera2.tremble = true;
+        obj_camera2.status = 3;
         obj_camera2.alarm[0] = 10;
         obj_camera2.alarm[1] = 5;
     }
@@ -384,7 +384,7 @@ if(status != 0){
             <string>//Show boss stuff
 //draw_text(30, 30, x);
 //draw_text(30, 50, y);
-draw_text(30, 70, status);
+//draw_text(30, 70, status);
 </string>
           </argument>
         </arguments>

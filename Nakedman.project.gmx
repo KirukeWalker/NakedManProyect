@@ -133,6 +133,7 @@
       <sprite>sprites\spr_boss2_jump</sprite>
       <sprite>sprites\spr_boss2_attack</sprite>
       <sprite>sprites\spr_boss2_idle</sprite>
+      <sprite>sprites\spr_sucker</sprite>
     </sprites>
     <sprites name="Enemigos Bosque">
       <sprite>sprites\spr_goomba3</sprite>
@@ -271,6 +272,8 @@
       <object>objects\FinalBoss3_Body</object>
       <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss5</object>
+      <object>objects\obj_sucker_level</object>
+      <object>objects\obj_sucker_boss</object>
     </objects>
     <objects name="Proyectil">
       <object>objects\obj_cacota</object>
