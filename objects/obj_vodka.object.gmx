@@ -29,7 +29,7 @@
 y += 3;
 image_angle += 5;
 //Si toca suelo se destruye
-if(place_meeting(x,y,Terreno)) instance_destroy();
+if(place_meeting(x,y,obj_solid_terrain)) instance_destroy();
 </string>
           </argument>
         </arguments>
