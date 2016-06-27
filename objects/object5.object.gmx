@@ -201,8 +201,19 @@ if (status_sliding = false){
 else 
     hsp = movespeed * 3 * image_xscale;
 //Aplicamos gravedad
-if(vsp &lt; 10) 
-    vsp += grav;       
+if(vsp &lt; 10){
+    //Hacemos aquí comprobación para vacios en el agua
+    if(place_meeting(x, y, Agua)){
+        terrainId = collision_line(x, y, x, y + 480, obj_solid_terrain, true, false);
+        if(terrainId == noone){
+            grav = 0.2 +(2 * ((480 - distance_to_point(x, 480)) / 480));
+        }
+        else{
+            grav = 0.2;
+        }
+    }
+    vsp += grav;
+}       
 //Salto
 if((
     place_meeting(x,y+1,obj_solid_terrain) ||
@@ -231,17 +242,31 @@ if(place_meeting(x,y+1,obj_hielo))
 else 
     status_sliding = false
 
+//Comporbación de succionadores en los lados (Boss 2)
+if(room == Room_FinalBoss2){
+    terrainIdL = collision_line(x, y, x - 600, y, obj_suelo_marnopisable, true, false);
+    terrainIdR = collision_line(x, y, x + 600, y, obj_suelo_marnopisable, true, false);
+    //Hacemos que no aplique cambio si el prota no está en el lado que corresponde
+    if(terrainIdL == noone &amp;&amp; x &lt; 352){
+        hsp -= 3 * (300 - distance_to_point(32, y)) / 300;
+    }
+    if(terrainIdR == noone &amp;&amp; x &gt; 352){
+        hsp += 3 * (300 - distance_to_point(704, y)) / 300;
+    }
+}
+    
 //Horizontal collision (Terreno sólido)
 if(place_meeting(x+hsp,y,obj_solid_terrain))
 {
-    
     while(!place_meeting(x+sign(hsp), y,obj_solid_terrain))
     {
         x+=sign(hsp);
     }
     hsp=0;
 }
+//Aplicamos cambios en x
 x += hsp;
+
 //Control para no salir por los lados
 x = clamp(x, 15, room_width-15);
 

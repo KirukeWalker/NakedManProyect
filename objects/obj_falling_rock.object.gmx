@@ -83,9 +83,7 @@ with(other) instance_destroy();
 if(y &gt; 64){
     //Y tu también, imbécil
     alarm_set(0, 1);
-    sucker = instance_create(other.y+16, room_height-16, obj_sucker_boss);
-    sucker.direction_sucking = 1; 
-}
+} 
 </string>
           </argument>
         </arguments>

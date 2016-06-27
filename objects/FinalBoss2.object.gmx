@@ -354,15 +354,6 @@ if (global.vidaboss = 0)
           <argument>
             <kind>1</kind>
             <string>//
-if(x &lt; room_width/2){
-    sucker = instance_create(16, other.y + 16, obj_sucker_boss);
-    sucker.direction_sucking = 0; 
-}
-else{
-    sucker = instance_create(room_width - 16, other.y + 16, obj_sucker_boss);
-    sucker.direction_sucking = 2; 
-}
-//
 if(destroy_terrain == true){
     with(other) instance_destroy();
 }
