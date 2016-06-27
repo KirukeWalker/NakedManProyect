@@ -52,6 +52,7 @@
       <sprite>sprites\spr_rayos</sprite>
       <sprite>sprites\veneno</sprite>
       <sprite>sprites\spr_jetstream_sam</sprite>
+      <sprite>sprites\spr_geiser</sprite>
       <sprite>sprites\spr_fans</sprite>
       <sprite>sprites\spr_suelo_madero</sprite>
       <sprite>sprites\spr_sliding_floor</sprite>
@@ -348,13 +349,13 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss2</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
     <room>rooms\Nivel_1</room>
     <room>rooms\Room_FinalBoss1_New</room>
     <room>rooms\Nivel_Playa</room>
+    <room>rooms\Room_FinalBoss2</room>
     <room>rooms\Nivel_Bosque</room>
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>

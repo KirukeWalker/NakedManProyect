@@ -2896,6 +2896,24 @@
     <instance objName="Melee" x="2816" y="96" name="inst_3BC6D1C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Melee" x="4352" y="256" name="inst_0CA119D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Melee" x="3040" y="384" name="inst_EC20A424" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5632" y="64" name="inst_5CDF25C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5664" y="64" name="inst_1EFC46B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5696" y="64" name="inst_0F6BBD91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5728" y="64" name="inst_2AF35ABD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5760" y="64" name="inst_B833D8F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5792" y="64" name="inst_F845CC77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5824" y="64" name="inst_979EC706" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5856" y="64" name="inst_3744224D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5888" y="64" name="inst_6413D9E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5920" y="64" name="inst_50BA3E28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5952" y="64" name="inst_8BEBBE54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5984" y="64" name="inst_C7979237" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="5632" y="288" name="inst_70B0D113" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_geiser" x="5632" y="256" name="inst_86066B41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_geiser" x="5632" y="224" name="inst_85609E0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_geiser" x="5632" y="192" name="inst_6462417B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_geiser" x="5632" y="160" name="inst_8D1E2A43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_geiser" x="5632" y="128" name="inst_C06CA322" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
