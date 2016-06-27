@@ -7,7 +7,134 @@
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Variables
+global.vidaboss = 20;
+
+//Start alarm for camera stuff
+alarm_set(0, 1);
+
+//Alarm for wall stuff
+alarm_set(1, 4);
+
+//Create the first walls
+for(i = 0; i &lt;= 642; i += 32){
+    wall_piece_left  = instance_create(32, i, obj_suelo_mar_pisable);
+    wall_piece_right = instance_create(610, i, obj_suelo_mar_pisable);
+    //
+    wall_piece_left.vspeed = -8;
+    wall_piece_right.vspeed = -8;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Creamos las piuezas con alarma
+wall_piece_left  = instance_create(32, 480, obj_suelo_mar_pisable);
+wall_piece_right = instance_create(610, 480, obj_suelo_mar_pisable);
+//
+wall_piece_left.vspeed = -8;
+wall_piece_right.vspeed = -8;
+//
+alarm_set(1, 4);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Cuadra la camara
+camera = instance_find(obj_camera2, 0);
+camera.status = 0;
+camera.objectiveX = room_width/2;
+camera.objectiveY = room_height/2;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Create a piece of wall any 2 frames
+/*if(delta_time % 2 == 1){
+    wall_piece_left  = instance_create(32, 480, obj_suelo_mar_pisable);
+    wall_piece_right = instance_create(610, 480, obj_suelo_mar_pisable);
+    //
+    wall_piece_left.vspeed = -16;
+    wall_piece_right.vspeed = -16;
+}*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

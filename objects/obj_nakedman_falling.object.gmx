@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Positions for the battle
+            <string>//Variables
+global.vida = 3;
+
+//Positions for the battle
 positionX[0] = 100;
 positionX[1] = 200;
 positionX[2] = 300;

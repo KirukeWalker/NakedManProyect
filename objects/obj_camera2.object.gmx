@@ -27,6 +27,10 @@
             <kind>1</kind>
             <string>//Get the player
 player = instance_find(object5, 0);
+//Si no está el normal pillamos el del escenario
+if(player == noone){
+    player = instance_find(obj_nakedman_falling, 0);
+}
 //Variables
 tremble_direction = 1;
 tremble_speed = 2;
