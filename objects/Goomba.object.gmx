@@ -268,7 +268,7 @@ while(place_meeting(x, y, other)){
           <argument>
             <kind>1</kind>
             <string>//Control stuff
-draw_text(30, 30, alarm[1]);
+//draw_text(30, 30, alarm[1]);
 </string>
           </argument>
         </arguments>

@@ -47,6 +47,9 @@ status = 0;
 //Interactor for attacking animation
 interactor = instance_create(x,y,obj_boss_interactor);
 
+//Get the player
+player = instance_find(object5, 0);
+
 //Alarma para cuadrar la cámara
 alarm_set(1, 1);
 </string>
@@ -286,13 +289,30 @@ if(status == 5){
         status = 0;
     }
 }
+//Cae al vacío cuando "muere"
+if(status == 6){
+    with(obj_chain_link) instance_destroy();
+    with(obj_anchor) instance_destroy();
+    direction = 0;
+    vspeed = 10;
+    if(y &gt; 1000){
+        instance_create(room_width/2, room_height + 200, obj_anchor_event);
+        player.status_locked = true;
+        status = 7;
+    }
+}
+//Esperar que se cierre la escena
+if(status == 7){
+    //Nada de momento
+}
 //Matar al rpota si llega a los bordes
 if( object5.x &lt; object5.sprite_width/2 || 
     object5.x &gt; room_width - sprite_width/2 || 
     object5.y &lt; sprite_height/2)
     global.vida = 0;
+    
 //Morir del todo
-if (global.vidaboss = 0)
+/*if (global.vidaboss == 0)
 { 
     ini_open("SystemNM.txt")
     ini_key_delete("NhTPahPmx","KSgfhsRKWenv")
@@ -303,7 +323,7 @@ if (global.vidaboss = 0)
     global.muertes += 1;
     obj_fade.fadeIn = false;
     obj_fade.alarm[1] = room_speed * 0.05;
-    instance_destroy();   
+    instance_destroy();  
 }
 </string>
           </argument>
@@ -328,9 +348,13 @@ if (global.vidaboss = 0)
           <argument>
             <kind>1</kind>
             <string>//Recibir ataque
-    global.vidaboss -=1;
-    with(other)
-        instance_destroy();
+global.vidaboss -= 5;
+with(other)
+    instance_destroy();
+    
+//Control de muerte
+if(global.vidaboss &lt;= 0)
+    status = 6;
 </string>
           </argument>
         </arguments>

@@ -363,7 +363,7 @@ if (position_meeting (x,y,obj_acido))
     global.vida = 0;
 if (position_meeting (x,y,obj_pincho)) 
     global.vida = 0;
-if (y &gt; room_height) 
+if (y &gt; room_height &amp;&amp; status_locked == false) 
     global.vida = 0;
 //Control de negativos
 if (global.vida &lt; 0) 
@@ -576,36 +576,6 @@ if(invincible == false &amp;&amp; status_dead == false){
 if(invincible == false &amp;&amp; status_dead == 0){            
     script_execute(scr_knockback);
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_solid_terrain">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Solo en los niveles con succionadores
-if(room == Room_FinalBoss2){
-//En horizontal
-    while(place_meeting(x + (sign(x - room_width/2)*suckers_sucking), 
-        y, obj_solid_terrain))
-        x -= sign(x - room_width/2);
-}
-suckers_sucking = 0;
 </string>
           </argument>
         </arguments>
