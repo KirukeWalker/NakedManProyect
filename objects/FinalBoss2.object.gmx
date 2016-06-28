@@ -348,7 +348,7 @@ if( object5.x &lt; object5.sprite_width/2 ||
           <argument>
             <kind>1</kind>
             <string>//Recibir ataque
-global.vidaboss -= 5;
+global.vidaboss -= 1;
 with(other)
     instance_destroy();
     

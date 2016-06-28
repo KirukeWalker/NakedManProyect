@@ -284,6 +284,7 @@
       <object>objects\obj_mega_laser</object>
       <object>objects\obj_marker_laser</object>
       <object>objects\obj_anchor</object>
+      <object>objects\obj_daBigAnchor</object>
       <object>objects\obj_anchor_event</object>
       <object>objects\obj_chain_link</object>
       <object>objects\obj_boss_interactor</object>

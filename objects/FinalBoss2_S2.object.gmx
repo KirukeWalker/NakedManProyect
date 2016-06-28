@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>//Variables
 global.vidaboss = 20;
+time_to_shoot = false;
 
 //Start alarm for camera stuff
 alarm_set(0, 1);
@@ -42,6 +43,66 @@ for(i = 0; i &lt;= 642; i += 32){
     wall_piece_left.vspeed = -8;
     wall_piece_right.vspeed = -8;
 }
+
+//Positions for the battle
+positionY[0] = 100;
+positionY[1] = 200;
+positionY[2] = 300;
+positionY[3] = 400;
+//
+actual_position = 3;
+
+//Alarm for the position change
+alarm_set(2, 10);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Si no toca disparar movemos
+if(time_to_shoot == false){
+    //Mira a donde mover
+    switch(actual_position){
+        case 0:
+            actual_position ++;
+        break;
+        case 3:
+            actual_position --;
+        break;
+        default:
+            actual_position += sign(random_range(-10, 10));
+        break;
+    }
+    time_to_shoot = true;
+    //Y le damos a la alarma
+    alarm_set(2, 30);
+}
+else{ //Y si si, disparamos
+    daBigAnchor = instance_create(x - 20, y, obj_daBigAnchor);
+    daBigAnchor.direction = 170;
+    daBigAnchor.speed = 20;
+    daBigAnchor.image_xscale = 3;
+    daBigAnchor.image_yscale = 3;
+    time_to_shoot = false;  
+}
+
 </string>
           </argument>
         </arguments>
@@ -121,14 +182,53 @@ camera.objectiveY = room_height/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Create a piece of wall any 2 frames
-/*if(delta_time % 2 == 1){
-    wall_piece_left  = instance_create(32, 480, obj_suelo_mar_pisable);
-    wall_piece_right = instance_create(610, 480, obj_suelo_mar_pisable);
-    //
-    wall_piece_left.vspeed = -16;
-    wall_piece_right.vspeed = -16;
-}*/
+            <string>//Move to the position
+if(abs(positionY[actual_position] - y) &gt; 15){
+    vspeed = sign(positionY[actual_position] - y) * 10;
+}
+else if(abs(positionY[actual_position] - y) &gt; 3){
+    vspeed = sign(positionY[actual_position] - y);
+}
+else{
+    vspeed = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_cacota">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Pierde vida y destruye el proyectil
+global.vidaboss -= 1;
+with(other) instance_destroy();
+if (global.vidaboss == 0)
+{ 
+    ini_open("SystemNM.txt")
+    ini_key_delete("NhTPahPmx","KSgfhsRKWenv")
+    ini_write_string("NhTPahPmx","KSgfhSRKWenv","njsESnsSAnQ")
+    ini_close()
+    with(obj_chain_link) instance_destroy();
+    with(obj_anchor) instance_destroy();
+    global.muertes += 1;
+    obj_fade_white.fadeIn = false;
+    //instance_destroy();  
+}
 </string>
           </argument>
         </arguments>
