@@ -18,6 +18,7 @@
     <sound>sound\snd_city</sound>
     <sound>sound\snd_credits</sound>
     <sound>sound\snd_intro</sound>
+    <sound>sound\snd_lavaboss_test</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Terrenos">
@@ -334,6 +335,7 @@
       <object>objects\obj_pcinst</object>
       <object>objects\obj_camera2</object>
       <object>objects\obj_camera</object>
+      <object>objects\obj_lightning</object>
       <object>objects\obj_water_spammer</object>
     </objects>
     <objects name="BossFinal Pruebas">
