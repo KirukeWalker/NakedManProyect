@@ -101,6 +101,7 @@ switch (nivel)
             <string>//Alarm for unlocked if locked (cancel the geiser effect)
 speed = 0;
 status_locked = false;
+grav = 1;
 </string>
           </argument>
         </arguments>
