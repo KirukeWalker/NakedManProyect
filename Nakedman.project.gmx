@@ -299,6 +299,7 @@
       <object>objects\obj_fireball</object>
       <object>objects\obj_shoot_pointer</object>
       <object>objects\obj_falling_rock</object>
+      <object>objects\obj_fire_wall</object>
     </objects>
     <objects name="Utilidades">
       <object>objects\obj_music</object>
@@ -335,8 +336,8 @@
       <object>objects\obj_pcinst</object>
       <object>objects\obj_camera2</object>
       <object>objects\obj_camera</object>
-      <object>objects\obj_lightning</object>
       <object>objects\obj_water_spammer</object>
+      <object>objects\obj_lightning</object>
     </objects>
     <objects name="BossFinal Pruebas">
       <object>objects\Player1</object>

@@ -151,6 +151,10 @@ switch(status){
             break;
         }
     break;
+    //Go forward
+    case 4:
+        hspeed = 1;
+    break;
 }
 </string>
           </argument>

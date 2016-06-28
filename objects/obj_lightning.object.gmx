@@ -51,6 +51,7 @@ triggered = false;
             <kind>1</kind>
             <string>//
 object5.status_locked = false;
+obj_camera2.status = 4;
 </string>
           </argument>
         </arguments>
@@ -73,10 +74,19 @@ object5.status_locked = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
+            <string>//Stop the player and play the lightning
 if(object5.x &gt; 4000 &amp;&amp; triggered == false){
+    //El rayo
     obj_fade_white.alpha = 1;
     triggered = true;
+    //El prota
+    object5.x = 4000;
+    object5.status_locked = true;
+    //
+    alarm_set(0, 60);
+    for(i = 0; i &lt; room_height; i += 32){
+        fire_wall = instance_create(3616, i, obj_fire_wall);
+    }
 }
 </string>
           </argument>
