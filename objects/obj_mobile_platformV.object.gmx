@@ -51,30 +51,26 @@ vsp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vsp = dir * movespeed;
+            <string>//Aplicamos parámetros 
+vsp = dir * movespeed;
 
 //Horizontal collision (Terreno sólido)
-if(place_meeting(x,y+vsp,Terreno) || 
-    place_meeting(x,y+vsp,obj_arena) ||
-    place_meeting(x,y+vsp,obj_suelo_bosque)
-    )
+if(place_meeting(x,y+vsp,obj_solid_terrain))
 {
-    
-    while(!place_meeting(x, y+sign(vsp), Terreno) &amp;&amp; 
-        !place_meeting(x, y+sign(vsp), obj_arena) &amp;&amp;
-        !place_meeting(x, y+sign(vsp), obj_suelo_bosque)
-        )
+    while(!place_meeting(x, y+sign(vsp), obj_solid_terrain))
     {
         y+=sign(vsp);
     }
     vsp=0;
     dir *= -1;
 }
-//Chequeo para que no escachufle del nivel
-if (y + vsp &gt;= room_height) dir *= -1;
-
+//Chequeo para que no se salga del nivel
+if (y + vsp &lt;= 0 || 
+    y + vsp &gt;= room_height) 
+    dir *= -1;
+//Aplicamos movimiento
 y += vsp;
-//
+//Para matener al prota encima
 if(vsp &lt; 0){
     //Mover al prota (hacia arriba)
     if (place_meeting(x,y-1,object5)) object5.y += vsp;

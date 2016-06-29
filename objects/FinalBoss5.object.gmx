@@ -168,7 +168,8 @@ if(teleporting == true){
 //Recibir ataque
 if (place_meeting (x,y, obj_cacota) &amp;&amp; teleporting == false) {
     global.vidaboss -=1;
-    instance_deactivate_object(obj_cacota);
+    stay_time -= 4;
+    with(obj_cacota) instance_destroy();
 }
 //Morir del todo
 if (global.vidaboss = 0)
