@@ -275,11 +275,11 @@ if(room == Room_FinalBoss2){
     terrainIdL = collision_line(x, y, x - 600, y, obj_suelo_marnopisable, true, false);
     terrainIdR = collision_line(x, y, x + 600, y, obj_suelo_marnopisable, true, false);
     //Hacemos que no aplique cambio si el prota no está en el lado que corresponde
-    if(terrainIdL == noone &amp;&amp; x &lt; 352){
-        hsp -= 3 * (300 - distance_to_point(32, y)) / 300;
+    if(terrainIdL == noone &amp;&amp; x &lt; 624){
+        hsp -= 3 * (300 - distance_to_point(624-300, y)) / 300;
     }
-    if(terrainIdR == noone &amp;&amp; x &gt; 352){
-        hsp += 3 * (300 - distance_to_point(704, y)) / 300;
+    if(terrainIdR == noone &amp;&amp; x &gt; 624){
+        hsp += 3 * (300 - distance_to_point(624+300, y)) / 300;
     }
 }
     

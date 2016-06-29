@@ -122,10 +122,11 @@ if(speed != 0){
     chain_link.image_angle = image_angle;
 }
 //Comprobación de salida de pantalla
-if(x &lt; 0 || x &gt; room_width || y &lt; 0 || y &gt; room_height){
+if(x &lt; 288 || x &gt; 960 || y &lt; 510 || y &gt; 1120){
     speed *= -1;
     returning = true;
 }
+
 </string>
           </argument>
         </arguments>
@@ -183,7 +184,7 @@ if(other.status == 3){
     //Temblor de cámara
     if(camera_tremble == false){
         obj_camera2.status = 3;
-        obj_camera2.alarm[0] = 10;
+        obj_camera2.alarm[0] = 20;
         obj_camera2.alarm[1] = 5;
         obj_camera2.tremble_axis = 1;
         camera_tremble = true;

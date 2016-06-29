@@ -80,7 +80,7 @@ instance_destroy();
             <kind>1</kind>
             <string>//Rompe el otro bloque
 with(other) instance_destroy();
-if(y &gt; 64){
+if(y &gt; 700){
     //Y tu también, imbécil
     alarm_set(0, 1);
 } 

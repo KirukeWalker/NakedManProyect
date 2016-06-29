@@ -137,17 +137,19 @@ switch(status){
     case 2:
         if(distance_to_point(objectiveX, objectiveY) &gt; 10)
             move_towards_point(objectiveX, objectiveY, 10);
-        else
+        else{
             status = 0;
+            speed = 0;
+        }
     break;
     //Tremble
     case 3:
         switch(tremble_axis){
             case 1:
-                x += tremble_direction * tremble_speed;
+                x += tremble_direction * tremble_speed * 2;
             break;
             case 2:
-                y += tremble_direction * tremble_speed;
+                y += tremble_direction * tremble_speed * 2;
             break;
         }
     break;

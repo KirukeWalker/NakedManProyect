@@ -35,14 +35,13 @@ looking_left = true;
 attack = 0;
 vsp = 0;
 destroy_terrain = false;
-alarm[0] = 60;
 /* Estados
 0 - Normal
 1 - Apuntando
 2 - Disparando
 3 - Viajando
 4 - Desatascando */
-status = 0;
+status = -1;
 
 //Interactor for attacking animation
 interactor = instance_create(x,y,obj_boss_interactor);
@@ -50,8 +49,6 @@ interactor = instance_create(x,y,obj_boss_interactor);
 //Get the player
 player = instance_find(object5, 0);
 
-//Alarma para cuadrar la cámara
-alarm_set(1, 1);
 </string>
           </argument>
         </arguments>
@@ -76,33 +73,6 @@ alarm_set(1, 1);
             <kind>1</kind>
             <string>//
 destroy_terrain = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Cuadra la camara
-camera = instance_find(obj_camera2, 0);
-camera.status = 0;
-camera.objectiveX = room_width/2;
-camera.objectiveY = room_height/2;
 </string>
           </argument>
         </arguments>
@@ -171,8 +141,31 @@ else if(status == 1){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Actitud normal
+            <string>//Esperando al prota
+if(status == -1){
+    if(object5.y &gt; 704){
+        block1 = instance_create(416, 576, obj_suelo_mar_pisable);
+        block2 = instance_create(448, 576, obj_suelo_mar_pisable);
+        block1.image_yscale = 2;
+        block2.image_yscale = 2;
+        //Cuadra la camara
+        camera = instance_find(obj_camera2, 0);
+        camera.status = 2;
+        camera.objectiveX = 624;
+        camera.objectiveY = 848;
+        //Empieza la pelea
+        health_bar = instance_create(448, 608, obj_healthbar_anal);
+        status = 0;
+        alarm[0] = 60;
+    }
+}
+//Actitud normal
 if(status == 0){
+    //Cierre de los bloques
+    if(block1.x &gt; 352){
+        block1.x -= 16;
+        block2.x -= 16;
+    }
     //Comprobamos posición del prota para el encaramiento
     if(x &lt; instance_position(x, y, object5)) 
         looking_left = true;
@@ -275,17 +268,23 @@ if(status = 4){
 }
 //Pisotón
 if(status == 5){
-    vspeed = 10;
-    if(place_meeting(x, y + vspeed, obj_solid_terrain)){
-        while(place_meeting(x, y + vspeed, obj_solid_terrain)){
-            vspeed --;
+    floorId = collision_line(x, y, x, y+480, obj_solid_terrain, false, true);
+    if(floorId != noone){
+        vspeed = 10;
+        if(place_meeting(x, y + vspeed, obj_solid_terrain)){
+            while(place_meeting(x, y + vspeed, obj_solid_terrain)){
+                vspeed --;
+            }
+            obj_camera2.status = 3;
+            obj_camera2.alarm[0] = 10;
+            obj_camera2.alarm[1] = 5;
+            obj_camera2.tremble_axis = 2;
+            rock_position = irandom_range(384/32, 832/32) * 32;
+            falling_rock = instance_create(rock_position, 500, obj_falling_rock);
+            status = 0;
         }
-        obj_camera2.status = 3;
-        obj_camera2.alarm[0] = 10;
-        obj_camera2.alarm[1] = 5;
-        obj_camera2.tremble_axis = 2;
-        rock_position = irandom_range(2, 17) * 32;
-        falling_rock = instance_create(rock_position, 0, obj_falling_rock);
+    }
+    else{
         status = 0;
     }
 }
@@ -307,11 +306,12 @@ if(status == 7){
     //Nada de momento
 }
 //Matar al rpota si llega a los bordes
-if( object5.x &lt; object5.sprite_width/2 || 
-    object5.x &gt; room_width - sprite_width/2 || 
-    object5.y &lt; sprite_height/2)
-    global.vida = 0;
-    
+if(status &gt; -1){
+    if( object5.x &lt; 288 || 
+        object5.x &gt; 960 || 
+        object5.y &gt; 1120)
+        global.vida = 0;
+}
 //Morir del todo
 /*if (global.vidaboss == 0)
 { 
