@@ -55,7 +55,7 @@ returning = false;
             <kind>1</kind>
             <string>//Ve creando eslabones 
 if(speed != 0){ 
-    chain_link = instance_create(x,y,obj_chain_link);
+    chain_link = instance_create(x,y,obj_chain_link_event);
     chain_link.image_angle = image_angle + 180;
 }
 
@@ -97,33 +97,6 @@ if(returning == false){
     global.muertes += 1;
     obj_fade.fadeIn = false;
     //obj_fade.alarm[1] = room_speed * 0.05;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_chain_link">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//
-if(returning == true){
-    with(other)
-        instance_destroy();
 }
 </string>
           </argument>

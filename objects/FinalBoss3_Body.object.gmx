@@ -74,8 +74,16 @@ x += FinalBoss3.move_speed * h_direction;
 y += FinalBoss3.move_speed * v_direction;
 
 //Chequeo para ver si se destruye (con 20 de vida)
-if(global.vidaboss &lt;= qeue_position*2) 
+if(global.vidaboss &lt;= qeue_position*2){
+    //Destruimos los segmentos previamente creados
+    with(obj_unlinked_segment) instance_destroy();
+    //Creamos dos segmentos que rebotarán a esa altura
+    segment1 = instance_create(x, y, obj_unlinked_segment);
+    segment2 = instance_create(x, y, obj_unlinked_segment);
+    segment1.hspeed = -10;
+    segment2.hspeed = 10;
     instance_destroy();
+}
 </string>
           </argument>
         </arguments>

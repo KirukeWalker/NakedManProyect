@@ -688,7 +688,7 @@
     <instance objName="obj_suelo_hojas" x="6560" y="320" name="inst_254B5832" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="4320" y="416" name="inst_5596E5ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="4608" y="416" name="inst_E4BC5E9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Goomba" x="576" y="416" name="inst_271362F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Goomba" x="544" y="352" name="inst_271362F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Goomba" x="3680" y="224" name="inst_5CF37916" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Volador" x="1136" y="304" name="inst_47CC7640" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Volador" x="1136" y="384" name="inst_93C6DCD8" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -808,6 +808,7 @@
     <instance objName="obj_lightning" x="0" y="320" name="inst_58187311" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_white" x="0" y="352" name="inst_3463DFA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera2" x="0" y="384" name="inst_10D89EEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Melee" x="410" y="313" name="inst_C5E0CF9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

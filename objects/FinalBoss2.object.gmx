@@ -294,7 +294,8 @@ if(status == 6){
     with(obj_chain_link) instance_destroy();
     with(obj_anchor) instance_destroy();
     direction = 0;
-    vspeed = 10;
+    speed = 0;
+    vspeed = 15;
     if(y &gt; 1000){
         instance_create(room_width/2, room_height + 200, obj_anchor_event);
         player.status_locked = true;

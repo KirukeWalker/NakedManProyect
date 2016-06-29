@@ -131,22 +131,22 @@ ready_to_jump = true;
 if(place_meeting(x, y, Agua) &amp;&amp; jumping == false &amp;&amp; ready_to_jump = true){
     nakedId = collision_rectangle(x-64, y-480, x+64, y, object5, false, true);
     //blockId = collision_line(x, y, x, y-480, obj_solid_terrain, false, true);
-    distance_to_objective = 1;
-    while(!place_meeting(x, y - distance_to_objective, obj_solid_terrain))
-        distance_to_objective ++;
     if(nakedId != noone){
-            //Calcula fuerza necesaria
-            necessary_force = 0;
-            distance_done = 0;
-            grav_to_surpass = 0;
-            steps_to_next_jump = 0;
-            while(distance_done &lt; distance_to_objective){
-                //Aplicamos modificador de gravedad
-                grav_to_surpass += 0.1;
-                necessary_force += grav_to_surpass;
-                distance_done += necessary_force;
-                steps_to_next_jump ++;
-            }
+        distance_to_objective = 1;
+        while(!place_meeting(x, y - distance_to_objective, obj_solid_terrain))
+            distance_to_objective ++;
+        //Calcula fuerza necesaria
+        necessary_force = 0;
+        distance_done = 0;
+        grav_to_surpass = 0;
+        steps_to_next_jump = 0;
+        while(distance_done &lt; distance_to_objective){
+            //Aplicamos modificador de gravedad
+            grav_to_surpass += 0.1;
+            necessary_force += grav_to_surpass;
+            distance_done += necessary_force;
+            steps_to_next_jump ++;
+        }
         vsp -= necessary_force;
         jumping = true;
         ready_to_jump = false;
@@ -176,13 +176,15 @@ if(vsp &lt; 10){
         grav = 1;
     vsp += grav;
 }
-if(place_meeting(x,y+vsp, obj_solid_terrain))
+if(place_meeting(x,y+vsp, obj_solid_terrain) ||
+    place_meeting(x,y+vsp, obj_suelo_hojas))
 {
     //Si choca por arriba se sigue considerando en salto
     if(vsp &gt; 0){
         jumping = false;
     }
-    while(!place_meeting(x, y+sign(vsp), obj_solid_terrain))
+    while(!place_meeting(x, y+sign(vsp), obj_solid_terrain) &amp;&amp;
+            !place_meeting(x, y+sign(vsp), obj_suelo_hojas))
     {
         y+=sign(vsp);
     }
