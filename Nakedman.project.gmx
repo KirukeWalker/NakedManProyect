@@ -225,6 +225,7 @@
         <object>objects\obj_arena</object>
         <object>objects\obj_terreno_profundo</object>
         <object>objects\obj_suelo_bosque</object>
+        <object>objects\obj_sueloBosque_noPisable</object>
         <object>objects\obj_esquina_bosque</object>
         <object>objects\obj_suelo_mar_pisable</object>
         <object>objects\obj_suelo_marnopisable</object>
@@ -236,6 +237,7 @@
       </objects>
       <objects name="Atravesables">
         <object>objects\obj_passable_terrain</object>
+        <object>objects\obj_falling_branch</object>
         <object>objects\obj_suelo_hojas</object>
         <object>objects\obj_wood_platform</object>
         <object>objects\obj_mobile_platformH</object>
@@ -248,8 +250,8 @@
       <object>objects\obj_door</object>
       <object>objects\Agua</object>
       <object>objects\FondoCueva</object>
-      <object>objects\obj_sueloBosque_noPisable</object>
       <object>objects\obj_tronco_arbol</object>
+      <object>objects\obj_falling_tree</object>
       <object>objects\obj_pinchos</object>
       <object>objects\obj_hielo</object>
       <object>objects\obj_nieve_no_pisable</object>
@@ -277,6 +279,8 @@
       <object>objects\FinalBoss2_S2</object>
       <object>objects\FinalBoss3</object>
       <object>objects\FinalBoss3_Body</object>
+      <object>objects\FinalBoss3_Test</object>
+      <object>objects\FinalBoss3_Body_Test</object>
       <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss4_New</object>
       <object>objects\FinalBoss5</object>
@@ -304,6 +308,7 @@
       <object>objects\obj_falling_rock</object>
       <object>objects\obj_unlinked_segment</object>
       <object>objects\obj_fire_wall</object>
+      <object>objects\obj_ascending_fire</object>
     </objects>
     <objects name="Utilidades">
       <object>objects\obj_music</object>
@@ -363,7 +368,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss3</room>
+    <room>rooms\Room_FinalBoss3_Test</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -373,6 +378,7 @@
     <room>rooms\Room_FinalBoss2</room>
     <room>rooms\Room_FinalBoss2_S2</room>
     <room>rooms\Nivel_Bosque</room>
+    <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4</room>
