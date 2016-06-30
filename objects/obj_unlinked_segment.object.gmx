@@ -8,6 +8,74 @@
   <parentName>obj_enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+move_speed = 4;
+v_direction = -1;
+h_direction = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Comprobamos paredes
+//Horizontales
+if(place_meeting(x + (move_speed * h_direction), y, obj_suelo_bosque))
+{
+    while(!place_meeting(x + h_direction, y, obj_suelo_bosque))
+        x += h_direction;
+    h_direction *= -1;
+    image_xscale *= -1;
+}
+//Verticales
+if(place_meeting(x, y + (move_speed * v_direction), obj_suelo_bosque))
+{
+    while(!place_meeting(x, y + v_direction, obj_suelo_bosque))
+        y += v_direction;
+    v_direction *= -1;
+    image_yscale *= -1;
+}
+//Movimiento
+x += move_speed * h_direction;
+y += move_speed * v_direction;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_solid_terrain">
       <action>
         <libid>1</libid>
