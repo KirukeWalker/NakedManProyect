@@ -233,6 +233,7 @@ if(touched == false){
 }
 //Y destruimos la roca
 if(destroy_it == true){
+    script_execute(scr_generate_fragments, other);
     with(other) instance_destroy();
 }
 </string>

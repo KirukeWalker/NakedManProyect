@@ -79,6 +79,7 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>//Rompe el otro bloque
+script_execute(scr_generate_fragments, other);
 with(other) instance_destroy();
 if(y &gt; 700){
     //Y tu también, imbécil

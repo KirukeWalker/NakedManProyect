@@ -58,6 +58,7 @@
       <sprite>sprites\spr_suelo_madero</sprite>
       <sprite>sprites\spr_sliding_floor</sprite>
       <sprite>sprites\spr_mobile_platform</sprite>
+      <sprite>sprites\spr_fragment</sprite>
     </sprites>
     <sprites name="Prota">
       <sprite>sprites\spr_idle</sprite>
@@ -205,6 +206,7 @@
     <script>scripts\scr_menu2.gml</script>
     <script>scripts\scr_menunivel.gml</script>
     <script>scripts\scr_knockback.gml</script>
+    <script>scripts\scr_generate_fragments.gml</script>
     <script>scripts\scr_create_flames.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -264,6 +266,7 @@
       <object>objects\obj_teleporter</object>
       <object>objects\obj_geiser</object>
       <object>objects\obj_falling_floor</object>
+      <object>objects\obj_fragment</object>
     </objects>
     <objects name="Enemigos">
       <object>objects\obj_enemy</object>
@@ -368,7 +371,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss3_Test</room>
+    <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -379,10 +382,10 @@
     <room>rooms\Room_FinalBoss2_S2</room>
     <room>rooms\Nivel_Bosque</room>
     <room>rooms\Room_FinalBoss3</room>
+    <room>rooms\Room_FinalBoss3_Test</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4</room>
-    <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Continuara</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>

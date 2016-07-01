@@ -380,6 +380,7 @@ if(global.vidaboss &lt;= 0)
             <kind>1</kind>
             <string>//
 if(destroy_terrain == true){
+    script_execute(scr_generate_fragments, other);
     with(other) instance_destroy();
 }
 
