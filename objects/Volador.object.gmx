@@ -99,7 +99,7 @@ switch (nivel)
           <argument>
             <kind>1</kind>
             <string>//Controloamos distancia horizontal (no bajo el agua)
-if(room != Nivel_Playa){
+if(!place_meeting(x, y, Agua)){
     if (abs(x - initial_position) &gt;= max_distance)
     {
         direction_looking *= -1;
@@ -113,7 +113,7 @@ if (y &lt;= initial_height - max_height) going_down = true;
 //En horizontal
 x += 2 * direction_looking;
 //En vertical
-if(room == Nivel_Playa) height = 1; else height = 2;
+if(!place_meeting(x, y, Agua)) height = 1; else height = 2;
 if(going_down) y+=height; else y-=height;
 //Hacemos que cague
 if(poop_shot = 0 &amp;&amp; nivel = "Nivel_Nieve")

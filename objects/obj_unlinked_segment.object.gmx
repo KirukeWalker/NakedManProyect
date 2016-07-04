@@ -94,7 +94,7 @@ y += move_speed * v_direction;
           <argument>
             <kind>1</kind>
             <string>//
-//hspeed *= -1;
+hspeed *= -1;
 </string>
           </argument>
         </arguments>

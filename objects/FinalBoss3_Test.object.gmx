@@ -29,11 +29,10 @@
 global.vidaboss = 20;
 status = 0;
 rotation_speed = 2;
-speed = 0;
+speed = 10;
 x_pos = x;
 y_pos = y;
-body_segments = 10;
-player_direction = 0;
+body_segments = 20;
 
 /*Turning_direction
     -1  -    Left
@@ -155,7 +154,6 @@ switch(status){
                 ascending_fire = instance_create(i, 640, obj_ascending_fire);
             }
             status = 1;
-            speed = 10;
         }
     break;
     //Wait for the fire to ascend
@@ -174,40 +172,9 @@ switch(status){
             lifeBar = instance_create(480, 100, obj_healthbar_anal);
         }
     break;
-    //Start to chase the player
+    //
     case 2:
-        //
-        if(global.vidaboss &lt;= 10){
-            speed *= 2;
-            rotation_speed = 6;
-            status = 3;
-        }
-    break;
-    //Super speed
-    case 3:
-        //
-        if(global.vidaboss &lt;= 0){
-            player.status_locked = true;
-            //Stop spamming them
-            alarm_set(0, -1);
-            alarm_set(1, -1);
-            //Make them disomount
-            obj_falling_tree.alarm[0] = 1;
-            obj_falling_branch.alarm[0] = 1;
-            //
-            obj_fade.fadeIn = false;
-            obj_fade.fading_speed = 0.01;
-            status = 4;
-        }
-    break;
-    //Die
-    case 4:
-    
-    break;
-}
-//Way to chase the player
-if(status == 2 || distance_to_point(720, 320) &gt;= 300){
-    //Rotate towards the player
+        //Rotate towards the player
         //Ge the player´s position
         player_direction = point_direction(x,y, player.x, player.y);
         if(player_direction &gt; direction) 
@@ -221,8 +188,9 @@ if(status == 2 || distance_to_point(720, 320) &gt;= 300){
             turning_direction *= -1;
         //And rotate towards the player
         direction += turning_direction * rotation_speed;
-        //Ajustar el sprite del bicho con su cuerpo
+        //
         image_angle = direction - 45;
+    break;
 }
 </string>
           </argument>
@@ -249,32 +217,6 @@ if(status == 2 || distance_to_point(720, 320) &gt;= 300){
             <string>//
 global.vidaboss --;
 with(other) instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Control stuff
-//draw_set_color(c_white);
-//draw_text(30, 30, direction);
-//draw_text(30, 50, player_direction);
 </string>
           </argument>
         </arguments>

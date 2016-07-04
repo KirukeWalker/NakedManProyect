@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>//
 triggered = false;
-fire_wall = noone;
 </string>
           </argument>
         </arguments>
@@ -50,7 +49,10 @@ fire_wall = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>//
+object5.status_locked = false;
+obj_camera2.status = 4;
+</string>
           </argument>
         </arguments>
       </action>
@@ -83,14 +85,7 @@ if(object5.x &gt; 4000 &amp;&amp; triggered == false){
     //
     alarm_set(0, 60);
     for(i = 0; i &lt; room_height; i += 32){
-        fire_wall = instance_create(3416, i, obj_fire_wall);
-    }
-}
-//
-if(fire_wall != noone){
-    if(fire_wall.x &gt;= 3680){
-        object5.status_locked = false;
-        obj_camera2.status = 4;
+        fire_wall = instance_create(3616, i, obj_fire_wall);
     }
 }
 </string>

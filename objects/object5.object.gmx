@@ -358,16 +358,14 @@ else
     //sprite_index = spr_jump
 }
 //Control de muerte
-if(status_locked == false){
-    if (position_meeting (x,y,Lava)) 
-        global.vida = 0 ;
-    if (position_meeting (x,y,obj_acido)) 
-        global.vida = 0;
-    if (position_meeting (x,y,obj_pincho)) 
-        global.vida = 0;
-    if (y &gt; room_height &amp;&amp; status_locked == false) 
-        global.vida = 0;
-}
+if (position_meeting (x,y,Lava)) 
+    global.vida = 0 ;
+if (position_meeting (x,y,obj_acido)) 
+    global.vida = 0;
+if (position_meeting (x,y,obj_pincho)) 
+    global.vida = 0;
+if (y &gt; room_height &amp;&amp; status_locked == false) 
+    global.vida = 0;
 //Control de negativos
 if (global.vida &lt; 0) 
     global.vida = 0;
@@ -576,7 +574,7 @@ if(invincible == false &amp;&amp; status_dead == false){
           <argument>
             <kind>1</kind>
             <string>//Colision con enemigos
-if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){            
+if(invincible == false &amp;&amp; status_dead == 0){            
     script_execute(scr_knockback);
 }
 </string>
