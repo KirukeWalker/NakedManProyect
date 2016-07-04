@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 //
-hspeed = 1;
+hspeed = 3;
 </string>
           </argument>
         </arguments>

@@ -88,10 +88,10 @@ if (global.vidaboss = 0)
     ini_write_string("NhTPahPmx","sbSDLgaSbsQn","ANabwjQnvsl")
     ini_close()
     global.muertes += 1;
-    obj_fade.fadeIn = false;
-    obj_fade.alarm[1] = room_speed * 0.05; 
+    obj_fade_white.fadeIn = false;
+    //obj_fade.alarm[1] = room_speed * 0.05; 
     checkpoint = true;
-    instance_destroy();      
+    //instance_destroy();      
 }
 </string>
           </argument>

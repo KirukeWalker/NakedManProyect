@@ -80,9 +80,11 @@ if(global.vidaboss &lt;= qeue_position*2){
     //Creamos dos segmentos que rebotarán a esa altura
     segment1 = instance_create(x, y, obj_unlinked_segment);
     segment2 = instance_create(x, y, obj_unlinked_segment);
-    segment1.move_speed = FinalBoss3.move_speed;
-    segment2.move_speed = FinalBoss3.move_speed;
+    segment1.move_speed = 6;
+    segment2.move_speed = 6;
     segment1.h_direction = -h_direction;
+    segment1.v_direction = v_direction;
+    segment2.h_direction = h_direction;
     segment2.v_direction = -v_direction;
     instance_destroy();
 }

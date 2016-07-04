@@ -140,7 +140,7 @@ if (sprite_index == moverse)
     x += hsp * direction_facing;
 }
 //Recibir ataque
-if (place_meeting(x, y, obj_cacota))
+if (place_meeting(x, y, obj_cacota) &amp;&amp; status_dead == 0)
 { 
     global.muertes += 1;
     sprite_index = muerte;
