@@ -351,6 +351,7 @@
       <object>objects\obj_camera</object>
       <object>objects\obj_water_spammer</object>
       <object>objects\obj_lightning</object>
+      <object>objects\stuff_deactivator</object>
     </objects>
     <objects name="BossFinal Pruebas">
       <object>objects\Player1</object>
@@ -368,7 +369,6 @@
     </objects>
     <object>objects\object5</object>
     <object>objects\obj_nakedman_falling</object>
-    <object>objects\stuff_deactivator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>

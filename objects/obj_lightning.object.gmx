@@ -28,6 +28,10 @@
             <string>//
 triggered = false;
 fire_wall = noone;
+flyer_stage = 0;
+
+//
+camera = instance_find(obj_camera2, 0);
 </string>
           </argument>
         </arguments>
@@ -86,13 +90,45 @@ if(object5.x &gt; 4000 &amp;&amp; triggered == false){
         fire_wall = instance_create(3416, i, obj_fire_wall);
     }
 }
-//
+//Make the camera follow the firewall
 if(fire_wall != noone){
     if(fire_wall.x &gt;= 3680){
         object5.status_locked = false;
         obj_camera2.status = 4;
     }
 }
+//Spam enemies when the players reaches certain point
+switch(flyer_stage){
+    case 0:
+        if(camera.x &gt; 4096 - 310){
+            flyer = instance_create(4096, 320, Volador);
+            flyer_stage = 1; 
+        }
+    break;
+    case 1:
+        if(camera.x &gt; 4928 - 310){
+            flyer = instance_create(4928, 320, Volador);
+            flyer_stage = 2; 
+        }
+    break;
+    case 2:
+        if(camera.x &gt; 5120 - 310){
+            flyer = instance_create(5120, 288, Volador);
+            flyer_stage = 3; 
+        }
+    break;
+    case 3:
+        if(camera.x &gt; 6112 - 310){
+            for(i = 0; i &lt; 12; i ++){
+                positionX = i + 6112;
+                positionY = i * 32 + 32;
+                flyer = instance_create(positionX, positionY, Volador);
+            }
+        }
+        stage = 4;
+    break;
+}
+
 </string>
           </argument>
         </arguments>
