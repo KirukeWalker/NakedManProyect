@@ -136,7 +136,7 @@ switch(status){
     //Go to the indicated point
     case 2:
         if(distance_to_point(objectiveX, objectiveY) &gt; 10)
-            move_towards_point(objectiveX, objectiveY, 10);
+            move_towards_point(objectiveX, objectiveY, 5);
         else{
             status = 0;
             speed = 0;
@@ -155,7 +155,7 @@ switch(status){
     break;
     //Go forward
     case 4:
-        hspeed = 1;
+        hspeed = 3;
     break;
 }
 </string>

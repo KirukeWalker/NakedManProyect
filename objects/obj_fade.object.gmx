@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>fadeIn = true;
 alpha = 1;
-alarm[0] = room_speed * 0.05;
+//alarm[0] = room_speed * 0.05;
+fading_speed = 0.05;
 </string>
           </argument>
         </arguments>
@@ -119,7 +120,7 @@ alarm[0] = room_speed * 0.05;
 if (fadeIn == true)
 {
     if (alpha &gt; 0){
-        alpha -= 0.05;
+        alpha -= fading_speed;
         //alarm[0] = room_speed * 0.05;
     }
     else{
@@ -128,7 +129,7 @@ if (fadeIn == true)
 }
 else if (fadeIn = false) {
     if(alpha &lt; 1){
-        alpha += 0.05;
+        alpha += fading_speed;
         //alarm[1] = room_speed * 0.05;
     }
     else{
