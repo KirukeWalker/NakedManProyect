@@ -147,7 +147,7 @@ switch(status){
             health_bar = instance_create(608, 192, obj_healthbar_anal);
             //
             obj_camera2.status = 2;
-            obj_camera2.objectiveX = 820;
+            obj_camera2.objectiveX = 832;
             obj_camera2.objectiveY = 384;
         }
     break;

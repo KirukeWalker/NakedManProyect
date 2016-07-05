@@ -36,6 +36,7 @@ tremble_direction = 1;
 tremble_speed = 2;
 objectiveX = 0;
 objectiveY = 0;
+movement_speed = 10;
 /* Axis for the trembles
     1 - Horizontal
     2 - Vertical
@@ -135,8 +136,8 @@ switch(status){
     break;
     //Go to the indicated point
     case 2:
-        if(distance_to_point(objectiveX, objectiveY) &gt; 10)
-            move_towards_point(objectiveX, objectiveY, 5);
+        if(distance_to_point(objectiveX, objectiveY) &gt; movement_speed * 1.5)
+            move_towards_point(objectiveX, objectiveY, movement_speed);
         else{
             status = 0;
             speed = 0;

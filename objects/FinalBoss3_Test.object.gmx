@@ -144,7 +144,8 @@ switch(status){
             //Cuadra la camara
             camera = instance_find(obj_camera2, 0);
             camera.status = 2;
-            camera.objectiveX = 720;
+            camera.movement_speed = 5;
+            camera.objectiveX = 721;
             camera.objectiveY = 320;
             //
             player.status_locked = true;
@@ -202,7 +203,7 @@ switch(status){
     break;
     //Die
     case 4:
-    
+        obj_rising_fire.y += 1;
     break;
 }
 //Way to chase the player
