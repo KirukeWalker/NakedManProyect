@@ -33,6 +33,7 @@ max_height = 10;
 direction_looking = -1;
 going_down = true;
 poop_shot = 0;      //Contador para la alarma
+go_straight = false;
 
 //Para el nivel de bosque
 if(room == Nivel_Bosque){
@@ -104,7 +105,7 @@ switch (nivel)
           <argument>
             <kind>1</kind>
             <string>//Controloamos distancia horizontal (no bajo el agua)
-if(room != Nivel_Playa &amp;&amp; room != Nivel_Bosque){
+if(go_straight == false){
     if (abs(x - initial_position) &gt;= max_distance)
     {
         direction_looking *= -1;
@@ -112,8 +113,10 @@ if(room != Nivel_Playa &amp;&amp; room != Nivel_Bosque){
     }
 }
 //Controlamos distancia vertical
-if (y &gt;= initial_height + max_height) going_down = false;
-if (y &lt;= initial_height - max_height) going_down = true;
+if (y &gt;= initial_height + max_height) 
+    going_down = false;
+if (y &lt;= initial_height - max_height) 
+    going_down = true;
 //Movemos las manoplas
 //En horizontal
 x += 2 * direction_looking;

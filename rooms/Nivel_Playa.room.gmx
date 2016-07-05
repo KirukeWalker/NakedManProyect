@@ -2990,6 +2990,7 @@
     <instance objName="obj_loose_block" x="3712" y="0" name="inst_B60505B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_loose_block" x="3840" y="0" name="inst_493BDFD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_loose_block" x="3936" y="0" name="inst_63D7A1F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal" x="7328" y="256" name="inst_41FA2B22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

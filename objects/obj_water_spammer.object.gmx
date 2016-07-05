@@ -29,6 +29,8 @@
 water = instance_create(0, 0, Agua);
 water.image_xscale = room_width;
 water.image_yscale = room_height;
+//Aprovechamos para mandar a los oladores tirar recto
+Volador.go_straight = true;
 </string>
           </argument>
         </arguments>

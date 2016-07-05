@@ -173,6 +173,7 @@
       <sprite>sprites\spr_level3</sprite>
       <sprite>sprites\spr_level4</sprite>
       <sprite>sprites\spr_level5</sprite>
+      <sprite>sprites\spr_level6</sprite>
       <sprite>sprites\spr_camera_ref</sprite>
       <sprite>sprites\spr_x</sprite>
       <sprite>sprites\spr_underconst</sprite>
@@ -396,7 +397,6 @@
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4_New</room>
-    <room>rooms\Room_FinalBoss4</room>
     <room>rooms\Continuara</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
@@ -406,6 +406,7 @@
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
     <room>rooms\Room_FinalBoss1</room>
+    <room>rooms\Room_FinalBoss4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
