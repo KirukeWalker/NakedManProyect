@@ -198,8 +198,11 @@ switch(status){
     break;
     //Ve a una de las plataforas de los lados y sube
     case 3:
-        if(x &lt; 600 || x &gt; 1060){
-            x = clamp(x, 600, 1060);
+        if(abs(hspeed) &lt; sprint_speed){
+            hspeed += direction_looking;
+        }
+        if(x &lt; 580 || x &gt; 1080){
+            x = clamp(x, 580, 1080);
             hspeed = 0;
             direction_looking = sign(800 - x);
             vspeed -= 40;
@@ -226,10 +229,22 @@ switch(status){
             apply_gravity = false;
         }
     break;  
-    //"Morir"
+    //Secuencia de muerte
     case 6:
-        obj_fade.fadeIn = false;
-        y = 1000;
+        apply_gravity = true;
+        if(abs(hspeed) &lt; sprint_speed/4)
+            hspeed += direction_looking;
+        if(place_meeting(x, y, Lava))
+            hspeed = 0;
+        if(y &gt; 700){
+            status = 7; 
+            obj_fade.fadeIn = false;
+            //Para que no finalice la pelea
+            global.vidaboss = -1;
+        }
+    break;
+    //"Morir"
+    case 7:
         //Fade in de nuevo
         if(obj_fade.alpha == 1){
             global.vidaboss = 1;
@@ -248,11 +263,11 @@ switch(status){
             depth = -1;
             object5.depth = -1;
             lava_reference = instance_find(Lava, 0);
-            status = 7;
+            status = 8;
         }
     break; 
     //Subida de lava y de vida
-    case 7:
+    case 8:
         //Temblor de cámara
         if(obj_camera2.status != 3){
             obj_camera2.status = 3;
@@ -304,7 +319,6 @@ if(global.vidaboss == 0 &amp;&amp; last_round == false){
     status = 6;
     shoot_counter = 0;
     obj_healthbar_anal.initialLife = 12;
-    apply_gravity = false;
     depth = -2;
     with(obj_fire_splash) instance_destroy();
     with(obj_fireball) instance_destroy();

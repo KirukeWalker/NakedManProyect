@@ -335,7 +335,7 @@ if(vsp = 0)
 {
     if(status_dead = 1 &amp;&amp; complete_death = 0) {
         sprite_index = spr_death;
-        if(image_index = 79) {
+        if(image_index = image_number - 1) {
             sprite_index = total_death;
             instance_create(view_xview,view_yview,obj_gameoverimg)
             complete_death = 1;

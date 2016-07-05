@@ -28,7 +28,7 @@
             <string>//Variables
 global.vidaboss = 20;
 status = 0;
-rotation_speed = 2;
+rotation_speed = 4;
 speed = 0;
 x_pos = x;
 y_pos = y;
@@ -153,16 +153,16 @@ switch(status){
             with(obj_fire_wall) instance_destroy();
             //
             for(i = 416; i &lt; 1024; i+= 32){
-                ascending_fire = instance_create(i, 640, obj_ascending_fire);
+                ascending_fire = instance_create(i, 672, obj_ascending_fire);
             }
             status = 1;
-            speed = 10;
         }
     break;
     //Wait for the fire to ascend
     case 1:
         obj_ascending_fire.y -= 2;
         if(obj_ascending_fire.y &lt; 544){
+            speed = 10;
             player.status_locked = false;
             status = 2;
             //Alarma para hacer más tronco
@@ -180,13 +180,14 @@ switch(status){
         //
         if(global.vidaboss &lt;= 10){
             speed *= 2;
-            rotation_speed = 6;
+            rotation_speed = 35;
             status = 3;
         }
     break;
     //Super speed
     case 3:
-        //
+        
+        //Tiramos el arbol cuando muera
         if(global.vidaboss &lt;= 0){
             player.status_locked = true;
             //Stop spamming them
@@ -203,11 +204,11 @@ switch(status){
     break;
     //Die
     case 4:
-        obj_rising_fire.y += 1;
+        obj_ascending_fire.y += 1;
     break;
 }
 //Way to chase the player
-if(status == 2 || distance_to_point(720, 320) &gt;= 300){
+if(status == 2 || distance_to_point(720, 320) &gt;= 400){
     //Rotate towards the player
         //Ge the player´s position
         player_direction = point_direction(x,y, player.x, player.y);
