@@ -1,4 +1,4 @@
-switch(global.movemenu)
+switch(levelPosition)
 {
     case 0:{
        if global.Nivel1Acceso=1{

@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Declaración de globalvars
-global.vidaboss = 0;
+            <string>//Desactivamos interpolación de texturas
+texture_set_interpolation(false);
+//Declaración de globalvars
 global.offline = 1;
 globalvar pussy_mode;
 pussy_mode = false;
@@ -58,13 +59,9 @@ global.ciborg2 = 0;
 global.visor2 = 0;
 global.tunica2 = 0;
 global.dorada2 = 0;
-global.Nivel1Acceso = 0; 
-global.Nivel2Acceso = 0; 
-global.Nivel3Acceso = 0;
-global.Nivel4Acceso = 0;
-global.Nivel5Acceso = 0;
-global.Nivel6Acceso = 0;
-global.HarcorAcceso = 0;
+
+global.menu1Start = true;
+global.menustart=false;
 //Variable de joystic
 global.joy_check = true;
 //Variable de checkpoint
@@ -86,6 +83,43 @@ if !file_exists("SystemNM.txt") {
     ini_write_string("NhTPahPmx","jrTbDRETSJrN","DRybSETAHNY") //Nivel4 - Nieve
     ini_write_string("NhTPahPmx","YFrBuGdETSYU","rtwKBTlgjyV") //Nivel5 - Visor
     ini_write_string("NhTPahPmx","FDtldthSVDJg","GVdGnjfSnkd") //Creditos -  BarraDorada
+    ini_close();
+}
+if file_exists("SystemNM.txt"){
+    ini_open("SystemNM.txt")
+    if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
+        global.Nivel1Acceso = 1; 
+        global.Nivel2Acceso = 1; 
+        }
+    else {
+        global.Nivel1Acceso = 0;
+        global.Nivel2Acceso = 0;
+    }
+    if ini_key_exists("NhTPahPmx","KSgfhSRKWenv") { //Nivel 2 Pasado
+        global.Nivel3Acceso = 1;
+        }
+    else global.Nivel3Acceso = 0;
+    
+    if ini_key_exists("NhTPahPmx","sbSDLgaSbsQn") { //Nivel 3 Pasado
+        global.Nivel4Acceso = 1;
+        }
+    else global.Nivel4Acceso = 0;
+    
+    if ini_key_exists("NhTPahPmx","ALsdvEhsWnvp") { //Nivel 4 Pasado
+        global.Nivel5Acceso = 1;
+        }
+    else global.Nivel5Acceso = 0;
+    
+    if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Nivel 5 Pasado
+        global.Nivel6Acceso = 1;
+        }
+    else global.Nivel6Acceso = 0;
+    
+    if ini_key_exists("NhTPahPmx","MeFjgPfREndg2") { //Nivel 6 Pasado
+        global.HarcorAcceso = 1;
+        }
+    else global.HarcorAcceso = 0;
+    
     ini_close();
 }
 //Cargamos la siguiente escena

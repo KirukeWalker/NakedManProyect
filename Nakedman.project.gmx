@@ -151,6 +151,10 @@
       <sprite>sprites\spr_boss3_body</sprite>
     </sprites>
     <sprites name="Miscen">
+      <sprite>sprites\spr_gameoverimg</sprite>
+      <sprite>sprites\spr_Menu1Selector</sprite>
+      <sprite>sprites\spr_pressStart</sprite>
+      <sprite>sprites\spr_Menu1</sprite>
       <sprite>sprites\sprite1</sprite>
       <sprite>sprites\sprite2</sprite>
       <sprite>sprites\spr_hearts</sprite>
@@ -204,6 +208,7 @@
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_menu2.gml</script>
+    <script>scripts\scr_menu1Start.gml</script>
     <script>scripts\scr_menunivel.gml</script>
     <script>scripts\scr_knockback.gml</script>
     <script>scripts\scr_generate_fragments.gml</script>
@@ -317,6 +322,7 @@
     <objects name="Utilidades">
       <object>objects\obj_music</object>
       <object>objects\obj_fade</object>
+      <object>objects\obj_gameoverimg</object>
       <object>objects\obj_fade_white</object>
       <object>objects\obj_portal</object>
       <object>objects\obj_portal_nieve</object>
@@ -330,7 +336,6 @@
       <object>objects\obj_game_over_Nieve</object>
       <object>objects\obj_game_over_Bosque</object>
       <object>objects\obj_oscureitor</object>
-      <object>objects\obj_menu</object>
       <object>objects\obj_snow</object>
       <object>objects\obj_lluvia</object>
       <object>objects\Luciernagas</object>
@@ -352,6 +357,11 @@
       <object>objects\obj_water_spammer</object>
       <object>objects\obj_lightning</object>
       <object>objects\stuff_deactivator</object>
+      <object>objects\obj_chooseLevel</object>
+      <object>objects\obj_Menu1Selector</object>
+      <object>objects\obj_Menu1</object>
+      <object>objects\obj_pressStart</object>
+      <object>objects\obj_menu</object>
     </objects>
     <objects name="BossFinal Pruebas">
       <object>objects\Player1</object>

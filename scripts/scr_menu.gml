@@ -22,9 +22,10 @@ switch(mpos){
     //case 1: room_goto (Menu2); break;
     case 1: room_goto(Menu2); break;//show_message("UNDER CONSTRUCTION, SORRYP"); break;
         
-    case 2: room_goto (Credits); break;
+    case 3: room_goto (Credits); break;
     
-    case 3: game_end(); break;
+    case 4: game_end(); break;
         
     default: break;
 }
+
