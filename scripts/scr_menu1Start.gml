@@ -1,8 +1,9 @@
 switch(scriptStep){
     case 0:
+    if n==0 audio_play_sound(snd_woosh, 1, false);
     if (n<400){
-        obj_pressStart.y+=10;
-        n+=10;
+        obj_pressStart.y+=40;
+        n+=40;
     }
     if (n>=400){
         with(obj_pressStart) instance_destroy();
@@ -18,8 +19,9 @@ switch(scriptStep){
     
     case 2:
     if (n<480){
-        obj_Menu1.y-=10;
-        n+=10;
+        if n==160 audio_play_sound(snd_woosh, 1, false);
+        obj_Menu1.y-=40;
+        n+=40;
     }
     if (n>=480){
         scriptStep=3;
