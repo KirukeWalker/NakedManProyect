@@ -143,7 +143,10 @@ if(key_shoot == 1){
 }
 //Animations
 if(status_dead == 1){
-    sprite_index = spr_death;
+    sprite_index = spr_fall;
+    vspeed = -10;
+    if(y &lt; 0 &amp;&amp; !instance_exists(obj_gameoverimg))
+        game_over_screen = instance_create(view_xview,view_yview,obj_gameoverimg);
 }
 else if(disparo == 1){
     sprite_index = spr_jumpshoot;

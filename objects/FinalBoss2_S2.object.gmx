@@ -45,12 +45,11 @@ for(i = 0; i &lt;= 642; i += 32){
 }
 
 //Positions for the battle
-positionY[0] = 100;
-positionY[1] = 200;
-positionY[2] = 300;
-positionY[3] = 400;
+positionY[0] = 150;
+positionY[1] = 250;
+positionY[2] = 350;
 //
-actual_position = 3;
+actual_position = 2;
 
 //Alarm for the position change
 alarm_set(2, 10);
@@ -83,7 +82,7 @@ if(time_to_shoot == false){
         case 0:
             actual_position ++;
         break;
-        case 3:
+        case 2:
             actual_position --;
         break;
         default:
@@ -93,10 +92,10 @@ if(time_to_shoot == false){
     time_to_shoot = true;
     //Y le damos a la alarma
     alarm_set(2, 30);
-}
-else{ //Y si si, disparamos
+}//Que no dispare si el prota está muerto
+else if(obj_nakedman_falling.status_dead == 0){ //Y si si, disparamos
     daBigAnchor = instance_create(x - 20, y, obj_daBigAnchor);
-    daBigAnchor.direction = 170;
+    daBigAnchor.direction = 180;
     daBigAnchor.speed = 20;
     daBigAnchor.image_xscale = 3;
     daBigAnchor.image_yscale = 3;
@@ -126,11 +125,15 @@ else{ //Y si si, disparamos
           <argument>
             <kind>1</kind>
             <string>//Creamos las piuezas con alarma
-wall_piece_left  = instance_create(32, 480, obj_suelo_mar_pisable);
-wall_piece_right = instance_create(610, 480, obj_suelo_mar_pisable);
+wall_piece_left1  = instance_create(0, 480, obj_suelo_mar_pisable);
+wall_piece_left2  = instance_create(32, 480, obj_suelo_mar_pisable);
+wall_piece_right1 = instance_create(608, 480, obj_suelo_mar_pisable);
+wall_piece_right2 = instance_create(640, 480, obj_suelo_mar_pisable);
 //
-wall_piece_left.vspeed = -8;
-wall_piece_right.vspeed = -8;
+wall_piece_left1.vspeed = -8;
+wall_piece_left2.vspeed = -8;
+wall_piece_right1.vspeed = -8;
+wall_piece_right2.vspeed = -8;
 //
 alarm_set(1, 4);
 </string>
