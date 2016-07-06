@@ -167,16 +167,16 @@ if(status_charguing == true){ //Si lo está hará el ataque rasante
     //Primero pasar animación a la de muerte
     if(sprite_index == moverse)
         sprite_index = muerte;
-    else if(sprite_index == muerte){
-        if(image_index == image_number - 1){
-            sprite_index = disparando;
+    else if(sprite_index == muerte &amp;&amp; hspeed == 0){
+        //image_number += 1;
+        if(image_index &gt;= image_number - 2){
             hspeed = 10 * direction_facing;
             distance_to_do = 320;
             originX = x;
         }
     }
     else{
-        if(place_meeting(x, y, obj_solid_terrain) ||
+        if(place_meeting(x + hspeed, y, obj_solid_terrain) ||
             abs(x - originX) &gt;= distance_to_do){
             hspeed = 0;
             status_charguing = false;
