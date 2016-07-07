@@ -19,6 +19,7 @@
     <sound>sound\snd_credits</sound>
     <sound>sound\snd_intro</sound>
     <sound>sound\snd_lavaboss_test</sound>
+    <sound>sound\snd_woosh</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Terrenos">
