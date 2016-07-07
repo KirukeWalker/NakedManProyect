@@ -145,12 +145,13 @@ switch(status){
             camera = instance_find(obj_camera2, 0);
             camera.status = 2;
             camera.movement_speed = 5;
-            camera.objectiveX = 721;
+            camera.objectiveX = 720;
             camera.objectiveY = 320;
             //
             player.status_locked = true;
-            //
-            with(obj_fire_wall) instance_destroy();
+            //Paramos el muro
+            //with(obj_fire_wall) instance_destroy();
+            obj_fire_wall.hspeed = 0;
             //
             for(i = 416; i &lt; 1024; i+= 32){
                 ascending_fire = instance_create(i, 672, obj_ascending_fire);

@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize Variables
+            <string>//Vida del personaje, la resteamos cuando no esté pasando a la segunda fase de un boss
+//if(room != Room_FinalBoss3)
+    global.vida = 3;
+
+///Initialize Variables
 grav = 1;         //gravity se usa para funciones
 hsp = 0;            //velocidad horizontal
 vsp = 0;            //velocidad vertical
@@ -38,7 +42,6 @@ status_knockback = false;   //Declaramos knockback
 invincible = false;         //Separamos invecibilidad del knockback
 knockback_distance = 5;
 knockback_duration = 30;
-global.vida = 3; //Vida del personaje
 status_dead = 0;
 status_locked = false;
 complete_death = 0;

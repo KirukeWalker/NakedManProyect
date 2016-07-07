@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
-global.vida = 3;
+//global.vida = 3;
 disparo = 0;
 status_dead = 0;
 invincible = false;
