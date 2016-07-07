@@ -133,6 +133,9 @@
       <sprite>sprites\spr_melee2</sprite>
       <sprite>sprites\spr_melee_attack2</sprite>
       <sprite>sprites\spr_melee_death2</sprite>
+      <sprite>sprites\spr_charguing2</sprite>
+      <sprite>sprites\spr_flying2</sprite>
+      <sprite>sprites\spr_rising2</sprite>
       <sprite>sprites\spr_boss2_move</sprite>
       <sprite>sprites\spr_boss2_jump</sprite>
       <sprite>sprites\spr_boss2_attack</sprite>
@@ -384,7 +387,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -395,6 +397,7 @@
     <room>rooms\Room_FinalBoss2_S2</room>
     <room>rooms\Nivel_Bosque</room>
     <room>rooms\Room_FinalBoss3_Test</room>
+    <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4_New</room>
