@@ -171,6 +171,7 @@ if(status_charguing == true){ //Si lo está hará el ataque rasante
     //Primero pasar animación a la de carga
     if(sprite_index == moverse){
         sprite_index = cargando;
+        image_index = 0;
         apply_gravity = false;
     }
     else if(sprite_index == cargando &amp;&amp; hspeed == 0){

@@ -66,16 +66,16 @@ if(place_meeting(x + (move_speed * h_direction), y, obj_suelo_bosque))
     while(!place_meeting(x + h_direction, y, obj_suelo_bosque))
         x += h_direction;
     h_direction *= -1;
-    //image_xscale *= -1;
+    image_xscale *= -1;
     //image_angle += 90;
 }
 //Verticales
-if(place_meeting(x, y + (move_speed * v_direction), obj_suelo_bosque))
+else if(place_meeting(x, y + (move_speed * v_direction), obj_suelo_bosque))
 {
     while(!place_meeting(x, y + v_direction, obj_suelo_bosque))
         y += v_direction;
     v_direction *= -1;
-    //image_yscale *= -1;
+    image_yscale *= -1;
     //image_angle += 90;
 }
 //Movimiento

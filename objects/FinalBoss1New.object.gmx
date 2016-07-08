@@ -45,12 +45,17 @@ player = instance_find(object5, 0);
 //Get the pointer
 pointer = instance_find(obj_shoot_pointer, 0);
 //Instance the "door"
-block[0] = instance_create(480, 416, Terreno);
-block[1] = instance_create(480, 448, Terreno);
-block[2] = instance_create(480, 480, Terreno);
-block[3] = instance_create(512, 416, Terreno);
-block[4] = instance_create(512, 448, Terreno);
-block[5] = instance_create(512, 480, Terreno);
+block[0] = instance_create(480, 416, obj_terreno_profundo);
+block[1] = instance_create(480, 448, obj_terreno_profundo);
+block[2] = instance_create(480, 480, obj_terreno_profundo);
+//
+block[3] = instance_create(544, 416, Terreno);
+block[4] = instance_create(544, 448, Terreno);
+block[5] = instance_create(544, 480, Terreno);
+//
+block[3].image_angle = 270;
+block[4].image_angle = 270;
+block[5].image_angle = 270;
 /*Status
     0 - Waiting
     1 - Closing the door
@@ -205,7 +210,9 @@ switch(status){
             x = clamp(x, 580, 1080);
             hspeed = 0;
             direction_looking = sign(800 - x);
-            vspeed -= 40;
+            //Que no salte en la parte final
+            if(phase &lt; 5)
+                vspeed -= 40;
             status = 4;
         }
     break;
