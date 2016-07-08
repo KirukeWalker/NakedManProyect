@@ -26,14 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>//Inicializamos variables
-global.vidaboss = 10;
-min_pos_x = 50;
-max_pos_x = 550;
+global.vidaboss = 20;
+min_pos_x = 100;
+max_pos_x = 500;
 min_pos_y = 50;
-max_pos_y = 400;
+max_pos_y = 350;
 teleporting = false;
-stay_time = 60;
-alarm[0] = stay_time;
+stay_time = 120;
+//alarm[0] = stay_time;
 attack_type = 0;
 attack = false;
 /*Status
@@ -96,6 +96,8 @@ if(attack == true)
     {
         //Aqui activaremos la animación de melée
         sprite_index = spr_boss5_barrido;
+        if(image_index == image_number - 1)
+            image_index = 17;
     }
     else //Si no ataca a melee dispara
     {
@@ -138,6 +140,8 @@ if(attack == true)
 if(teleporting == true){
     //Empieza a desaparecer
     if(teleport_status == 0){
+        //Destruimos el laser al desaparecer
+        with(obj_mega_laser) instance_destroy();
         image_xscale -= 0.2;
         image_yscale *= 2;
         if(image_xscale &lt;= 0){
@@ -168,7 +172,7 @@ if(teleporting == true){
 //Recibir ataque
 if (place_meeting (x,y, obj_cacota) &amp;&amp; teleporting == false) {
     global.vidaboss -=1;
-    stay_time -= 4;
+    stay_time -= 1;
     with(obj_cacota) instance_destroy();
 }
 //Morir del todo
@@ -179,9 +183,8 @@ if (global.vidaboss = 0)
     ini_write_string("NhTPahPmx","TibsGHsbEhuU","KjjyFtLTgjY")
     ini_close()
     global.muertes += 1;
-    obj_fade.fadeIn = false;
-    obj_fade.alarm[1] = room_speed * 0.05;
-    instance_destroy();   
+    obj_fade_white.fadeIn = false;
+    //instance_destroy();   
 }
 
 </string>
