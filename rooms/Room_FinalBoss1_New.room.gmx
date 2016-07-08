@@ -103,7 +103,7 @@
     <instance objName="Terreno" x="416" y="512" name="inst_05268F06" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="448" y="512" name="inst_42F2364C" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="480" y="512" name="inst_B3C408D0" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="128" y="567" name="inst_8F112682" locked="0" code="" scaleX="1" scaleY="0.839999973773956" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="128" y="576" name="inst_8F112682" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_over" x="32" y="32" name="inst_9B6FE40E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="64" y="32" name="inst_523766BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obl_hud" x="96" y="32" name="inst_DADFC6AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

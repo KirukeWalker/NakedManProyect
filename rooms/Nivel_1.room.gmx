@@ -627,7 +627,7 @@
     <instance objName="Terreno" x="1088" y="480" name="inst_DFD8DCE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="Terreno" x="1344" y="448" name="inst_6EB148A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="2048" y="288" name="inst_BF62408B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="128" y="384" name="inst_72E708A8" locked="0" code="" scaleX="1" scaleY="0.839999973773956" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="128" y="384" name="inst_72E708A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="224" y="384" name="inst_B3396917" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="256" y="384" name="inst_62A84FEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_terreno_profundo" x="288" y="384" name="inst_16387185" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

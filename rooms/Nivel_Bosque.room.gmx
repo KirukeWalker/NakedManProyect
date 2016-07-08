@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="Volador" x="4128" y="352" name="inst_9ABC4BE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="64" y="96" name="inst_6520F76C" locked="0" code="" scaleX="0.819999992847443" scaleY="0.819999992847443" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="64" y="96" name="inst_6520F76C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="256" y="448" name="inst_5B67429B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="288" y="448" name="inst_3E6DBCB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="320" y="448" name="inst_E9BC7D88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
