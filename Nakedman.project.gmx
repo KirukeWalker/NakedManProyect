@@ -38,6 +38,12 @@
       <sprite>sprites\spr_tronco_arbol</sprite>
       <sprite>sprites\spr_hielo</sprite>
       <sprite>sprites\spr_nieve_pisable</sprite>
+      <sprite>sprites\spr_nieveTriple</sprite>
+      <sprite>sprites\spr_esquinaNieve</sprite>
+      <sprite>sprites\spr_sueloNieveDoble</sprite>
+      <sprite>sprites\spr_nieveEsquinilla_Suelo</sprite>
+      <sprite>sprites\spr_esquina_esquinilla</sprite>
+      <sprite>sprites\spr_esquinilla_doble</sprite>
       <sprite>sprites\suelo_pisable_mar</sprite>
       <sprite>sprites\sueloMarNoPisable</sprite>
       <sprite>sprites\esquina_mar</sprite>
@@ -63,6 +69,9 @@
       <sprite>sprites\spr_mobile_platform</sprite>
       <sprite>sprites\spr_fragment</sprite>
       <sprite>sprites\spr_sueloMarDoble</sprite>
+      <sprite>sprites\spr_sueloBosqueDoble</sprite>
+      <sprite>sprites\spr_SueloBosque3</sprite>
+      <sprite>sprites\spr_nieveEsquinilla</sprite>
     </sprites>
     <sprites name="Prota">
       <sprite>sprites\spr_idle</sprite>
@@ -242,11 +251,20 @@
         <object>objects\obj_suelo_bosque</object>
         <object>objects\obj_sueloBosque_noPisable</object>
         <object>objects\obj_esquina_bosque</object>
+        <object>objects\obj_sueloBosqueDoble</object>
+        <object>objects\obj_SueloBosque3</object>
         <object>objects\obj_suelo_mar_pisable</object>
         <object>objects\obj_sueloMarDoble</object>
         <object>objects\obj_suelo_marnopisable</object>
         <object>objects\obj_esquina_mar</object>
         <object>objects\obj_nieve_pisable</object>
+        <object>objects\obj_nieveDoble</object>
+        <object>objects\obj_nieveTriple</object>
+        <object>objects\obj_esquina_esquinilla</object>
+        <object>objects\obj_esquinilla_suelo_nieve</object>
+        <object>objects\obj_EsquinaNieve</object>
+        <object>objects\obj_nieveEsquinilla</object>
+        <object>objects\obj_esquinilla_doble</object>
         <object>objects\obj_suelo_mar_pisable3puntas</object>
         <object>objects\obj_suelo_pisableCiudad</object>
         <object>objects\obj_nubes</object>
@@ -406,11 +424,11 @@
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4_New</room>
-    <room>rooms\Continuara</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
+    <room>rooms\Continuara</room>
     <room>rooms\god_room_final</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
