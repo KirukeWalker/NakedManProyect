@@ -62,6 +62,7 @@
       <sprite>sprites\spr_sliding_floor</sprite>
       <sprite>sprites\spr_mobile_platform</sprite>
       <sprite>sprites\spr_fragment</sprite>
+      <sprite>sprites\spr_sueloMarDoble</sprite>
     </sprites>
     <sprites name="Prota">
       <sprite>sprites\spr_idle</sprite>
@@ -242,6 +243,7 @@
         <object>objects\obj_sueloBosque_noPisable</object>
         <object>objects\obj_esquina_bosque</object>
         <object>objects\obj_suelo_mar_pisable</object>
+        <object>objects\obj_sueloMarDoble</object>
         <object>objects\obj_suelo_marnopisable</object>
         <object>objects\obj_esquina_mar</object>
         <object>objects\obj_nieve_pisable</object>
@@ -390,7 +392,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -407,6 +408,7 @@
     <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Continuara</room>
     <room>rooms\Final_Level</room>
+    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\god_room_final</room>
