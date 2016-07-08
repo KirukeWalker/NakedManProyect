@@ -26,6 +26,8 @@
       <sprite>sprites\spr_Terreno</sprite>
       <sprite>sprites\SueloVolcanNoPisable</sprite>
       <sprite>sprites\spr_FondoVolcan</sprite>
+      <sprite>sprites\spr_sueloVolcanDobleEsquina</sprite>
+      <sprite>sprites\spr_suelo_doble_volcan</sprite>
       <sprite>sprites\spr_lava</sprite>
       <sprite>sprites\spr_suelo_hojas</sprite>
       <sprite>sprites\spr_sueloBosque_NoPisable</sprite>
@@ -234,6 +236,8 @@
         <object>objects\obj_solid_terrain</object>
         <object>objects\Terreno</object>
         <object>objects\obj_esquina_volcan</object>
+        <object>objects\obj_esquina_doble_volcan</object>
+        <object>objects\obj_suelo_doble_volcan</object>
         <object>objects\obj_arena</object>
         <object>objects\obj_terreno_profundo</object>
         <object>objects\obj_suelo_bosque</object>
