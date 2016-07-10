@@ -43,6 +43,7 @@ attack = false;
 teleport_status = 0;
 //
 randomize();
+
 </string>
           </argument>
         </arguments>
@@ -91,6 +92,8 @@ randomize();
             <string>//Estado normal
 if(attack == true)
 {
+    //Stuff to tests
+    //object5.vsp = -1000;
     //Ataques
     if(distance_to_object(object5) &lt;= 60)
     {
@@ -172,7 +175,7 @@ if(teleporting == true){
 //Recibir ataque
 if (place_meeting (x,y, obj_cacota) &amp;&amp; teleporting == false) {
     global.vidaboss -=1;
-    stay_time -= 1;
+    stay_time -= 1.5;
     with(obj_cacota) instance_destroy();
 }
 //Morir del todo

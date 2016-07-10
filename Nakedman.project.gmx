@@ -278,7 +278,6 @@
         <object>objects\obj_mobile_platformV</object>
         <object>objects\obj_falling_clouds</object>
         <object>objects\obj_final_clouds</object>
-        <object>objects\obj_lifter</object>
       </objects>
       <object>objects\Lava</object>
       <object>objects\obj_acido</object>
@@ -299,6 +298,7 @@
       <object>objects\obj_teleporter</object>
       <object>objects\obj_geiser</object>
       <object>objects\obj_falling_floor</object>
+      <object>objects\obj_lifter</object>
       <object>objects\obj_fragment</object>
     </objects>
     <objects name="Enemigos">
@@ -410,6 +410,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -425,7 +426,6 @@
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Final_Level</room>
-    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\Continuara</room>

@@ -267,6 +267,7 @@ if(vsp &lt; 10){
             grav = 0.2;
         }
     }
+    //Y aplicamos
     vsp += grav;
 }       
 //Salto
@@ -286,7 +287,8 @@ if((
 }
 //Altura de salto variable
 if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
-    vsp = max(vsp, -jumpspeed/4);
+    vsp = max(vsp, vsp/4);
+    //vsp = max(vsp, -jumpspeed/4);
 
 //Desplazamos al personaje (controlando colisiones)
 //Comprobamos suelo hielo
@@ -321,7 +323,8 @@ if(place_meeting(x+hsp,y,obj_solid_terrain))
     hsp=0;
 }
 //Aplicamos cambios en x
-x += hsp;
+//x += hsp;
+hspeed = hsp;
 
 //Control para no salir por los lados
 x = clamp(x, 15, room_width-15);
@@ -334,7 +337,7 @@ if(place_meeting(x,y+vsp,obj_solid_terrain))
     {
         y+=sign(vsp);
     }
-    vsp=0;
+    vsp = 0;
     status_knockback = false;
 }
 //Comprobación aparte para suelo atravesable
@@ -349,15 +352,12 @@ vsp &gt;= 0 &amp;&amp; key_down = 0)
     vsp = 0;
     status_knockback = false;
 }
-
 //Hacemos que descienda con lo sacado de las colisiones del suelo/techo
-y += vsp;
-
-
+//y += vsp;
+vspeed = vsp;
 //Giro
 if (move != 0 &amp;&amp; status_sliding = false) 
     image_xscale = move;
-
 //Animaciones
 if(vsp = 0)
 {

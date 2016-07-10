@@ -25,11 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Paredes que paran el tesla
+            <string>//
+vsp = 48;
+
+//Paredes que paran el tesla
 tesla_wall[0] = instance_create(160, 448, obj_suelo_pisableCiudad);
 tesla_wall[1] = instance_create(416, 448, obj_suelo_pisableCiudad);
 //Paredes para que no se salga del ascensor
 //De momento no
+
+//Para la camara
+camera = instance_find(obj_camera2, 0);
+camera.status = 0;
+camera.objectiveX = room_width/2;
+camera.objectiveY = room_height*3/4;
 </string>
           </argument>
         </arguments>
@@ -54,9 +63,12 @@ tesla_wall[1] = instance_create(416, 448, obj_suelo_pisableCiudad);
             <kind>1</kind>
             <string>//Subelo con el prote si este esta encima
 if(place_meeting(x, y-1, object5) &amp;&amp; object5.x &gt; 224 &amp;&amp; object5.x &lt; 384){
-    y -= 8;
-    object5.y -= 8;
+    y -= vsp;
+    object5.y -= vsp;
     object5.status_locked = true;
+    camera.objectiveY = y - room_height/4;
+    if(vsp &gt; 2)
+        vsp -= 2;
 }
 /*else if(y &lt; 896){
     y += 2;
@@ -81,8 +93,12 @@ if(y &lt; 448){
     }
     //Activa al boss y al prota
     object5.status_locked = false;
-    //object5.vspeed -= 50;
+    //object5.key_jump_held = 1;
+    //object5.key_jump = 1;
+    //object5.vsp = -500;
     FinalBoss5.alarm[0] = 120;
+    //Ajusta la cámara
+    camera.status = 2;
     //Y destruyete
     instance_destroy();
 }
