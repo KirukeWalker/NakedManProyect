@@ -84,7 +84,7 @@ switch(status){
     break;
 }
 
-//Cehqueo para no colisionar
+//Chequeo para no colisionar
 if(place_meeting(x, y + vspeed, obj_solid_terrain)){
     while(place_meeting(x, y + vspeed, obj_solid_terrain)){
         vspeed -= sign(vspeed);
