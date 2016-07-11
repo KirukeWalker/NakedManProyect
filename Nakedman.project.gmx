@@ -44,6 +44,7 @@
       <sprite>sprites\spr_nieveEsquinilla_Suelo</sprite>
       <sprite>sprites\spr_esquina_esquinilla</sprite>
       <sprite>sprites\spr_esquinilla_doble</sprite>
+      <sprite>sprites\spr_nieve_doble_esquinilla</sprite>
       <sprite>sprites\suelo_pisable_mar</sprite>
       <sprite>sprites\sueloMarNoPisable</sprite>
       <sprite>sprites\esquina_mar</sprite>
@@ -265,6 +266,7 @@
         <object>objects\obj_EsquinaNieve</object>
         <object>objects\obj_nieveEsquinilla</object>
         <object>objects\obj_esquinilla_doble</object>
+        <object>objects\obj_nieve_esquinilla_doble</object>
         <object>objects\obj_suelo_mar_pisable3puntas</object>
         <object>objects\obj_suelo_pisableCiudad</object>
         <object>objects\obj_nubes</object>
