@@ -254,8 +254,6 @@
     <instance objName="obj_suelo_bosque" x="1920" y="288" name="inst_7BDB4004" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="1952" y="288" name="inst_36B8A79E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="1984" y="160" name="inst_1FF0917C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_bosque" x="2016" y="192" name="inst_0F1CDC63" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_bosque" x="2048" y="160" name="inst_6988258D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="1984" y="256" name="inst_BC9A9753" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="2016" y="256" name="inst_1316B549" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="2048" y="256" name="inst_2ACD1DC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -265,7 +263,6 @@
     <instance objName="obj_suelo_bosque" x="2080" y="384" name="inst_BD0A6A2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_suelo_bosque" x="2080" y="416" name="inst_3151DA6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_suelo_bosque" x="2080" y="448" name="inst_7CB684F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_suelo_bosque" x="2080" y="128" name="inst_9C0A49EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_suelo_bosque" x="2080" y="96" name="inst_C9D9D60E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_suelo_bosque" x="2080" y="64" name="inst_8C5F8089" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_suelo_bosque" x="2080" y="64" name="inst_114D88DC" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
@@ -978,7 +975,6 @@
     <instance objName="obj_esquina_bosque" x="1888" y="128" name="inst_2C371989" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_bosque" x="1952" y="160" name="inst_949B350A" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_bosque" x="2016" y="192" name="inst_EA3EACAD" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_esquina_bosque" x="2048" y="192" name="inst_6CF8AE74" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sueloBosque_noPisable" x="1728" y="0" name="inst_A4963D5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_bosque" x="2112" y="64" name="inst_75460C1A" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_bosque" x="2400" y="256" name="inst_FEFFCF93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1046,6 +1042,8 @@
     <instance objName="obj_sueloBosque_noPisable" x="7008" y="0" name="inst_F02F55DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="32" y="128" name="inst_D6473574" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="0" y="128" name="inst_64B20A26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_esquina_bosque" x="2016" y="192" name="inst_10231D07" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_esquina_bosque" x="2048" y="160" name="inst_1FD2C783" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
