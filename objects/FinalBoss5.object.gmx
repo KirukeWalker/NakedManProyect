@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>//Inicializamos variables
 global.vidaboss = 20;
-min_pos_x = 100;
-max_pos_x = 500;
+min_pos_x = 50;
+max_pos_x = 550;
 min_pos_y = 50;
 max_pos_y = 350;
 teleporting = false;
@@ -172,12 +172,6 @@ if(teleporting == true){
         }
     }
 }
-//Recibir ataque
-if (place_meeting (x,y, obj_cacota) &amp;&amp; teleporting == false) {
-    global.vidaboss -=1;
-    stay_time -= 1.5;
-    with(obj_cacota) instance_destroy();
-}
 //Morir del todo
 if (global.vidaboss = 0)
 { 
@@ -190,6 +184,34 @@ if (global.vidaboss = 0)
     //instance_destroy();   
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_cacota">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Recibir ataque
+if (teleporting == false) {
+    global.vidaboss -=1;
+    stay_time -= 4;
+    with(other) instance_destroy();
+}
 </string>
           </argument>
         </arguments>
