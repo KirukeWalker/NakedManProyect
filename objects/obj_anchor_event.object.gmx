@@ -54,7 +54,8 @@ returning = false;
           <argument>
             <kind>1</kind>
             <string>//Ve creando eslabones 
-if(speed != 0){ 
+if(speed &gt; 0){ 
+    direction = point_direction(x, y, player.x, player.y);
     chain_link = instance_create(x,y,obj_chain_link_event);
     chain_link.image_angle = image_angle + 180;
 }

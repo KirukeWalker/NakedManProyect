@@ -264,11 +264,14 @@ switch(status){
                      lava[i, j] = instance_create(i * 32 + 544, j * 32 + 640, Lava);
                 }
             }
+            //Ajsuta las profundidades
             obj_terreno_profundo.depth = -3;
             Lava.depth = -2;
             Terreno.depth = -1;
             depth = -1;
             object5.depth = -1;
+            //Resetea la vida del prota
+            global.vida = 3;
             lava_reference = instance_find(Lava, 0);
             status = 8;
         }

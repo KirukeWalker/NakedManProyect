@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
-//global.vida = 3;
+global.vida = 3;
 disparo = 0;
 status_dead = 0;
 invincible = false;
@@ -129,7 +129,7 @@ else{
 }
 //Disparo
 if(key_shoot == 1){
-    if(disparo = 0 &amp;&amp; status_dead = 0) {
+    if(disparo == 0 &amp;&amp; status_dead == 0) {
         audio_play_sound(snd_shoot, 1, false);
         proyectil = instance_create(x,y+3,obj_cacota);
         proyectil.speed = 15;

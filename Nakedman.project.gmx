@@ -269,6 +269,8 @@
         <object>objects\obj_nieve_esquinilla_doble</object>
         <object>objects\obj_suelo_mar_pisable3puntas</object>
         <object>objects\obj_suelo_pisableCiudad</object>
+        <object>objects\obj_mobile_platformH</object>
+        <object>objects\obj_mobile_platformV</object>
         <object>objects\obj_nubes</object>
       </objects>
       <objects name="Atravesables">
@@ -276,8 +278,6 @@
         <object>objects\obj_falling_branch</object>
         <object>objects\obj_suelo_hojas</object>
         <object>objects\obj_wood_platform</object>
-        <object>objects\obj_mobile_platformH</object>
-        <object>objects\obj_mobile_platformV</object>
         <object>objects\obj_falling_clouds</object>
         <object>objects\obj_final_clouds</object>
       </objects>
@@ -413,7 +413,6 @@
   <rooms name="rooms">
     <room>rooms\room_preload</room>
     <room>rooms\Introduccion1</room>
-    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
     <room>rooms\Nivel_1</room>
@@ -428,6 +427,7 @@
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Final_Level</room>
+    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\Continuara</room>

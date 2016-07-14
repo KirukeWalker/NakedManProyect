@@ -29,8 +29,9 @@
 texture_set_interpolation(false);
 //Declaración de globalvars
 global.offline = 1;
-globalvar pussy_mode;
-pussy_mode = false;
+//globalvar pussy_mode;
+//pussy_mode = false;
+global.vida = 3;
 global.muertes = 0;
 global.muertes_registro = 0;
 global.cagaprisas = 0;
