@@ -74,7 +74,6 @@
     <instance objName="obj_rayos" x="512" y="448" name="inst_281C1297" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="544" y="448" name="inst_061F2BD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_oscureitor" x="224" y="64" name="inst_347D37BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_healthbar_forAll" x="224" y="32" name="inst_38E9FDF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_white" x="256" y="32" name="inst_69838B29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="0" y="928" name="inst_E3E7957B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="32" y="928" name="inst_FE2899E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

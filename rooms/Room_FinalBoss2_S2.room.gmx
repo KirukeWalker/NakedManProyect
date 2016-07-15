@@ -58,7 +58,6 @@
     <instance objName="obj_nakedman_falling" x="128" y="160" name="inst_A9CDD832" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="FinalBoss2_S2" x="544" y="352" name="inst_B640EF28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera2" x="64" y="32" name="inst_75A676CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_healthbar_forAll" x="64" y="64" name="inst_36E8B6B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade" x="128" y="32" name="inst_60736193" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_white" x="128" y="64" name="inst_F546B983" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

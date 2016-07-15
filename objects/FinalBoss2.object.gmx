@@ -154,6 +154,7 @@ if(status == -1){
         camera.objectiveX = 624;
         camera.objectiveY = 848;
         //Empieza la pelea
+        health_bar_frame = instance_create(448, 608, obj_healthbar_frame);
         health_bar = instance_create(448, 608, obj_healthbar_anal);
         status = 0;
         alarm[0] = 60;

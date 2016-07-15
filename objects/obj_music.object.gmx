@@ -189,9 +189,9 @@ if !(room==Credits) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(view_xview+20,view_yview+20,room)
-draw_text(view_xview+20,view_yview+40,intro)
-draw_text(view_xview+20,view_yview+60,lava)
+            <string>//draw_text(view_xview+20,view_yview+20,room)
+//draw_text(view_xview+20,view_yview+40,intro)
+//draw_text(view_xview+20,view_yview+60,lava)
 
 
 </string>

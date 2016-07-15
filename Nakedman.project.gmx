@@ -193,6 +193,7 @@
       <sprite>sprites\spr_x</sprite>
       <sprite>sprites\spr_underconst</sprite>
       <sprite>sprites\sprite139</sprite>
+      <sprite>sprites\spr_healthbar_frame</sprite>
     </sprites>
     <sprites name="BossFinal Pruebas">
       <sprite>sprites\spr_stand</sprite>
@@ -375,6 +376,7 @@
       <object>objects\obj_niebla</object>
       <object>objects\obj_healthbar</object>
       <object>objects\obj_healthbar_forAll</object>
+      <object>objects\obj_healthbar_frame</object>
       <object>objects\obj_healthbar_anal</object>
       <object>objects\obj_preload</object>
       <object>objects\obj_MenuNivel</object>

@@ -37,6 +37,9 @@ for (i=1; i&lt;10; i++)
     parts[i] = instance_create(x-30*i, y+30*i, FinalBoss3_Body);
     parts[i].qeue_position = i;
 }
+//
+health_bar_frame = instance_create(100, 50, obj_healthbar_frame);
+health_bar_ = instance_create(100, 50, obj_healthbar_anal);
 </string>
           </argument>
         </arguments>
