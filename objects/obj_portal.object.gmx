@@ -27,7 +27,9 @@
             <kind>1</kind>
             <string>obj_fade.fadeIn = false;
 other.x = x;
-other.y = y;
+//other.y = y;
+other.status_locked = true;
+obj_door.triggered = true;
 //obj_fade.alarm[1] = room_speed * 0.05;   
 
 

@@ -31,6 +31,7 @@
       <sprite>sprites\spr_lava</sprite>
       <sprite>sprites\spr_suelo_hojas</sprite>
       <sprite>sprites\spr_sueloBosque_NoPisable</sprite>
+      <sprite>sprites\spr_door</sprite>
       <sprite>sprites\sprite28</sprite>
       <sprite>sprites\spr_agua</sprite>
       <sprite>sprites\spr_arena</sprite>
@@ -83,6 +84,8 @@
       <sprite>sprites\spr_jumpshoot</sprite>
       <sprite>sprites\spr_death</sprite>
       <sprite>sprites\total_death</sprite>
+      <sprite>sprites\spr_swim</sprite>
+      <sprite>sprites\spr_enter</sprite>
     </sprites>
     <sprites name="Proyectiles">
       <sprite>sprites\spr_cacota</sprite>
@@ -192,7 +195,7 @@
       <sprite>sprites\spr_camera_ref</sprite>
       <sprite>sprites\spr_x</sprite>
       <sprite>sprites\spr_underconst</sprite>
-      <sprite>sprites\sprite139</sprite>
+      <sprite>sprites\spr_tuto</sprite>
       <sprite>sprites\spr_healthbar_frame</sprite>
     </sprites>
     <sprites name="BossFinal Pruebas">

@@ -389,17 +389,25 @@ if(vsp == 0)
             sprite_index = spr_run; 
         else 
         {
-            if(disparo &gt; 0) sprite_index = spr_shoot;
-            else sprite_index = spr_idle;
+            if(disparo &gt; 0) 
+                sprite_index = spr_shoot;
+            else if (place_meeting(x, y, obj_portal))
+                sprite_index = spr_enter;
+            else 
+                sprite_index = spr_idle;
         }
     }
 }
 else
 {
-    if (disparo &gt; 0) sprite_index = spr_jumpshoot;
-    else if(vsp &lt; 0) sprite_index = spr_jump;
-    else if (vsp &gt; 0) sprite_index = spr_fall;
-    //sprite_index = spr_jump
+    if (disparo &gt; 0) 
+        sprite_index = spr_jumpshoot;
+    else if (place_meeting(x, y, Agua)) 
+        sprite_index = spr_swim;
+    else if (vsp &lt; 0) 
+        sprite_index = spr_jump;
+    else if (vsp &gt; 0) 
+        sprite_index = spr_fall;
 }
 //Control de muerte
 if(status_locked == false){
