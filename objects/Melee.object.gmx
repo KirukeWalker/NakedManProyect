@@ -68,7 +68,14 @@ switch (nivel)
         muerte = spr_melee_death4;
         moverse = spr_melee4;
         break;
-    }    
+    }  
+    case "Final_Level": 
+    {
+        disparando = spr_melee_attack5;
+        muerte = spr_melee_death4;      //Falta la chupa muriéndose
+        moverse = spr_melee5;
+        break;
+    }  
 }
 //Se la asignamos antes de empezar
 sprite_index = moverse;

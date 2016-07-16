@@ -42,7 +42,7 @@ nivel = room_get_name (room);
 switch (nivel)
 {
     case "Nivel_Playa": {
-        skin = spr_goomba2
+        skin = spr_goomba2;
         break;
     }
     case "Nivel_Bosque":{
@@ -50,7 +50,11 @@ switch (nivel)
         break;
     }   
     case "Nivel_Nieve": {
-        skin = spr_goomba4
+        skin = spr_goomba4;
+        break;
+    }
+    case "Final_Level": {
+        skin = spr_goomba5;
         break;
     }
 }

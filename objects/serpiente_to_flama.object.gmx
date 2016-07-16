@@ -54,6 +54,12 @@ switch (nivel)
         muerte = spr_snake_death4;
         break;
     }
+    case "Final_Level": {
+        estatico = spr_snake_idle5;
+        disparando = spr_snake_fire5;
+        muerte = spr_snake_death5;
+        break;
+    }
 }
 sprite_index = estatico;
 </string>
