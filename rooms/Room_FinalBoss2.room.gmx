@@ -130,7 +130,7 @@
     <instance objName="obj_suelo_mar_pisable" x="128" y="256" name="inst_B40A553F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="96" y="256" name="inst_DB394E5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="64" y="256" name="inst_904435D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door" x="160" y="192" name="inst_61816E74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="160" y="256" name="inst_61816E74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="64" y="96" name="inst_AF5485D8" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="96" y="96" name="inst_57257D57" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_mar_pisable" x="128" y="96" name="inst_4FE55872" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>

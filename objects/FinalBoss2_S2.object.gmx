@@ -30,7 +30,7 @@ global.vidaboss = 20;
 time_to_shoot = false;
 
 //Helthabar
-health_bar_frame = instance_create(100, 50, obj_healthbar_frame);
+//health_bar_frame = instance_create(100, 50, obj_healthbar_frame);
 health_bar = instance_create(448, 608, obj_healthbar_anal);
 
 //Start alarm for camera stuff

@@ -149,7 +149,7 @@ switch(status){
     case 0:
         if(player.x &gt; 554){
             status = 1;
-            health_bar_frame = instance_create(608, 192, obj_healthbar_frame);
+            //health_bar_frame = instance_create(608, 192, obj_healthbar_frame);
             health_bar = instance_create(608, 192, obj_healthbar_anal);            
             //
             obj_camera2.status = 2;

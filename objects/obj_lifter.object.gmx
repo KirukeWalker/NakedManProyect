@@ -97,7 +97,7 @@ if(y &lt; 448){
     //object5.key_jump = 1;
     //object5.vsp = -500;
     FinalBoss5.alarm[0] = 120;
-    health_bar_frame = instance_create(100, 50, obj_healthbar_frame);
+    //health_bar_frame = instance_create(100, 50, obj_healthbar_frame);
     health_bar = instance_create(100, 50, obj_healthbar_anal);
     //Ajusta la cámara
     camera.status = 2;

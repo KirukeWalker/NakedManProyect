@@ -173,7 +173,7 @@ switch(status){
             //
             background_vspeed = 1;
             //Instance the lifebar
-            health_bar_frame = instance_create(480, 100, obj_healthbar_frame);
+            //health_bar_frame = instance_create(480, 100, obj_healthbar_frame);
             lifeBar = instance_create(480, 100, obj_healthbar_anal);
         }
     break;

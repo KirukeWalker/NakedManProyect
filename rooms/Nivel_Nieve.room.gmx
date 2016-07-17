@@ -1100,6 +1100,8 @@
     <instance objName="obj_nieve_pisable" x="896" y="2688" name="inst_D994FA58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_EsquinaNieve" x="864" y="2656" name="inst_88372E3E" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieveEsquinilla" x="928" y="2656" name="inst_092D1FEC" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="480" y="704" name="inst_A1DB3C64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_portal_nieve" x="480" y="672" name="inst_F1186A52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="288" y="3904" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_0C78A4FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
