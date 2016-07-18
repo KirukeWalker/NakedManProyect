@@ -50,6 +50,47 @@ gamepad_set_axis_deadzone(0,0.7)
 //Para los suckers
 suckers_sucking = 0;
 
+//Para utilizar la skin seleccionada
+swim = spr_swim; //Este de momento fuera
+switch(global.skin){
+    //Estándar
+    case 0:
+        idle = spr_idle;
+        run = spr_run;
+        jump = spr_jump;
+        fall = spr_fall;
+        shoot = spr_shoot;
+        jumpshoot = spr_jumpshoot;
+        death = spr_death;
+        total_death = spr_total_death;
+        enter = spr_enter;
+    break;
+    //Quemado
+    case 1:
+        idle = spr_idle1;
+        run = spr_run1;
+        jump = spr_jump1;
+        fall = spr_fall1;
+        shoot = spr_shoot1;
+        jumpshoot = spr_jumpshoot1;
+        death = spr_death1;
+        total_death = spr_total_death1;
+        enter = spr_enter1;
+    break;
+    //Con capa
+    case 2:
+        idle = spr_idle2;
+        run = spr_run2;
+        jump = spr_jump2;
+        fall = spr_fall2;
+        shoot = spr_shoot2;
+        jumpshoot = spr_jumpshoot2;
+        death = spr_death2;
+        total_death = spr_total_death2;
+        enter = spr_enter2;
+    break;
+}
+
 //Seteamos cronómetro
 reloj = 0;
 alarm[1]=30;
@@ -378,7 +419,7 @@ if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2)  || joystick_ch
 if(vsp == 0)
 {
     if(status_dead = 1 &amp;&amp; complete_death == 0) {
-        sprite_index = spr_death;
+        sprite_index = death;
         if(image_index = image_number - 1) {
             sprite_index = total_death;
             complete_death = 1;
@@ -386,28 +427,28 @@ if(vsp == 0)
     } 
     else if (complete_death == 0){    
         if(hsp != 0) 
-            sprite_index = spr_run; 
+            sprite_index = run; 
         else 
         {
             if(disparo &gt; 0) 
-                sprite_index = spr_shoot;
+                sprite_index = shoot;
             else if (place_meeting(x, y, obj_portal))
-                sprite_index = spr_enter;
+                sprite_index = enter;
             else 
-                sprite_index = spr_idle;
+                sprite_index = idle;
         }
     }
 }
 else
 {
     if (disparo &gt; 0) 
-        sprite_index = spr_jumpshoot;
+        sprite_index = jumpshoot;
     else if (place_meeting(x, y, Agua)) 
-        sprite_index = spr_swim;
+        sprite_index = swim;
     else if (vsp &lt; 0) 
-        sprite_index = spr_jump;
+        sprite_index = jump;
     else if (vsp &gt; 0) 
-        sprite_index = spr_fall;
+        sprite_index = fall;
 }
 //Control de muerte
 if(status_locked == false){

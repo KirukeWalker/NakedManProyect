@@ -36,6 +36,7 @@ global.muertes = 0;
 global.muertes_registro = 0;
 global.cagaprisas = 0;
 //Declaracion de glovalvars desbloqueables
+global.skin = 2; //Con esto controlamos que skin se usa por el momento
 global.quemaduras = 0;
 global.cabezallamas = 0;
 global.botecrema = 0;

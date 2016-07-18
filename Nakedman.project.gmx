@@ -76,16 +76,40 @@
       <sprite>sprites\spr_nieveEsquinilla</sprite>
     </sprites>
     <sprites name="Prota">
-      <sprite>sprites\spr_idle</sprite>
-      <sprite>sprites\spr_run</sprite>
-      <sprite>sprites\spr_jump</sprite>
-      <sprite>sprites\spr_fall</sprite>
-      <sprite>sprites\spr_shoot</sprite>
-      <sprite>sprites\spr_jumpshoot</sprite>
-      <sprite>sprites\spr_death</sprite>
-      <sprite>sprites\total_death</sprite>
-      <sprite>sprites\spr_swim</sprite>
-      <sprite>sprites\spr_enter</sprite>
+      <sprites name="Skin0">
+        <sprite>sprites\spr_idle</sprite>
+        <sprite>sprites\spr_run</sprite>
+        <sprite>sprites\spr_jump</sprite>
+        <sprite>sprites\spr_fall</sprite>
+        <sprite>sprites\spr_shoot</sprite>
+        <sprite>sprites\spr_jumpshoot</sprite>
+        <sprite>sprites\spr_total_death</sprite>
+        <sprite>sprites\spr_death</sprite>
+        <sprite>sprites\spr_swim</sprite>
+        <sprite>sprites\spr_enter</sprite>
+      </sprites>
+      <sprites name="Skin1">
+        <sprite>sprites\spr_idle1</sprite>
+        <sprite>sprites\spr_jump1</sprite>
+        <sprite>sprites\spr_jumpshoot1</sprite>
+        <sprite>sprites\spr_run1</sprite>
+        <sprite>sprites\spr_fall1</sprite>
+        <sprite>sprites\spr_shoot1</sprite>
+        <sprite>sprites\spr_death1</sprite>
+        <sprite>sprites\spr_total_death1</sprite>
+        <sprite>sprites\spr_enter1</sprite>
+      </sprites>
+      <sprites name="Skin2">
+        <sprite>sprites\spr_idle2</sprite>
+        <sprite>sprites\spr_jump2</sprite>
+        <sprite>sprites\spr_jumpshoot2</sprite>
+        <sprite>sprites\spr_run2</sprite>
+        <sprite>sprites\spr_fall2</sprite>
+        <sprite>sprites\spr_shoot2</sprite>
+        <sprite>sprites\spr_death2</sprite>
+        <sprite>sprites\spr_total_death2</sprite>
+        <sprite>sprites\spr_enter2</sprite>
+      </sprites>
     </sprites>
     <sprites name="Proyectiles">
       <sprite>sprites\spr_cacota</sprite>
@@ -227,7 +251,9 @@
     <background>background\background8</background>
     <background>background\background9</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
     <script>scripts\scr_menu2.gml</script>
