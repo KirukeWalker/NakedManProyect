@@ -76,11 +76,11 @@ switch(status){
     case 2:
         //Salta si se queda sin suelo delante
         //Al estar volteado hay que aplicar el ancho del sprte en negativo
-        if(!place_meeting(x + -sprite_width, y + 1, obj_solid_terrain) &amp;&amp;
+        /*if(!place_meeting(x + -sprite_width, y + 1, obj_solid_terrain) &amp;&amp;
             sprite_index == spr_boss4_sliding){
             vspeed -= 20;
             sprite_index = spr_boss4_jump;
-        }
+        }*/
     break;
 }
 
@@ -91,6 +91,31 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain)){
     }
     sprite_index = spr_boss4_sliding;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_jumper">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Salta
+vspeed -= 20;
+sprite_index = spr_boss4_jump;
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,7 @@
       <sprite>sprites\spr_sueloVolcanDobleEsquina</sprite>
       <sprite>sprites\spr_suelo_doble_volcan</sprite>
       <sprite>sprites\spr_lava</sprite>
+      <sprite>sprites\spr_deep_lava</sprite>
       <sprite>sprites\spr_suelo_hojas</sprite>
       <sprite>sprites\spr_sueloBosque_NoPisable</sprite>
       <sprite>sprites\spr_door</sprite>
@@ -74,6 +75,7 @@
       <sprite>sprites\spr_sueloBosqueDoble</sprite>
       <sprite>sprites\spr_SueloBosque3</sprite>
       <sprite>sprites\spr_nieveEsquinilla</sprite>
+      <sprite>sprites\spr_falling_floor</sprite>
     </sprites>
     <sprites name="Prota">
       <sprites name="Skin0">
@@ -318,6 +320,7 @@
         <object>objects\obj_final_clouds</object>
       </objects>
       <object>objects\Lava</object>
+      <object>objects\obj_deep_lava</object>
       <object>objects\obj_acido</object>
       <object>objects\obj_door</object>
       <object>objects\Agua</object>
@@ -356,6 +359,7 @@
       <object>objects\FinalBoss3_Body_Test</object>
       <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss4_New</object>
+      <object>objects\obj_jumper</object>
       <object>objects\FinalBoss5</object>
       <object>objects\obj_lifter</object>
     </objects>
@@ -454,8 +458,8 @@
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
-    <room>rooms\Room_FinalBoss1_New</room>
     <room>rooms\Nivel_1</room>
+    <room>rooms\Room_FinalBoss1_New</room>
     <room>rooms\Nivel_Playa</room>
     <room>rooms\Room_FinalBoss2</room>
     <room>rooms\Room_FinalBoss2_S2</room>

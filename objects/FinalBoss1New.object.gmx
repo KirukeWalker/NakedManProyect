@@ -262,7 +262,10 @@ switch(status){
             //Crea la piscina de lava
             for(i = 0; i &lt; 18; i++){
                 for(j = 0; j &lt; 18; j++){
-                     lava[i, j] = instance_create(i * 32 + 544, j * 32 + 640, Lava);
+                    if(j == 0)
+                        lava[i, j] = instance_create(i * 32 + 544, j * 32 + 640, Lava);
+                    else
+                        lava[i, j] = instance_create(i * 32 + 544, j * 32 + 640, obj_deep_lava);
                 }
             }
             //Ajsuta las profundidades
