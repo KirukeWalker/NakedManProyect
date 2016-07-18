@@ -122,6 +122,9 @@
       <sprite>sprites\spr_ball</sprite>
       <sprite>sprites\spr_boss_interactor</sprite>
       <sprite>sprites\spr_fireball</sprite>
+      <sprite>sprites\spr_explosion</sprite>
+      <sprite>sprites\spr_fire_up</sprite>
+      <sprite>sprites\spr_fire_down</sprite>
     </sprites>
     <sprites name="Enemigos Nieve">
       <sprite>sprites\spr_manoplas4</sprite>
@@ -381,6 +384,7 @@
       <object>objects\obj_unlinked_segment</object>
       <object>objects\obj_fire_wall</object>
       <object>objects\obj_ascending_fire</object>
+      <object>objects\obj_explosion</object>
     </objects>
     <objects name="Utilidades">
       <object>objects\obj_music</object>
