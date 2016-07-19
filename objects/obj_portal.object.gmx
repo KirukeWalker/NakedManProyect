@@ -25,14 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_fade.fadeIn = false;
-other.x = x;
-//other.y = y;
-other.status_locked = true;
-obj_door.triggered = true;
-//obj_fade.alarm[1] = room_speed * 0.05;   
-
-
+            <string>//La cogemos
+door = instance_find(obj_door, 0);
+//Primero se abre
+if(door.triggered == false){
+    other.x = x;
+    other.status_locked = true;
+    door.triggered = true;
+    door.image_index = 0;
+}
+//Y luego entra naked man
+else if(door.image_index == door.image_number - 1){
+    obj_fade.fadeIn = false;
+    door.image_index = door.image_number - 2;
+}
 </string>
           </argument>
         </arguments>

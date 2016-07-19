@@ -432,8 +432,11 @@ if(vsp == 0)
         {
             if(disparo &gt; 0) 
                 sprite_index = shoot;
-            else if (place_meeting(x, y, obj_portal))
+            else if (place_meeting(x, y, obj_portal)){
                 sprite_index = enter;
+                if(obj_fade.fadeIn = true)
+                    image_index = 0;
+            }
             else 
                 sprite_index = idle;
         }
