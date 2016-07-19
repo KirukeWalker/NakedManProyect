@@ -30,6 +30,31 @@
     //columna = instance_create(x, y+32, obj_fire_column);
 //Inicia contador de auto destrucción
 alarm_set(0, 3);
+alarm_set(1, 1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+sprite_index = spr_deep_lava;
 </string>
           </argument>
         </arguments>

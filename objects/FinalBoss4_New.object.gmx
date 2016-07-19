@@ -114,8 +114,11 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain)){
           <argument>
             <kind>1</kind>
             <string>//Salta
-vspeed -= 20;
-sprite_index = spr_boss4_jump;
+if(other.triggered == false){
+    vspeed -= 20;
+    sprite_index = spr_boss4_jump;
+    other.triggered = true;
+}
 </string>
           </argument>
         </arguments>

@@ -291,7 +291,7 @@ switch(status){
         if(lava_reference.y &gt; 480){
             for(i = 0; i &lt; 18; i++){
                 for(j = 0; j &lt; 18; j++){
-                     lava[i, j].y -= 0.5;
+                     lava[i, j].y -= 1;
                 }
             }
         }

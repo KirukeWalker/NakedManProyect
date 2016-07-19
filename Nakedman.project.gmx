@@ -112,6 +112,28 @@
         <sprite>sprites\spr_total_death2</sprite>
         <sprite>sprites\spr_enter2</sprite>
       </sprites>
+      <sprites name="Skin3">
+        <sprite>sprites\spr_idle3</sprite>
+        <sprite>sprites\spr_jump3</sprite>
+        <sprite>sprites\spr_jumpshoot3</sprite>
+        <sprite>sprites\spr_run3</sprite>
+        <sprite>sprites\spr_fall3</sprite>
+        <sprite>sprites\spr_shoot3</sprite>
+        <sprite>sprites\spr_death3</sprite>
+        <sprite>sprites\spr_total_death3</sprite>
+        <sprite>sprites\spr_enter3</sprite>
+      </sprites>
+      <sprites name="Skin4">
+        <sprite>sprites\spr_idle4</sprite>
+        <sprite>sprites\spr_jump4</sprite>
+        <sprite>sprites\spr_jumshoot4</sprite>
+        <sprite>sprites\spr_run4</sprite>
+        <sprite>sprites\spr_fall4</sprite>
+        <sprite>sprites\spr_shoot4</sprite>
+        <sprite>sprites\spr_death4</sprite>
+        <sprite>sprites\spr_total_death4</sprite>
+        <sprite>sprites\spr_enter4</sprite>
+      </sprites>
     </sprites>
     <sprites name="Proyectiles">
       <sprite>sprites\spr_cacota</sprite>
@@ -126,6 +148,7 @@
       <sprite>sprites\spr_fireball</sprite>
       <sprite>sprites\spr_explosion</sprite>
       <sprite>sprites\spr_fire_up</sprite>
+      <sprite>sprites\spr_fire_side</sprite>
       <sprite>sprites\spr_fire_down</sprite>
     </sprites>
     <sprites name="Enemigos Nieve">
@@ -387,6 +410,7 @@
       <object>objects\obj_falling_rock</object>
       <object>objects\obj_unlinked_segment</object>
       <object>objects\obj_fire_wall</object>
+      <object>objects\obj_fire_wall_deep</object>
       <object>objects\obj_ascending_fire</object>
       <object>objects\obj_explosion</object>
     </objects>

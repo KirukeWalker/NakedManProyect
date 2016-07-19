@@ -94,7 +94,7 @@ if(object5.x &gt; 4000 &amp;&amp; triggered == false){
 }
 //Make the camera follow the firewall
 if(fire_wall != noone){
-    if(fire_wall.x &gt;= 3680){
+    if(fire_wall.x &gt;= 3688){
         object5.status_locked = false;
         obj_camera2.status = 4;
     }
