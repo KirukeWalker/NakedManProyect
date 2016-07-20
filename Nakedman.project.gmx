@@ -134,6 +134,12 @@
         <sprite>sprites\spr_total_death4</sprite>
         <sprite>sprites\spr_enter4</sprite>
       </sprites>
+      <sprites name="Hat1">
+        <sprite>sprites\spr_hat_jump1</sprite>
+        <sprite>sprites\spr_hat_fall1</sprite>
+        <sprite>sprites\spr_hat_shoot1</sprite>
+        <sprite>sprites\spr_hat_run1</sprite>
+      </sprites>
     </sprites>
     <sprites name="Proyectiles">
       <sprite>sprites\spr_cacota</sprite>
