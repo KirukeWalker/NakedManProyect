@@ -89,6 +89,66 @@ switch(global.skin){
         total_death = spr_total_death2;
         enter = spr_enter2;
     break;
+    //Con hoja
+    case 3:
+        idle = spr_idle3;
+        run = spr_run3;
+        jump = spr_jump3;
+        fall = spr_fall3;
+        shoot = spr_shoot3;
+        jumpshoot = spr_jumpshoot3;
+        death = spr_death3;
+        total_death = spr_total_death3;
+        enter = spr_enter3;
+    break;
+    //Muñeco nieve
+    case 4:
+        idle = spr_idle4;
+        run = spr_run4;
+        jump = spr_jump4;
+        fall = spr_fall4;
+        shoot = spr_shoot4;
+        jumpshoot = spr_jumpshoot4;
+        death = spr_death4;
+        total_death = spr_total_death4;
+        enter = spr_enter4;
+    break;
+    //Robot, o algo parecido
+    case 5:
+        idle = spr_idle5;
+        run = spr_run5;
+        jump = spr_jump5;
+        fall = spr_fall5;
+        shoot = spr_shoot5;
+        jumpshoot = spr_jumpshoot5;
+        death = spr_death5;
+        total_death = spr_total_death5;
+        enter = spr_enter5;
+    break;
+    //Con dorado
+    case 6:
+        idle = spr_idle6;
+        run = spr_run6;
+        jump = spr_jump6;
+        fall = spr_fall6;
+        shoot = spr_shoot6;
+        jumpshoot = spr_jumpshoot6;
+        death = spr_death6;
+        total_death = spr_total_death6;
+        enter = spr_enter6;
+    break;
+    //Con túnica
+    case 7:
+        idle = spr_idle7;
+        run = spr_run7;
+        jump = spr_jump7;
+        fall = spr_fall7;
+        shoot = spr_shoot7;
+        jumpshoot = spr_jumpshoot7;
+        death = spr_death7;
+        total_death = spr_total_death7;
+        enter = spr_enter7;
+    break;
 }
 
 //Seteamos cronómetro
@@ -709,14 +769,30 @@ if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == f
             <string>//Primero dibuja al moñaco, anda
 draw_self();
 //Control de gorro
-if(disparo == 1)
-    draw_sprite(spr_hat_shoot1, 0, x, y);
-else if(vsp &lt; 0)
-    draw_sprite(spr_hat_jump1, 0, x, y);
-else if(vsp &gt; 0)
-    draw_sprite(spr_hat_fall1, 0, x, y);
-else if(actual_speed &gt; 0)
-    draw_sprite(spr_hat_run1, image_index%2, x, y);
+if(image_xscale = 1){
+    if(disparo == 1)
+        draw_sprite(spr_hat_shoot1_right, 0, x, y);
+    else if(vsp &lt; 0)
+        draw_sprite(spr_hat_jump1_right, 0, x, y);
+    else if(vsp &gt; 0)
+        draw_sprite(spr_hat_fall1_right, 0, x, y);
+    else if(actual_speed &gt; 0)
+        draw_sprite(spr_hat_run1_right, image_index%2, x, y);
+    else if(actual_speed == 0)
+        draw_sprite(spr_hat_idle1_right, 0, x, y);
+}
+else{
+    if(disparo == 1)
+        draw_sprite(spr_hat_shoot1_left, 0, x, y);
+    else if(vsp &lt; 0)
+        draw_sprite(spr_hat_jump1_left, 0, x, y);
+    else if(vsp &gt; 0)
+        draw_sprite(spr_hat_fall1_left, 0, x, y);
+    else if(actual_speed &gt; 0)
+        draw_sprite(spr_hat_run1_left, image_index%2, x, y);
+    else if(actual_speed == 0)
+        draw_sprite(spr_hat_idle1_left, 0, x, y);
+}
 </string>
           </argument>
         </arguments>
