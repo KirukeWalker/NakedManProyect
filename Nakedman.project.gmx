@@ -522,7 +522,8 @@
     <object>objects\object5</object>
     <object>objects\obj_nakedman_falling</object>
     <object>objects\obj_naked_test</object>
-    <object>objects\obj_hat_test</object>
+    <object>objects\obj_hat_testL</object>
+    <object>objects\obj_hat_testR</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
