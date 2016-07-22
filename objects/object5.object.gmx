@@ -770,27 +770,27 @@ if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == f
 draw_self();
 //Control de gorro
 if(image_xscale = 1){
-    if(disparo == 1)
-        draw_sprite(spr_hat_shoot1_right, 0, x, y);
-    else if(vsp &lt; 0)
+    if(vsp &lt; 0)
         draw_sprite(spr_hat_jump1_right, 0, x, y);
+    else if(disparo == 1)
+        draw_sprite(spr_hat_shoot1_right, 0, x, y); 
     else if(vsp &gt; 0)
         draw_sprite(spr_hat_fall1_right, 0, x, y);
-    else if(actual_speed &gt; 0)
+    else if(hsp &gt; 0)
         draw_sprite(spr_hat_run1_right, image_index%2, x, y);
-    else if(actual_speed == 0)
+    else if(hsp == 0)
         draw_sprite(spr_hat_idle1_right, 0, x, y);
 }
 else{
+    if(vsp &lt; 0)
+        draw_sprite(spr_hat_jump1_left, 0, x, y);
     if(disparo == 1)
         draw_sprite(spr_hat_shoot1_left, 0, x, y);
-    else if(vsp &lt; 0)
-        draw_sprite(spr_hat_jump1_left, 0, x, y);
     else if(vsp &gt; 0)
         draw_sprite(spr_hat_fall1_left, 0, x, y);
-    else if(actual_speed &gt; 0)
+    else if(hsp &lt; 0)
         draw_sprite(spr_hat_run1_left, image_index%2, x, y);
-    else if(actual_speed == 0)
+    else if(hsp == 0)
         draw_sprite(spr_hat_idle1_left, 0, x, y);
 }
 </string>
