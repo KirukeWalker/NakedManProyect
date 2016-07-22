@@ -31,6 +31,8 @@ disparo = 0;
 status_dead = 0;
 invincible = false;
 status_dead = 0;
+gamepad_set_axis_deadzone(0,0.7);
+can_switch = true;
 
 //Positions for the battle
 positionY[0] = 100;
@@ -39,6 +41,30 @@ positionY[2] = 300;
 positionY[3] = 400;
 //
 actual_position = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+can_switch = true;
 </string>
           </argument>
         </arguments>
@@ -110,13 +136,17 @@ disparo = 0;
           <argument>
             <kind>1</kind>
             <string>//Get the keys
-key_up = keyboard_check_pressed(vk_up);
-key_down = keyboard_check_pressed(vk_down);
-key_shoot = keyboard_check_pressed(ord('C'));
+key_up = keyboard_check_pressed(vk_up) || gamepad_axis_value(0,gp_axislv) &lt; -0.8 || gamepad_button_check_pressed(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
+key_down = keyboard_check_pressed(vk_down) || gamepad_axis_value(0,gp_axislv) &gt; 0.8 || gamepad_button_check_pressed(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
+key_shoot = keyboard_check_pressed(ord('C')) || gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2);
 
 //Switch to the next location
-actual_position += -key_up + key_down;
-actual_position = clamp(actual_position, 0, 3);
+if(can_switch == true){
+    actual_position += -key_up + key_down;
+    actual_position = clamp(actual_position, 0, 3);
+    //alarm_set(2, 5);
+    //can_switch = false;
+}
 //Move to the position
 if(abs(positionY[actual_position] - y) &gt; 15){
     vspeed = sign(positionY[actual_position] - y) * 10;
@@ -127,6 +157,9 @@ else if(abs(positionY[actual_position] - y) &gt; 3){
 else{
     vspeed = 0;
 }
+//Control stuff
+//key_up = 0;
+//key_down = 0;
 //Disparo
 if(key_shoot == 1){
     if(disparo == 0 &amp;&amp; status_dead == 0) {
@@ -193,6 +226,31 @@ if(invincible == false &amp;&amp; status_dead == 0){
         alarm_set(1, 30);
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+draw_text(30, 30, key_up);
+draw_text(30, 50, key_down);
 </string>
           </argument>
         </arguments>
