@@ -521,13 +521,14 @@
     </objects>
     <object>objects\object5</object>
     <object>objects\obj_nakedman_falling</object>
-    <object>objects\obj_naked_test</object>
-    <object>objects\obj_hat_testL</object>
-    <object>objects\obj_hat_testR</object>
+    <objects name="Sprite_Test">
+      <object>objects\obj_naked_test</object>
+      <object>objects\obj_hat_testL</object>
+      <object>objects\obj_hat_testR</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss2_S2</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -535,6 +536,7 @@
     <room>rooms\Room_FinalBoss1_New</room>
     <room>rooms\Nivel_Playa</room>
     <room>rooms\Room_FinalBoss2</room>
+    <room>rooms\Room_FinalBoss2_S2</room>
     <room>rooms\Nivel_Bosque</room>
     <room>rooms\Room_FinalBoss3_Test</room>
     <room>rooms\Room_FinalBoss3</room>

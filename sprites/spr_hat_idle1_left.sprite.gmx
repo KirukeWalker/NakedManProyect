@@ -19,7 +19,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>30</width>
-  <height>72</height>
+  <height>85</height>
   <frames>
     <frame index="0">images\spr_hat_idle1_left_0.png</frame>
   </frames>
