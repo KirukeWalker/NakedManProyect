@@ -83,7 +83,8 @@ surface_reset_target();
             <string>draw_set_blend_mode(bm_subtract);
 draw_surface(light,view_xview[0],view_yview[0]);
 draw_set_blend_mode(bm_normal);
-
+//En el error decía de usar esta instrucción
+//surface_reset_target();
 </string>
           </argument>
         </arguments>
