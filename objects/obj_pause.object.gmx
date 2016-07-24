@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>pause = 0;
+pausepos = 0;
 //audio_pause_all();
 </string>
           </argument>
@@ -49,20 +50,102 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(vk_escape)) || (gamepad_button_check_pressed(0,gp_start)) {
-if (!pause) {
-    pause = 1;
-    instance_deactivate_all(true);
-    audio_pause_all();
-}
-else {
-    pause = 0;
-    instance_activate_all();
-    audio_resume_all();
+            <string>if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_escape)) || (gamepad_button_check_pressed(0,gp_start)) {
+    if (!pause) {
+        pause = 1;
+        if room=Nivel_Bosque{
+            part_system_destroy (obj_lluvia.rain)
+        }
+        
+        if room=Nivel_Nieve{
+            part_system_destroy (obj_snow.snow)
+        }
+        
+        instance_deactivate_all(true);
+        instance_create(view_xview+302,view_yview+340,obj_gamePausedMenu)
+        instance_create(view_xview+304,view_yview+340-60,obj_Menu1Selector)
     }
 }
 
-if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face3)) || keyboard_check_pressed(ord('Q'))) {
+if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter)) &amp;&amp; pause=1 &amp;&amp; pausepos=0 {
+    pause = 0;
+    if room=Nivel_Bosque{
+        rain = part_system_create();    //Creamos el generador de nieve
+        part_system_depth(rain, -60);   //Lo ponemos a profunidad -60
+        raintear = part_type_create();     //Creamos el tipo de particula
+        part_type_shape(raintear,pt_shape_line);
+        part_type_orientation(raintear,0,0,0,0,1);
+        part_type_size(raintear,0.2,0.5,0,0);
+        part_type_speed(raintear,15,20,0.05,0);
+        part_type_direction(raintear,225,225,0,0);
+        part_type_life(raintear,50,400);
+        rain_emitter = part_emitter_create(rain);   //Creamos el emisor
+        part_emitter_region(rain,rain_emitter,-100,
+                            room_width+100,80,-10,
+                            ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
+        part_emitter_stream(rain,rain_emitter,raintear,5);     //Emitimos las partículas de nieve
+    }
+    if room=Nivel_Nieve{
+        snow = part_system_create();    //Creamos el generador de nieve
+        part_system_depth(snow, -60);   //Lo ponemos a profunidad -60
+        snowflake = part_type_create();     //Creamos el tipo de particula
+        part_type_shape(snowflake,pt_shape_square);
+        part_type_orientation(snowflake,0,0,0,0,1);
+        part_type_size(snowflake,0.01,0.05,0,0);
+        part_type_speed(snowflake,1,1.5,0.05,0);
+        part_type_direction(snowflake,270,270,0,4);
+        part_type_life(snowflake,1000,1500);
+        snow_emitter = part_emitter_create(snow);   //Creamos el emisor
+        part_emitter_region(snow,snow_emitter,0-100,
+                            room_width+100,4000,-5,
+                            ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
+        part_emitter_stream(snow,snow_emitter,snowflake,5);     //Emitimos las partículas de nieve
+    }
+    with(obj_gamePausedMenu) instance_destroy();
+    with(obj_Menu1Selector) instance_destroy();
+    pausepos=0;
+    instance_activate_all();
+    if global.MUSIC=true{
+        audio_resume_all();
+    }
+}
+
+if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter)) &amp;&amp; pause=1 &amp;&amp; pausepos=1 {
+    script_execute(scr_menu1options);
+}
+
+if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter)) &amp;&amp; pause=1 &amp;&amp; pausepos=2 {
+    audio_stop_all();
+    if global.MUSIC=true{
+        audio_play_sound(snd_intro,1,true);
+    }
+    room_goto(Menu);
+}
+
+if !instance_exists(obj_blackScreen) &amp;&amp; pause==1 &amp;&amp; keyboard_check_pressed(vk_down){
+    if pausepos=2 {
+        pausepos=0;
+        obj_Menu1Selector.y=view_yview+340-60
+    }
+   else {
+        pausepos++;
+        obj_Menu1Selector.y=obj_Menu1Selector.y+64
+   }
+}
+
+if !instance_exists(obj_blackScreen) &amp;&amp; pause==1 &amp;&amp; keyboard_check_pressed(vk_up){
+    if pausepos=0 {
+        pausepos=2;
+        obj_Menu1Selector.y=view_yview+340-60+64*2
+    }
+    else {
+        pausepos--;
+        obj_Menu1Selector.y=obj_Menu1Selector.y-64
+    }
+}
+
+
+/*if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face3)) || keyboard_check_pressed(ord('Q'))) {
     audio_stop_all();
     audio_play_sound(snd_intro,1,true);
     room_goto(Menu);
@@ -95,10 +178,13 @@ if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face3)) || keyboar
     draw_set_halign(fa_center);
     draw_set_font(fnt_pause);
     draw_set_color(c_white);
-    draw_text(view_xview + 230,view_yview + 100,"Game Paused");
-    draw_set_font(fnt_creditos_peque);
-    draw_text(view_xview + 180+50+12,view_yview + 200,"Press Q or          to quit");
-    draw_sprite(spr_x,0,view_xview + 230 + 35,view_yview + 200)
+    draw_sprite(spr_pauseTitle,-1,view_xview+305,view_yview+140)
+    
+    
+    //draw_text(view_xview + 230,view_yview + 100,"Game Paused");
+    //draw_set_font(fnt_creditos_peque);
+    //draw_text(view_xview + 180+50+12,view_yview + 200,"Press Q or          to quit");
+    //draw_sprite(spr_x,0,view_xview + 230 + 35,view_yview + 200)
     //if(pussy_mode == true)
     draw_set_color(c_black);
     }

@@ -558,8 +558,6 @@
     <instance objName="obj_nieve_no_pisable" x="480" y="768" name="inst_1A6CD24C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_no_pisable" x="512" y="768" name="inst_200D7CC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_snow" x="1024" y="3968" name="inst_8FCDC08F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_game_over_Nieve" x="992" y="3936" name="inst_D0E8868A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pause_nieve" x="960" y="3936" name="inst_63BEFFC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal_nieve" x="2160" y="3922" name="inst_13BAEF43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal_nieve" x="2144" y="3808" name="inst_2680F4D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal_nieve" x="2144" y="3808" name="inst_41D86431" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1102,6 +1100,8 @@
     <instance objName="obj_nieveEsquinilla" x="928" y="2656" name="inst_092D1FEC" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="480" y="704" name="inst_A1DB3C64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal_nieve" x="480" y="672" name="inst_F1186A52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pause" x="960" y="3936" name="inst_9485D263" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_game_over" x="992" y="3936" name="inst_2A3E3457" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="288" y="3904" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_0C78A4FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

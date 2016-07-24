@@ -21,7 +21,9 @@ switch(mpos){
     
     //case 1: room_goto (Menu2); break;
     case 1: room_goto(Menu2); break;//show_message("UNDER CONSTRUCTION, SORRYP"); break;
-        
+     
+    case 2: script_execute(scr_menu1options); break;
+       
     case 3: room_goto (Credits); break;
     
     case 4: game_end(); break;

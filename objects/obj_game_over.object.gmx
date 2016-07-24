@@ -25,20 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Vamos al menú
-if (keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3) || joystick_check_button(2, 2))) &amp;&amp; (global.vida = 0){
+            <string>if (keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3) || joystick_check_button(2, 2))) &amp;&amp; (global.vida = 0){
+    if room=Nivel_Bosque part_system_destroy(obj_lluvia.rain);
+    if room=Nivel_Nieve part_system_destroy(obj_snow.snow);
     room_goto(Menu);
-}
-//Reiniciamos el nivel
+    }
 if (keyboard_check(vk_enter) || (gamepad_button_check(0,gp_face4) || joystick_check_button(2, 3))) &amp;&amp; (global.vida = 0){
-    //Si no estamos en la segunda fase de un boss
-    if(room == Room_FinalBoss2_S2)
-        room_goto(Room_FinalBoss2);
-    else if(room == Room_FinalBoss3)
-        room_goto(Room_FinalBoss3_Test)
-    else //El caso habitual
+    if room=Nivel_Bosque part_system_destroy(obj_lluvia.rain);
+    if room=Nivel_Nieve part_system_destroy(obj_snow.snow);
     room_restart();
-}
+    }
 </string>
           </argument>
         </arguments>

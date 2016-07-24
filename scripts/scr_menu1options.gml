@@ -1,0 +1,6 @@
+instance_create(view_xview,view_yview,obj_blackScreen)
+instance_create(view_xview+310,view_yview+180,obj_musicOnOff)
+instance_create(view_xview+310,view_yview+240,obj_soundsOnOff)
+instance_create(view_xview+310,view_yview+300,obj_fullScreenOnOff)
+instance_create(view_xview+310,view_yview+360,obj_timerOnOff)
+instance_create(view_xview+310,view_yview+420,obj_hdModeOnOff)

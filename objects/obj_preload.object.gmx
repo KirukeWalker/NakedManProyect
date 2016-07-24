@@ -29,14 +29,13 @@
 texture_set_interpolation(false);
 //Declaración de globalvars
 global.offline = 1;
-//globalvar pussy_mode;
-//pussy_mode = false;
-global.vida = 3;
+globalvar pussy_mode;
+global.skin=1;
+pussy_mode = false;
 global.muertes = 0;
 global.muertes_registro = 0;
 global.cagaprisas = 0;
 //Declaracion de glovalvars desbloqueables
-global.skin = 0; //Con esto controlamos que skin se usa por el momento
 global.quemaduras = 0;
 global.cabezallamas = 0;
 global.botecrema = 0;
@@ -64,6 +63,11 @@ global.dorada2 = 0;
 
 global.menu1Start = true;
 global.menustart=false;
+global.MUSIC=true;
+global.SOUNDS=true;
+global.FULLSCREEN=false;
+global.TIMER=false;
+global.HD=false;
 //Variable de joystic
 global.joy_check = true;
 //Variable de checkpoint

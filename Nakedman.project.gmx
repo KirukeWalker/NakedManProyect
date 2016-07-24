@@ -297,6 +297,16 @@
       <sprite>sprites\spr_underconst</sprite>
       <sprite>sprites\spr_tuto</sprite>
       <sprite>sprites\spr_healthbar_frame</sprite>
+      <sprite>sprites\sprite251</sprite>
+      <sprite>sprites\spr_blackScreen</sprite>
+      <sprite>sprites\spr_fullScreenOnOff</sprite>
+      <sprite>sprites\spr_gamePausedMenu</sprite>
+      <sprite>sprites\spr_hdModeOnOff</sprite>
+      <sprite>sprites\spr_musicOnOff</sprite>
+      <sprite>sprites\spr_optionsBlack</sprite>
+      <sprite>sprites\spr_pauseTitle</sprite>
+      <sprite>sprites\spr_soundsOnOff</sprite>
+      <sprite>sprites\spr_timerOnOff</sprite>
     </sprites>
     <sprites name="BossFinal Pruebas">
       <sprite>sprites\spr_stand</sprite>
@@ -335,6 +345,8 @@
     <script>scripts\scr_knockback.gml</script>
     <script>scripts\scr_generate_fragments.gml</script>
     <script>scripts\scr_create_flames.gml</script>
+    <script>scripts\scr_menu1options.gml</script>
+    <script>scripts\scr_menuoptions.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_intro</font>
@@ -504,6 +516,14 @@
       <object>objects\obj_Menu1</object>
       <object>objects\obj_pressStart</object>
       <object>objects\obj_menu</object>
+      <object>objects\obj_blackScreen</object>
+      <object>objects\obj_fullScreenOnOff</object>
+      <object>objects\obj_gamePausedMenu</object>
+      <object>objects\obj_guardado</object>
+      <object>objects\obj_hdModeOnOff</object>
+      <object>objects\obj_musicOnOff</object>
+      <object>objects\obj_soundsOnOff</object>
+      <object>objects\obj_timerOnOff</object>
     </objects>
     <objects name="BossFinal Pruebas">
       <object>objects\Player1</object>
@@ -529,7 +549,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Final_Level</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -551,6 +570,7 @@
     <room>rooms\god_room_final</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
+    <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss1</room>
     <room>rooms\Room_FinalBoss4</room>
   </rooms>

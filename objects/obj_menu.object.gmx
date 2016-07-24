@@ -68,19 +68,19 @@ instance_create(view_xview+128+32,view_yview+256-86,obj_Menu1Selector);
     moving=true;
 }
 
-if moving=true &amp;&amp; movingfinish=false script_execute(scr_menu1Start);
+if moving=true &amp;&amp; movingfinish=false  script_execute(scr_menu1Start);
 
-if movingfinish=true &amp;&amp; keyboard_check_pressed(vk_down){
+if movingfinish=true &amp;&amp; keyboard_check_pressed(vk_down) &amp;&amp; !instance_exists(obj_blackScreen){
     if mpos=4 {
         mpos=0;
         obj_Menu1Selector.y=view_yview+256-86
     }
-   else {
+    else {
         mpos++;
         obj_Menu1Selector.y=obj_Menu1Selector.y+64
-   }
+    }
 }
-if movingfinish=true &amp;&amp; keyboard_check_pressed(vk_up){
+if movingfinish=true &amp;&amp; keyboard_check_pressed(vk_up) &amp;&amp; !instance_exists(obj_blackScreen){ 
     if mpos=0 {
         mpos=4;
         obj_Menu1Selector.y=view_yview+256-86+64*4
@@ -91,7 +91,7 @@ if movingfinish=true &amp;&amp; keyboard_check_pressed(vk_up){
     }
 }
 
-if movingfinish=true &amp;&amp; (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start)){
+if movingfinish=true &amp;&amp; !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start)){
     script_execute(scr_menu);
 }
 </string>
@@ -116,7 +116,7 @@ if movingfinish=true &amp;&amp; (keyboard_check_pressed(vk_enter) || keyboard_ch
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw_text(view_xview+80,view_yview+20,instance_number(obj_music))
+            <string>draw_text(view_xview+80,view_yview+20,instance_number(obj_music))
 </string>
           </argument>
         </arguments>

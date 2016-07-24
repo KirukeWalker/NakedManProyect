@@ -33,6 +33,7 @@ switch(scriptStep){
     global.menustart=true;
     movingfinish=true;
     scriptStep=4;
+    n=0;
     mpos=0;
     break;
 }

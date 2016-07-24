@@ -67,7 +67,7 @@
     <instance objName="obj_suelo_hojas" x="192" y="224" name="inst_0345A289" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_hojas" x="160" y="224" name="inst_0F8E7A32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_hojas" x="224" y="320" name="inst_17235732" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obl_hud" x="0" y="256" name="inst_002655E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obl_hud" x="-64" y="256" name="inst_002655E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="1216" y="448" name="inst_8FA0239C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="1184" y="448" name="inst_3EE886D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="1152" y="448" name="inst_322050C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -88,9 +88,9 @@
     <instance objName="obj_suelo_hojas" x="992" y="384" name="inst_78A9F7BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_hojas" x="960" y="-32" name="inst_B7EC0D69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_hojas" x="1024" y="96" name="inst_77F180AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fade" x="0" y="192" name="inst_793D3F85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fade" x="-64" y="192" name="inst_793D3F85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lluvia" x="0" y="0" name="inst_8322759A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_oscureitor" x="0" y="224" name="inst_CD3293C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_oscureitor" x="-64" y="224" name="inst_CD3293C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="128" y="192" name="inst_FB116153" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="320" y="96" name="inst_FE2FA713" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="320" y="224" name="inst_E474A8A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -106,8 +106,6 @@
     <instance objName="Luciernagas" x="672" y="256" name="inst_28FD2FCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="512" y="32" name="inst_3DFBE2BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="704" y="384" name="inst_9E501900" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_game_over_Bosque" x="0" y="160" name="inst_7E845CF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pause_bosque" x="0" y="288" name="inst_39DA910E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="896" y="224" name="inst_85164255" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="1056" y="288" name="inst_125D2258" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Luciernagas" x="1152" y="64" name="inst_EF130736" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -666,7 +664,7 @@
     <instance objName="obj_geiser" x="3840" y="-64" name="inst_900E491D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_geiser" x="3872" y="-64" name="inst_76464AB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightning" x="0" y="320" name="inst_58187311" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_fade_white" x="0" y="352" name="inst_3463DFA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fade_white" x="-64" y="352" name="inst_3463DFA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera2" x="0" y="384" name="inst_10D89EEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="6912" y="448" name="inst_988E9342" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal_bosque" x="6912" y="416" name="inst_CD45247D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1044,6 +1042,8 @@
     <instance objName="obj_suelo_bosque" x="0" y="128" name="inst_64B20A26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_bosque" x="2016" y="192" name="inst_10231D07" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_bosque" x="2048" y="160" name="inst_1FD2C783" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_game_over" x="-64" y="288" name="inst_7F3DD11D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pause" x="-64" y="320" name="inst_D8E92950" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
