@@ -472,6 +472,7 @@
       <object>objects\obj_explosion</object>
     </objects>
     <objects name="Utilidades">
+      <object>objects\obj_preload</object>
       <object>objects\obj_music</object>
       <object>objects\obj_fade</object>
       <object>objects\obj_gameoverimg</object>
@@ -500,7 +501,6 @@
       <object>objects\obj_healthbar_anal</object>
       <object>objects\obj_healthbar_frame</object>
       <object>objects\obj_healthbar_back</object>
-      <object>objects\obj_preload</object>
       <object>objects\obj_MenuNivel</object>
       <object>objects\obj_MenuNivelCamera</object>
       <object>objects\obj_MenuNivelAll</object>

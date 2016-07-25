@@ -81,7 +81,8 @@ surface_reset_target();
           <argument>
             <kind>1</kind>
             <string>draw_set_blend_mode(bm_subtract);
-draw_surface(light,view_xview[0],view_yview[0]);
+if(surface_exists(light))
+    draw_surface(light,view_xview[0],view_yview[0]);
 draw_set_blend_mode(bm_normal);
 //En el error decía de usar esta instrucción
 //surface_reset_target();
