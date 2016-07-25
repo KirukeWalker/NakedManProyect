@@ -31,6 +31,7 @@ texture_set_interpolation(false);
 global.offline = 1;
 globalvar pussy_mode;
 global.skin = 6;
+global.hat = 1;
 pussy_mode = false;
 global.muertes = 0;
 global.muertes_registro = 0;

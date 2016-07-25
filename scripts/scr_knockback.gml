@@ -1,4 +1,5 @@
-audio_play_sound(snd_knockback, 1, false);
+if (global.SOUNDS == 1)
+    audio_play_sound(snd_knockback, 1, false);
 global.vida -= 1;
 status_knockback = true;
 invincible = true;

@@ -150,6 +150,22 @@ switch(global.skin){
         enter = spr_enter7;
     break;
 }
+//Para utilizar el gorro seleccionada
+switch(global.hat){
+    //Estándar
+    case 1:
+        hat_idle_left = spr_hat_idle1_left;
+        hat_idle_right = spr_hat_idle1_right;
+        hat_jump_left = spr_hat_jump1_left;
+        hat_jump_right = spr_hat_jump1_right;
+        hat_run_left = spr_hat_run1_left;
+        hat_run_right = spr_hat_run1_right;
+        hat_fall_left = spr_hat_fall1_left;
+        hat_fall_right = spr_hat_fall1_right;
+        hat_shoot_left = spr_hat_shoot1_left;
+        hat_shoot_right = spr_hat_shoot1_right;
+    break;
+}
 
 //Seteamos cronómetro
 reloj = 0;
@@ -384,7 +400,8 @@ if((
     &amp;&amp; status_locked = false)
 {
     vsp = -jumpspeed;
-    audio_play_sound(snd_jump, 1, false);
+    if(global.SOUNDS == 1)
+        audio_play_sound(snd_jump, 1, false);
 }
 //Altura de salto variable
 if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
@@ -465,7 +482,8 @@ if (move != 0 &amp;&amp;
 //Disparo en codigo
 if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2))  {
     if(disparo = 0 &amp;&amp; status_dead = 0) {
-        audio_play_sound(snd_shoot, 1, false);
+        if(global.SOUNDS == 1)
+            audio_play_sound(snd_shoot, 1, false);
         proyectil = instance_create(x,y+3,obj_cacota);
         proyectil.speed = 15;
         proyectil.direction = 90-(90*image_xscale);
@@ -530,7 +548,8 @@ if (global.vida &lt; 0)
 //Sonido de muerte
 if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
 {
-    audio_play_sound(snd_die, 1, false);
+    if(global.SOUNDS == 1)
+        audio_play_sound(snd_die, 1, false);
     alarm_set(4, 30);
     status_dead = 1;
 }
@@ -769,29 +788,32 @@ if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == f
             <string>//Primero dibuja al moñaco, anda
 draw_self();
 //Control de gorro
-if(image_xscale = 1){
-    if(vsp &lt; 0)
-        draw_sprite(spr_hat_jump1_right, 0, x, y);
-    else if(disparo == 1)
-        draw_sprite(spr_hat_shoot1_right, 0, x, y); 
-    else if(vsp &gt; 0)
-        draw_sprite(spr_hat_fall1_right, 0, x, y);
-    else if(hsp &gt; 0)
-        draw_sprite(spr_hat_run1_right, image_index%2, x, y);
-    else if(hsp == 0)
-        draw_sprite(spr_hat_idle1_right, 0, x, y);
-}
-else{
-    if(vsp &lt; 0)
-        draw_sprite(spr_hat_jump1_left, 0, x, y);
-    if(disparo == 1)
-        draw_sprite(spr_hat_shoot1_left, 0, x, y);
-    else if(vsp &gt; 0)
-        draw_sprite(spr_hat_fall1_left, 0, x, y);
-    else if(hsp &lt; 0)
-        draw_sprite(spr_hat_run1_left, image_index%2, x, y);
-    else if(hsp == 0)
-        draw_sprite(spr_hat_idle1_left, 0, x, y);
+if(global.hat != 0){
+    run_length = sprite_get_number(hat_run_right);
+    if(image_xscale = 1){
+        if(vsp &lt; 0)
+            draw_sprite(hat_jump_right, 0, x, y);
+        else if(disparo == 1)
+            draw_sprite(hat_shoot_right, 0, x, y); 
+        else if(vsp &gt; 0)
+            draw_sprite(hat_fall_right, 0, x, y);
+        else if(hsp &gt; 0)
+            draw_sprite(hat_run_right, image_index%run_length, x, y);
+        else if(hsp == 0)
+            draw_sprite(hat_idle_right, 0, x, y);
+    }
+    else{
+        if(vsp &lt; 0)
+            draw_sprite(hat_jump_left, 0, x, y);
+        else if(disparo == 1)
+            draw_sprite(hat_shoot_left, 0, x, y);
+        else if(vsp &gt; 0)
+            draw_sprite(hat_fall_left, 0, x, y);
+        else if(hsp &lt; 0)
+            draw_sprite(hat_run_left, image_index%run_length, x, y);
+        else if(hsp == 0)
+            draw_sprite(hat_idle_left, 0, x, y);
+    }
 }
 </string>
           </argument>
