@@ -92,6 +92,7 @@
       </sprites>
       <sprites name="Skin1">
         <sprite>sprites\spr_idle1</sprite>
+        <sprite>sprites\spr_skinBlack1</sprite>
         <sprite>sprites\spr_jump1</sprite>
         <sprite>sprites\spr_jumpshoot1</sprite>
         <sprite>sprites\spr_run1</sprite>
@@ -104,6 +105,7 @@
       </sprites>
       <sprites name="Skin2">
         <sprite>sprites\spr_idle2</sprite>
+        <sprite>sprites\spr_skinBlack2</sprite>
         <sprite>sprites\spr_jump2</sprite>
         <sprite>sprites\spr_jumpshoot2</sprite>
         <sprite>sprites\spr_run2</sprite>
@@ -116,6 +118,7 @@
       </sprites>
       <sprites name="Skin3">
         <sprite>sprites\spr_idle3</sprite>
+        <sprite>sprites\spr_skinBlack3</sprite>
         <sprite>sprites\spr_jump3</sprite>
         <sprite>sprites\spr_jumpshoot3</sprite>
         <sprite>sprites\spr_run3</sprite>
@@ -128,6 +131,7 @@
       </sprites>
       <sprites name="Skin4">
         <sprite>sprites\spr_idle4</sprite>
+        <sprite>sprites\spr_skinBlack4</sprite>
         <sprite>sprites\spr_jump4</sprite>
         <sprite>sprites\spr_jumpshoot4</sprite>
         <sprite>sprites\spr_run4</sprite>
@@ -140,6 +144,7 @@
       </sprites>
       <sprites name="Skin5">
         <sprite>sprites\spr_idle5</sprite>
+        <sprite>sprites\spr_skinBlack5</sprite>
         <sprite>sprites\spr_jump5</sprite>
         <sprite>sprites\spr_jumpshoot5</sprite>
         <sprite>sprites\spr_run5</sprite>
@@ -151,6 +156,7 @@
       </sprites>
       <sprites name="Skin6">
         <sprite>sprites\spr_idle6</sprite>
+        <sprite>sprites\spr_skinBlack6</sprite>
         <sprite>sprites\spr_jump6</sprite>
         <sprite>sprites\spr_jumpshoot6</sprite>
         <sprite>sprites\spr_run6</sprite>
@@ -162,6 +168,7 @@
       </sprites>
       <sprites name="Skin7">
         <sprite>sprites\spr_idle7</sprite>
+        <sprite>sprites\spr_skinBlack7</sprite>
         <sprite>sprites\spr_jump7</sprite>
         <sprite>sprites\spr_jumpshoot7</sprite>
         <sprite>sprites\spr_run7</sprite>
@@ -277,6 +284,7 @@
       <sprite>sprites\spr_Menu1Selector</sprite>
       <sprite>sprites\spr_pressStart</sprite>
       <sprite>sprites\spr_Menu1</sprite>
+      <sprite>sprites\spr_prizes</sprite>
       <sprite>sprites\sprite1</sprite>
       <sprite>sprites\sprite2</sprite>
       <sprite>sprites\spr_hearts</sprite>
