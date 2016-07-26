@@ -51,7 +51,6 @@ gamepad_set_axis_deadzone(0,0.7)
 suckers_sucking = 0;
 
 //Para utilizar la skin seleccionada
-swim = spr_swim; //Este de momento fuera
 switch(global.skin){
     //Estándar
     case 0:
@@ -64,6 +63,7 @@ switch(global.skin){
         death = spr_death;
         total_death = spr_total_death;
         enter = spr_enter;
+        swim = spr_swim;
     break;
     //Quemado
     case 1:
@@ -76,6 +76,7 @@ switch(global.skin){
         death = spr_death1;
         total_death = spr_total_death1;
         enter = spr_enter1;
+        swim = spr_swim1;
     break;
     //Con capa
     case 2:
@@ -88,6 +89,7 @@ switch(global.skin){
         death = spr_death2;
         total_death = spr_total_death2;
         enter = spr_enter2;
+        swim = spr_swim2;
     break;
     //Con hoja
     case 3:
@@ -100,6 +102,7 @@ switch(global.skin){
         death = spr_death3;
         total_death = spr_total_death3;
         enter = spr_enter3;
+        swim = spr_swim3;
     break;
     //Muñeco nieve
     case 4:
@@ -112,6 +115,7 @@ switch(global.skin){
         death = spr_death4;
         total_death = spr_total_death4;
         enter = spr_enter4;
+        swim = spr_swim4;
     break;
     //Robot, o algo parecido
     case 5:
@@ -124,6 +128,7 @@ switch(global.skin){
         death = spr_death5;
         total_death = spr_total_death5;
         enter = spr_enter5;
+        swim = spr_swim5;
     break;
     //Con dorado
     case 6:
@@ -136,6 +141,7 @@ switch(global.skin){
         death = spr_death6;
         total_death = spr_total_death6;
         enter = spr_enter6;
+        swim = spr_swim6;
     break;
     //Con túnica
     case 7:
@@ -148,6 +154,7 @@ switch(global.skin){
         death = spr_death7;
         total_death = spr_total_death7;
         enter = spr_enter7;
+        swim = spr_swim7;
     break;
 }
 //Para utilizar el gorro seleccionada

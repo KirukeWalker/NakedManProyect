@@ -114,7 +114,7 @@
         <sprite>sprites\spr_death2</sprite>
         <sprite>sprites\spr_total_death2</sprite>
         <sprite>sprites\spr_enter2</sprite>
-        <sprite>sprites\spr_swin2</sprite>
+        <sprite>sprites\spr_swim2</sprite>
       </sprites>
       <sprites name="Skin3">
         <sprite>sprites\spr_idle3</sprite>
@@ -153,6 +153,7 @@
         <sprite>sprites\spr_death5</sprite>
         <sprite>sprites\spr_total_death5</sprite>
         <sprite>sprites\spr_enter5</sprite>
+        <sprite>sprites\spr_swim5</sprite>
       </sprites>
       <sprites name="Skin6">
         <sprite>sprites\spr_idle6</sprite>
@@ -165,6 +166,7 @@
         <sprite>sprites\spr_death6</sprite>
         <sprite>sprites\spr_total_death6</sprite>
         <sprite>sprites\spr_enter6</sprite>
+        <sprite>sprites\spr_swim6</sprite>
       </sprites>
       <sprites name="Skin7">
         <sprite>sprites\spr_idle7</sprite>
@@ -177,6 +179,7 @@
         <sprite>sprites\spr_death7</sprite>
         <sprite>sprites\spr_total_death7</sprite>
         <sprite>sprites\spr_enter7</sprite>
+        <sprite>sprites\spr_swim7</sprite>
       </sprites>
       <sprites name="Hat1">
         <sprite>sprites\spr_hat_idle1_right</sprite>
