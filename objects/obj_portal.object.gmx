@@ -35,9 +35,12 @@ if(door.triggered == false){
     door.image_index = 0;
 }
 //Y luego entra naked man
-else if(door.image_index == door.image_number - 1){
+else if(door.image_index == door.image_number - 1 &amp;&amp; door.image_speed &gt; 0){
     obj_fade.fadeIn = false;
-    door.image_index = door.image_number - 2;
+    //door.image_index = door.image_number - 2;
+    door.image_speed = 0;
+    falling_hat = instance_create(x, y - 30, obj_falling_hat);
+    falling_hat.sprite_index = object5.hat_lone;
 }
 </string>
           </argument>

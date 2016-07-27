@@ -136,16 +136,16 @@ disparo = 0;
           <argument>
             <kind>1</kind>
             <string>//Get the keys
-key_up = keyboard_check_pressed(vk_up) || gamepad_axis_value(0,gp_axislv) &lt; -0.8 || gamepad_button_check_pressed(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
-key_down = keyboard_check_pressed(vk_down) || gamepad_axis_value(0,gp_axislv) &gt; 0.8 || gamepad_button_check_pressed(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
-key_shoot = keyboard_check_pressed(ord('C')) || gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2);
+key_up = keyboard_check(vk_up) || gamepad_axis_value(0,gp_axislv) &lt; -0.8 || gamepad_button_check(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
+key_down = keyboard_check(vk_down) || gamepad_axis_value(0,gp_axislv) &gt; 0.8 || gamepad_button_check(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
+key_shoot = keyboard_check(ord('C')) || gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2);
 
 //Switch to the next location
 if(can_switch == true){
     actual_position += -key_up + key_down;
     actual_position = clamp(actual_position, 0, 3);
-    //alarm_set(2, 5);
-    //can_switch = false;
+    alarm_set(2, 5);
+    can_switch = false;
 }
 //Move to the position
 if(abs(positionY[actual_position] - y) &gt; 15){
@@ -249,8 +249,8 @@ if(invincible == false &amp;&amp; status_dead == 0){
           <argument>
             <kind>1</kind>
             <string>//
-draw_text(30, 30, key_up);
-draw_text(30, 50, key_down);
+//draw_text(30, 30, key_up);
+//draw_text(30, 50, key_down);
 </string>
           </argument>
         </arguments>

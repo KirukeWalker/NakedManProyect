@@ -159,21 +159,58 @@ switch(global.skin){
 }
 //Para utilizar el gorro seleccionada
 switch(global.hat){
-    //Estándar
-    case 1:
-        hat_idle_left = spr_hat_idle1_left;
-        hat_idle_right = spr_hat_idle1_right;
-        hat_jump_left = spr_hat_jump1_left;
-        hat_jump_right = spr_hat_jump1_right;
-        hat_run_left = spr_hat_run1_left;
-        hat_run_right = spr_hat_run1_right;
-        hat_fall_left = spr_hat_fall1_left;
-        hat_fall_right = spr_hat_fall1_right;
-        hat_shoot_left = spr_hat_shoot1_left;
-        hat_shoot_right = spr_hat_shoot1_right;
+    //Crema
+    case 2:
+        hat_idle_left = spr_hat_idle2_left;
+        hat_idle_right = spr_hat_idle2_right;
+        hat_jump_left = spr_hat_jump2_left;
+        hat_jump_right = spr_hat_jump2_right;
+        hat_run_left = spr_hat_run2_left;
+        hat_run_right = spr_hat_run2_right;
+        hat_fall_left = spr_hat_fall2_left;
+        hat_fall_right = spr_hat_fall2_right;
+        hat_shoot_left = spr_hat_shoot2_left;
+        hat_shoot_right = spr_hat_shoot2_right;
+        hat_swim_left = spr_hat_swim2_left;
+        hat_swim_right = spr_hat_swim2_right;
+        hat_lone = spr_hat2;
+    break;
+    //Sombrilla
+    case 3:
+        hat_idle_left = spr_hat_idle3_left;
+        hat_idle_right = spr_hat_idle3_right;
+        hat_jump_left = spr_hat_jump3_left;
+        hat_jump_right = spr_hat_jump3_right;
+        hat_run_left = spr_hat_run3_left;
+        hat_run_right = spr_hat_run3_right;
+        hat_fall_left = spr_hat_fall3_left;
+        hat_fall_right = spr_hat_fall3_right;
+        hat_shoot_left = spr_hat_shoot3_left;
+        hat_shoot_right = spr_hat_shoot3_right;
+        hat_swim_left = spr_hat_swim3_left;
+        hat_swim_right = spr_hat_swim3_right;
+        hat_lone = spr_hat3;
+    break;
+    //Ciborg
+    case 5:
+        hat_idle_left = spr_hat_idle5_left;
+        hat_idle_right = spr_hat_idle5_right;
+        hat_jump_left = spr_hat_jump5_left;
+        hat_jump_right = spr_hat_jump5_right;
+        hat_run_left = spr_hat_run5_left;
+        hat_run_right = spr_hat_run5_right;
+        hat_fall_left = spr_hat_fall5_left;
+        hat_fall_right = spr_hat_fall5_right;
+        hat_shoot_left = spr_hat_shoot5_left;
+        hat_shoot_right = spr_hat_shoot5_right;
+        hat_swim_left = spr_hat_swim5_left;
+        hat_swim_right = spr_hat_swim5_right;
+        hat_lone = spr_hat5;
+    break;
+    default:
+        global.hat = 0;
     break;
 }
-
 //Seteamos cronómetro
 reloj = 0;
 alarm[1]=30;
@@ -557,6 +594,8 @@ if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
 {
     if(global.SOUNDS == 1)
         audio_play_sound(snd_die, 1, false);
+    falling_hat = instance_create(x, y-30, obj_falling_hat);
+    falling_hat.sprite_index = hat_lone;
     alarm_set(4, 30);
     status_dead = 1;
 }
@@ -795,27 +834,43 @@ if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == f
             <string>//Primero dibuja al moñaco, anda
 draw_self();
 //Control de gorro
-if(global.hat != 0){
+if(global.hat != 0 &amp;&amp; status_dead = 0 &amp;&amp; !place_meeting(x, y, obj_portal)){
     run_length = sprite_get_number(hat_run_right);
     if(image_xscale = 1){
-        if(vsp &lt; 0)
-            draw_sprite(hat_jump_right, 0, x, y);
+        if(vsp &lt; 0){
+            if(!place_meeting(x, y, Agua))
+                draw_sprite(hat_jump_right, 0, x, y);
+            else
+                draw_sprite(hat_swim_right, 0, x, y);
+        }
         else if(disparo == 1)
             draw_sprite(hat_shoot_right, 0, x, y); 
-        else if(vsp &gt; 0)
-            draw_sprite(hat_fall_right, 0, x, y);
+        else if(vsp &gt; 0){
+            if(!place_meeting(x, y, Agua))
+                draw_sprite(hat_fall_right, 0, x, y);
+            else
+                draw_sprite(hat_swim_right, 0, x, y);
+        }
         else if(hsp &gt; 0)
             draw_sprite(hat_run_right, image_index%run_length, x, y);
         else if(hsp == 0)
             draw_sprite(hat_idle_right, 0, x, y);
     }
     else{
-        if(vsp &lt; 0)
-            draw_sprite(hat_jump_left, 0, x, y);
+        if(vsp &lt; 0){
+            if(!place_meeting(x, y, Agua))
+                draw_sprite(hat_jump_left, 0, x, y);
+            else
+                draw_sprite(hat_swim_left, 0, x, y);
+        }
         else if(disparo == 1)
             draw_sprite(hat_shoot_left, 0, x, y);
-        else if(vsp &gt; 0)
-            draw_sprite(hat_fall_left, 0, x, y);
+        else if(vsp &gt; 0){
+            if(!place_meeting(x, y, Agua))
+                draw_sprite(hat_fall_left, 0, x, y);
+            else
+                draw_sprite(hat_swim_left, 0, x, y);
+        }
         else if(hsp &lt; 0)
             draw_sprite(hat_run_left, image_index%run_length, x, y);
         else if(hsp == 0)
