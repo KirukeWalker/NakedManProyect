@@ -101,14 +101,14 @@ obj_fade.alarm[1] = room_speed * 0.05;
             <string>draw_set_halign (fa_center);
 draw_set_font (fnt_creditos_peque);
 draw_set_colour (c_white);
-draw_text (x,y, "One day, The Clothes rebelled");
-draw_text (x,y+40, "and they preyed upon us.");
-draw_text (x,y+80, "The few survivors had to");
-draw_text (x,y+120, "renounce to their shame to survive");
-draw_text (x,y +160, "It's the duty of the Chosen Naked Man");
-draw_text (x,y+200, "to bring back The Clothes to their place.");
-draw_text (x,y+240, "");
-draw_text (x,y+280, "The Drawer");
+draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
+draw_text (room_width/2,y+80, "and they preyed upon us.");
+draw_text (room_width/2,y+120, "The few survivors had to");
+draw_text (room_width/2,y+160, "renounce to their shame to survive");
+draw_text (room_width/2,y+200, "It's the duty of the Chosen Naked Man");
+draw_text (room_width/2,y+240, "to bring back The Clothes to their place.");
+draw_text (room_width/2,y+280, "");
+draw_text (room_width/2,y+320, "The Drawer");
 
 </string>
           </argument>

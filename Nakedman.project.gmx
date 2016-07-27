@@ -79,6 +79,7 @@
     </sprites>
     <sprites name="Prota">
       <sprites name="Skin0">
+        <sprite>sprites\spr_runBig</sprite>
         <sprite>sprites\spr_idle</sprite>
         <sprite>sprites\spr_run</sprite>
         <sprite>sprites\spr_jump</sprite>
@@ -92,6 +93,7 @@
       </sprites>
       <sprites name="Skin1">
         <sprite>sprites\spr_idle1</sprite>
+        <sprite>sprites\spr_runBig1</sprite>
         <sprite>sprites\spr_skinBlack1</sprite>
         <sprite>sprites\spr_jump1</sprite>
         <sprite>sprites\spr_jumpshoot1</sprite>
@@ -105,6 +107,7 @@
       </sprites>
       <sprites name="Skin2">
         <sprite>sprites\spr_idle2</sprite>
+        <sprite>sprites\spr_runBig2</sprite>
         <sprite>sprites\spr_skinBlack2</sprite>
         <sprite>sprites\spr_jump2</sprite>
         <sprite>sprites\spr_jumpshoot2</sprite>
@@ -117,6 +120,7 @@
         <sprite>sprites\spr_swim2</sprite>
       </sprites>
       <sprites name="Skin3">
+        <sprite>sprites\spr_runBig3</sprite>
         <sprite>sprites\spr_idle3</sprite>
         <sprite>sprites\spr_skinBlack3</sprite>
         <sprite>sprites\spr_jump3</sprite>
@@ -130,6 +134,7 @@
         <sprite>sprites\spr_swim3</sprite>
       </sprites>
       <sprites name="Skin4">
+        <sprite>sprites\spr_runBig4</sprite>
         <sprite>sprites\spr_idle4</sprite>
         <sprite>sprites\spr_skinBlack4</sprite>
         <sprite>sprites\spr_jump4</sprite>
@@ -144,6 +149,7 @@
       </sprites>
       <sprites name="Skin5">
         <sprite>sprites\spr_idle5</sprite>
+        <sprite>sprites\spr_runBig5</sprite>
         <sprite>sprites\spr_skinBlack5</sprite>
         <sprite>sprites\spr_jump5</sprite>
         <sprite>sprites\spr_jumpshoot5</sprite>
@@ -157,6 +163,7 @@
       </sprites>
       <sprites name="Skin6">
         <sprite>sprites\spr_idle6</sprite>
+        <sprite>sprites\spr_runBig6</sprite>
         <sprite>sprites\spr_skinBlack6</sprite>
         <sprite>sprites\spr_jump6</sprite>
         <sprite>sprites\spr_jumpshoot6</sprite>
@@ -169,6 +176,7 @@
         <sprite>sprites\spr_swim6</sprite>
       </sprites>
       <sprites name="Skin7">
+        <sprite>sprites\spr_runBig7</sprite>
         <sprite>sprites\spr_idle7</sprite>
         <sprite>sprites\spr_skinBlack7</sprite>
         <sprite>sprites\spr_jump7</sprite>
@@ -187,6 +195,7 @@
         <sprite>sprites\spr_hat_jump2_right</sprite>
         <sprite>sprites\spr_hat_jump2_left</sprite>
         <sprite>sprites\spr_hat_run2_right</sprite>
+        <sprite>sprites\spr_hat_runBig2</sprite>
         <sprite>sprites\spr_hat_run2_left</sprite>
         <sprite>sprites\spr_hat_fall2_right</sprite>
         <sprite>sprites\spr_hat_fall2_left</sprite>
@@ -202,6 +211,7 @@
         <sprite>sprites\spr_hat_jump3_right</sprite>
         <sprite>sprites\spr_hat_jump3_left</sprite>
         <sprite>sprites\spr_hat_run3_right</sprite>
+        <sprite>sprites\spr_hat_runBig3</sprite>
         <sprite>sprites\spr_hat_run3_left</sprite>
         <sprite>sprites\spr_hat_fall3_right</sprite>
         <sprite>sprites\spr_hat_fall3_left</sprite>
@@ -216,7 +226,7 @@
         <sprite>sprites\spr_hat_idle5_left</sprite>
         <sprite>sprites\spr_hat_jump5_right</sprite>
         <sprite>sprites\spr_hat_jump5_left</sprite>
-        <sprite>sprites\spr_hat_run5_right</sprite>
+        <sprite>sprites\spr_hat_runBig5</sprite>
         <sprite>sprites\spr_hat_run5_left</sprite>
         <sprite>sprites\spr_hat_fall5_right</sprite>
         <sprite>sprites\spr_hat_fall5_left</sprite>
