@@ -182,9 +182,9 @@ switch(status){
           <argument>
             <kind>1</kind>
             <string>//Position stuff
-draw_set_color(c_white);
-//draw_text(30, 30, alarm[0]);
-//draw_text(30, 50, alarm[1]);
+//draw_set_color(c_white);
+//draw_text(30, 30, x);
+//draw_text(30, 50, status);
 </string>
           </argument>
         </arguments>

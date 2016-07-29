@@ -54,8 +54,8 @@ if room=Nivel_Nieve &amp;&amp; instance_exists(obj_snow) {
           <argument>
             <kind>1</kind>
             <string>if instance_exists(obj_camera2) {
-    x=obj_camera2.x 
-    y=obj_camera2.y
+    x = view_xview;
+    y = view_yview;
 }
 </string>
           </argument>

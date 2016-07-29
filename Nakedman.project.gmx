@@ -226,7 +226,7 @@
         <sprite>sprites\spr_hat_idle5_left</sprite>
         <sprite>sprites\spr_hat_jump5_right</sprite>
         <sprite>sprites\spr_hat_jump5_left</sprite>
-        <sprite>sprites\spr_hat_runBig5</sprite>
+        <sprite>sprites\spr_hat_run5_right</sprite>
         <sprite>sprites\spr_hat_run5_left</sprite>
         <sprite>sprites\spr_hat_fall5_right</sprite>
         <sprite>sprites\spr_hat_fall5_left</sprite>
@@ -235,6 +235,9 @@
         <sprite>sprites\spr_hat_swim5_right</sprite>
         <sprite>sprites\spr_hat_swim5_left</sprite>
         <sprite>sprites\spr_hat5</sprite>
+        <sprite>sprites\spr_hat_runBig5</sprite>
+        <sprite>sprites\spr_hat5_enter</sprite>
+        <sprite>sprites\spr_hat5_death</sprite>
       </sprites>
     </sprites>
     <sprites name="Proyectiles">

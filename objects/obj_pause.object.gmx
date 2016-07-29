@@ -28,6 +28,31 @@
             <string>pause = 0;
 pausepos = 0;
 //audio_pause_all();
+can_switch = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+can_switch = true;
 </string>
           </argument>
         </arguments>
@@ -50,7 +75,24 @@ pausepos = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_escape)) || (gamepad_button_check_pressed(0,gp_start)) {
+            <string>//Get the keys
+key_up = keyboard_check(vk_up) || gamepad_axis_value(0,gp_axislv) &lt; -0.8 || gamepad_button_check(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
+key_down = keyboard_check(vk_down) || gamepad_axis_value(0,gp_axislv) &gt; 0.8 || gamepad_button_check(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
+key_okey = keyboard_check(vk_enter) || gamepad_button_check_pressed(0,gp_face1);
+key_pause = keyboard_check(vk_escape) || gamepad_button_check_pressed(0,gp_start);
+key_cancel = gamepad_button_check_pressed(0,gp_face2);
+
+//Control para que no vaya to loco (esta así para trabajar también con el joystick)
+if(can_switch == true &amp;&amp; pause == 1){
+    pausepos += -key_up + key_down;
+    pausepos = clamp(pausepos, 0, 2); //Aquí cantidad de opciones
+    if(instance_exists(obj_Menu1Selector))
+        obj_Menu1Selector.y=view_yview+280+(64*pausepos);
+    alarm_set(0, 5);
+    can_switch = false;
+}
+//
+if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
     if (!pause) {
         pause = 1;
         if room=Nivel_Bosque{
@@ -67,7 +109,7 @@ pausepos = 0;
     }
 }
 
-if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter)) &amp;&amp; pause=1 &amp;&amp; pausepos=0 {
+if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp;&amp; pausepos=0 {
     pause = 0;
     if room=Nivel_Bosque{
         rain = part_system_create();    //Creamos el generador de nieve
@@ -110,11 +152,13 @@ if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter
     }
 }
 
-if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter)) &amp;&amp; pause=1 &amp;&amp; pausepos=1 {
+if !instance_exists(obj_blackScreen) &amp;&amp; key_okey 
+    &amp;&amp; pause=1 &amp;&amp; pausepos=1 {
     script_execute(scr_menu1options);
 }
 
-if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter)) &amp;&amp; pause=1 &amp;&amp; pausepos=2 {
+if !instance_exists(obj_blackScreen) &amp;&amp; key_okey 
+    &amp;&amp; pause=1 &amp;&amp; pausepos=2 {
     audio_stop_all();
     if global.MUSIC=true{
         audio_play_sound(snd_intro,1,true);
@@ -122,7 +166,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter
     room_goto(Menu);
 }
 
-if !instance_exists(obj_blackScreen) &amp;&amp; pause==1 &amp;&amp; keyboard_check_pressed(vk_down){
+/*if !instance_exists(obj_blackScreen) &amp;&amp; pause==1 &amp;&amp; keyboard_check_pressed(vk_down){
     if pausepos=2 {
         pausepos=0;
         obj_Menu1Selector.y=view_yview+340-60
@@ -142,7 +186,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; pause==1 &amp;&amp; keyboard_che
         pausepos--;
         obj_Menu1Selector.y=obj_Menu1Selector.y-64
     }
-}
+}*/
 
 
 /*if (pause = 1) &amp;&amp; ((gamepad_button_check_pressed(0,gp_face3)) || keyboard_check_pressed(ord('Q'))) {

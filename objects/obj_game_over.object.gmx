@@ -25,12 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(ord('Q')) || (gamepad_button_check(0,gp_face3) || joystick_check_button(2, 2))) &amp;&amp; (global.vida = 0){
+            <string>if ((keyboard_check(ord('Q')) || gamepad_button_check(0,gp_face3) || joystick_check_button(2, 2)) 
+    &amp;&amp; global.vida = 0){
     if room=Nivel_Bosque part_system_destroy(obj_lluvia.rain);
     if room=Nivel_Nieve part_system_destroy(obj_snow.snow);
     room_goto(Menu);
     }
-if (keyboard_check(vk_enter) || (gamepad_button_check(0,gp_face4) || joystick_check_button(2, 3))) &amp;&amp; (global.vida = 0){
+if ((keyboard_check(vk_enter) || gamepad_button_check(0,gp_face4) || joystick_check_button(2, 3)
+    || keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_start) ) 
+    &amp;&amp; global.vida = 0){
     if room=Nivel_Bosque part_system_destroy(obj_lluvia.rain);
     if room=Nivel_Nieve part_system_destroy(obj_snow.snow);
     room_restart();
