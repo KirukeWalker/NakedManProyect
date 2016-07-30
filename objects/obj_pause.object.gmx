@@ -83,10 +83,10 @@ key_pause = keyboard_check(vk_escape) || gamepad_button_check_pressed(0,gp_start
 key_cancel = gamepad_button_check_pressed(0,gp_face2);
 
 //Control para que no vaya to loco (esta así para trabajar también con el joystick)
-if(can_switch == true &amp;&amp; pause == 1){
+if(can_switch == true &amp;&amp; pause == 1 &amp;&amp; !instance_exists(obj_blackScreen)){
     pausepos += -key_up + key_down;
     pausepos = clamp(pausepos, 0, 2); //Aquí cantidad de opciones
-    if(instance_exists(obj_Menu1Selector))
+    if(instance_exists(obj_Menu1Selector))//Para evitar error
         obj_Menu1Selector.y=view_yview+280+(64*pausepos);
     alarm_set(0, 5);
     can_switch = false;
@@ -155,6 +155,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
 if !instance_exists(obj_blackScreen) &amp;&amp; key_okey 
     &amp;&amp; pause=1 &amp;&amp; pausepos=1 {
     script_execute(scr_menu1options);
+    pausepos = 0;
 }
 
 if !instance_exists(obj_blackScreen) &amp;&amp; key_okey 
