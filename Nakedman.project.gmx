@@ -189,6 +189,21 @@
         <sprite>sprites\spr_enter7</sprite>
         <sprite>sprites\spr_swim7</sprite>
       </sprites>
+      <sprites name="Hat1">
+        <sprite>sprites\spr_hat_idle1_right</sprite>
+        <sprite>sprites\spr_hat_idle1_left</sprite>
+        <sprite>sprites\spr_hat_jump1_right</sprite>
+        <sprite>sprites\spr_hat_jump1_left</sprite>
+        <sprite>sprites\spr_hat_run1_right</sprite>
+        <sprite>sprites\spr_hat_run1_left</sprite>
+        <sprite>sprites\spr_hat_fall1_right</sprite>
+        <sprite>sprites\spr_hat_fall1_left</sprite>
+        <sprite>sprites\spr_hat_shoot1_right</sprite>
+        <sprite>sprites\spr_hat_shoot1_left</sprite>
+        <sprite>sprites\spr_hat_swim1_right</sprite>
+        <sprite>sprites\spr_hat_swim1_left</sprite>
+        <sprite>sprites\spr_hat1</sprite>
+      </sprites>
       <sprites name="Hat2">
         <sprite>sprites\spr_hat_idle2_right</sprite>
         <sprite>sprites\spr_hat_idle2_left</sprite>
