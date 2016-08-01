@@ -75,19 +75,25 @@ can_switch = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get the keys
-key_up = keyboard_check(vk_up) || gamepad_axis_value(0,gp_axislv) &lt; -0.8 || gamepad_button_check(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
-key_down = keyboard_check(vk_down) || gamepad_axis_value(0,gp_axislv) &gt; 0.8 || gamepad_button_check(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
-key_okey = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1);
-key_cancel = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_start) ||gamepad_button_check_pressed(0,gp_face2);
-//Move between it
+            <string>//Reset the keys
+key_up = 0;
+key_down = 0;
+//Get the stick
 if(can_switch == true){
-    optionspos += -key_up + key_down;
-    optionspos = clamp(optionspos, 0, 4); //Aquí cantidad de opciones
-    obj_Menu1Selector.y=view_yview+178+(60*optionspos);
+    key_up = gamepad_axis_value(0,gp_axislv) &lt; -0.8;
+    key_down = gamepad_axis_value(0,gp_axislv) &gt; 0.8;
     alarm_set(0, 5);
     can_switch = false;
 }
+//Get the keys
+key_up = key_up || keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
+key_down = key_down || keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
+key_okey = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1);
+key_cancel = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_start) ||gamepad_button_check_pressed(0,gp_face2);
+//Move between it
+    optionspos += -key_up + key_down;
+    optionspos = clamp(optionspos, 0, 4); //Aquí cantidad de opciones
+    obj_Menu1Selector.y=view_yview+178+(60*optionspos);
 /*
 if keyboard_check_pressed(vk_down){
     if optionspos=4 {

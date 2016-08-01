@@ -135,18 +135,25 @@ disparo = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get the keys
-key_up = keyboard_check(vk_up) || gamepad_axis_value(0,gp_axislv) &lt; -0.8 || gamepad_button_check(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
-key_down = keyboard_check(vk_down) || gamepad_axis_value(0,gp_axislv) &gt; 0.8 || gamepad_button_check(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
-key_shoot = keyboard_check(ord('C')) || gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2);
-
-//Switch to the next location
+            <string>//Reset the keys
+key_up = 0;
+key_down = 0;
+//Get the stick
 if(can_switch == true){
-    actual_position += -key_up + key_down;
-    actual_position = clamp(actual_position, 0, 3);
+    key_up = gamepad_axis_value(0,gp_axislv) &lt; -0.8;
+    key_down = gamepad_axis_value(0,gp_axislv) &gt; 0.8;
     alarm_set(2, 5);
     can_switch = false;
 }
+//Get the keys
+key_up = key_up || keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
+key_down = key_down || keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
+key_shoot = keyboard_check(ord('C')) || gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2);
+
+//Switch to the next location
+actual_position += -key_up + key_down;
+actual_position = clamp(actual_position, 0, 3);
+
 //Move to the position
 if(abs(positionY[actual_position] - y) &gt; 15){
     vspeed = sign(positionY[actual_position] - y) * 10;

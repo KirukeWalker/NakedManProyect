@@ -75,21 +75,29 @@ can_switch = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get the keys
-key_up = keyboard_check(vk_up) || gamepad_axis_value(0,gp_axislv) &lt; -0.8 || gamepad_button_check(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
-key_down = keyboard_check(vk_down) || gamepad_axis_value(0,gp_axislv) &gt; 0.8 || gamepad_button_check(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
+            <string>//Reset the keys
+key_up = 0;
+key_down = 0;
+//Get the stick
+if(can_switch == true){
+    key_up = gamepad_axis_value(0,gp_axislv) &lt; -0.8;
+    key_down = gamepad_axis_value(0,gp_axislv) &gt; 0.8;
+    alarm_set(0, 5);
+    can_switch = false;
+}
+//Get the keys
+key_up = key_up || keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(0,gp_padu)/* || joystick_ypos(2) &lt; 0.2*/;
+key_down = key_down || keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(0,gp_padd)/* || joystick_ypos(2) &gt; 0.2*/;
 key_okey = keyboard_check(vk_enter) || gamepad_button_check_pressed(0,gp_face1);
 key_pause = keyboard_check(vk_escape) || gamepad_button_check_pressed(0,gp_start);
 key_cancel = gamepad_button_check_pressed(0,gp_face2);
 
 //Control para que no vaya to loco (esta así para trabajar también con el joystick)
-if(can_switch == true &amp;&amp; pause == 1 &amp;&amp; !instance_exists(obj_blackScreen)){
+if(pause == 1 &amp;&amp; !instance_exists(obj_blackScreen)){
     pausepos += -key_up + key_down;
     pausepos = clamp(pausepos, 0, 2); //Aquí cantidad de opciones
     if(instance_exists(obj_Menu1Selector))//Para evitar error
         obj_Menu1Selector.y=view_yview+280+(64*pausepos);
-    alarm_set(0, 5);
-    can_switch = false;
 }
 //
 if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {

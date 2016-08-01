@@ -852,45 +852,45 @@ draw_self();
 //Control de gorro
 if(global.hat != 0 &amp;&amp; status_dead = 0 &amp;&amp; !place_meeting(x, y, obj_portal)){
     run_length = sprite_get_number(hat_run_right);
-    if(image_xscale = 1){
+    if(image_xscale == 1){
         if(vsp &lt; 0){
             if(!place_meeting(x, y, Agua))
-                draw_sprite(hat_jump_right, 0, x, y);
+                draw_sprite(hat_jump_right, delta_time % sprite_get_number(hat_jump_right), x, y);
             else
-                draw_sprite(hat_swim_right, 0, x, y);
+                draw_sprite(hat_swim_right, delta_time % sprite_get_number(hat_swim_right), x, y);
         }
         else if(disparo == 1)
-            draw_sprite(hat_shoot_right, 0, x, y); 
+            draw_sprite(hat_shoot_right, delta_time % sprite_get_number(hat_shoot_right), x, y); 
         else if(vsp &gt; 0){
             if(!place_meeting(x, y, Agua))
-                draw_sprite(hat_fall_right, 0, x, y);
+                draw_sprite(hat_fall_right, delta_time % sprite_get_number(hat_fall_right), x, y);
             else
-                draw_sprite(hat_swim_right, 0, x, y);
+                draw_sprite(hat_swim_right, delta_time % sprite_get_number(hat_swim_right), x, y);
         }
         else if(hsp &gt; 0)
-            draw_sprite(hat_run_right, image_index%run_length, x, y);
+            draw_sprite(hat_run_right, delta_time % sprite_get_number(hat_run_right), x, y);
         else if(hsp == 0)
-            draw_sprite(hat_idle_right, 0, x, y);
+            draw_sprite(hat_idle_right, delta_time % sprite_get_number(hat_idle_right), x, y);
     }
     else{
         if(vsp &lt; 0){
             if(!place_meeting(x, y, Agua))
-                draw_sprite(hat_jump_left, 0, x, y);
+                draw_sprite(hat_jump_left, delta_time % sprite_get_number(hat_jump_left), x, y);
             else
-                draw_sprite(hat_swim_left, 0, x, y);
+                draw_sprite(hat_swim_left, delta_time % sprite_get_number(hat_swim_left), x, y);
         }
         else if(disparo == 1)
-            draw_sprite(hat_shoot_left, 0, x, y);
+            draw_sprite(hat_shoot_left, delta_time % sprite_get_number(hat_shoot_left), x, y);
         else if(vsp &gt; 0){
             if(!place_meeting(x, y, Agua))
-                draw_sprite(hat_fall_left, 0, x, y);
+                draw_sprite(hat_fall_left, delta_time % sprite_get_number(hat_fall_left), x, y);
             else
-                draw_sprite(hat_swim_left, 0, x, y);
+                draw_sprite(hat_swim_left, delta_time % sprite_get_number(hat_swim_left), x, y);
         }
         else if(hsp &lt; 0)
-            draw_sprite(hat_run_left, image_index%run_length, x, y);
+            draw_sprite(hat_run_left, delta_time % sprite_get_number(hat_run_left), x, y);
         else if(hsp == 0)
-            draw_sprite(hat_idle_left, 0, x, y);
+            draw_sprite(hat_idle_left, delta_time % sprite_get_number(hat_idle_left), x, y);
     }
 }
 </string>
