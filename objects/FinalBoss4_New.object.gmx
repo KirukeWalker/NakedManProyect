@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
-running_speed = 6;
+running_speed = 5;
 apply_gravity = false;
 
 status = 0;
@@ -61,7 +61,7 @@ if(apply_gravity == true){
 switch(status){
     //Espera a que el prota llegue donde debe
     case 0:
-        if(object5.x &gt; 480){
+        if(object5.x &gt; 200){
             status = 1;
             apply_gravity = true;
             hspeed = running_speed;
@@ -115,7 +115,7 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain)){
             <kind>1</kind>
             <string>//Salta
 if(other.triggered == false){
-    vspeed -= 20;
+    vspeed -= 27;
     sprite_index = spr_boss4_jump;
     other.triggered = true;
 }

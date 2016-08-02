@@ -422,7 +422,7 @@ else if(status_dead = 1 || status_locked = true)
 else 
     move = key_left + key_right;        //Aplicamos los valores de las teclas de dirección
 //Acelaración
-if(move != 0 &amp;&amp; abs(actual_speed) &lt; movespeed &amp;&amp; disparo == 0) 
+if(move != 0 &amp;&amp; abs(actual_speed) &lt;= movespeed &amp;&amp; disparo == 0) 
     actual_speed += 1;
 else if(actual_speed != 0)  
     actual_speed -= 1;
