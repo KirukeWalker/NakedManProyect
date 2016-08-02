@@ -85,12 +85,61 @@ switch(status){
 }
 
 //Chequeo para no colisionar
-if(place_meeting(x, y + vspeed, obj_solid_terrain)){
+if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; hspeed &gt; 0){
     while(place_meeting(x, y + vspeed, obj_solid_terrain)){
         vspeed -= sign(vspeed);
+        //vspeed --;
     }
     sprite_index = spr_boss4_sliding;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_runner">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+hspeed = running_speed
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_faller">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+hspeed = 0;
 </string>
           </argument>
         </arguments>
@@ -115,9 +164,36 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain)){
             <kind>1</kind>
             <string>//Salta
 if(other.triggered == false){
-    vspeed -= 27;
+    vspeed -= 30;
     sprite_index = spr_boss4_jump;
     other.triggered = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_hielo">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+with(other){
+    script_execute(scr_generate_fragments, other);
+    instance_destroy();
 }
 </string>
           </argument>

@@ -74,7 +74,8 @@ start_falling = true;
           <argument>
             <kind>1</kind>
             <string>//Start the count
-if(place_meeting(x, y - 1, object5) &amp;&amp; alarm[0] &lt; 0)
+if((place_meeting(x, y - 1, object5) || place_meeting(x, y - 1, FinalBoss4_New))
+    &amp;&amp; alarm[0] &lt; 0)
     alarm_set(0, 30);
     
 //Fall and destroy
