@@ -236,6 +236,21 @@
         <sprite>sprites\spr_hat_swim3_left</sprite>
         <sprite>sprites\spr_hat3</sprite>
       </sprites>
+      <sprites name="Hat4">
+        <sprite>sprites\spr_hat_idle4_right</sprite>
+        <sprite>sprites\spr_hat_idle4_left</sprite>
+        <sprite>sprites\spr_hat_jump4_right</sprite>
+        <sprite>sprites\spr_hat_jump4_left</sprite>
+        <sprite>sprites\spr_hat_run4_right</sprite>
+        <sprite>sprites\spr_hat_run4_left</sprite>
+        <sprite>sprites\spr_hat_fall4_right</sprite>
+        <sprite>sprites\spr_hat_fall4_left</sprite>
+        <sprite>sprites\spr_hat_shoot4_right</sprite>
+        <sprite>sprites\spr_hat_shoot4_left</sprite>
+        <sprite>sprites\spr_hat_swim4_right</sprite>
+        <sprite>sprites\spr_hat_swim4_left</sprite>
+        <sprite>sprites\spr_hat4</sprite>
+      </sprites>
       <sprites name="Hat5">
         <sprite>sprites\spr_hat_idle5_right</sprite>
         <sprite>sprites\spr_hat_idle5_left</sprite>
@@ -625,6 +640,7 @@
       <object>objects\obj_hat_testR</object>
     </objects>
     <object>objects\obj_falling_hat</object>
+    <object>objects\obj_hat</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>

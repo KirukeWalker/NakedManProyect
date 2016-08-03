@@ -157,6 +157,9 @@ switch(global.skin){
         swim = spr_swim7;
     break;
 }
+//Create a object for the hat
+if(global.hat != 0)
+    hat = instance_create(x, y, obj_hat);
 //Para utilizar el gorro seleccionada
 switch(global.hat){
     //Llamas
@@ -207,6 +210,22 @@ switch(global.hat){
         hat_swim_right = spr_hat_swim3_right;
         hat_lone = spr_hat3;
     break;
+    //Navidad
+    case 4:
+        hat_idle_left = spr_hat_idle4_left;
+        hat_idle_right = spr_hat_idle4_right;
+        hat_jump_left = spr_hat_jump4_left;
+        hat_jump_right = spr_hat_jump4_right;
+        hat_run_left = spr_hat_run4_left;
+        hat_run_right = spr_hat_run4_right;
+        hat_fall_left = spr_hat_fall4_left;
+        hat_fall_right = spr_hat_fall4_right;
+        hat_shoot_left = spr_hat_shoot4_left;
+        hat_shoot_right = spr_hat_shoot4_right;
+        hat_swim_left = spr_hat_swim4_left;
+        hat_swim_right = spr_hat_swim4_right;
+        hat_lone = spr_hat4;
+    break;
     //Ciborg
     case 5:
         hat_idle_left = spr_hat_idle5_left;
@@ -222,6 +241,9 @@ switch(global.hat){
         hat_swim_left = spr_hat_swim5_left;
         hat_swim_right = spr_hat_swim5_right;
         hat_lone = spr_hat5;
+        //Propios de este
+        hat_enter = spr_hat5_enter;
+        hat_death = spr_hat5_death;
     break;
     default:
         global.hat = 0;
@@ -553,7 +575,7 @@ if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2)  || joystick_ch
         alarm[0] = 15;
     }
 }
-//Animaciones
+//Animaciones (ahora al gorro también)
 if(vsp == 0)
 {
     if(status_dead = 1 &amp;&amp; complete_death == 0) {
@@ -564,32 +586,46 @@ if(vsp == 0)
         }
     } 
     else if (complete_death == 0){    
-        if(hsp != 0) 
-            sprite_index = run; 
+        if(hsp != 0){
+            sprite_index = run;
+            hat.sprite_index = hat_run_right;
+        }
         else 
         {
-            if(disparo &gt; 0) 
+            if(disparo &gt; 0){
                 sprite_index = shoot;
+                hat.sprite_index = hat_shoot_right;
+            }
             else if (place_meeting(x, y, obj_portal)){
                 sprite_index = enter;
                 if(obj_fade.fadeIn = true)
                     image_index = 0;
             }
-            else 
+            else{
                 sprite_index = idle;
+                hat.sprite_index = hat_idle_right;
+            }
         }
     }
 }
 else
 {
-    if (disparo &gt; 0) 
+    if (disparo &gt; 0){
         sprite_index = jumpshoot;
-    else if (place_meeting(x, y, Agua)) 
+        hat.sprite_index = hat_jump_right;
+    }
+    else if (place_meeting(x, y, Agua)){
         sprite_index = swim;
-    else if (vsp &lt; 0) 
+        hat.sprite_index = hat_swim_right;
+    }
+    else if (vsp &lt; 0){
         sprite_index = jump;
-    else if (vsp &gt; 0) 
+        hat.sprite_index = hat_jump_right;
+    }
+    else if (vsp &gt; 0){
         sprite_index = fall;
+        hat.sprite_index = hat_fall_right;
+    }
 }
 //Control de muerte
 if(status_locked == false){
@@ -610,6 +646,7 @@ if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
 {
     if(global.SOUNDS == 1)
         audio_play_sound(snd_die, 1, false);
+    with(hat) instance_destroy();
     falling_hat = instance_create(x, y-30, obj_falling_hat);
     falling_hat.sprite_index = hat_lone;
     alarm_set(4, 30);
@@ -847,7 +884,7 @@ other.sprite_index = spr_pinchos_sangre;
           <argument>
             <kind>1</kind>
             <string>//Check stuff
-//draw_text(50, 50, move);
+//draw_text(50, 50, current_time);
 //draw_text(50, 70, actual_speed);
 //draw_text(50, 90, hsp);
 </string>
@@ -875,27 +912,26 @@ other.sprite_index = spr_pinchos_sangre;
             <string>//Primero dibuja al moñaco, anda
 draw_self();
 //Control de gorro
-if(global.hat != 0 &amp;&amp; status_dead = 0 &amp;&amp; !place_meeting(x, y, obj_portal)){
-    run_length = sprite_get_number(hat_run_right);
+/*if(global.hat != 0 &amp;&amp; status_dead = 0 &amp;&amp; !place_meeting(x, y, obj_portal)){
     if(image_xscale == 1){
         if(vsp &lt; 0){
             if(!place_meeting(x, y, Agua))
-                draw_sprite(hat_jump_right, delta_time % sprite_get_number(hat_jump_right), x, y);
+                draw_sprite(hat_jump_right, current_time % (sprite_get_number(hat_jump_right) - 1), x, y);
             else
-                draw_sprite(hat_swim_right, delta_time % sprite_get_number(hat_swim_right), x, y);
+                draw_sprite(hat_swim_right, current_time % (sprite_get_number(hat_swim_right) - 1), x, y);
         }
         else if(disparo == 1)
-            draw_sprite(hat_shoot_right, delta_time % sprite_get_number(hat_shoot_right), x, y); 
+            draw_sprite(hat_shoot_right, current_time % (sprite_get_number(hat_shoot_right) - 1), x, y); 
         else if(vsp &gt; 0){
             if(!place_meeting(x, y, Agua))
-                draw_sprite(hat_fall_right, delta_time % sprite_get_number(hat_fall_right), x, y);
+                draw_sprite(hat_fall_right, current_time % (sprite_get_number(hat_fall_right) - 1), x, y);
             else
-                draw_sprite(hat_swim_right, delta_time % sprite_get_number(hat_swim_right), x, y);
+                draw_sprite(hat_swim_right, current_time % (sprite_get_number(hat_swim_right) - 1), x, y);
         }
         else if(hsp &gt; 0)
-            draw_sprite(hat_run_right, delta_time % sprite_get_number(hat_run_right), x, y);
+            draw_sprite(hat_run_right, current_time % (sprite_get_number(hat_run_right) - 1), x, y);
         else if(hsp == 0)
-            draw_sprite(hat_idle_right, delta_time % sprite_get_number(hat_idle_right), x, y);
+            draw_sprite(hat_idle_right, current_time % (sprite_get_number(hat_idle_right) - 1), x, y);
     }
     else{
         if(vsp &lt; 0){
@@ -917,7 +953,7 @@ if(global.hat != 0 &amp;&amp; status_dead = 0 &amp;&amp; !place_meeting(x, y, ob
         else if(hsp == 0)
             draw_sprite(hat_idle_left, delta_time % sprite_get_number(hat_idle_left), x, y);
     }
-}
+}*/
 </string>
           </argument>
         </arguments>

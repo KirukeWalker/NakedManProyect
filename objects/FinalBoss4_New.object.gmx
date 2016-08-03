@@ -85,7 +85,7 @@ switch(status){
 }
 
 //Chequeo para no colisionar
-if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; hspeed &gt; 0){
+if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; hspeed &gt; 0 &amp;&amp; vspeed &gt; 0){
     while(place_meeting(x, y + vspeed, obj_solid_terrain)){
         vspeed -= sign(vspeed);
         //vspeed --;
