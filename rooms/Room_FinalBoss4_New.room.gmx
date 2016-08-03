@@ -355,55 +355,50 @@
     <instance objName="obj_nieve_pisable" x="3296" y="448" name="inst_BE41A925" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3328" y="448" name="inst_68CEF9E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3360" y="448" name="inst_117A3F64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3392" y="448" name="inst_86B7C9E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3424" y="416" name="inst_07BB75DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3456" y="416" name="inst_88CA0ACB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3488" y="384" name="inst_5EB24A4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="352" name="inst_F2D231EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="320" name="inst_D1BF9035" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="288" name="inst_631ECF62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="256" name="inst_2D67C1F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="224" name="inst_8EC113C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="160" name="inst_BB2447D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="192" name="inst_462D9EEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3552" y="160" name="inst_797508B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="160" name="inst_9838BB71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="192" name="inst_E0EE7F8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="224" name="inst_71A4B2D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="256" name="inst_46C6D5A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="288" name="inst_2B408F8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="320" name="inst_707C8752" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="352" name="inst_09C5B02F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="384" name="inst_21DA3FF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="416" name="inst_BC26E4C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="448" name="inst_85D231FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3616" y="448" name="inst_6A7FFDFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3648" y="448" name="inst_96467671" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3680" y="448" name="inst_F80E7EE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3712" y="448" name="inst_A841EB26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="448" name="inst_A42407BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="224" name="inst_BFB3371F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="192" name="inst_F83731CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="160" name="inst_7CDC8BFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="128" name="inst_E837375A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="96" name="inst_F762CA28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="64" name="inst_5F70AD76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="32" name="inst_C4C46BA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3552" y="448" name="inst_86B7C9E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3584" y="416" name="inst_07BB75DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3616" y="416" name="inst_88CA0ACB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="352" name="inst_F2D231EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="320" name="inst_D1BF9035" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="288" name="inst_631ECF62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="256" name="inst_2D67C1F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="224" name="inst_8EC113C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="160" name="inst_BB2447D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="192" name="inst_462D9EEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3712" y="160" name="inst_797508B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="160" name="inst_9838BB71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="192" name="inst_E0EE7F8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="224" name="inst_71A4B2D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="256" name="inst_46C6D5A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="288" name="inst_2B408F8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="320" name="inst_707C8752" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="352" name="inst_09C5B02F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="384" name="inst_21DA3FF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="416" name="inst_BC26E4C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="448" name="inst_85D231FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3776" y="448" name="inst_6A7FFDFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3808" y="448" name="inst_96467671" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3840" y="448" name="inst_F80E7EE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3872" y="448" name="inst_A841EB26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="448" name="inst_A42407BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="224" name="inst_BFB3371F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="192" name="inst_F83731CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="160" name="inst_7CDC8BFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="128" name="inst_E837375A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="96" name="inst_F762CA28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="64" name="inst_5F70AD76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="32" name="inst_C4C46BA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3360" y="0" name="inst_CF31194E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3200" y="0" name="inst_67D26A52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3328" y="0" name="inst_BEE2D118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="256" name="inst_049F7F91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3776" y="256" name="inst_0BBED92C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3808" y="256" name="inst_D32C05F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3840" y="256" name="inst_E9729D0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3872" y="256" name="inst_38A9BCB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3904" y="256" name="inst_3F4CD48A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="256" name="inst_049F7F91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3936" y="256" name="inst_0BBED92C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3968" y="256" name="inst_D32C05F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4000" y="256" name="inst_E9729D0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4032" y="256" name="inst_38A9BCB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4064" y="256" name="inst_3F4CD48A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3840" y="448" name="inst_4791C90A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3872" y="448" name="inst_97DC9DE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="4032" y="448" name="inst_EB78A28C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="4064" y="448" name="inst_C54FE16B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="4096" y="448" name="inst_DDD5C485" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="4128" y="448" name="inst_8BF7E8C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="2976" y="448" name="inst_D2967C36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3008" y="448" name="inst_23C9339F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3040" y="448" name="inst_99B1BFED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -420,18 +415,18 @@
     <instance objName="obj_nieve_pisable" x="1856" y="448" name="inst_A6C353C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="1824" y="448" name="inst_CA3DBA8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="1792" y="448" name="inst_4E8FAFB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3392" y="0" name="inst_52F5E390" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3424" y="0" name="inst_3FAE4B93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3456" y="0" name="inst_A0B93678" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3488" y="0" name="inst_AC664023" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="0" name="inst_E20A8137" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3552" y="0" name="inst_F99438AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3584" y="0" name="inst_ADD32FE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3616" y="0" name="inst_957E8C8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3648" y="0" name="inst_6FB0CEAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3680" y="0" name="inst_16AF30FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3712" y="0" name="inst_065A4497" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3744" y="0" name="inst_A4829902" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3552" y="0" name="inst_52F5E390" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3584" y="0" name="inst_3FAE4B93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3616" y="0" name="inst_A0B93678" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3648" y="0" name="inst_AC664023" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="0" name="inst_E20A8137" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3712" y="0" name="inst_F99438AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3744" y="0" name="inst_ADD32FE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3776" y="0" name="inst_957E8C8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3808" y="0" name="inst_6FB0CEAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3840" y="0" name="inst_16AF30FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3872" y="0" name="inst_065A4497" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3904" y="0" name="inst_A4829902" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3936" y="256" name="inst_A70AEB69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3968" y="256" name="inst_913CF2E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="4000" y="256" name="inst_913C6295" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -448,9 +443,9 @@
     <instance objName="obj_nieve_pisable" x="4352" y="32" name="inst_605385ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="4384" y="0" name="inst_18D600BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="3296" y="0" name="inst_7346F74B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3424" y="448" name="inst_5E476361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3488" y="416" name="inst_E6D3C32D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3520" y="384" name="inst_127A532C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3584" y="448" name="inst_5E476361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3648" y="416" name="inst_E6D3C32D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3680" y="384" name="inst_127A532C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="4064" y="224" name="inst_7654DC22" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="4096" y="192" name="inst_C1569027" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="4128" y="160" name="inst_FBE2DB15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -490,8 +485,6 @@
     <instance objName="obj_nieve_pisable" x="5312" y="0" name="inst_2FA33E4F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="5344" y="0" name="inst_7D001AFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="5376" y="0" name="inst_E3902B8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hielo" x="3296" y="288" name="inst_1100825A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hielo" x="3328" y="288" name="inst_DEBC5202" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hielo" x="2432" y="448" name="inst_A6C964B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_pisable" x="2432" y="448" name="inst_1DFDAB94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="2240" y="448" name="inst_F46E836B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -499,18 +492,6 @@
     <instance objName="obj_falling_floor" x="2304" y="448" name="inst_EA03C381" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="2336" y="448" name="inst_C45141E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="2368" y="448" name="inst_193914BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="2400" y="448" name="inst_5C06A3BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="3776" y="448" name="inst_5067BA48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="3808" y="448" name="inst_699C0895" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4160" y="448" name="inst_31AE51C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4192" y="448" name="inst_D29FE2E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4224" y="448" name="inst_A0F96EE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4256" y="448" name="inst_52CE1EF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4288" y="448" name="inst_01D0C136" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4320" y="448" name="inst_77AD7AF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4352" y="448" name="inst_651B5C4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4384" y="448" name="inst_31159A09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_falling_floor" x="4416" y="448" name="inst_628176D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="4448" y="448" name="inst_30025346" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="4480" y="448" name="inst_2A754AD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="4512" y="448" name="inst_A17760D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -556,9 +537,42 @@
     <instance objName="obj_faller" x="1760" y="128" name="inst_5BAD3101" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_runner" x="1728" y="416" name="inst_0540C844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumper" x="2688" y="416" name="inst_54867674" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_jumper" x="3392" y="416" name="inst_E7605545" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3296" y="288" name="inst_F0245905" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pisable" x="3328" y="288" name="inst_10EF2695" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jumper" x="3552" y="416" name="inst_E7605545" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="2400" y="448" name="inst_01EC20A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hielo" x="2400" y="448" name="inst_813DE08D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3392" y="448" name="inst_0D9E0794" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3424" y="448" name="inst_C2B7C313" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3456" y="448" name="inst_C1634CF2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3488" y="448" name="inst_B56C95A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3520" y="448" name="inst_665291BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3392" y="0" name="inst_D237FD7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3424" y="0" name="inst_7A7CF4DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3456" y="0" name="inst_0D91AD29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3488" y="0" name="inst_2CE1A511" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3520" y="0" name="inst_E8D0D13F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_faller" x="3893" y="128" name="inst_71EA7D7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_runner" x="3872" y="416" name="inst_202F8A2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3648" y="288" name="inst_BAB3E1CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3936" y="448" name="inst_DBB5019C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3968" y="448" name="inst_7EB13A76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4000" y="448" name="inst_9819711D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4032" y="448" name="inst_C6293421" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4064" y="448" name="inst_662BF497" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4096" y="448" name="inst_72D76CC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4128" y="448" name="inst_216254AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4160" y="448" name="inst_E23CF01D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4192" y="448" name="inst_31B8EC8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4224" y="448" name="inst_799F23CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4256" y="448" name="inst_083305A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4288" y="448" name="inst_2FB06722" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4320" y="448" name="inst_BB8B4A1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4352" y="448" name="inst_147C5AC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4384" y="448" name="inst_E52A0AD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="4416" y="448" name="inst_15CD531A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="3616" y="288" name="inst_73A63BD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="2080" y="416" name="inst_4C7B60E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="2048" y="416" name="inst_5030E25B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="512" y="416" name="inst_35F3425A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
