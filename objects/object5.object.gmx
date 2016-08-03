@@ -597,8 +597,8 @@ if(status_locked == false){
         global.vida = 0 ;
     if (position_meeting (x,y,obj_acido)) 
         global.vida = 0;
-    if (position_meeting (x,y,obj_pincho)) 
-        global.vida = 0;
+    //if (place_meeting (x,y,obj_pinchos)) 
+        //global.vida = 0;
     if (y &gt; room_height &amp;&amp; status_locked == false) 
         global.vida = 0;
 }
@@ -799,6 +799,31 @@ if(invincible == false &amp;&amp; status_dead == false){
 if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){            
     script_execute(scr_knockback);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_pinchos">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+global.vida = 0;
+other.sprite_index = spr_pinchos_sangre;
 </string>
           </argument>
         </arguments>
