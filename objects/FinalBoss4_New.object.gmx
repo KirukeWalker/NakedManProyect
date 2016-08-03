@@ -116,7 +116,7 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; hspeed &gt; 0){
             <kind>1</kind>
             <string>//Salta
 if(other.triggered == false){
-    vspeed -= 30;
+    vspeed -= 29;
     sprite_index = spr_boss4_jump;
     other.triggered = true;
 }
