@@ -26,10 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>//Fall to the bottom or to the next block
-if(y &lt; 448 &amp;&amp; !place_meeting(x, y + 8, obj_snow_block))
+if(y &lt; 448 &amp;&amp; !place_meeting(x, y + 8, obj_arena))
     vspeed = 8;
-else
-    vspeed = 0;
+else{
+    instance_create (x, y, obj_arena);
+    instance_destroy ();
+}
 </string>
           </argument>
         </arguments>
