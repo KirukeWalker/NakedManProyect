@@ -530,6 +530,8 @@
       <object>objects\FinalBoss3_Body_Test</object>
       <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss4_New</object>
+      <object>objects\obj_avalanch</object>
+      <object>objects\obj_snow_block</object>
       <object>objects\obj_faller</object>
       <object>objects\obj_runner</object>
       <object>objects\obj_jumper</object>

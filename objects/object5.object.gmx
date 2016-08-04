@@ -588,13 +588,15 @@ if(vsp == 0)
     else if (complete_death == 0){    
         if(hsp != 0){
             sprite_index = run;
-            hat.sprite_index = hat_run_right;
+            if(instance_exists(hat))
+                hat.sprite_index = hat_run_right;
         }
         else 
         {
             if(disparo &gt; 0){
                 sprite_index = shoot;
-                hat.sprite_index = hat_shoot_right;
+                if(instance_exists(hat))
+                    hat.sprite_index = hat_shoot_right;
             }
             else if (place_meeting(x, y, obj_portal)){
                 sprite_index = enter;
@@ -603,7 +605,8 @@ if(vsp == 0)
             }
             else{
                 sprite_index = idle;
-                hat.sprite_index = hat_idle_right;
+                if(instance_exists(hat))
+                    hat.sprite_index = hat_idle_right;
             }
         }
     }
@@ -612,19 +615,23 @@ else
 {
     if (disparo &gt; 0){
         sprite_index = jumpshoot;
-        hat.sprite_index = hat_jump_right;
+        if(instance_exists(hat))
+            hat.sprite_index = hat_jump_right;
     }
     else if (place_meeting(x, y, Agua)){
         sprite_index = swim;
-        hat.sprite_index = hat_swim_right;
+        if(instance_exists(hat))
+            hat.sprite_index = hat_swim_right;
     }
     else if (vsp &lt; 0){
         sprite_index = jump;
-        hat.sprite_index = hat_jump_right;
+        if(instance_exists(hat))
+            hat.sprite_index = hat_jump_right;
     }
     else if (vsp &gt; 0){
         sprite_index = fall;
-        hat.sprite_index = hat_fall_right;
+        if(instance_exists(hat))
+            hat.sprite_index = hat_fall_right;
     }
 }
 //Control de muerte
