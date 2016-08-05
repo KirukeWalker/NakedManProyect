@@ -173,15 +173,19 @@ if(teleporting == true){
     }
 }
 //Morir del todo
-if (global.vidaboss = 0)
+if (global.vidaboss == 0)
 { 
-    ini_open("SystemNM.txt")
+    /*ini_open("SystemNM.txt")
     ini_key_delete("NhTPahPmx","TibsGhsbEhuU")
     ini_write_string("NhTPahPmx","TibsGHsbEhuU","KjjyFtLTgjY")
     ini_close()
-    global.muertes += 1;
-    obj_fade_white.fadeIn = false;
-    //instance_destroy();   
+    global.muertes += 1;*/
+    with(obj_lightball) instance_destroy();
+    with(obj_marker_laser) instance_destroy();
+    with(obj_mega_laser) instance_destroy();
+    second_round = instance_create(288, 800, FinalBoss5_S2);
+    obj_fade.fadeIn = false;
+    instance_destroy();   
 }
 
 </string>
@@ -208,7 +212,7 @@ if (global.vidaboss = 0)
             <kind>1</kind>
             <string>//Recibir ataque
 if (teleporting == false) {
-    global.vidaboss -=1;
+    global.vidaboss -= 20;
     stay_time -= 4;
     with(other) instance_destroy();
 }

@@ -30,7 +30,7 @@ xPosition = 0;
 length = 1;
 
 //Inicia el reloj
-alarm_set(0, 10);
+alarm_set(0, 6);
 </string>
           </argument>
         </arguments>
@@ -64,7 +64,7 @@ if(length &lt; 448 / 32)
     length ++;
     
 //
-alarm_set(0, 10);
+alarm_set(0, 6);
 </string>
           </argument>
         </arguments>

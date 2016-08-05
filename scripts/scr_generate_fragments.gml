@@ -10,6 +10,7 @@ for(i = 45; i < 360; i += 90){
     fragment.speed = 10;
 }
 
-//
-if(y > room_height)
-    instance_destroy();
+//Esto ultimo no tiene sentido
+//Me debi colar con los propios fragmentos
+//if(y > room_height)
+//    instance_destroy();

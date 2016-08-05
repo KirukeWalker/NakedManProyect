@@ -68,6 +68,7 @@
       <sprite>sprites\spr_geiser</sprite>
       <sprite>sprites\spr_fans</sprite>
       <sprite>sprites\spr_suelo_madero</sprite>
+      <sprite>sprites\spr_suelo_madero2</sprite>
       <sprite>sprites\spr_sliding_floor</sprite>
       <sprite>sprites\spr_mobile_platform</sprite>
       <sprite>sprites\spr_fragment</sprite>
@@ -320,9 +321,11 @@
       <sprite>sprites\spr_snake_death5</sprite>
       <sprite>sprites\spr_boss5_idle</sprite>
       <sprite>sprites\spr_boss5_lcast</sprite>
+      <sprite>sprites\spr_boss5_lcast_dup</sprite>
       <sprite>sprites\spr_boss5_barrido</sprite>
       <sprite>sprites\spr_boss5_bcast</sprite>
       <sprite>sprites\spr_boss5_lprep</sprite>
+      <sprite>sprites\spr_boss5_lprep_dup</sprite>
       <sprite>sprites\spr_melee5</sprite>
       <sprite>sprites\spr_melee_attack5</sprite>
     </sprites>
@@ -490,6 +493,7 @@
         <object>objects\obj_falling_branch</object>
         <object>objects\obj_suelo_hojas</object>
         <object>objects\obj_wood_platform</object>
+        <object>objects\obj_wood_platform2</object>
         <object>objects\obj_falling_clouds</object>
         <object>objects\obj_final_clouds</object>
       </objects>
@@ -540,6 +544,7 @@
       <object>objects\obj_runner</object>
       <object>objects\obj_jumper</object>
       <object>objects\FinalBoss5</object>
+      <object>objects\FinalBoss5_S2</object>
       <object>objects\obj_lifter</object>
     </objects>
     <objects name="Proyectil">
@@ -650,7 +655,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss4_S2</room>
     <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
@@ -665,6 +669,8 @@
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
+    <room>rooms\Room_FinalBoss4_S2</room>
+    <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
@@ -672,7 +678,6 @@
     <room>rooms\god_room_final</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
-    <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss1</room>
     <room>rooms\Room_FinalBoss4</room>
   </rooms>

@@ -65,6 +65,7 @@ switch(status){
             status = 1;
             apply_gravity = true;
             hspeed = running_speed;
+            avalanch = instance_create(0, 0, obj_avalanch);
         }
     break;
     //Saliendo y rompiendo la pared
@@ -92,6 +93,11 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; hspeed &gt; 0 &amp
     }
     sprite_index = spr_boss4_sliding;
 }
+//Sprites
+if(vspeed != 0)
+    sprite_index = spr_boss4_jump;
+else
+    sprite_index = spr_boss4_sliding;
 </string>
           </argument>
         </arguments>
