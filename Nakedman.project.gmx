@@ -476,6 +476,9 @@
         <object>objects\obj_nieveEsquinilla</object>
         <object>objects\obj_esquinilla_doble</object>
         <object>objects\obj_nieve_esquinilla_doble</object>
+        <object>objects\obj_nieve_nievosa</object>
+        <object>objects\obj_nieve_disparable</object>
+        <object>objects\obj_nieve_pinrelera</object>
         <object>objects\obj_suelo_mar_pisable3puntas</object>
         <object>objects\obj_suelo_pisableCiudad</object>
         <object>objects\obj_mobile_platformH</object>
@@ -530,6 +533,7 @@
       <object>objects\FinalBoss3_Body_Test</object>
       <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss4_New</object>
+      <object>objects\FinalBoss4_S2</object>
       <object>objects\obj_avalanch</object>
       <object>objects\obj_snow_block</object>
       <object>objects\obj_faller</object>
@@ -646,6 +650,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\Room_FinalBoss4_S2</room>
     <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
