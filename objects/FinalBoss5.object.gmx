@@ -183,6 +183,7 @@ if (global.vidaboss == 0)
     with(obj_lightball) instance_destroy();
     with(obj_marker_laser) instance_destroy();
     with(obj_mega_laser) instance_destroy();
+    explosion = instance_create(x, y, obj_explosion);
     second_round = instance_create(288, 800, FinalBoss5_S2);
     obj_fade.fadeIn = false;
     instance_destroy();   
@@ -212,7 +213,7 @@ if (global.vidaboss == 0)
             <kind>1</kind>
             <string>//Recibir ataque
 if (teleporting == false) {
-    global.vidaboss -= 20;
+    global.vidaboss -= 1;
     stay_time -= 4;
     with(other) instance_destroy();
 }

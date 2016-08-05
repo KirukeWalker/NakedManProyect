@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>fly = false;
 alarm[0] = 30;
-objective = FinalBoss5;
+objective = object5;
+//objective = FinalBoss5;
 </string>
           </argument>
         </arguments>

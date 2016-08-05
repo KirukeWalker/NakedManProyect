@@ -320,6 +320,7 @@
       <sprite>sprites\spr_snake_fire5</sprite>
       <sprite>sprites\spr_snake_death5</sprite>
       <sprite>sprites\spr_boss5_idle</sprite>
+      <sprite>sprites\spr_boss5_idle_dup</sprite>
       <sprite>sprites\spr_boss5_lcast</sprite>
       <sprite>sprites\spr_boss5_lcast_dup</sprite>
       <sprite>sprites\spr_boss5_barrido</sprite>
@@ -655,7 +656,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Room_FinalBoss4_New</room>
+    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -669,9 +670,9 @@
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
+    <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Room_FinalBoss4_S2</room>
     <room>rooms\Final_Level</room>
-    <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_1</room>
     <room>rooms\god_room_2</room>
     <room>rooms\Continuara</room>
