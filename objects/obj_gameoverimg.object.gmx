@@ -36,7 +36,7 @@ if room=Nivel_Nieve &amp;&amp; instance_exists(obj_snow) {
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
