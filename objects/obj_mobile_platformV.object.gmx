@@ -73,12 +73,15 @@ y += vsp;
 //Para matener al prota encima
 if(vsp &lt; 0){
     //Mover al prota (hacia arriba)
-    if (place_meeting(x,y-1,object5)) object5.y += vsp;
+    if (place_meeting(x,y-1,object5)) 
+        //object5.y += vsp;
+        object5.y = y - 30;
 }
 else{
     //Mover al prota (hacia abajo)
     if (place_meeting(x,y-4,object5) &amp;&amp; !place_meeting(x,y-3,object5)) 
-        object5.y += vsp;
+        //object5.y += vsp;
+        object5.y = y - 30;
 }
 </string>
           </argument>

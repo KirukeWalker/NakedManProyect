@@ -850,15 +850,6 @@
     <instance objName="obj_pinchos" x="864" y="3232" name="inst_B57FC656" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos" x="864" y="3264" name="inst_7617135F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos" x="864" y="3296" name="inst_A3ADFBD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_pincho" x="160" y="3264" name="inst_C89617BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_pincho" x="192" y="3296" name="inst_525DB0D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_pincho" x="224" y="3328" name="inst_AF6C981B" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pincho" x="256" y="3360" name="inst_29E0BBBA" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pincho" x="288" y="3328" name="inst_71CD2C93" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pincho" x="320" y="3296" name="inst_8495F2C9" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pincho" x="352" y="3232" name="inst_14122F07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pincho" x="320" y="3040" name="inst_C247B37B" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pincho" x="352" y="3040" name="inst_C73418A5" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pincho" x="352" y="2944" name="inst_485E56C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pincho" x="320" y="2944" name="inst_5A6E7009" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pincho" x="32" y="2944" name="inst_9762063F" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>

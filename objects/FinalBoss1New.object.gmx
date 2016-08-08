@@ -257,6 +257,7 @@ switch(status){
         if(obj_fade.alpha == 1){
             global.vidaboss = 1;
             last_round = true;
+            time_between_shoots = 20;
             obj_fade.fadeIn = true;
             with(Lava) instance_destroy();
             //Crea la piscina de lava

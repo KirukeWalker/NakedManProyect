@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//Gravead
-if(!place_meeting(x, y, obj_solid_terrain))
+//if(!place_meeting(x, y, obj_solid_terrain))
     y += 4; 
 </string>
           </argument>
