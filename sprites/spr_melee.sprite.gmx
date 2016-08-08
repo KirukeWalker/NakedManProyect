@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>44</bbox_right>
+  <bbox_left>2</bbox_left>
+  <bbox_right>42</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>48</bbox_bottom>
   <HTile>0</HTile>
@@ -31,5 +31,13 @@
     <frame index="7">images\spr_melee_7.png</frame>
     <frame index="8">images\spr_melee_8.png</frame>
     <frame index="9">images\spr_melee_9.png</frame>
+    <frame index="10">images\spr_melee_10.png</frame>
+    <frame index="11">images\spr_melee_11.png</frame>
+    <frame index="12">images\spr_melee_12.png</frame>
+    <frame index="13">images\spr_melee_13.png</frame>
+    <frame index="14">images\spr_melee_14.png</frame>
+    <frame index="15">images\spr_melee_15.png</frame>
+    <frame index="16">images\spr_melee_16.png</frame>
+    <frame index="17">images\spr_melee_17.png</frame>
   </frames>
 </sprite>
