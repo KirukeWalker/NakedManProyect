@@ -203,7 +203,10 @@
         <sprite>sprites\spr_hat_shoot1_left</sprite>
         <sprite>sprites\spr_hat_swim1_right</sprite>
         <sprite>sprites\spr_hat_swim1_left</sprite>
+        <sprite>sprites\spr_hat_runBig1</sprite>
         <sprite>sprites\spr_hat1</sprite>
+        <sprite>sprites\spr_hat_idle1</sprite>
+        <sprite>sprites\spr_hat_black1</sprite>
       </sprites>
       <sprites name="Hat2">
         <sprite>sprites\spr_hat_idle2_right</sprite>
@@ -211,7 +214,6 @@
         <sprite>sprites\spr_hat_jump2_right</sprite>
         <sprite>sprites\spr_hat_jump2_left</sprite>
         <sprite>sprites\spr_hat_run2_right</sprite>
-        <sprite>sprites\spr_hat_runBig2</sprite>
         <sprite>sprites\spr_hat_run2_left</sprite>
         <sprite>sprites\spr_hat_fall2_right</sprite>
         <sprite>sprites\spr_hat_fall2_left</sprite>
@@ -219,7 +221,10 @@
         <sprite>sprites\spr_hat_shoot2_left</sprite>
         <sprite>sprites\spr_hat_swim2_right</sprite>
         <sprite>sprites\spr_hat_swim2_left</sprite>
+        <sprite>sprites\spr_hat_runBig2</sprite>
         <sprite>sprites\spr_hat2</sprite>
+        <sprite>sprites\spr_hat_idle2</sprite>
+        <sprite>sprites\spr_hat_black2</sprite>
       </sprites>
       <sprites name="Hat3">
         <sprite>sprites\spr_hat_idle3_right</sprite>
@@ -227,7 +232,6 @@
         <sprite>sprites\spr_hat_jump3_right</sprite>
         <sprite>sprites\spr_hat_jump3_left</sprite>
         <sprite>sprites\spr_hat_run3_right</sprite>
-        <sprite>sprites\spr_hat_runBig3</sprite>
         <sprite>sprites\spr_hat_run3_left</sprite>
         <sprite>sprites\spr_hat_fall3_right</sprite>
         <sprite>sprites\spr_hat_fall3_left</sprite>
@@ -235,7 +239,10 @@
         <sprite>sprites\spr_hat_shoot3_left</sprite>
         <sprite>sprites\spr_hat_swim3_right</sprite>
         <sprite>sprites\spr_hat_swim3_left</sprite>
+        <sprite>sprites\spr_hat_runBig3</sprite>
         <sprite>sprites\spr_hat3</sprite>
+        <sprite>sprites\spr_hat_idle3</sprite>
+        <sprite>sprites\spr_hat_black3</sprite>
       </sprites>
       <sprites name="Hat4">
         <sprite>sprites\spr_hat_idle4_right</sprite>
@@ -243,6 +250,7 @@
         <sprite>sprites\spr_hat_jump4_right</sprite>
         <sprite>sprites\spr_hat_jump4_left</sprite>
         <sprite>sprites\spr_hat_run4_right</sprite>
+        <sprite>sprites\spr_hat_runBig4</sprite>
         <sprite>sprites\spr_hat_run4_left</sprite>
         <sprite>sprites\spr_hat_fall4_right</sprite>
         <sprite>sprites\spr_hat_fall4_left</sprite>
@@ -251,6 +259,8 @@
         <sprite>sprites\spr_hat_swim4_right</sprite>
         <sprite>sprites\spr_hat_swim4_left</sprite>
         <sprite>sprites\spr_hat4</sprite>
+        <sprite>sprites\spr_hat_idle4</sprite>
+        <sprite>sprites\spr_hat_black4</sprite>
       </sprites>
       <sprites name="Hat5">
         <sprite>sprites\spr_hat_idle5_right</sprite>
@@ -266,6 +276,8 @@
         <sprite>sprites\spr_hat_swim5_right</sprite>
         <sprite>sprites\spr_hat_swim5_left</sprite>
         <sprite>sprites\spr_hat5</sprite>
+        <sprite>sprites\spr_hat_idle5</sprite>
+        <sprite>sprites\spr_hat_black5</sprite>
         <sprite>sprites\spr_hat_runBig5</sprite>
         <sprite>sprites\spr_hat5_enter</sprite>
         <sprite>sprites\spr_hat5_death</sprite>

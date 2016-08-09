@@ -155,7 +155,6 @@
     <instance objName="obj_fade" x="160" y="32" name="inst_3B79C4B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_over" x="96" y="32" name="inst_53D5194E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="128" y="32" name="inst_70541889" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_oscureitor" x="64" y="32" name="inst_F7B43079" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal" x="3968" y="416" name="inst_28EE9AEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_volcan" x="1472" y="288" name="inst_A0B48CA8" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_volcan" x="1632" y="160" name="inst_34EB4FE9" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -445,6 +444,7 @@
     <instance objName="Lava" x="704" y="448" name="inst_0B91276D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Lava" x="736" y="448" name="inst_30D87349" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Lava" x="768" y="448" name="inst_C759DC3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_oscureitor" x="64" y="32" name="inst_BE2098A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
