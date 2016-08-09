@@ -145,13 +145,17 @@ switch(status){
     break;
     //Tremble
     case 3:
-        switch(tremble_axis){
-            case 1:
-                x += tremble_direction * tremble_speed * 2;
-            break;
-            case 2:
-                y += tremble_direction * tremble_speed * 2;
-            break;
+        //Que no tiemble si el prota esta morido
+        if(object5.status_dead == 0){
+            //Y ya tiembla
+            switch(tremble_axis){
+                case 1:
+                    x += tremble_direction * tremble_speed * 2;
+                break;
+                case 2:
+                    y += tremble_direction * tremble_speed * 2;
+                break;
+            }
         }
     break;
     //Go forward
