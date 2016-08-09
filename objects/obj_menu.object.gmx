@@ -167,7 +167,7 @@ if movingfinish=true &amp;&amp; !instance_exists(obj_blackScreen) &amp;&amp; (ke
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(view_xview+80,view_yview+20,instance_number(obj_music))
+            <string>//draw_text(view_xview+80,view_yview+20,instance_number(obj_music))
 </string>
           </argument>
         </arguments>
