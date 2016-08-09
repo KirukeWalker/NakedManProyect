@@ -213,7 +213,7 @@ if (global.vidaboss == 0)
             <kind>1</kind>
             <string>//Recibir ataque
 if (teleporting == false) {
-    global.vidaboss -= 1;
+    global.vidaboss -= 20;
     stay_time -= 4;
     with(other) instance_destroy();
 }
