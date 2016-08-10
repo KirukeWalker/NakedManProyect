@@ -29,6 +29,9 @@
 global.vidaboss = 10;
 hands_off = 0; //Manos fuera de combate
 original_y = y;
+
+//Put the healthbar
+health_bar = instance_create(150, 50, obj_healthbar_anal);
 </string>
           </argument>
         </arguments>
@@ -80,7 +83,9 @@ obj_hand.vida_mano = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Comprobamos que hayan caido ambas manos
+            <string>//Posible movimiento circular
+
+//Comprobamos que hayan caido ambas manos
 if(hands_off = 2){
     alarm[0] = 90;
     hands_off = 3;  //Así solo hacemos este paso una vez

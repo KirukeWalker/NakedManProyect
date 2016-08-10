@@ -100,16 +100,20 @@ last_status = status;
 if(status = 0){
     //Las controlamos horizontalmente
     //Comprobación separada para cada mano
-    if(object5.x &lt; 300 &amp;&amp; hand = 0){
-        if(object5.x &lt; x)   x -= 3;//speed = 3;
-        else                x += 3;//speed = -3;
+    //Izquierda
+    if(object5.x &lt; 304 &amp;&amp; hand = 0){
+        if(object5.x &lt; x)   x -= 3;
+        else                x += 3;
     }
-    else if(x &lt; 300 &amp;&amp; hand = 0)    x += 3;
-    if(object5.x &gt; 300 &amp;&amp; hand = 1){
-        if(object5.x &lt; x)   x -= 3;//speed = 3;
-        else                x += 3;//speed = -3;
+    else if(x &lt; 304 &amp;&amp; hand = 0)    
+        x += 3;
+    //Derecha
+    if(object5.x &gt; 304 &amp;&amp; hand = 1){
+        if(object5.x &lt; x)   x -= 3;
+        else                x += 3;
     }
-    else if(x &gt; 300 &amp;&amp; hand = 1)    x -= 3;
+    else if(x &gt; 304 &amp;&amp; hand = 1)    
+        x -= 3;
 }
 //Caen las manos
 if(status = 1){
