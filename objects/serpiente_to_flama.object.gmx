@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_enemy</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -88,7 +88,7 @@ sprite_index = estatico;
 if(!place_meeting(x, y+1, obj_solid_terrain))
     y += 1;
 //Recibir ataque
-if (place_meeting(x, y, obj_cacota))
+/*if (place_meeting(x, y, obj_cacota))
 { 
     global.muertes += 1;
     sprite_index = muerte;
@@ -97,7 +97,7 @@ if (place_meeting(x, y, obj_cacota))
 }
 //Morir del todo
 if(image_index = 15 &amp;&amp; status_dead = 1) 
-    instance_destroy();
+    instance_destroy();*/
 //Disparar
 if (distance_to_object(object5) &lt; 208 &amp;&amp; status_dead == 0)
 {

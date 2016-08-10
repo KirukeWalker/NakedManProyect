@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
-vidaboss = 20;
+            <string>//Variables
+global.vida = 3;
+vidaboss = 20; //Se usa después con global.vidaboss
 var mega_laser;
 rotation_speed = 1;
 spam_rate = 30;
@@ -67,8 +68,8 @@ with(obj_rayos) instance_destroy();
             <kind>1</kind>
             <string>//Spameamos siguiente bolita
 //while(distance_
-xPos = random(608);
-yPos = random(480);
+xPos = random_range(10, 600);
+yPos = random_range(10, 430);
 ligthball = instance_create(xPos, yPos, obj_lightball_S2);
 //
 alarm_set(0, spam_rate);
@@ -127,6 +128,7 @@ switch(status){
         if(global.vidaboss &lt; 20)
             global.vidaboss += 0.1;
         //Sube el suelo
+        //Hacer que suba con naked man si esta sobre él
         if(solid_floor[0].y &gt; 448){
             for(i = 0; i &lt; 608/32; i++){
                 solid_floor[i].y -= 2;
@@ -148,6 +150,8 @@ switch(status){
             mega_laser.direction = point_direction(x, y, object5.x, object5.y) + 180;
             mega_laser.image_angle = mega_laser.direction;
             mega_laser.alarm[0] = -1; //Que no se autodestruya
+            mega_laser.image_xscale = 2;
+            mega_laser.image_yscale = 2;
             sprite_index = spr_boss5_lcast_dup;
             alarm_set(0, 1);
         }

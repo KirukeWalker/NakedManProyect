@@ -151,7 +151,7 @@ if (sprite_index == moverse)
     x += hsp * direction_facing;
 }
 //Recibir ataque
-if (place_meeting(x, y, obj_cacota) &amp;&amp; status_dead == 0)
+/*if (place_meeting(x, y, obj_cacota) &amp;&amp; status_dead == 0)
 { 
     global.muertes += 1;
     sprite_index = muerte;
@@ -161,7 +161,7 @@ if (place_meeting(x, y, obj_cacota) &amp;&amp; status_dead == 0)
 //Morir del todo
 sprite_length = sprite_get_number(muerte);
 if(image_index = sprite_length-1 &amp;&amp; status_dead = 1) 
-    instance_destroy();
+    instance_destroy();*/
 //Si no está bajo el agua
 if(!place_meeting(x, y, Agua)){
     //Atacar
