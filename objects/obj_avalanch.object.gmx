@@ -64,7 +64,7 @@ if(length &lt; 448 / 32)
     length ++;
     
 //
-alarm_set(0, 6);
+alarm_set(0, 7);
 </string>
           </argument>
         </arguments>

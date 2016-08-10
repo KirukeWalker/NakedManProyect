@@ -133,7 +133,6 @@
     <instance objName="obj_nieve_nievosa" x="0" y="0" name="inst_1A296FA3" locked="0" code="" scaleX="16" scaleY="12" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_nievosa" x="512" y="0" name="inst_2AC74A45" locked="0" code="" scaleX="2" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_nievosa" x="96" y="448" name="inst_D4D1560A" locked="0" code="" scaleX="13" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_pinrelera" x="32" y="448" name="inst_7595B7B3" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_disparable" x="32" y="384" name="inst_74327A79" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_disparable" x="96" y="384" name="inst_C47C3278" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_disparable" x="160" y="384" name="inst_2FBC1E6C" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
