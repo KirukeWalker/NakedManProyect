@@ -29,8 +29,8 @@
 global.vida = 3;
 vidaboss = 20; //Se usa después con global.vidaboss
 var mega_laser;
-rotation_speed = 1;
-spam_rate = 30;
+rotation_speed = 1; //
+spam_rate = 30;     //
 //
 status = 0;
 //
@@ -205,8 +205,8 @@ if (global.vidaboss == 0 &amp;&amp; y == 240)
             <string>//Pierde vida y gana velocidad de laser
 if(status &gt; 1){
     global.vidaboss -= 1;
-    rotation_speed += 0.1;
-    spam_rate -= 1;
+    rotation_speed += 0.05;
+    spam_rate -= 0.5;
     with(other) instance_destroy();
 }
 </string>
