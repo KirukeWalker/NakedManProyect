@@ -61,7 +61,7 @@ if(apply_gravity == true){
 switch(status){
     //Espera a que el prota llegue donde debe
     case 0:
-        if(object5.x &gt; 200){
+        if(object5.x &gt; 180){
             status = 1;
             apply_gravity = true;
             hspeed = running_speed;
