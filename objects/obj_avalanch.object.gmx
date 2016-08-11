@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -55,7 +55,7 @@ alarm_set(0, 6);
             <kind>1</kind>
             <string>//Control de caida de bloques
 for(i = 0; i &lt; length; i++){
-    block = instance_create(xPosition - (i * 32), -32, obj_snow_block);
+    block = instance_create(xPosition - (i * 32), -32-(irandom(3)*8), obj_snow_block);
 }
 //
 xPosition += 32;
@@ -64,7 +64,7 @@ if(length &lt; 448 / 32)
     length ++;
     
 //
-alarm_set(0, 7);
+alarm_set(0, irandom_range(6, 8));
 </string>
           </argument>
         </arguments>
