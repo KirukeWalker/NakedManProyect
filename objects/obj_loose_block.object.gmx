@@ -78,7 +78,7 @@ instance_destroy();
 nakedId = collision_line(x - 30, y, x - 30, y + 480, object5, true, false);
 if(nakedId != noone &amp;&amp; trembling == false){
     trembling = true;
-    alarm_set(0, 10);
+    alarm_set(0, 11);
 }
 //
 if(trembling == true){

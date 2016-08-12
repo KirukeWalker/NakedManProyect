@@ -61,7 +61,7 @@ instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_suelo_mar_pisable">
+    <event eventtype="4" ename="obj_solid_terrain">
       <action>
         <libid>1</libid>
         <id>603</id>

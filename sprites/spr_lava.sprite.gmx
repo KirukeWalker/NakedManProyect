@@ -45,17 +45,5 @@
     <frame index="21">images\spr_lava_21.png</frame>
     <frame index="22">images\spr_lava_22.png</frame>
     <frame index="23">images\spr_lava_23.png</frame>
-    <frame index="24">images\spr_lava_24.png</frame>
-    <frame index="25">images\spr_lava_25.png</frame>
-    <frame index="26">images\spr_lava_26.png</frame>
-    <frame index="27">images\spr_lava_27.png</frame>
-    <frame index="28">images\spr_lava_28.png</frame>
-    <frame index="29">images\spr_lava_29.png</frame>
-    <frame index="30">images\spr_lava_30.png</frame>
-    <frame index="31">images\spr_lava_31.png</frame>
-    <frame index="32">images\spr_lava_32.png</frame>
-    <frame index="33">images\spr_lava_33.png</frame>
-    <frame index="34">images\spr_lava_34.png</frame>
-    <frame index="35">images\spr_lava_35.png</frame>
   </frames>
 </sprite>
