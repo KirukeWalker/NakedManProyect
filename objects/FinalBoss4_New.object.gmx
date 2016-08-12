@@ -75,8 +75,18 @@ switch(status){
     break;
     //Patinando normal
     case 2:
-        if y &gt; 500
+        //Caida y muerte
+        if (y &gt; 500)
         obj_fade.fadeIn = false;
+        //Llega y te jodes
+        if (x &gt; 5816)
+            status = 3;
+    break;
+    //Espera y te tira
+    case 3:
+        image_xscale = 1;
+        hspeed = 0;
+        vspeed = 0;
     break;
 }
 
@@ -93,6 +103,32 @@ if(vspeed != 0)
     sprite_index = spr_boss4_jump;
 else
     sprite_index = spr_boss4_sliding;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="object5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+if(status == 3){
+    other.x -= 20;
+}
 </string>
           </argument>
         </arguments>

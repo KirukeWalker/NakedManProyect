@@ -675,6 +675,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -689,7 +690,6 @@
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
-    <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Room_FinalBoss4_S2</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
