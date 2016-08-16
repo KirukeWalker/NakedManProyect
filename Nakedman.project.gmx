@@ -679,13 +679,13 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Nivel_Playa1</room>
+    <room>rooms\Room_FinalBoss1_New</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
     <room>rooms\Nivel_1</room>
     <room>rooms\room_1_2</room>
-    <room>rooms\Room_FinalBoss1_New</room>
+    <room>rooms\Nivel_Playa1</room>
     <room>rooms\Nivel_Playa2</room>
     <room>rooms\Room_FinalBoss2</room>
     <room>rooms\Room_FinalBoss2_S2</room>

@@ -125,7 +125,7 @@ if (y &lt;= initial_height - max_height)
 //En horizontal
 x += 2 * direction_looking;
 //En vertical
-if(room == Nivel_Playa) height = 1; else height = 2;
+if(room == Nivel_Playa1 || room == Nivel_Playa1) height = 1; else height = 2;
 if(going_down) y+=height; else y-=height;
 //Hacemos que cague
 if(poop_shot = 0 &amp;&amp; nivel = "Nivel_Nieve")

@@ -97,12 +97,13 @@ noaudio=false;
         lavaBoss=0;
     }
     //
-    if ((room==Nivel_Playa || room==Room_FinalBoss2) &amp;&amp; playa=0) {
+        //Ya metermeos playa 2
+    if ((room==Nivel_Playa1 || room==Room_FinalBoss2) &amp;&amp; playa=0) {
         audio_play_sound(snd_beach,1,true);
         playa=1;
         }
         
-    if !(room==Nivel_Playa || room==Room_FinalBoss2) {
+    if !(room==Nivel_Playa1 || room==Room_FinalBoss2) {
         audio_stop_sound(snd_beach);
         playa=0;
     }
