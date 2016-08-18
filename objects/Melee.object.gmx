@@ -45,7 +45,7 @@ moverse = spr_melee;            //Variable para guardar la animación de moverse
 nivel = room_get_name (room);
 switch (nivel)
 {
-    case "Nivel_Playa": 
+    case "Nivel_Playa1": 
     {
         disparando = spr_melee_attack2;
         muerte = spr_melee_death2;
@@ -55,6 +55,16 @@ switch (nivel)
         levantando = spr_rising2;
         break;
     }    
+    case "Nivel_Playa2": 
+    {
+        disparando = spr_melee_attack2;
+        muerte = spr_melee_death2;
+        moverse = spr_melee2;
+        cargando = spr_charguing2;
+        volando = spr_flying2;
+        levantando = spr_rising2;
+        break;
+    } 
     case "Nivel_Bosque":
     {
         disparando = spr_melee_attack3;
@@ -108,7 +118,7 @@ image_xscale = direction_facing;
 
 //Comportamiento bajo el agua
 if(place_meeting(x, y, Agua) &amp;&amp; status_charguing = false){
-    nakedId = collision_line(x-150, y, x+150, y, object5, false, true);;
+    nakedId = collision_line(x-250, y, x+250, y, object5, false, true);;
     if(nakedId != noone){
         status_charguing = true;
         direction_facing = sign(nakedId.x - x);
