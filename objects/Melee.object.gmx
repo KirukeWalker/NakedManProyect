@@ -143,18 +143,19 @@ if(place_meeting(x,y+vsp, obj_solid_terrain) ||
 y += vsp;
 //Controlamos cambio de dirección
 //Con las paredes
-if(place_meeting(x+(hsp*direction_facing), y, obj_solid_terrain) ||
-    place_meeting(x+(hsp*direction_facing), y, obj_suelo_hojas))
+if((place_meeting(x+(hsp*direction_facing), y, obj_solid_terrain) ||
+    place_meeting(x+(hsp*direction_facing), y, obj_suelo_hojas)) &amp;&amp;
+    vsp == 0)
 { 
     direction_facing *= -1;
 }
 //Con los vacios
 if(!place_meeting(x+(skin_width*direction_facing), y+1, obj_solid_terrain) &amp;&amp; 
     !place_meeting(x+(skin_width*direction_facing), y+1, obj_suelo_hojas) &amp;&amp;
-    status_jumping == false &amp;&amp; status_charguing == false)
+    status_jumping == false &amp;&amp; status_charguing == false &amp;&amp; vsp == 0)
     direction_facing *= -1;
 //Movemos el mantel si no ataca
-if (sprite_index == moverse)
+if (sprite_index == moverse &amp;&amp; vsp == 0)
 {
     if(status_jumping = true) hsp = 4;
     else hsp = 2;

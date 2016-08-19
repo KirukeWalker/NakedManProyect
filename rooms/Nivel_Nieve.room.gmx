@@ -1093,6 +1093,8 @@
     <instance objName="obj_portal_nieve" x="480" y="672" name="inst_F1186A52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="960" y="3936" name="inst_9485D263" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_over" x="992" y="3936" name="inst_2A3E3457" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieveTriple" x="160" y="3744" name="inst_59E6A33F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="serpiente_to_flama" x="179" y="3726" name="inst_31996507" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="288" y="3904" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_0C78A4FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

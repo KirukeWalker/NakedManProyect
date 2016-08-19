@@ -116,12 +116,16 @@ if (distance_to_object(object5) &lt; 208 &amp;&amp; status_dead == 0)
     {
         shoot = instance_create (x-2,y+2, obj_sneksot)    
         shoot.speed = 10;
-        shoot.direction = 180;
+        shoot.direction = image_xscale * 90 + 90;
+        //shoot.image_angle = shoot.direction;
+        shoot.image_xscale = image_xscale;
         //Segundo proyectil
         if(nivel == "Nivel_Nieve"){
             shoot = instance_create (x-2,y+2, obj_sneksot)    
             shoot.speed = 10;
-            shoot.direction = 135;
+            shoot.direction = image_xscale * 45 + 90;
+            //shoot.image_angle = shoot.direction + 90;
+            shoot.image_xscale = image_xscale;
         }
     }
 }
@@ -131,6 +135,8 @@ if(image_index == image_number-1 &amp;&amp;
     distance_to_object(object5) &gt;= 208){
     sprite_index = estatico;
 }
+//Mirar siempre hacia el prota
+image_xscale = sign(x - object5.x);
 </string>
           </argument>
         </arguments>

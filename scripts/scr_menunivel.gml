@@ -9,7 +9,7 @@ switch(levelPosition)
        break;
     case 1:{
        if global.Nivel2Acceso=1{ 
-            room_goto(Nivel_Playa) 
+            room_goto(Nivel_Playa1) 
             instance_destroy();
             }
        }

@@ -579,7 +579,8 @@ if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2)  || joystick_ch
     }
 }
 //Animaciones (ahora al gorro también)
-if(vsp == 0)
+//if(vsp == 0)
+if(place_meeting(x, y + 1, obj_solid_terrain) || place_meeting(x, y + 1, obj_suelo_hojas))
 {
     if(status_dead = 1 &amp;&amp; complete_death == 0) {
         sprite_index = death;
