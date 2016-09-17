@@ -35,6 +35,7 @@ muerte = spr_snake_death;
 nivel = room_get_name (room);
 switch (nivel)
 {
+    //Playa
     case "Nivel_Playa1": {
         estatico = spr_snake_idle2;
         disparando = spr_snake_fire2;
@@ -47,18 +48,33 @@ switch (nivel)
         muerte = spr_snake_death2;
         break;
     }
+    //Bosque
     case "Nivel_Bosque": {
         estatico = spr_snake_idle3;
         disparando = spr_snake_fire3;
         muerte = spr_snake_death3;
         break;
     }
+    case "Nivel_Bosque_2": {
+        estatico = spr_snake_idle3;
+        disparando = spr_snake_fire3;
+        muerte = spr_snake_death3;
+        break;
+    }
+    //Nieve
     case "Nivel_Nieve": {
         estatico = spr_snake_idle4;
         disparando = spr_snake_fire4;
         muerte = spr_snake_death4;
         break;
     }
+    case "Nivel_Nieve_2": {
+        estatico = spr_snake_idle4;
+        disparando = spr_snake_fire4;
+        muerte = spr_snake_death4;
+        break;
+    }
+    //Ciudad
     case "Final_Level": {
         estatico = spr_snake_idle5;
         disparando = spr_snake_fire5;
