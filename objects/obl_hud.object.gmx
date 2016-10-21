@@ -31,6 +31,9 @@ draw_sprite(spr_hearts,global.vida, view_xview+40, view_yview+20);
 draw_set_halign(fa_center);
 draw_set_color(c_white);
 draw_set_font(fnt_creditos_peque);
+
+if(global.HD == true)
+    draw_text(view_xview + 550, view_yview + 30, "HD");
 //if (pussy_mode == true) draw_text(view_xview+350,view_yview+20,"Pussy Mode");
 
 

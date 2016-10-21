@@ -873,6 +873,7 @@ other.sprite_index = spr_pinchos_sangre;
 //draw_text(50, 50, current_time);
 //draw_text(50, 70, actual_speed);
 //draw_text(50, 90, hsp);
+
 </string>
           </argument>
         </arguments>
@@ -897,6 +898,16 @@ other.sprite_index = spr_pinchos_sangre;
             <kind>1</kind>
             <string>//Primero dibuja al moñaco, anda
 draw_self();
+
+
+//Pinta el temporizador si esta activado
+    //Sería mejor gestionarlo desde otra parte
+if(global.TIMER == true){
+    draw_text(view_xview + 300, view_yview + 30, reloj);
+}
+
+
+
 //Control de gorro
 /*if(global.hat != 0 &amp;&amp; status_dead = 0 &amp;&amp; !place_meeting(x, y, obj_portal)){
     if(image_xscale == 1){
