@@ -146,7 +146,7 @@ x += 2 * direction_looking;
 if(room == Nivel_Playa1 || room == Nivel_Playa2) height = 1; else height = 2;
 if(going_down) y+=height; else y-=height;
 //Hacemos que cague
-if(poop_shot = 0 &amp;&amp; nivel = "Nivel_Nieve")
+if(poop_shot = 0 &amp;&amp; (nivel = "Nivel_Nieve" || nivel = "Nivel_Nieve_2"))
 {
     instance_create(x,y+1, obj_vodka);
     poop_shot = 1;

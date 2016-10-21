@@ -28,8 +28,8 @@
             <string>//Declaración de globalvars
 global.offline = 1;
 globalvar pussy_mode;
-global.skin = 4;
-global.hat = 4;
+global.skin = 0;
+global.hat = 0;
 //pussy_mode = false;
 global.muertes = 0;
 global.muertes_registro = 0;

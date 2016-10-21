@@ -607,6 +607,23 @@
         <object>objects\obj_oscureitor</object>
         <object>objects\obl_hud</object>
       </objects>
+      <objects name="Menus">
+        <object>objects\obj_MenuNivel</object>
+        <object>objects\obj_MenuNivelCamera</object>
+        <object>objects\obj_MenuNivelAll</object>
+        <object>objects\obj_menu2</object>
+        <object>objects\obj_Menu1Selector</object>
+        <object>objects\obj_Menu1</object>
+        <object>objects\obj_menu</object>
+        <object>objects\obj_gamePausedMenu</object>
+      </objects>
+      <objects name="Healthbars">
+        <object>objects\obj_healthbar</object>
+        <object>objects\obj_healthbar_forAll</object>
+        <object>objects\obj_healthbar_anal</object>
+        <object>objects\obj_healthbar_frame</object>
+        <object>objects\obj_healthbar_back</object>
+      </objects>
       <object>objects\obj_preload</object>
       <object>objects\obj_music</object>
       <object>objects\obj_gameoverimg</object>
@@ -624,15 +641,6 @@
       <object>objects\obj_credits</object>
       <object>objects\obj_continuara</object>
       <object>objects\obj_niebla</object>
-      <object>objects\obj_healthbar</object>
-      <object>objects\obj_healthbar_forAll</object>
-      <object>objects\obj_healthbar_anal</object>
-      <object>objects\obj_healthbar_frame</object>
-      <object>objects\obj_healthbar_back</object>
-      <object>objects\obj_MenuNivel</object>
-      <object>objects\obj_MenuNivelCamera</object>
-      <object>objects\obj_MenuNivelAll</object>
-      <object>objects\obj_menu2</object>
       <object>objects\obj_pcinst</object>
       <object>objects\obj_camera2</object>
       <object>objects\obj_camera</object>
@@ -640,13 +648,9 @@
       <object>objects\obj_lightning</object>
       <object>objects\stuff_deactivator</object>
       <object>objects\obj_chooseLevel</object>
-      <object>objects\obj_Menu1Selector</object>
-      <object>objects\obj_Menu1</object>
       <object>objects\obj_pressStart</object>
-      <object>objects\obj_menu</object>
       <object>objects\obj_blackScreen</object>
       <object>objects\obj_fullScreenOnOff</object>
-      <object>objects\obj_gamePausedMenu</object>
       <object>objects\obj_guardado</object>
       <object>objects\obj_hdModeOnOff</object>
       <object>objects\obj_musicOnOff</object>
@@ -679,7 +683,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Nivel_Nieve_2</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -696,6 +699,7 @@
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Interludio</room>
     <room>rooms\Nivel_Nieve</room>
+    <room>rooms\Nivel_Nieve_2</room>
     <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Room_FinalBoss4_S2</room>
     <room>rooms\Final_Level</room>

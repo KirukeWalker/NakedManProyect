@@ -592,14 +592,14 @@ if(place_meeting(x, y + 1, obj_solid_terrain) || place_meeting(x, y + 1, obj_sue
     else if (complete_death == 0){    
         if(hsp != 0){
             sprite_index = run;
-            if(instance_exists(hat))
+            if(instance_exists(obj_hat))
                 hat.sprite_index = hat_run_right;
         }
         else 
         {
             if(disparo &gt; 0){
                 sprite_index = shoot;
-                if(instance_exists(hat))
+                if(instance_exists(obj_hat))
                     hat.sprite_index = hat_shoot_right;
             }
             else if (place_meeting(x, y, obj_portal)){
@@ -609,7 +609,7 @@ if(place_meeting(x, y + 1, obj_solid_terrain) || place_meeting(x, y + 1, obj_sue
             }
             else{
                 sprite_index = idle;
-                if(instance_exists(hat))
+                if(instance_exists(obj_hat))
                     hat.sprite_index = hat_idle_right;
             }
         }
@@ -619,22 +619,22 @@ else
 {
     if (disparo &gt; 0){
         sprite_index = jumpshoot;
-        if(instance_exists(hat))
+        if(instance_exists(obj_hat))
             hat.sprite_index = hat_jump_right;
     }
     else if (place_meeting(x, y, Agua)){
         sprite_index = swim;
-        if(instance_exists(hat))
+        if(instance_exists(obj_hat))
             hat.sprite_index = hat_swim_right;
     }
     else if (vsp &lt; 0){
         sprite_index = jump;
-        if(instance_exists(hat))
+        if(instance_exists(obj_hat))
             hat.sprite_index = hat_jump_right;
     }
     else if (vsp &gt; 0){
         sprite_index = fall;
-        if(instance_exists(hat))
+        if(instance_exists(obj_hat))
             hat.sprite_index = hat_fall_right;
     }
 }
@@ -657,9 +657,12 @@ if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
 {
     if(global.SOUNDS == 1)
         audio_play_sound(snd_die, 1, false);
-    with(hat) instance_destroy();
-    falling_hat = instance_create(x, y-30, obj_falling_hat);
-    falling_hat.sprite_index = hat_lone;
+    //Sobrero si hay
+    if(instance_exists(obj_hat)){
+        with(hat) instance_destroy();
+        falling_hat = instance_create(x, y-30, obj_falling_hat);
+        falling_hat.sprite_index = hat_lone;
+    }
     alarm_set(4, 30);
     status_dead = 1;
 }
