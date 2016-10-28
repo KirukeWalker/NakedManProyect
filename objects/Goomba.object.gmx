@@ -224,8 +224,8 @@ if(place_meeting(x+(msp*direction_walking), y, obj_solid_terrain) ||
     }
 }
 //Con los vacios
-if(!place_meeting(x+(skin_width*direction_walking), y+1, obj_solid_terrain) &amp;&amp; 
-    !place_meeting(x+(skin_width*direction_walking), y+1, obj_suelo_hojas) &amp;&amp;
+if(!place_meeting(x+(skin_width*direction_walking), y+2, obj_solid_terrain) &amp;&amp; 
+    !place_meeting(x+(skin_width*direction_walking), y+2, obj_suelo_hojas) &amp;&amp;
     goombaloco == false)
     direction_walking *= -1;
 

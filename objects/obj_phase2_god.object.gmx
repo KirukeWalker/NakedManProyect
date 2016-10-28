@@ -3,7 +3,7 @@
   <spriteName>spr_god_side</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Variables
+            <string>//Antes de nada...
+randomize();
+//Variables
 global.vidaboss = 10;
 movement_speed = 12;
 next_xPosition = 0;

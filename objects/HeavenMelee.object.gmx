@@ -56,6 +56,10 @@ switch (skinToChoose)
 }
 //Se la asignamos antes de empezar
 sprite_index = moverse;
+
+//Pa que no spamee clavao en la nube
+while(place_meeting(x, y, obj_falling_clouds))
+    y--;
 </string>
           </argument>
         </arguments>

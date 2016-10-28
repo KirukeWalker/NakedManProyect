@@ -168,8 +168,8 @@ if((place_meeting(x+(hsp*direction_facing), y, obj_solid_terrain) ||
     direction_facing *= -1;
 }
 //Con los vacios
-if(!place_meeting(x+(skin_width*direction_facing), y+1, obj_solid_terrain) &amp;&amp; 
-    !place_meeting(x+(skin_width*direction_facing), y+1, obj_suelo_hojas) &amp;&amp;
+if(!place_meeting(x+(skin_width*direction_facing), y+2, obj_solid_terrain) &amp;&amp; 
+    !place_meeting(x+(skin_width*direction_facing), y+2, obj_suelo_hojas) &amp;&amp;
     status_jumping == false &amp;&amp; status_charguing == false &amp;&amp; vsp == 0)
     direction_facing *= -1;
 //Movemos el mantel si no ataca

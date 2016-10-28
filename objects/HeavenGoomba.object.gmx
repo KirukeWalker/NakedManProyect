@@ -45,6 +45,9 @@ switch (skinToChoose)
         break;
 }
 sprite_index = skin;
+//Pa que no spamee clavao en la nube
+while(place_meeting(x, y, obj_falling_clouds))
+    y--;
 </string>
           </argument>
         </arguments>

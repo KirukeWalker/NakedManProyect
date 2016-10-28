@@ -51,7 +51,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="Volador" x="4128" y="352" name="inst_9ABC4BE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object5" x="64" y="96" name="inst_6520F76C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="256" y="448" name="inst_5B67429B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_bosque" x="288" y="448" name="inst_3E6DBCB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -601,68 +600,68 @@
     <instance objName="obj_geiser" x="1824" y="-128" name="inst_0505DD37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_geiser" x="1856" y="-128" name="inst_5C05C459" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_geiser" x="1888" y="-128" name="inst_A809062C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="1920" y="-64" name="inst_A64B2D11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="1952" y="-64" name="inst_B0C88593" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="1984" y="-64" name="inst_7DD32F14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2016" y="-64" name="inst_14E530E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2048" y="-64" name="inst_B46EA2D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2080" y="-64" name="inst_15A62D14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2112" y="-64" name="inst_CA319869" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2144" y="-64" name="inst_04F1A498" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2176" y="-64" name="inst_968A9191" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2208" y="-64" name="inst_8A071306" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2240" y="-64" name="inst_EF9C435A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2272" y="-64" name="inst_AB5F18C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2304" y="-64" name="inst_F4B8F538" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2336" y="-64" name="inst_5F17E65D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2368" y="-64" name="inst_CB936541" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2400" y="-64" name="inst_967EEC21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2432" y="-64" name="inst_DDBA7CFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2464" y="-64" name="inst_423D211E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2496" y="-64" name="inst_21F0CCB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2528" y="-64" name="inst_3E9D0192" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2560" y="-64" name="inst_8B8F7A72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2592" y="-64" name="inst_5DFC9A66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2624" y="-64" name="inst_EBB46107" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2656" y="-64" name="inst_77C5DCBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2688" y="-64" name="inst_192D3A30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2720" y="-64" name="inst_5EB63C99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2752" y="-64" name="inst_502A0E42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2784" y="-64" name="inst_41AD1F97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2816" y="-64" name="inst_933779C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2848" y="-64" name="inst_536BE422" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2880" y="-64" name="inst_95D4CCA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2912" y="-64" name="inst_A82A5438" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2944" y="-64" name="inst_4489F608" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="2976" y="-64" name="inst_C04E1FD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3008" y="-64" name="inst_B8B0F4A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3040" y="-64" name="inst_7C351270" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3072" y="-64" name="inst_D3172589" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3104" y="-64" name="inst_A51AB760" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3136" y="-64" name="inst_7E93D50F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3168" y="-64" name="inst_BD062C1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3200" y="-64" name="inst_A27A16F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3232" y="-64" name="inst_1EF5D03D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3264" y="-64" name="inst_E8FDC9E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3296" y="-64" name="inst_BCF60368" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3328" y="-64" name="inst_219335D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3360" y="-64" name="inst_19089075" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3392" y="-64" name="inst_001DD481" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3424" y="-64" name="inst_FF26C75D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3456" y="-64" name="inst_0A1CF850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3488" y="-64" name="inst_9374DB61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3520" y="-64" name="inst_8BB21432" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3552" y="-64" name="inst_E826CE3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3584" y="-64" name="inst_443254C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3616" y="-64" name="inst_49CB5496" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3648" y="-64" name="inst_A3A5E8C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3680" y="-64" name="inst_2E97E055" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3712" y="-64" name="inst_39A567D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3744" y="-64" name="inst_7C09145F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3776" y="-64" name="inst_F4195940" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3808" y="-64" name="inst_D4808A82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3840" y="-64" name="inst_900E491D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_geiser" x="3872" y="-64" name="inst_76464AB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="1920" y="-128" name="inst_A64B2D11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="1952" y="-128" name="inst_B0C88593" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="1984" y="-128" name="inst_7DD32F14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2016" y="-128" name="inst_14E530E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2048" y="-128" name="inst_B46EA2D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2080" y="-128" name="inst_15A62D14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2112" y="-128" name="inst_CA319869" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2144" y="-128" name="inst_04F1A498" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2176" y="-128" name="inst_968A9191" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2208" y="-128" name="inst_8A071306" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2240" y="-128" name="inst_EF9C435A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2272" y="-128" name="inst_AB5F18C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2304" y="-128" name="inst_F4B8F538" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2336" y="-128" name="inst_5F17E65D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2368" y="-128" name="inst_CB936541" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2400" y="-128" name="inst_967EEC21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2432" y="-128" name="inst_DDBA7CFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2464" y="-128" name="inst_423D211E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2496" y="-128" name="inst_21F0CCB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2528" y="-128" name="inst_3E9D0192" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2560" y="-128" name="inst_8B8F7A72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2592" y="-128" name="inst_5DFC9A66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2624" y="-128" name="inst_EBB46107" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2656" y="-128" name="inst_77C5DCBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2688" y="-128" name="inst_192D3A30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2720" y="-128" name="inst_5EB63C99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2752" y="-128" name="inst_502A0E42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2784" y="-128" name="inst_41AD1F97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2816" y="-128" name="inst_933779C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2848" y="-128" name="inst_536BE422" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2880" y="-128" name="inst_95D4CCA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2912" y="-128" name="inst_A82A5438" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2944" y="-128" name="inst_4489F608" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="2976" y="-128" name="inst_C04E1FD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3008" y="-128" name="inst_B8B0F4A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3040" y="-128" name="inst_7C351270" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3072" y="-128" name="inst_D3172589" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3104" y="-128" name="inst_A51AB760" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3136" y="-128" name="inst_7E93D50F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3168" y="-128" name="inst_BD062C1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3200" y="-128" name="inst_A27A16F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3232" y="-128" name="inst_1EF5D03D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3264" y="-128" name="inst_E8FDC9E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3296" y="-128" name="inst_BCF60368" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3328" y="-128" name="inst_219335D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3360" y="-128" name="inst_19089075" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3392" y="-128" name="inst_001DD481" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3424" y="-128" name="inst_FF26C75D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3456" y="-128" name="inst_0A1CF850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3488" y="-128" name="inst_9374DB61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3520" y="-128" name="inst_8BB21432" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3552" y="-128" name="inst_E826CE3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3584" y="-128" name="inst_443254C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3616" y="-128" name="inst_49CB5496" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3648" y="-128" name="inst_A3A5E8C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3680" y="-128" name="inst_2E97E055" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3712" y="-128" name="inst_39A567D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3744" y="-128" name="inst_7C09145F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3776" y="-128" name="inst_F4195940" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3808" y="-128" name="inst_D4808A82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3840" y="-128" name="inst_900E491D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_geiser" x="3872" y="-128" name="inst_76464AB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lightning" x="0" y="320" name="inst_58187311" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_white" x="-64" y="352" name="inst_3463DFA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_camera2" x="0" y="384" name="inst_10D89EEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
