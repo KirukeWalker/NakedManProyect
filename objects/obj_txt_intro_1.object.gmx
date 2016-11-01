@@ -25,7 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 250
+            <string>//Alarm for the autofade
+alarm[0] = 250
+
+//Text to show
+text = 0;
+
+//Le metemos su porpio fade
+fadeIn = true;
+alpha = 1;
+fading_speed = 0.05;
 </string>
           </argument>
         </arguments>
@@ -48,8 +57,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_fade.fadeIn = false;
-obj_fade.alarm[1] = room_speed * 0.05;
+            <string>fadeIn = false;
 </string>
           </argument>
         </arguments>
@@ -72,10 +80,40 @@ obj_fade.alarm[1] = room_speed * 0.05;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(vk_enter)) || (keyboard_check_pressed(vk_space)) || (gamepad_button_check_pressed(0,gp_start)) || (gamepad_button_check_pressed(0,gp_face1) || joystick_check_button(2, 3)) {
-    obj_fade.fadeIn = false;
-    obj_fade.alarm[1] = room_speed * 0.05;
+            <string>if (keyboard_check_pressed(vk_enter)) || 
+        (keyboard_check_pressed(vk_space)) || 
+        (gamepad_button_check_pressed(0,gp_start)) || 
+        (gamepad_button_check_pressed(0,gp_face1) || 
+        joystick_check_button(2, 3)) {
+    fadeIn = false;
     }
+    
+//Fade in y out
+if (fadeIn == true)
+{
+    if (alpha &gt; 0){
+        alpha -= fading_speed;
+    }
+    else{
+        alpha = 0;
+    }
+}
+else if (fadeIn = false) {
+    if(alpha &lt; 1){
+        alpha += fading_speed;
+    }
+    else{
+        alpha = 1;
+        //Siguiente cacho de texto
+        if(text == 0){
+            text ++;
+            fadeIn = true;
+            alarm_set(0, 240);
+        }
+        else    //Y siguiente room
+            room_goto_next();
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -98,18 +136,28 @@ obj_fade.alarm[1] = room_speed * 0.05;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign (fa_center);
+            <string>//Text settings
+draw_set_halign (fa_center);
 draw_set_font (fnt_creditos_peque);
 draw_set_colour (c_white);
-draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
-draw_text (room_width/2,y+80, "and they preyed upon us.");
-draw_text (room_width/2,y+120, "The few survivors had to");
-draw_text (room_width/2,y+160, "renounce to their shame to survive");
-draw_text (room_width/2,y+200, "It's the duty of the Chosen Naked Man");
-draw_text (room_width/2,y+240, "to bring back The Clothes to their place.");
-draw_text (room_width/2,y+280, "");
-draw_text (room_width/2,y+320, "The Drawer");
-
+//
+if(text == 0){
+    draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
+    draw_text (room_width/2,y+80, "and they preyed upon us.");
+    draw_text (room_width/2,y+120, "The few survivors had to");
+    draw_text (room_width/2,y+160, "renounce to their shame to survive");
+}
+else{//
+    draw_text (room_width/2,y+40, "It's the duty of the Chosen Naked Man");
+    draw_text (room_width/2,y+80, "to bring back The Clothes to their place.");
+    draw_text (room_width/2,y+120, "");
+    draw_text (room_width/2,y+160, "The Drawer");
+}
+//Fade stuff
+draw_set_colour(c_black);
+draw_set_alpha(alpha);
+draw_rectangle(0,0,room_width, room_height, false);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>
