@@ -82,6 +82,8 @@
       <sprite>sprites\spr_falling_floor</sprite>
       <sprite>sprites\spr_big_cloud</sprite>
       <sprite>sprites\spr_big_cloud_fuck</sprite>
+      <sprite>sprites\spr_nieveEsquinilla_Suelo2</sprite>
+      <sprite>sprites\spr_suelo_nieve4</sprite>
     </sprites>
     <sprites name="Prota">
       <sprites name="Skin0">
@@ -508,6 +510,8 @@
         <object>objects\obj_mobile_platformH</object>
         <object>objects\obj_mobile_platformV</object>
         <object>objects\obj_nubes</object>
+        <object>objects\obj_esquinilla_suelo_nieve2</object>
+        <object>objects\obj_nieve_suelo4</object>
       </objects>
       <objects name="Atravesables">
         <object>objects\obj_passable_terrain</object>
