@@ -3,9 +3,9 @@
   <spriteName>spr_head</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>3</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_big_god</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,12 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>//Variable
-global.vidaboss = 10;
-hands_off = 0; //Manos fuera de combate
-original_y = y;
+global.vidaboss = 50;
+    //Relacionado con la vida
+damage_received = 0;
+//original_y = y;
+stage = 0;
 
 //Put the healthbar
 health_bar = instance_create(150, 50, obj_healthbar_anal);
+
 </string>
           </argument>
         </arguments>
@@ -54,13 +57,19 @@ health_bar = instance_create(150, 50, obj_healthbar_anal);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Reactivamos las manos
-hands_off = 0;
-obj_hand.status = 0;
-obj_hand.speed = 0;
-obj_hand.vspeed = 0;
-obj_hand.alarm[0] = random_range(30, 90);
-obj_hand.vida_mano = 4;
+            <string>//Single punch alarm
+    //Los creamos de dos en dos
+    //Izquierdo
+    left_punch = instance_create(-30, random(room_height), obj_punch);
+    //left_punch.image_yscale = 1;
+    left_punch.image_xscale = 1;
+    //Derecho
+    rigth_punch = instance_create(room_width+30, random(room_height), obj_punch);
+    //rigth_punch.image_yscale = 1;
+    rigth_punch.image_xscale = -1;
+    rigth_punch.image_angle += 180;
+    //
+    alarm_set(0, 60);
 </string>
           </argument>
         </arguments>
@@ -83,32 +92,35 @@ obj_hand.vida_mano = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Posible movimiento circular
-
-//Comprobamos que hayan caido ambas manos
-if(hands_off = 2){
-    alarm[0] = 90;
-    hands_off = 3;  //Así solo hacemos este paso una vez
-}
-if(hands_off = 3){
-    if(!place_meeting(x,y+8,obj_nubes)) y+=8;
-    
-}
-if(hands_off = 0){
-    if(y &gt; original_y) y -= 4;
-}
-//Recibir ataque
-if (place_meeting (x,y, obj_cacota)) {
-    global.vidaboss -=1;
-    instance_deactivate_object(obj_cacota);
-}
-//Morir del todo
-if (global.vidaboss = 0)
-{ 
-    global.muertes += 1;
-    obj_fade.fadeIn = false;
-    obj_fade.alarm[1] = room_speed * 0.05;
-    instance_destroy();   
+            <string>//Dependiendo de la fase
+switch(stage){
+    //Bajar en plan presentacion
+    case 0:
+        y += 4;
+        //Decidimos la primera dirección y pasamos a la siguiente fase
+        if(y &gt; room_height*1/3){
+            x_to_go = random(room_height);
+            y_to_go = random(room_width/2);
+            direction = point_direction(x, y, x_to_go, y_to_go);
+            speed = 2;
+            alarm_set(0, 1);
+            stage = 1;
+        }
+    break;
+    //Comienza la pelea
+    case 1:
+        //Movimiemiento de prueba
+        if(distance_to_point(x_to_go, y_to_go) &lt; 10){
+            x_to_go = random(room_height);
+            y_to_go = random(room_width/2);
+            direction = point_direction(x, y, x_to_go, y_to_go);
+        }
+        //Cuando la vida baje de ciertos puntos lanzamos el doble punch
+        if(damage_received &gt;= 15){
+            damage_received = 0;
+            double_punch = instance_create(object5.x, -50, obj_double_punch);
+        }
+    break;
 }
 </string>
           </argument>
