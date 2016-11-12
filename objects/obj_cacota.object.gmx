@@ -197,6 +197,7 @@ explosion = instance_create(other.x, other.y, obj_explosion);
 with(other)
     instance_destroy();
 instance_destroy();*/
+audio_play_sound(snd_damaged_enemy, 1, false);
 </string>
           </argument>
         </arguments>

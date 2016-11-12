@@ -6,20 +6,33 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\snd_jump</sound>
-    <sound>sound\snd_shoot</sound>
-    <sound>sound\snd_die</sound>
-    <sound>sound\snd_knockback</sound>
-    <sound>sound\snd_lava</sound>
-    <sound>sound\snd_beach</sound>
-    <sound>sound\snd_snow</sound>
-    <sound>sound\snd_forest</sound>
-    <sound>sound\snd_lavalboss</sound>
-    <sound>sound\snd_city</sound>
-    <sound>sound\snd_credits</sound>
-    <sound>sound\snd_intro</sound>
-    <sound>sound\snd_lavaboss_test</sound>
     <sound>sound\snd_woosh</sound>
+    <sounds name="Sound Effects">
+      <sound>sound\snd_jump</sound>
+      <sound>sound\snd_shoot</sound>
+      <sound>sound\snd_die</sound>
+      <sound>sound\snd_knockback</sound>
+      <sound>sound\snd_menu_cursor</sound>
+      <sound>sound\snd_boss5_balls</sound>
+      <sound>sound\snd_boss1_hitting_wall</sound>
+      <sound>sound\snd_rain</sound>
+      <sound>sound\snd_boss5_laser</sound>
+      <sound>sound\snd_boss2_chain_attack</sound>
+      <sound>sound\snd_boss1_rising_lava</sound>
+      <sound>sound\snd_menu_selection</sound>
+      <sound>sound\snd_damaged_enemy</sound>
+    </sounds>
+    <sounds name="Music">
+      <sound>sound\snd_lava</sound>
+      <sound>sound\snd_beach</sound>
+      <sound>sound\snd_snow</sound>
+      <sound>sound\snd_forest</sound>
+      <sound>sound\snd_lavalboss</sound>
+      <sound>sound\snd_city</sound>
+      <sound>sound\snd_credits</sound>
+      <sound>sound\snd_intro</sound>
+      <sound>sound\snd_lavaboss_test</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Terrenos">
