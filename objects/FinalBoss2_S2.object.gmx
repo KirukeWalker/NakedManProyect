@@ -224,6 +224,7 @@ else{
             <string>//Pierde vida y destruye el proyectil
 global.vidaboss -= 1;
 with(other) instance_destroy();
+instance_create(x, y, obj_cacota_sound);
 if (global.vidaboss == 0)
 { 
     ini_open("SystemNM.txt")

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>self</parentName>
   <maskName>spr_boss2_idle</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -353,6 +353,7 @@ if(status &gt; -1){
 global.vidaboss -= 1;
 with(other)
     instance_destroy();
+instance_create(x, y, obj_cacota_sound);
     
 //Control de muerte
 if(global.vidaboss &lt;= 0)

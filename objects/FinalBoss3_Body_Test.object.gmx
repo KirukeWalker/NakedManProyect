@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -84,6 +84,7 @@ else
             <string>//
 global.vidaboss --;
 with(other) instance_destroy();
+instance_create(x, y, obj_cacota_sound);
 </string>
           </argument>
         </arguments>

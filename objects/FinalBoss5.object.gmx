@@ -216,6 +216,7 @@ if (teleporting == false) {
     global.vidaboss -= 1;
     stay_time -= 4;
     with(other) instance_destroy();
+    instance_create(x, y, obj_cacota_sound);
 }
 </string>
           </argument>

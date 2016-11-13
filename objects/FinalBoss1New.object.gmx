@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-5</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>self</parentName>
   <maskName>spr_boss1_idle</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -387,6 +387,7 @@ if(status != 0){
     with(other)
         instance_destroy();
     global.vidaboss -= 1;
+    instance_create(x, y, obj_cacota_sound);
 }
 </string>
           </argument>

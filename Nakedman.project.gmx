@@ -570,6 +570,7 @@
     </objects>
     <objects name="Enemigos">
       <object>objects\obj_enemy</object>
+      <object>objects\obj_boss</object>
       <object>objects\serpiente_to_flama</object>
       <object>objects\Goomba</object>
       <object>objects\HeavenGoomba</object>
@@ -598,6 +599,7 @@
     </objects>
     <objects name="Proyectil">
       <object>objects\obj_cacota</object>
+      <object>objects\obj_cacota_sound</object>
       <object>objects\obj_vodka</object>
       <object>objects\obj_sneksot</object>
       <object>objects\obj_lightball</object>

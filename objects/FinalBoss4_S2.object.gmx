@@ -91,6 +91,7 @@ switch(status){
             <kind>1</kind>
             <string>//Pierde vida
 global.vidaboss --;
+instance_create(x, y, obj_cacota_sound);
 </string>
           </argument>
         </arguments>

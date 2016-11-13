@@ -208,6 +208,7 @@ if(status &gt; 1){
     rotation_speed += 0.05;
     spam_rate -= 0.5;
     with(other) instance_destroy();
+    instance_create(x, y, obj_cacota_sound);
 }
 </string>
           </argument>

@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="obj_double_punch">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,150 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Suma muerte, crea explosion y destruye a ambos
-explosion = instance_create(other.x, other.y, obj_explosion);
-with(other)
-    instance_destroy();
-instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_punch">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Suma muerte, crea explosion y destruye a ambos
-explosion = instance_create(other.x, other.y, obj_explosion);
-with(other)
-    instance_destroy();
-instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="Melee">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Suma muerte, crea explosion y destruye a ambos
-global.muertes += 1;
-explosion = instance_create(other.x, other.y, obj_explosion);
-with(other)
-    instance_destroy();
-instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="Volador">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Suma muerte, crea explosion y destruye a ambos
-global.muertes += 1;
-explosion = instance_create(other.x, other.y, obj_explosion);
-with(other)
-    instance_destroy();
-instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="Goomba">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Suma muerte, crea explosion y destruye a ambos
-global.muertes += 1;
-explosion = instance_create(other.x, other.y, obj_explosion);
-with(other)
-    instance_destroy();
-instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="serpiente_to_flama">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Suma muerte, crea explosion y destruye a ambos
-global.muertes += 1;
-explosion = instance_create(other.x, other.y, obj_explosion);
-with(other)
-    instance_destroy();
-instance_destroy();
+            <string>//Control de destrucción
+
 </string>
           </argument>
         </arguments>
@@ -192,12 +50,12 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>//Suma muerte, crea explosion y destruye a ambos
-/*global.muertes += 1;
+global.muertes += 1;
 explosion = instance_create(other.x, other.y, obj_explosion);
 with(other)
     instance_destroy();
-instance_destroy();*/
-audio_play_sound(snd_damaged_enemy, 1, false);
+instance_destroy();
+instance_create(x, y, obj_cacota_sound);
 </string>
           </argument>
         </arguments>
