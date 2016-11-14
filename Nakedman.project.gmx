@@ -13,14 +13,14 @@
       <sound>sound\snd_die</sound>
       <sound>sound\snd_knockback</sound>
       <sound>sound\snd_menu_cursor</sound>
-      <sound>sound\snd_boss5_balls</sound>
-      <sound>sound\snd_boss1_hitting_wall</sound>
       <sound>sound\snd_rain</sound>
-      <sound>sound\snd_boss5_laser</sound>
-      <sound>sound\snd_boss2_chain_attack</sound>
-      <sound>sound\snd_boss1_rising_lava</sound>
       <sound>sound\snd_menu_selection</sound>
       <sound>sound\snd_damaged_enemy</sound>
+      <sound>sound\snd_boss1_hitting_wall</sound>
+      <sound>sound\snd_boss1_rising_lava</sound>
+      <sound>sound\snd_boss2_chain_attack</sound>
+      <sound>sound\snd_boss5_laser</sound>
+      <sound>sound\snd_boss5_balls</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\snd_lava</sound>
@@ -645,7 +645,15 @@
         <object>objects\obj_Menu1Selector</object>
         <object>objects\obj_Menu1</object>
         <object>objects\obj_menu</object>
+        <object>objects\obj_blackScreen</object>
         <object>objects\obj_gamePausedMenu</object>
+        <object>objects\obj_pressStart</object>
+        <object>objects\obj_fullScreenOnOff</object>
+        <object>objects\obj_hdModeOnOff</object>
+        <object>objects\obj_musicOnOff</object>
+        <object>objects\obj_soundsOnOff</object>
+        <object>objects\obj_timerOnOff</object>
+        <object>objects\obj_chooseLevel</object>
       </objects>
       <objects name="Healthbars">
         <object>objects\obj_healthbar</object>
@@ -677,15 +685,7 @@
       <object>objects\obj_water_spammer</object>
       <object>objects\obj_lightning</object>
       <object>objects\stuff_deactivator</object>
-      <object>objects\obj_chooseLevel</object>
-      <object>objects\obj_pressStart</object>
-      <object>objects\obj_blackScreen</object>
-      <object>objects\obj_fullScreenOnOff</object>
       <object>objects\obj_guardado</object>
-      <object>objects\obj_hdModeOnOff</object>
-      <object>objects\obj_musicOnOff</object>
-      <object>objects\obj_soundsOnOff</object>
-      <object>objects\obj_timerOnOff</object>
     </objects>
     <objects name="BossFinal Pruebas">
       <object>objects\Player1</object>

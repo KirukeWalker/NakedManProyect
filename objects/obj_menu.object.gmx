@@ -110,9 +110,11 @@ key_cancel = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0
 if(!instance_exists(obj_blackScreen)){
     mpos += -key_up + key_down;
     mpos = clamp(mpos, 0, 4); //Aquí cantidad de opciones
-    if(instance_exists(obj_Menu1Selector))
+    if(instance_exists(obj_Menu1Selector)){
         obj_Menu1Selector.y=view_yview+170+(64*mpos);
-    
+        if(key_up || key_down)
+            audio_play_sound(snd_menu_cursor, 10, false);
+    }
 }
 
 if global.menu1Start = true &amp;&amp; moving=false &amp;&amp; key_okey{

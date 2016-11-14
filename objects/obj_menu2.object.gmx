@@ -160,6 +160,9 @@ key_cancel = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0
     mpos = clamp(mpos, 0, 5); //Aquí cantidad de opciones
     npos += -key_left + key_right;
     npos = clamp(npos, 0, 1); //Aquí cantidad de opciones
+//Movement sound
+    if(key_up || key_down || key_left || key_right)
+        audio_play_sound(snd_menu_cursor, 10, false);
     //if(instance_exists(obj_Menu1Selector))
         //obj_Menu1Selector.y=view_yview+170+(64*mpos);
 

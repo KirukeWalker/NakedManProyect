@@ -87,9 +87,11 @@ if(joystick_xpos(2) != 0 &amp;&amp; global.joy_check == true){
 
 if ((gamepad_button_check_pressed(0,gp_padr) || keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) &amp;&amp; global.movemenu&lt;6) {
     global.movemenu++;
+        audio_play_sound(snd_menu_cursor, 10, false);
     }
 if ((gamepad_button_check_pressed(0,gp_padl) || keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) &amp;&amp; global.movemenu&gt;0) {
     global.movemenu--;
+        audio_play_sound(snd_menu_cursor, 10, false);
     }
 
     
