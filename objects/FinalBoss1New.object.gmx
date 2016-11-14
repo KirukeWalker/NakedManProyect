@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-5</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>obj_hazard</parentName>
   <maskName>spr_boss1_idle</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -269,6 +269,8 @@ switch(status){
                         lava[i, j] = instance_create(i * 32 + 544, j * 32 + 640, obj_deep_lava);
                 }
             }
+            //Empezamos aqui el audio de lava subiendo
+            audio_play_sound(snd_boss1_rising_lava, 10, true);
             //Ajsuta las profundidades
             obj_terreno_profundo.depth = -3;
             Lava.depth = -2;
@@ -304,6 +306,8 @@ switch(status){
             hspeed = 12 * direction_looking;
             status = 3;
             phase = 4;
+            //Paramos aqui el audio
+            audio_stop_sound(snd_boss1_rising_lava);
         }
     break;
     //
@@ -320,6 +324,7 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; status != 5){
 if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
     hspeed = 0;
     direction_looking *= -1;
+    audio_play_sound(snd_boss1_hitting_wall, 10, false);
     //Temblor de cámara
     if(last_round == true){
         obj_camera2.status = 3;
