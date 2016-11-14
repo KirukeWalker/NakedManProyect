@@ -42,6 +42,8 @@ part_emitter_region(rain,rain_emitter,0-100,
                     ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
 part_emitter_stream(rain,rain_emitter,raintear,20);     //Emitimos las partículas de nieve
 
+//Empezamos sonido de lluvia
+audio_play_sound(snd_rain, 10, true);
 </string>
           </argument>
         </arguments>
@@ -71,6 +73,7 @@ if(object5.x &lt; 4000){
 }
 else{
     part_emitter_stream(rain,rain_emitter,raintear,0);
+    audio_stop_sound(snd_rain);
 }
 </string>
           </argument>
