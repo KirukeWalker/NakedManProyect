@@ -654,6 +654,7 @@
         <object>objects\obj_soundsOnOff</object>
         <object>objects\obj_timerOnOff</object>
         <object>objects\obj_chooseLevel</object>
+        <object>objects\obj_selection_sound</object>
       </objects>
       <objects name="Healthbars">
         <object>objects\obj_healthbar</object>

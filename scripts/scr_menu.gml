@@ -5,7 +5,7 @@ if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Done
     }
 ini_close();
 //Variables
-globalvar pussy_mode;
+//globalvar pussy_mode;
 //globalvar muertes;
 //globalvar muertes_registro;
 //Según la opción elegida

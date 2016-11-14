@@ -146,6 +146,7 @@ if movingfinish=true &amp;&amp; keyboard_check_pressed(vk_up) &amp;&amp; !instan
 
 if movingfinish=true &amp;&amp; !instance_exists(obj_blackScreen) &amp;&amp; (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_start)){
     script_execute(scr_menu);
+    instance_create(0, 0, obj_selection_sound);
 }
 </string>
           </argument>
