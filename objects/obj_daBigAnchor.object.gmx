@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>obj_hazard</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -106,6 +106,7 @@ if(returning == true){
 if(returning = true){
     other.alarm[2] = 10;
     with(obj_chain_link) instance_destroy();
+    audio_stop_sound(snd_boss2_chain_attack);
     instance_destroy();
 }
 </string>

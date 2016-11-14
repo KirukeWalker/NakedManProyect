@@ -31,6 +31,9 @@ direction = point_direction(x, y, player.x, player.y);
 image_angle = direction + 180;
 speed = 30;
 returning = false;
+//El audio de cadena lo iniciamos aqui para esta
+    //Desaprarecera solo con el cierre de escena
+audio_play_sound(snd_boss2_chain_attack, 10, true);
 </string>
           </argument>
         </arguments>

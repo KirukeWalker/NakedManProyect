@@ -104,6 +104,7 @@ else if(obj_nakedman_falling.status_dead == 0){ //Y si si, disparamos
     daBigAnchor.image_xscale = 3;
     daBigAnchor.image_yscale = 3;
     time_to_shoot = false;  
+    audio_play_sound(snd_boss2_chain_attack, 10, true);
 }
 
 </string>

@@ -118,6 +118,8 @@ else if(status == 1){
     anchor = instance_create(x,y,obj_anchor);
     status = 2;
     sprite_index = spr_boss2_idle;
+    //Audio del ancla
+    audio_play_sound(snd_boss2_chain_attack, 10, true);
 }
 </string>
           </argument>
@@ -261,6 +263,8 @@ if(status = 4){
         image_xscale = -1;
         interactor.image_xscale = -1;
     }
+    //Paramos el sonido del ancla
+    audio_stop_sound(snd_boss2_chain_attack);
     //Destruimos el terreno que tque
     destroy_terrain = true;
     alarm_set(2, 1);

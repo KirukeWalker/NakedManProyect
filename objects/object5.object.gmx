@@ -717,32 +717,6 @@ if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_hazard">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Colision con enemigos
-if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){            
-    script_execute(scr_knockback);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_boss_interactor">
       <action>
         <libid>1</libid>
@@ -821,6 +795,32 @@ if(invincible == false &amp;&amp; status_dead == false){
     if(other.teleporting == false){
         script_execute(scr_knockback);
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_hazard">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Colision con enemigos
+if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){            
+    script_execute(scr_knockback);
 }
 </string>
           </argument>
