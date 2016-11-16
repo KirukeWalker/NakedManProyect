@@ -29,7 +29,7 @@
 direction = point_direction(x, y, object5.x, object5.y);
 image_angle = direction;
 //La velocidad hacemos que dependa de la vida que le queda al boss
-speed = 20 - (global.vidaboss / 10);
+speed = 12 - (global.vidaboss / 10);
 //Lo destruimos para evitar la sobrecarga
     //Con contador
 alarm_set(0, 60 * 10);
