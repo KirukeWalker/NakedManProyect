@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemy</parentName>
+  <parentName>obj_hazard</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -55,6 +55,9 @@ objective = object5;
 //Control para cuando muere el boss
 if(object_exists(objective))
     direction = point_direction(x, y, objective.x, objective.y);
+//Lo activamos solo una vez
+if(!audio_is_playing(snd_boss5_balls))
+    audio_play_sound(snd_boss5_balls, 10, false);
 </string>
           </argument>
         </arguments>

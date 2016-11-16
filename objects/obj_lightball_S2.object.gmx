@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-1</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_hazard</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -32,6 +32,7 @@ objective = object5;
 //objective = FinalBoss5;
 image_xscale = 0.1;
 image_yscale = 64;
+
 </string>
           </argument>
         </arguments>
@@ -56,8 +57,10 @@ image_yscale = 64;
             <kind>1</kind>
             <string>fly = true;
 //Control para cuando muere el boss
-if(object_exists(objective))
+//if(object_exists(objective))
     direction = point_direction(x, y, objective.x, objective.y);
+//
+audio_play_sound(snd_boss5_balls, 10, false);
 </string>
           </argument>
         </arguments>

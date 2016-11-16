@@ -127,7 +127,8 @@ if(attack == true)
                 if(attack_type = 0) disparo[i].objective = FinalBoss5;
                 else    disparo[i].objective = object5;  
             }
-                //attack_type = 1;
+            //attack_type = 1;
+            //audio_play_sound(snd_boss5_balls, 10, false);
         }
         else
         {
