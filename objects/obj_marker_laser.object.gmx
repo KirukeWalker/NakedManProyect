@@ -28,7 +28,7 @@
             <string>image_angle = point_direction(x, y, object5.x, object5.y);
 alarm[0] = 30;
 //De momento es muy lento
-//audio_play_sound(snd_boss5_laser, 10, false);
+audio_play_sound(snd_boss5_laser_preparing, 10, false);
 </string>
           </argument>
         </arguments>

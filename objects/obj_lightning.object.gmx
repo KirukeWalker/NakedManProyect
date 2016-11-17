@@ -91,6 +91,8 @@ if(object5.x &gt; 4000 &amp;&amp; triggered == false){
     }
     //De momento limpiamos los que estaban aqui
     with(Volador) instance_destroy();
+    //Y que suene
+    audio_play_sound(snd_thunder, 10, false);
 }
 //Make the camera follow the firewall
 if(fire_wall != noone){

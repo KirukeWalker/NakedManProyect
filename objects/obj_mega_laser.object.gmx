@@ -27,6 +27,11 @@
             <kind>1</kind>
             <string>//image_angle = point_direction(x, y, object5.x, object5.y);
 alarm[0] = 30;
+
+//Para el audio anterior si no habia finalizado e inicia el nuevo
+if(audio_is_playing(snd_boss5_laser_preparing))
+    audio_stop_sound(snd_boss5_laser_preparing);
+audio_play_sound(snd_boss5_laser_shooting, 10, false);
 </string>
           </argument>
         </arguments>

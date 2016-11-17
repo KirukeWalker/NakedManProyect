@@ -19,8 +19,10 @@
       <sound>sound\snd_boss1_hitting_wall</sound>
       <sound>sound\snd_boss1_rising_lava</sound>
       <sound>sound\snd_boss2_chain_attack</sound>
-      <sound>sound\snd_boss5_laser</sound>
+      <sound>sound\snd_boss5_laser_preparing</sound>
+      <sound>sound\snd_boss5_laser_shooting</sound>
       <sound>sound\snd_boss5_balls</sound>
+      <sound>sound\snd_thunder</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\snd_lava</sound>
