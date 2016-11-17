@@ -31,7 +31,8 @@ if(obj_head.stage != 0){
         instance_destroy();
     global.vidaboss -= 1;
     obj_head.damage_received ++;
-    instance_create(x, y, obj_cacota_sound);
+    if(global.SOUNDS == true)
+        instance_create(x, y, obj_cacota_sound);
 }
 </string>
           </argument>

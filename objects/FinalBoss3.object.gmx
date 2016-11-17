@@ -125,7 +125,8 @@ global.vidaboss -=1;
 move_speed = move_speed + 0.5;
 with(other)
     instance_destroy();
-instance_create(x, y, obj_cacota_sound);
+if(global.SOUNDS == true)
+        instance_create(x, y, obj_cacota_sound);
 </string>
           </argument>
         </arguments>

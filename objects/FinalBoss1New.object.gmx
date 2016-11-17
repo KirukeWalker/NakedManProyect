@@ -270,7 +270,8 @@ switch(status){
                 }
             }
             //Empezamos aqui el audio de lava subiendo
-            audio_play_sound(snd_boss1_rising_lava, 10, true);
+            if(global.SOUNDS == true)
+                audio_play_sound(snd_boss1_rising_lava, 10, true);
             //Ajsuta las profundidades
             obj_terreno_profundo.depth = -3;
             Lava.depth = -2;
@@ -324,7 +325,8 @@ if(place_meeting(x, y + vspeed, obj_solid_terrain) &amp;&amp; status != 5){
 if(place_meeting(x + hspeed, y, obj_solid_terrain) &amp;&amp; status == 2){
     hspeed = 0;
     direction_looking *= -1;
-    audio_play_sound(snd_boss1_hitting_wall, 10, false);
+    if(global.SOUNDS == true)
+        audio_play_sound(snd_boss1_hitting_wall, 10, false);
     //Temblor de cámara
     if(last_round == true){
         obj_camera2.status = 3;
@@ -392,7 +394,8 @@ if(status != 0){
     with(other)
         instance_destroy();
     global.vidaboss -= 1;
-    instance_create(x, y, obj_cacota_sound);
+    if(global.SOUNDS == true)
+        instance_create(x, y, obj_cacota_sound);
 }
 </string>
           </argument>

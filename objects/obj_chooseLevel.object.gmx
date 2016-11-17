@@ -55,14 +55,16 @@ ready=true;
     right=1;
     left=0;
     ready=false;
-    audio_play_sound(snd_menu_cursor, 10, false);
+    if(global.SOUNDS == true)
+        audio_play_sound(snd_menu_cursor, 10, false);
 }
 
 if ((gamepad_button_check_pressed(0,gp_padl) || keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) &amp;&amp; x&gt;=-3312 &amp;&amp; x&lt;288 &amp;&amp; ready=true){
     right=0;
     left=1;
     ready=false;
-    audio_play_sound(snd_menu_cursor, 10, false);
+    if(global.SOUNDS == true)
+        audio_play_sound(snd_menu_cursor, 10, false);
 }
 
 if (right=1 &amp;&amp; left=0){

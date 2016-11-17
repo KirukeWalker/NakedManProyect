@@ -94,8 +94,10 @@ key_cancel = keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0
     optionspos += -key_up + key_down;
     optionspos = clamp(optionspos, 0, 4); //Aquí cantidad de opciones
     obj_Menu1Selector.y=view_yview+178+(60*optionspos);
-    if(key_up || key_down)
-        audio_play_sound(snd_menu_cursor, 10, false);
+    if(global.SOUNDS == true){
+        if(key_up || key_down)
+            audio_play_sound(snd_menu_cursor, 10, false);
+    }
 /*
 if keyboard_check_pressed(vk_down){
     if optionspos=4 {
@@ -120,7 +122,8 @@ if keyboard_check_pressed(vk_up){
 */
 if(key_okey){
     script_execute(scr_menuoptions);
-    instance_create(0, 0, obj_selection_sound);
+    if(global.SOUNDS == true)
+        instance_create(0, 0, obj_selection_sound);
 }
 
 if(key_cancel){

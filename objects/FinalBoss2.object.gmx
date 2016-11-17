@@ -119,7 +119,8 @@ else if(status == 1){
     status = 2;
     sprite_index = spr_boss2_idle;
     //Audio del ancla
-    audio_play_sound(snd_boss2_chain_attack, 10, true);
+    if(global.SOUNDS == true)
+        audio_play_sound(snd_boss2_chain_attack, 10, true);
 }
 </string>
           </argument>
@@ -317,6 +318,10 @@ if(status &gt; -1){
         object5.y &gt; 1120)
         global.vida = 0;
 }
+//Control de sonido si el player muere
+if(instance_exists(obj_gameoverimg))
+    audio_stop_sound(snd_boss2_chain_attack);
+
 //Morir del todo
 /*if (global.vidaboss == 0)
 { 
@@ -357,7 +362,8 @@ if(status &gt; -1){
 global.vidaboss -= 1;
 with(other)
     instance_destroy();
-instance_create(x, y, obj_cacota_sound);
+if(global.SOUNDS == true)
+        instance_create(x, y, obj_cacota_sound);
     
 //Control de muerte
 if(global.vidaboss &lt;= 0)

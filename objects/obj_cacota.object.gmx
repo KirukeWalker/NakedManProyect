@@ -55,7 +55,8 @@ explosion = instance_create(other.x, other.y, obj_explosion);
 with(other)
     instance_destroy();
 instance_destroy();
-instance_create(x, y, obj_cacota_sound);
+if(global.SOUNDS == true)
+        instance_create(x, y, obj_cacota_sound);
 </string>
           </argument>
         </arguments>

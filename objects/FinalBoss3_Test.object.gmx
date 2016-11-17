@@ -253,7 +253,8 @@ if(status == 2 || distance_to_point(720, 320) &gt;= 400){
             <string>//
 global.vidaboss --;
 with(other) instance_destroy();
-instance_create(x, y, obj_cacota_sound);
+if(global.SOUNDS == true)
+        instance_create(x, y, obj_cacota_sound);
 </string>
           </argument>
         </arguments>
