@@ -45,6 +45,33 @@ else
 //Creamos el primer eslabón
 chain_link = instance_create(x,y,obj_chain_link);
 chain_link.image_angle = image_angle;
+//Empezamos sonido con la creación del ancla
+if(global.SOUNDS == true)
+        audio_play_sound(snd_boss2_chain_attack, 3, false);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Y cuando desaparezca lo paramos
+audio_stop_sound(snd_boss2_chain_attack);
 </string>
           </argument>
         </arguments>
@@ -204,6 +231,7 @@ else if(returning == true){
         instance_destroy();
     instance_destroy();
 }
+
 </string>
           </argument>
         </arguments>

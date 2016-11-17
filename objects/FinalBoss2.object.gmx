@@ -119,8 +119,8 @@ else if(status == 1){
     status = 2;
     sprite_index = spr_boss2_idle;
     //Audio del ancla
-    if(global.SOUNDS == true)
-        audio_play_sound(snd_boss2_chain_attack, 10, true);
+    //if(global.SOUNDS == true)
+        //audio_play_sound(snd_boss2_chain_attack, 10, true);
 }
 </string>
           </argument>
