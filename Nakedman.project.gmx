@@ -99,6 +99,7 @@
       <sprite>sprites\spr_big_cloud_fuck</sprite>
       <sprite>sprites\spr_nieveEsquinilla_Suelo2</sprite>
       <sprite>sprites\spr_suelo_nieve4</sprite>
+      <sprite>sprites\spr_suelo_bosque4</sprite>
     </sprites>
     <sprites name="Prota">
       <sprites name="Skin0">
@@ -514,6 +515,7 @@
           <object>objects\obj_esquina_bosque</object>
           <object>objects\obj_sueloBosque_noPisable</object>
           <object>objects\obj_suelo_bosque</object>
+          <object>objects\obj_suelobosque4</object>
         </objects>
         <objects name="Nieve">
           <object>objects\obj_nieve_en_general</object>
@@ -724,6 +726,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\Nivel_Bosque_2</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -734,7 +737,6 @@
     <room>rooms\Nivel_Playa2</room>
     <room>rooms\Room_FinalBoss2</room>
     <room>rooms\Room_FinalBoss2_S2</room>
-    <room>rooms\Nivel_Bosque_2</room>
     <room>rooms\Nivel_Bosque</room>
     <room>rooms\Room_FinalBoss3_Test</room>
     <room>rooms\Room_FinalBoss3</room>
