@@ -63,15 +63,17 @@ switch(status){
     case 0:
         if(object5.x &gt; 180){
             status = 1;
-            apply_gravity = true;
+            
             hspeed = running_speed;
             avalanch = instance_create(0, 0, obj_avalanch);
         }
     break;
     //Saliendo y rompiendo la pared
     case 1:
-        if(x &gt; 640)
+        if(x &gt; 640){
             status = 2;
+            apply_gravity = true;   
+        }
     break;
     //Patinando normal
     case 2:

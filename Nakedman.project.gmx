@@ -533,6 +533,7 @@
           <object>objects\obj_nieveTriple</object>
           <object>objects\obj_nieveDoble</object>
           <object>objects\obj_nieve_pisable</object>
+          <object>objects\obj_nieve_no_pisable</object>
         </objects>
         <objects name="Ciudad">
           <object>objects\obj_mobile_platformV</object>
@@ -560,7 +561,6 @@
       <object>objects\obj_falling_tree</object>
       <object>objects\obj_pinchos</object>
       <object>objects\obj_hielo</object>
-      <object>objects\obj_nieve_no_pisable</object>
       <object>objects\obj_pincho</object>
       <object>objects\obj_pinchos_ciudad_derecha</object>
       <object>objects\obj_pinchos_ciudad_izquierda</object>
@@ -726,6 +726,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Introduccion1</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -742,7 +743,6 @@
     <room>rooms\Room_FinalBoss3</room>
     <room>rooms\Nivel_Nieve</room>
     <room>rooms\Nivel_Nieve_2</room>
-    <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Room_FinalBoss4_S2</room>
     <room>rooms\Final_Level</room>
     <room>rooms\Room_FinalBoss5</room>
