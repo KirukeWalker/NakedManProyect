@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//Ajuste vertical
-background_y[0] = (view_yview / room_height) 
+background_y[0] = view_yview 
+                    / (room_height - view_hview) 
                     * (room_height - background_get_height(0));                  
 </string>
           </argument>

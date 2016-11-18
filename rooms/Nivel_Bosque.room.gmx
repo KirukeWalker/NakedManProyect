@@ -1043,6 +1043,7 @@
     <instance objName="obj_esquina_bosque" x="2048" y="160" name="inst_1FD2C783" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_game_over" x="-64" y="288" name="inst_7F3DD11D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="-64" y="320" name="inst_D8E92950" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_background_displacerH" x="-64" y="384" name="inst_8E4CD322" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

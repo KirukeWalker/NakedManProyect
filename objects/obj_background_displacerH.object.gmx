@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Sacamos una proporcion de tamaño
+protortion = background_width[0] / room_width;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -26,8 +50,12 @@
           <argument>
             <kind>1</kind>
             <string>//Ajuste horizontal
-background_x[0] = (view_xview / room_width) 
-                    * (room_width - background_get_width(0));               
+                    //Posicion respecto al ancho entre 0 y 1
+background_x[0] = view_xview / 
+                    (room_width - view_wview) *              //Ancho del nivel menos el de la pantalla
+                    (room_width - background_get_width(0))   //Ancho del nivel menos el del fondo
+                    ;                  
+                    //         
 </string>
           </argument>
         </arguments>
