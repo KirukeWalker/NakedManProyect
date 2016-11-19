@@ -75,6 +75,7 @@ if(x &gt; room_height + 50)
           <argument>
             <kind>1</kind>
             <string>//Destruye las nubes en su camino
+script_execute(scr_generate_fragments, other);
 with(other) instance_destroy();
 </string>
           </argument>

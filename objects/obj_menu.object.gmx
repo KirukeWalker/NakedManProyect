@@ -156,7 +156,7 @@ if movingfinish=true &amp;&amp; !instance_exists(obj_blackScreen) &amp;&amp; (ke
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -173,7 +173,11 @@ if movingfinish=true &amp;&amp; !instance_exists(obj_blackScreen) &amp;&amp; (ke
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw_text(view_xview+80,view_yview+20,instance_number(obj_music))
+            <string>//De momento vamos a poner el titulo aqui
+draw_set_font(fnt_creditos_grande_negrita);
+draw_text(200, 20, "NAKED MAN");
+draw_set_font(fnt_creditos_grande);
+draw_text(400, 70, "vs The Clothes");
 </string>
           </argument>
         </arguments>
