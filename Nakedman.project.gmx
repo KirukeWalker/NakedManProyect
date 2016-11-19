@@ -453,6 +453,10 @@
       <sprite>sprites\spr_god_side</sprite>
       <sprite>sprites\spr_god_front</sprite>
     </sprites>
+    <sprites name="Logos">
+      <sprite>sprites\spr_4FF</sprite>
+      <sprite>sprites\spr_USJ</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_1</background>
@@ -727,7 +731,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Introduccion1</room>
+    <room>rooms\Introduccion</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
     <room>rooms\Nivel_1</room>

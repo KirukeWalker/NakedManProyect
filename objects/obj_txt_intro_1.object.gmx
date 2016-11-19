@@ -80,12 +80,17 @@ fading_speed = 0.05;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(vk_enter)) || 
+            <string>//Tecla para avanzar
+if (keyboard_check_pressed(vk_enter)) || 
         (keyboard_check_pressed(vk_space)) || 
-        (gamepad_button_check_pressed(0,gp_start)) || 
         (gamepad_button_check_pressed(0,gp_face1) || 
         joystick_check_button(2, 3)) {
     fadeIn = false;
+    }
+//Tecla para saltar
+if (keyboard_check_pressed(vk_escape)) || 
+        (gamepad_button_check_pressed(0,gp_start)) {
+    room_goto_next();
     }
     
 //Fade in y out
@@ -105,7 +110,7 @@ else if (fadeIn = false) {
     else{
         alpha = 1;
         //Siguiente cacho de texto
-        if(text == 0){
+        if(text &lt; 3){
             text ++;
             fadeIn = true;
             alarm_set(0, 240);
@@ -140,18 +145,28 @@ else if (fadeIn = false) {
 draw_set_halign (fa_center);
 draw_set_font (fnt_creditos_peque);
 draw_set_colour (c_white);
-//
-if(text == 0){
-    draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
-    draw_text (room_width/2,y+80, "and they preyed upon us.");
-    draw_text (room_width/2,y+120, "The few survivors had to");
-    draw_text (room_width/2,y+160, "renounce to their shame to survive");
-}
-else{//
-    draw_text (room_width/2,y+40, "It's the duty of the Chosen Naked Man");
-    draw_text (room_width/2,y+80, "to bring back The Clothes to their place.");
-    draw_text (room_width/2,y+120, "");
-    draw_text (room_width/2,y+160, "The Drawer");
+//Escribimos icono o texto según la slide
+switch(text){
+    case 0:
+        draw_sprite(spr_4FF, 0, room_width/2, room_height/2-50);
+        draw_set_font (fnt_creditos_grande_negrita);
+        draw_text(room_width/2, 350, "4FreaksFiction");
+    break;
+    case 1:
+        draw_sprite(spr_USJ, 0, room_width/2, room_height/2);
+    break;
+    case 2:
+        draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
+        draw_text (room_width/2,y+80, "and they preyed upon us.");
+        draw_text (room_width/2,y+120, "The few survivors had to");
+        draw_text (room_width/2,y+160, "renounce to their shame to survive");
+    break;
+    case 3:
+        draw_text (room_width/2,y+40, "It's the duty of the Chosen Naked Man");
+        draw_text (room_width/2,y+80, "to bring back The Clothes to their place.");
+        draw_text (room_width/2,y+120, "");
+        draw_text (room_width/2,y+160, "The Drawer");
+    break;
 }
 //Fade stuff
 draw_set_colour(c_black);

@@ -16,7 +16,7 @@ switch(levelPosition)
     break;
     case 2:{
        if global.Nivel3Acceso=1{ 
-            room_goto(Nivel_Bosque) 
+            room_goto(Nivel_Bosque_2) 
             instance_destroy();
             }
        }
