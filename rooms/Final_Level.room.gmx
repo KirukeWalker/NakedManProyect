@@ -2,7 +2,7 @@
 <room>
   <caption></caption>
   <width>4000</width>
-  <height>2000</height>
+  <height>2016</height>
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
@@ -2775,7 +2775,7 @@
     <instance objName="obj_ventiladores" x="3872" y="1952" name="inst_4E5C4216" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ventiladores" x="3904" y="1952" name="inst_7E7AC8F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mobile_platformV" x="2464" y="1376" name="inst_113CDADE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_jetstream_sam" x="3552" y="992" name="inst_CF528038" locked="0" code="" scaleX="1.29999995231628" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jetstream_sam" x="3552" y="1696" name="inst_CF528038" locked="0" code="" scaleX="0.213333338499069" scaleY="0.575999975204468" colour="4294967295" rotation="0"/>
     <instance objName="obj_ventiladores" x="32" y="1408" name="inst_4105673A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ventiladores" x="64" y="1408" name="inst_F83232D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ventiladores" x="96" y="1408" name="inst_29D0DA4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

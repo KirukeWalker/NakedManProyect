@@ -152,7 +152,8 @@ if(image_index == image_number-1 &amp;&amp;
     sprite_index = estatico;
 }
 //Mirar siempre hacia el prota
-image_xscale = sign(x - object5.x);
+if(sign(x - object5.x)!=0)
+    image_xscale = sign(x - object5.x);
 </string>
           </argument>
         </arguments>

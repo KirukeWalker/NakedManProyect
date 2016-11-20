@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//Subimos al naked man en proporción a lo alto que esté
-other.y -= (other.y - y) / sprite_height * 20;
+//other.vsp -= (other.y - y) / sprite_height * 20;
 //Para ir anulando la gravedad
-if(other.vsp &gt; 1)
-    other.vsp -= 1.2;
+if(other.vsp &gt; -20)
+    other.vsp -= 57;
 </string>
           </argument>
         </arguments>
