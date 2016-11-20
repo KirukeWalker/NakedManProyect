@@ -30,7 +30,6 @@ global.offline = 1;
 globalvar pussy_mode;
 global.skin = 0;
 global.hat = 0;
-//pussy_mode = false;
 global.muertes = 0;
 global.muertes_registro = 0;
 global.cagaprisas = 0;
@@ -88,10 +87,16 @@ if !file_exists("SystemNM.txt") {
     ini_write_string("NhTPahPmx","jrTbDRETSJrN","DRybSETAHNY") //Nivel4 - Nieve
     ini_write_string("NhTPahPmx","YFrBuGdETSYU","rtwKBTlgjyV") //Nivel5 - Visor
     ini_write_string("NhTPahPmx","FDtldthSVDJg","GVdGnjfSnkd") //Creditos -  BarraDorada
+    ini_write_real("Settings", "music", 1);
+    ini_write_real("Settings", "sounds", 1);
+    ini_write_real("Settings", "fullscreen", 0);
+    ini_write_real("Settings", "timer", 0);
+    ini_write_real("Settings", "hd", 0);
     ini_close();
 }
 if file_exists("SystemNM.txt"){
     ini_open("SystemNM.txt")
+    //Niveles pasados
     if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
         global.Nivel1Acceso = 1; 
         global.Nivel2Acceso = 1; 
@@ -124,7 +129,14 @@ if file_exists("SystemNM.txt"){
         global.HarcorAcceso = 1;
         }
     else global.HarcorAcceso = 0;
-    
+    //Opciones
+    global.MUSIC = ini_read_real("Settings", "music", 1);
+    global.SOUNDS = ini_read_real("Settings", "souns", 1);
+    global.FULLSCREEN = ini_read_real("Settings", "fullscreen", 0);
+    global.TIMER = ini_read_real("Settings", "timer", 0);
+    global.HD = ini_read_real("Settings", "hd", 0);
+    //Comprobación adicional de FULLSCREEN
+    window_set_fullscreen(global.FULLSCREEN);
     ini_close();
 }
 //Cargamos la siguiente escena
