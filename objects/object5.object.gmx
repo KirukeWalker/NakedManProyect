@@ -485,11 +485,11 @@ if((
     vsp = -jumpspeed;
     if(global.SOUNDS == 1)
         audio_play_sound(snd_jump, 1, false);
+    //Altura de salto variable
+    if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
+        vsp = max(vsp, vsp/4);
+        //vsp = max(vsp, -jumpspeed/4);
 }
-//Altura de salto variable
-if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
-    vsp = max(vsp, vsp/4);
-    //vsp = max(vsp, -jumpspeed/4);
 
 //Desplazamos al personaje (controlando colisiones)
 //Comprobamos suelo hielo

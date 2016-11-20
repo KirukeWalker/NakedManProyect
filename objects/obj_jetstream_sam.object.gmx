@@ -29,7 +29,7 @@
 //other.vsp -= (other.y - y) / sprite_height * 20;
 //Para ir anulando la gravedad
 if(other.vsp &gt; -20)
-    other.vsp -= 57;
+    other.vsp -= 2;
 </string>
           </argument>
         </arguments>
