@@ -33,6 +33,9 @@ forest=0;
 finalBoss3=0;
 snow=0;
 finalBoss4=0;
+city=0;
+finalBoss5=0;
+god=0;
 credits=0;
 noaudio=false;
 </string>
@@ -58,6 +61,7 @@ noaudio=false;
           <argument>
             <kind>1</kind>
             <string>if global.MUSIC=true{
+    //Menú
     if (room==Menu || room==MenuNivel || room==Menu2) &amp;&amp; intro=0{
         audio_play_sound(snd_intro,1,true);
         intro=1;
@@ -66,27 +70,17 @@ noaudio=false;
         audio_stop_sound(snd_intro);
         intro=0;
     }
-    
-    if (room==Nivel_1 &amp;&amp; lava=0) {
+    //Nivel 1
+    if ((room==Nivel_1 || room==room_1_2) &amp;&amp; lava=0) {
         audio_play_sound(snd_lava,1,true);
         lava=1;
         }
         
-    if !(room==Nivel_1) {
+    if !(room==Nivel_1 || room==room_1_2) {
         audio_stop_sound(snd_lava);
         lava=0;
     }
-    //Boss 1 original
-    /*if (room==Room_FinalBoss1 &amp;&amp; lavaBoss=0) {
-        audio_play_sound(snd_lavalboss,1,true);
-        lavaBoss=1;
-        }
-        
-    if !(room==Room_FinalBoss1) {
-        audio_stop_sound(snd_lavalboss);
-        lavaBoss=0;
-    }*/
-    //Boss 1 nuevo
+    //Boss 1
     if (room==Room_FinalBoss1_New &amp;&amp; lavaBoss=0) {
         audio_play_sound(snd_lavaboss_test,1,true);
         lavaBoss=1;
@@ -96,68 +90,98 @@ noaudio=false;
         audio_stop_sound(snd_lavaboss_test);
         lavaBoss=0;
     }
-    //
-        //Ya metermeos playa 2
-    if ((room==Nivel_Playa1 || room==Room_FinalBoss2) &amp;&amp; playa=0) {
+    //Nivel 2
+    if ((room==Nivel_Playa1 || room==Nivel_Playa2) &amp;&amp; playa=0) {
         audio_play_sound(snd_beach,1,true);
         playa=1;
         }
         
-    if !(room==Nivel_Playa1 || room==Room_FinalBoss2) {
+    if !(room==Nivel_Playa1 || room==Nivel_Playa2) {
         audio_stop_sound(snd_beach);
         playa=0;
     }
-    
-    /*if (room==Room_FinalBoss2 &amp;&amp; finalBoss2=0) {
+    //Aquí pondremos una de boss más adelante
+    if ((room==Room_FinalBoss2 || room == Room_FinalBoss2_S2) &amp;&amp; finalBoss2=0) {
         audio_play_sound(snd_beach,1,true);
         finalBoss2=1;
         }
         
-    if !(room==Room_FinalBoss2) {
+    if !(room==Room_FinalBoss2 || room == Room_FinalBoss2_S2) {
         audio_stop_sound(snd_beach);
         finalBoss2=0;
-    }*/
-    
-    if ((room==Nivel_Bosque || room==Room_FinalBoss3) &amp;&amp; bosque=0) {
+    }
+    //Nivel 3
+    if ((room==Nivel_Bosque || room==Nivel_Bosque_2) &amp;&amp; bosque=0) {
         audio_play_sound(snd_forest,1,true);
         bosque=1;
         }
         
-    if !(room==Nivel_Bosque || room==Room_FinalBoss3) {
+    if !(room==Nivel_Bosque || room==Nivel_Bosque_2) {
         audio_stop_sound(snd_forest);
         bosque=0;
     }
-    
-    /*if (room==Room_FinalBoss3 &amp;&amp; finalBoss3=0) {
+    //Esta la cambiaremos por una de boss
+    if ((room==Room_FinalBoss3 || room == Room_FinalBoss3_Test) &amp;&amp; finalBoss3=0) {
         audio_play_sound(snd_forest,1,true);
         finalBoss3=1;
         }
         
-    if !(room==Room_FinalBoss3) {
+    if !(room==Room_FinalBoss3 || room == Room_FinalBoss3_Test) {
         audio_stop_sound(snd_forest);
         finalBoss3=0;
-    }*/
-    
-    if ((room==Nivel_Nieve || room==Room_FinalBoss4) &amp;&amp; nieve=0) {
+    }
+    //Nivel 4
+    if ((room==Nivel_Nieve || room==Nivel_Nieve_2) &amp;&amp; nieve=0) {
         audio_play_sound(snd_snow,1,true);
         nieve=1;
         }
         
-    if !(room==Nivel_Nieve || room==Room_FinalBoss4) {
+    if !(room==Nivel_Nieve || room==Nivel_Nieve_2) {
         audio_stop_sound(snd_snow);
         nieve=0;
     }
-    
-    /*if (room==Room_FinalBoss4 &amp;&amp; finalBoss4=0) {
+    //Aquí meteremos otra de boss
+    if ((room==Room_FinalBoss4_New || room==Room_FinalBoss4_S2) &amp;&amp; finalBoss4=0) {
         audio_play_sound(snd_snow,1,true);
         finalBoss4=1;
         }
         
-    if !(room==Room_FinalBoss4) {
+    if !(room==Room_FinalBoss4_New || room==Room_FinalBoss4_S2) {
         audio_stop_sound(snd_snow);
         finalBoss4=0;
-    }*/
-    
+    }
+    //Nivel 5
+    if ((room==Final_Level/* || room==Final_Level2*/) &amp;&amp; city=0) {
+        audio_play_sound(snd_city,1,true);
+        city=1;
+        }
+        
+    if !(room==Final_Level/* || room==Final_Level2*/) {
+        audio_stop_sound(snd_city);
+        city=0;
+    }
+    //Boss 5
+    if (room==Room_FinalBoss5 &amp;&amp; finalBoss5=0) {
+        audio_play_sound(snd_city,1,true);
+        finalBoss5=1;
+        }
+        
+    if !(room==Room_FinalBoss5) {
+        audio_stop_sound(snd_city);
+        finalBoss5=0;
+    }
+    //Boss Final
+        //De momento una para todo
+    if ((room==god_room_01 || room==god_room_02 || room==god_room_final) &amp;&amp; god=0) {
+        audio_play_sound(snd_snow,1,true);
+        god=1;
+        }
+        
+    if !((room==god_room_01 || room==god_room_02 || room==god_room_final)) {
+        audio_stop_sound(snd_snow);
+        god=0;
+    }    
+    //Créditos
     if (room==Credits &amp;&amp; credits=0) {
         audio_play_sound(snd_credits,1,true);
         credits=1;

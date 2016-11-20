@@ -32,8 +32,8 @@ draw_set_halign(fa_center);
 draw_set_color(c_white);
 
 if(global.HD == true){
-    draw_text(view_xview + 550, view_yview + 30, "HD");
-    draw_set_font(fnt_creditos_grande);
+    draw_set_font(fnt_creditos_grande_negrita);
+    draw_text(view_xview + 550, view_yview + 30, "HD"); 
 }    
 
 draw_set_font(fnt_creditos_peque);

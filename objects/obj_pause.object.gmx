@@ -107,11 +107,11 @@ if(pause == 1 &amp;&amp; !instance_exists(obj_blackScreen)){
 if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
     if (!pause) {
         pause = 1;
-        if room=Nivel_Bosque{
+        if room == Nivel_Bosque || room == Nivel_Bosque_2{
             part_system_destroy (obj_lluvia.rain)
         }
         
-        if room=Nivel_Nieve{
+        if room == Nivel_Nieve || room == Nivel_Nieve_2{
             part_system_destroy (obj_snow.snow)
         }
         
