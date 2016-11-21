@@ -66,7 +66,12 @@ audio_play_sound(snd_rain, 10, true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Ajustamos la cantidad de lluvia
+            <string>//Actualizamos la posicion
+part_emitter_region(rain,rain_emitter,view_xview, view_xview + (view_hview*2.5),
+                    view_yview -10, view_yview,
+                    ps_shape_ellipse,ps_distr_linear);
+
+//Ajustamos la cantidad de lluvia
 if(object5.x &lt; 4000){
     rain_force = (4000 - object5.x) / 4000 * 20;
     part_emitter_stream(rain,rain_emitter,raintear,rain_force);

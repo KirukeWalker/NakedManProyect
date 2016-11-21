@@ -114,6 +114,12 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
         if room == Nivel_Nieve || room == Nivel_Nieve_2{
             part_system_destroy (obj_snow.snow)
         }
+        /*if part_system_exists(obj_lluvia.rain) {
+            part_system_destroy (obj_lluvia.rain)
+        }
+        if part_system_exists(obj_lluvia.snow) {
+            part_system_destroy (obj_snow.snow)
+        }*/
         
         instance_deactivate_all(true);
         instance_create(view_xview+302,view_yview+340,obj_gamePausedMenu)

@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room=Nivel_Bosque &amp;&amp; instance_exists(obj_lluvia) {
+            <string>if instance_exists(obj_lluvia) {
     part_system_destroy (obj_lluvia.rain)
 }
-if room=Nivel_Nieve &amp;&amp; instance_exists(obj_snow) {
+if instance_exists(obj_snow) {
     part_system_destroy (obj_snow.snow)
 }
 </string>

@@ -240,7 +240,7 @@ switch(status){
     //Secuencia de muerte
     case 6:
         apply_gravity = true;
-        if(abs(hspeed) &lt; sprint_speed/4)
+        if(abs(hspeed) &lt; sprint_speed/5)    //vamos a ver si con esto no se clava
             hspeed += direction_looking;
         if(place_meeting(x, y, Lava))
             hspeed = 0;
