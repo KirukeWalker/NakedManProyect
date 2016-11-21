@@ -13,7 +13,9 @@ global.muertes = 0;
 switch(mpos){
     case 0: 
     {
-        if(global.cabezallamas = 0)   room_goto(Introduccion1);
+        //if(global.cabezallamas = 0)  
+        if(global.level_completed == 0) 
+            room_goto(Nivel_1);
         //else room_goto(Room_FinalBoss5);
         else room_goto(MenuNivel);
         break;

@@ -29,6 +29,7 @@
 global.joy_check = false;
 
 ini_open("SystemNM.txt")
+    //Chequeo viejo de niveles
 if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
     global.Nivel1Acceso = 1; 
     global.Nivel2Acceso = 1; 
@@ -48,6 +49,8 @@ if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Nivel 5 Pasado
 if ini_key_exists("NhTPahPmx","MeFjgPfREndg2") { //Nivel 6 Pasado
     global.HarcorAcceso = 1;
     }
+    //Chequeo nuevo de niveles
+
 ini_close();
 </string>
           </argument>
@@ -182,16 +185,17 @@ draw_set_color(c_black);
 if global.movemenu=0 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 1")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
-    if global.Nivel1Acceso=1{
+    //if global.Nivel1Acceso=1{
     draw_sprite(spr_level1,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    //}
+    //else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }
 if global.movemenu=1 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 2")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel2Acceso=1{
+    //if global.Nivel2Acceso=1{
+    if(global.level_completed &gt;= 1){
     draw_sprite(spr_level2,1,room_width/2,room_height/2-22)
     }
     else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
@@ -201,7 +205,8 @@ if global.movemenu=2 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 3")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel3Acceso=1{
+    //if global.Nivel3Acceso=1{
+    if(global.level_completed &gt;= 2){
     draw_sprite(spr_level3,1,room_width/2,room_height/2-22)
     }
     else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
@@ -210,7 +215,8 @@ if global.movemenu=3 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 4")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel4Acceso=1{
+    //if global.Nivel4Acceso=1{
+    if(global.level_completed &gt;= 3){
     draw_sprite(spr_level4,1,room_width/2,room_height/2-22)
     }
     else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
@@ -219,7 +225,8 @@ if global.movemenu=4 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 5")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel5Acceso=1{
+    //if global.Nivel5Acceso=1{
+    if(global.level_completed &gt;= 4){
     draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
     }
     else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
@@ -228,11 +235,12 @@ if global.movemenu=5 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 6")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.Nivel6Acceso=1{
+    //if global.Nivel6Acceso=1{
+    if(global.level_completed &gt;= 5){
     draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
     }
     else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
-}
+}//Con este ya veremos qué hacemos
 if global.movemenu=6 {
     draw_text(view_xview+240,view_yview+374,"HARDCORE MODE")
     draw_sprite(spr_arrowleft,-1,20, room_height/2)

@@ -58,7 +58,9 @@ global.ciborg2 = 0;
 global.visor2 = 0;
 global.tunica2 = 0;
 global.dorada2 = 0;
-
+//Nuevas desbloqueables
+global.level_completed = 0;
+//De menú y ajustes
 global.menu1Start = true;
 global.menustart=false;
 global.MUSIC=true;
@@ -75,6 +77,7 @@ global.muertes_registro = 0;
 global.movemenu=0;
 if !file_exists("SystemNM.txt") {
     ini_open("SystemNM.txt") 
+    //Codificadas
     ini_write_string("NhTPahPmx","MeFjgPFREndg","uFscFjgWfjE") //Boss1 - CabezaEnLlamas
     ini_write_string("NhTPahPmx","KSgfhsRKWenv","njsESnsSAnQ") //Boss2 - Toalla
     ini_write_string("NhTPahPmx","sbSDLGaSbsQn","ANabwjQnvsl") //Boss3 -  Camuflaje
@@ -87,11 +90,25 @@ if !file_exists("SystemNM.txt") {
     ini_write_string("NhTPahPmx","jrTbDRETSJrN","DRybSETAHNY") //Nivel4 - Nieve
     ini_write_string("NhTPahPmx","YFrBuGdETSYU","rtwKBTlgjyV") //Nivel5 - Visor
     ini_write_string("NhTPahPmx","FDtldthSVDJg","GVdGnjfSnkd") //Creditos -  BarraDorada
+    //Ajustes
     ini_write_real("Settings", "music", 1);
     ini_write_real("Settings", "sounds", 1);
     ini_write_real("Settings", "fullscreen", 0);
     ini_write_real("Settings", "timer", 0);
     ini_write_real("Settings", "hd", 0);
+    //Desbloqueables nuevos
+        //Ya los codificaré más adelante
+        //Este servirá también para las skins
+    ini_write_real("Unlockables", "level completed", 0);
+        //Y los gorros ya aparte
+    ini_write_real("Unlockables", "flames", 0);
+    ini_write_real("Unlockables", "cream", 0);
+    ini_write_real("Unlockables", "umbrella", 0);
+    ini_write_real("Unlockables", "claus", 0);
+    ini_write_real("Unlockables", "cyborg", 0);
+        //Y la skin extra
+    ini_write_real("Unlockables", "golden", 0);
+    
     ini_close();
 }
 if file_exists("SystemNM.txt"){
@@ -137,6 +154,8 @@ if file_exists("SystemNM.txt"){
     global.HD = ini_read_real("Settings", "hd", 0);
     //Comprobación adicional de FULLSCREEN
     window_set_fullscreen(global.FULLSCREEN);
+    //Nuevas comprobaciones de desbloqueados
+    global.level_completed = ini_read_real("Unlockables", "level completed", 0);
     ini_close();
 }
 //Cargamos la siguiente escena
