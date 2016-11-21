@@ -114,7 +114,7 @@ if !file_exists("SystemNM.txt") {
 if file_exists("SystemNM.txt"){
     ini_open("SystemNM.txt")
     //Niveles pasados
-    if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
+    /*if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
         global.Nivel1Acceso = 1; 
         global.Nivel2Acceso = 1; 
         }
@@ -145,7 +145,7 @@ if file_exists("SystemNM.txt"){
     if ini_key_exists("NhTPahPmx","MeFjgPfREndg2") { //Nivel 6 Pasado
         global.HarcorAcceso = 1;
         }
-    else global.HarcorAcceso = 0;
+    else global.HarcorAcceso = 0;*/
     //Opciones
     global.MUSIC = ini_read_real("Settings", "music", 1);
     global.SOUNDS = ini_read_real("Settings", "souns", 1);

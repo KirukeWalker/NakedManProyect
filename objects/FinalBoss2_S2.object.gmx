@@ -228,15 +228,18 @@ global.vidaboss -= 1;
 with(other) instance_destroy();
 if(global.SOUNDS == true)
         instance_create(x, y, obj_cacota_sound);
-if (global.vidaboss == 0)
+if (global.vidaboss &lt;= 0)
 { 
-    ini_open("SystemNM.txt")
-    ini_key_delete("NhTPahPmx","KSgfhsRKWenv")
-    ini_write_string("NhTPahPmx","KSgfhSRKWenv","njsESnsSAnQ")
-    ini_close()
+    if(global.level.completed &lt; 2){
+        ini_open("SystemNM.txt")
+        //ini_key_delete("NhTPahPmx","KSgfhsRKWenv")
+        //ini_write_string("NhTPahPmx","KSgfhSRKWenv","njsESnsSAnQ")
+        ini_write_real("Unlockables", "level completed", 2);
+        ini_close()
+    }
     with(obj_chain_link) instance_destroy();
     with(obj_anchor) instance_destroy();
-    global.muertes += 1;
+    //global.muertes += 1;
     obj_fade_white.fadeIn = false;
     //instance_destroy();  
 }

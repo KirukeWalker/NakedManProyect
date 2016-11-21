@@ -88,10 +88,14 @@ y += move_speed * v_direction;
 //Morir del todo
 if (global.vidaboss = 0)
 { 
-    ini_open("SystemNM.txt")
-    ini_key_delete("NhTPahPmx","sbSDLGaSbsQn")
-    ini_write_string("NhTPahPmx","sbSDLgaSbsQn","ANabwjQnvsl")
-    ini_close()
+    if(global.level_completed &lt; 3){
+        ini_open("SystemNM.txt")
+        //ini_key_delete("NhTPahPmx","sbSDLGaSbsQn")
+        //ini_write_string("NhTPahPmx","sbSDLgaSbsQn","ANabwjQnvsl")
+        ini_write_real("Unlockables", "level completed", 3);
+        ini_close()
+    }
+    
     global.muertes += 1;
     obj_fade_white.fadeIn = false;
     //obj_fade.alarm[1] = room_speed * 0.05; 

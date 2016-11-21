@@ -64,6 +64,11 @@ switch(status){
     case 1:
         if(global.vidaboss &lt;= 0){
             obj_fade_white.fadeIn = false;
+            if(global.level_completed &lt; 4){
+                ini_open("SystemNM.txt");
+                ini_write_real("Unlockables", "level completed", 4);
+                ini_close();
+            }
         }
     break;
 }
