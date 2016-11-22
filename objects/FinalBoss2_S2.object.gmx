@@ -224,7 +224,7 @@ else{
           <argument>
             <kind>1</kind>
             <string>//Pierde vida y destruye el proyectil
-global.vidaboss -= 20;
+global.vidaboss -= 0;
 with(other) instance_destroy();
 if(global.SOUNDS == true)
         instance_create(x, y, obj_cacota_sound);
