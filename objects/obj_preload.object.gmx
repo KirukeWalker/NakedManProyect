@@ -70,7 +70,7 @@ global.time_required[4] = 200;
 global.time_required[5] = 200;
     //
 for(i=1; i&lt;=5; i++){
-    global.best_times[i] = 0;
+    global.best_times[i] = 10000;
 }
 //De menú y ajustes
 global.menu1Start = true;
