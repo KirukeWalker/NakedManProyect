@@ -224,13 +224,13 @@ else{
           <argument>
             <kind>1</kind>
             <string>//Pierde vida y destruye el proyectil
-global.vidaboss -= 1;
+global.vidaboss -= 20;
 with(other) instance_destroy();
 if(global.SOUNDS == true)
         instance_create(x, y, obj_cacota_sound);
 if (global.vidaboss &lt;= 0)
 { 
-    if(global.level.completed &lt; 2){
+    if(global.level_completed &lt; 2){
         ini_open("SystemNM.txt")
         //ini_key_delete("NhTPahPmx","KSgfhsRKWenv")
         //ini_write_string("NhTPahPmx","KSgfhSRKWenv","njsESnsSAnQ")
@@ -240,6 +240,8 @@ if (global.vidaboss &lt;= 0)
     }
     with(obj_chain_link) instance_destroy();
     with(obj_anchor) instance_destroy();
+    global.counter = obj_nakedman_falling.reloj;
+    global.last_level = 2;
     //global.muertes += 1;
     obj_fade_white.fadeIn = false;
     //instance_destroy();  

@@ -41,6 +41,9 @@ positionY[2] = 300;
 positionY[3] = 400;
 //
 actual_position = 0;
+
+//
+reloj = global.counter;
 </string>
           </argument>
         </arguments>

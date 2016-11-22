@@ -358,6 +358,9 @@ if (global.vidaboss == 0 &amp;&amp; last_round == true)
         global.level_completed = 1;
     }
     //global.muertes += 1;
+        //Guardamos el tiempo
+    global.counter = object5.reloj;
+    global.last_level = 1;
     //obj_fade.fadeIn = false;
     obj_fade_white.fadeIn = false;
     //obj_fade.alarm[1] = room_speed * 0.05;

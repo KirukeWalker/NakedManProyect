@@ -13,6 +13,8 @@ global.muertes = 0;
 switch(mpos){
     case 0: 
     {
+        //Reseteamos el timer
+        global.counter = 0; 
         //if(global.cabezallamas = 0)  
         if(global.level_completed == 0) 
             room_goto(Nivel_1);

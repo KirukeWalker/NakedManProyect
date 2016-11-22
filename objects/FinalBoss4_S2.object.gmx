@@ -70,6 +70,8 @@ switch(status){
                 ini_close();
                 global.level_completed = 4;
             }
+            global.counter = object5.reloj;
+            global.last_level = 4;
         }
     break;
 }
