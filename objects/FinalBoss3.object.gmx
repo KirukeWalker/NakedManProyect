@@ -94,6 +94,7 @@ if (global.vidaboss = 0)
         //ini_write_string("NhTPahPmx","sbSDLgaSbsQn","ANabwjQnvsl")
         ini_write_real("Unlockables", "level completed", 3);
         ini_close()
+        global.level_completed = 3;
     }
     
     global.muertes += 1;

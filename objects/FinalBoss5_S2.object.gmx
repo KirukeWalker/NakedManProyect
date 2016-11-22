@@ -174,6 +174,7 @@ if (global.vidaboss == 0 &amp;&amp; y == 240)
         //ini_write_string("NhTPahPmx","TibsGHsbEhuU","KjjyFtLTgjY")
         ini_write_real("Unlockables", "level completed", 5);
         ini_close()
+        global.level_completed = 5;
     }
     //global.muertes += 1;
     //with(obj_lightball) instance_destroy();

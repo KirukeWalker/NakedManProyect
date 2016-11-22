@@ -33,7 +33,9 @@
 grav = 1;         //gravity se usa para funciones
 hsp = 0;            //velocidad horizontal
 vsp = 0;            //velocidad vertical
-jumpspeed = 16;     //velocida de salto
+jumpspeed = 14;     //velocida de salto
+jumpFrames = 0;
+jumpMaxFrames = 4;
 movespeed = 6;      //velocidad de movimiento
 actual_speed = 0;   //Variable para aceleración
 disparo = 0;
@@ -49,6 +51,15 @@ status_sliding = false; //El personahe se desliza
 gamepad_set_axis_deadzone(0,0.7)
 //Para los suckers
 suckers_sucking = 0;
+
+//Entrando al agua
+//if(place_meeting(x,y,Agua))
+if(room == Nivel_Playa1 || room == Nivel_Playa2 || room == Room_FinalBoss2)
+{
+    grav = 0.2; 
+    jumpspeed = 8;
+    movespeed = 4.5;
+}
 
 //Para utilizar la skin seleccionada
 switch(global.skin){
@@ -482,13 +493,19 @@ if((
     &amp;&amp; status_dead = 0
     &amp;&amp; status_locked = false)
 {
-    vsp = -jumpspeed;
+    vsp = -jumpspeed/jumpMaxFrames;
+    jumpFrames = 1;
     if(global.SOUNDS == 1)
         audio_play_sound(snd_jump, 1, false);
     //Altura de salto variable
-    if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
+    /*if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
         vsp = max(vsp, vsp/4);
-        //vsp = max(vsp, -jumpspeed/4);
+        //vsp = max(vsp, -jumpspeed/4);*/
+}
+//Salto variable alternativo
+if(jumpFrames &lt; jumpMaxFrames &amp;&amp; vsp &lt; 0 &amp;&amp; key_jump_held == true){
+    vsp -= jumpspeed/jumpMaxFrames + grav;  //Para compensar la gravedad
+    jumpFrames ++;
 }
 
 //Desplazamos al personaje (controlando colisiones)
@@ -666,20 +683,6 @@ if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
     }
     alarm_set(4, 30);
     status_dead = 1;
-}
-//Entrando al agua
-if(place_meeting(x,y,Agua))
-{
-    grav = 0.2; 
-    jumpspeed = 8;
-    movespeed = 4.5;
-}
-//Saliendo del agua
-if(!place_meeting(x,y,Agua))
-{
-    grav = 1; 
-    jumpspeed = 16;
-    movespeed = 6;
 }
 
 //Cronoemtros para logros

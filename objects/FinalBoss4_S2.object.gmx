@@ -68,6 +68,7 @@ switch(status){
                 ini_open("SystemNM.txt");
                 ini_write_real("Unlockables", "level completed", 4);
                 ini_close();
+                global.level_completed = 4;
             }
         }
     break;

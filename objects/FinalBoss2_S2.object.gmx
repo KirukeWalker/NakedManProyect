@@ -236,6 +236,7 @@ if (global.vidaboss &lt;= 0)
         //ini_write_string("NhTPahPmx","KSgfhSRKWenv","njsESnsSAnQ")
         ini_write_real("Unlockables", "level completed", 2);
         ini_close()
+        global.level_completed = 2;
     }
     with(obj_chain_link) instance_destroy();
     with(obj_anchor) instance_destroy();

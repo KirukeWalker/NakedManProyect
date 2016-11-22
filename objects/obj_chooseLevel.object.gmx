@@ -148,43 +148,49 @@ else if(x==-3312){
 
 
 draw_text(x+0*600,room_height/2+200,"LEVEL 1");
-if global.Nivel1Acceso=1{
+//if global.Nivel1Acceso=1{
     draw_sprite(spr_level1,1,x+0*600,room_height/2-22);
-}
-else draw_sprite(spr_levelblock,1,x+0*600,room_height/2-22)
+//}
+//else draw_sprite(spr_levelblock,1,x+0*600,room_height/2-22)
 
 draw_text(x+1*600,room_height/2+200,"LEVEL 2");
-if global.Nivel2Acceso=1{
+//if global.Nivel2Acceso=1{
+if (global.level_completed &gt; 1){
     draw_sprite(spr_level2,1,x+1*600,room_height/2-22);
 }
 else draw_sprite(spr_levelblock,1,x+1*600,room_height/2-22)
 
 draw_text(x+2*600,room_height/2+200,"LEVEL 3");
-if global.Nivel3Acceso=1{
+//if global.Nivel3Acceso=1{
+if (global.level_completed &gt; 2){
     draw_sprite(spr_level3,1,x+2*600,room_height/2-22);
 }
 else draw_sprite(spr_levelblock,1,x+2*600,room_height/2-22)
 
 draw_text(x+3*600,room_height/2+200,"LEVEL 4");
-if global.Nivel4Acceso=1{
+//if global.Nivel4Acceso=1{
+if (global.level_completed &gt; 3){
     draw_sprite(spr_level4,1,x+3*600,room_height/2-22);
 }
 else draw_sprite(spr_levelblock,1,x+3*600,room_height/2-22)
 
 draw_text(x+4*600,room_height/2+200,"LEVEL 5");
-if global.Nivel5Acceso=1{
+//if global.Nivel5Acceso=1{
+if (global.level_completed &gt; 4){
     draw_sprite(spr_level5,1,x+4*600,room_height/2-22);
 }
 else draw_sprite(spr_levelblock,1,x+4*600,room_height/2-22)
 
 draw_text(x+5*600,room_height/2+200,"LEVEL 6");
-if global.Nivel6Acceso=1{
+//if global.Nivel6Acceso=1{
+if (global.level_completed &gt; 5){
     draw_sprite(spr_level6,1,x+5*600,room_height/2-22);
 }
 else draw_sprite(spr_levelblock,1,x+5*600,room_height/2-22)
 
 draw_text(x+6*600,room_height/2+200,"HARDCORE MODE");
-if global.HarcorAcceso=1{
+//if global.HarcorAcceso=1{
+if (global.level_completed &gt; 6){
     draw_sprite(spr_level5,1,x+6*600,room_height/2-22);
 }
 else draw_sprite(spr_levelblock,1,x+6*600,room_height/2-22)

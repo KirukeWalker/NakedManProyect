@@ -349,12 +349,13 @@ if(global.vidaboss == 0 &amp;&amp; last_round == false){
 //Morir del todo
 if (global.vidaboss == 0 &amp;&amp; last_round == true)
 { 
-    if(global.level.completed &lt; 1){
+    if(global.level_completed &lt; 1){
         ini_open("SystemNM.txt")
         //ini_key_delete("NhTPahPmx","MeFjgPFREndg")
         //ini_write_string("NhTPahPmx","MeFjgPfREndg","uFscFjgWfjE");
         ini_write_real("Unlockables", "level completed", 1);
         ini_close()
+        global.level_completed = 1;
     }
     //global.muertes += 1;
     //obj_fade.fadeIn = false;

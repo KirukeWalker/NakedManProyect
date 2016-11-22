@@ -31,37 +31,44 @@ move = 0;
 move2 = 0;
 //
 ini_open("SystemNM.txt");
-if ini_key_exists("NhTPahPmx","rgSHhbDRrsEF") { //Done
+//if ini_key_exists("NhTPahPmx","rgSHhbDRrsEF") { //Done
+if(global.level_completed &gt; 0){
     global.quemaduras = 1;
     }
 if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Done
+//if(global.level_completed &gt; 1){
     global.cabezallamas = 1;
     }
 if ini_key_exists("NhTPahPmx","ygNYRbdETjSa") { //Done
     global.botecrema = 1;
     }
-if ini_key_exists("NhTPahPmx","KSgfhSRKwenv") { //Done
+//if ini_key_exists("NhTPahPmx","KSgfhSRKwenv") { //Done
+if(global.level_completed &gt; 1){
     global.capa = 1;
     }
 if ini_key_exists("NhTPahPmx","Esyi4Nne5NrE") { //Done
     global.paraguas = 1;
     }
-if ini_key_exists("NhTPahPmx","sbSDLgaSbsQn") { //Done
+//if ini_key_exists("NhTPahPmx","sbSDLgaSbsQn") { //Done
+if(global.level_completed &gt; 2){
     global.camuflaje = 1;
     }
-if ini_key_exists("NhTPahPmx","jrTbDReTSJrN") { //Done
+//if ini_key_exists("NhTPahPmx","jrTbDReTSJrN") { //Done
+if(global.level_completed &gt; 3){
     global.munnieve = 1;
     }
 if ini_key_exists("NhTPahPmx","ALsdvEhsWnvp") { //Done
     global.papanoel = 1;
     }
-if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Done
+//if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Done
+if(global.level_completed &gt; 4){
     global.ciborg = 1;
     }
 if ini_key_exists("NhTPahPmx","YFrBuGdeTSYU") { //Done
     global.visor = 1;
     }
-if ini_key_exists("NhTPahPmx","KSgfhSRKwenv") {
+//if ini_key_exists("NhTPahPmx","KSgfhSRKwenv") {
+if(global.level_completed &gt; 5){
     global.tunica = 1;
     }
 if ini_key_exists("NhTPahPmx","FDtldtHSVDJg") { //Done
