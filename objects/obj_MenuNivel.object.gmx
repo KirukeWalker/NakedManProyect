@@ -107,7 +107,7 @@ if(joystick_xpos(2) != 0 &amp;&amp; global.joy_check == true){
     global.joy_check = false;
     alarm_set(0, 5);
 }
-
+//Movimiento en pantalla
 if ((gamepad_button_check_pressed(0,gp_padr) || keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) &amp;&amp; global.movemenu&lt;6) {
     global.movemenu++;
     if(global.SOUNDS == true)
@@ -118,8 +118,7 @@ if ((gamepad_button_check_pressed(0,gp_padl) || keyboard_check_pressed(vk_left) 
     if(global.SOUNDS == true)
         audio_play_sound(snd_menu_cursor, 10, false);
     }
-
-    
+//Boton para empezar
 if (gamepad_button_check_pressed(0,gp_face1) || keyboard_check_pressed(vk_enter) || joystick_check_button(2,2)) {
     scr_menunivel();
     }
@@ -154,7 +153,7 @@ if keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("SystemNM.txt")
+            <string>/*ini_open("SystemNM.txt")
 if ini_key_exists("NhTPahPmx","MeFjgPfREndg") { //Nivel 1 Pasado
     global.Nivel1Acceso = 1; 
     global.Nivel2Acceso = 1; 
@@ -174,7 +173,7 @@ if ini_key_exists("NhTPahPmx","TibsGHsbEhuU") { //Nivel 5 Pasado
 if ini_key_exists("NhTPahPmx","KSgfhSRKwenv") { //Nivel 6 Pasado
     global.HarcorAcceso = 2;
     }
-ini_close();
+ini_close();*/
 
 draw_set_halign(fa_middle);
 draw_set_valign(fa_middle);
@@ -195,10 +194,10 @@ if global.movemenu=1 {
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
     //if global.Nivel2Acceso=1{
-    if(global.level_completed &gt;= 1){
-    draw_sprite(spr_level2,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    //if(global.level_completed &gt;= 1){        //Esto habrá que revisarlo
+        draw_sprite(spr_level2,1,room_width/2,room_height/2-22)
+    //}
+    //else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
     
 }
 if global.movemenu=2 {
@@ -206,48 +205,48 @@ if global.movemenu=2 {
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
     //if global.Nivel3Acceso=1{
-    if(global.level_completed &gt;= 2){
+    //if(global.level_completed &gt;= 2){
     draw_sprite(spr_level3,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    //}
+    //else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }
 if global.movemenu=3 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 4")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
     //if global.Nivel4Acceso=1{
-    if(global.level_completed &gt;= 3){
+    //if(global.level_completed &gt;= 3){
     draw_sprite(spr_level4,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    //}
+    //else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }
 if global.movemenu=4 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 5")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
     //if global.Nivel5Acceso=1{
-    if(global.level_completed &gt;= 4){
+    //if(global.level_completed &gt;= 4){
     draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    //}
+    //else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }
 if global.movemenu=5 {
     draw_text(view_xview+240,view_yview+374,"LEVEL 6")
     draw_sprite(spr_arrowright,-1,room_width-20, room_height/2)
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
     //if global.Nivel6Acceso=1{
-    if(global.level_completed &gt;= 5){
-    draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    //if(global.level_completed &gt;= 5){
+    draw_sprite(spr_level5,1,room_width/2,room_height/2-22) //Aquí va el de dios
+    //}
+    //else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }//Con este ya veremos qué hacemos
 if global.movemenu=6 {
     draw_text(view_xview+240,view_yview+374,"HARDCORE MODE")
     draw_sprite(spr_arrowleft,-1,20, room_height/2)
-    if global.HarcorAcceso=1{
+    //if global.HarcorAcceso=1{
     draw_sprite(spr_level5,1,room_width/2,room_height/2-22)
-    }
-    else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
+    //}
+    //else draw_sprite(spr_levelblock,1,room_width/2,room_height/2-22)
 }
 </string>
           </argument>

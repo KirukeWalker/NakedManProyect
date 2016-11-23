@@ -33,9 +33,9 @@
 grav = 1;         //gravity se usa para funciones
 hsp = 0;            //velocidad horizontal
 vsp = 0;            //velocidad vertical
-jumpspeed = 13;     //velocida de salto
+jumpspeed = 16;     //velocida de salto
 jumpFrames = 0;
-jumpMaxFrames = 6;
+jumpMaxFrames = 4;
 movespeed = 6;      //velocidad de movimiento
 actual_speed = 0;   //Variable para aceleración
 disparo = 0;
@@ -489,23 +489,30 @@ if((
     place_meeting(x,y+1,obj_mobile_platformH) ||
     place_meeting(x,y+1,obj_mobile_platformV)
     ) 
-    &amp;&amp; key_jump &gt; 0                         //Y que el boton de salto esté pulsado
+    &amp;&amp; key_jump_held &gt; 0                         //Y que el boton de salto esté pulsado
     &amp;&amp; status_dead = 0
     &amp;&amp; status_locked = false)
 {
-    vsp = -jumpspeed/jumpMaxFrames;
-    jumpFrames = 1;
-    if(global.SOUNDS == 1)
-        audio_play_sound(snd_jump, 1, false);
-    //Altura de salto variable
+    //vsp = -jumpspeed/jumpMaxFrames;
+    jumpFrames ++;    
+    
+}
+//Altura de salto variable
     /*if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
         vsp = max(vsp, vsp/4);
         //vsp = max(vsp, -jumpspeed/4);*/
-}
+        
 //Salto variable alternativo
-if(jumpFrames &lt; jumpMaxFrames &amp;&amp; vsp &lt; 0 &amp;&amp; key_jump_held == true){
-    vsp -= jumpspeed/jumpMaxFrames + grav;  //Para compensar la gravedad
-    jumpFrames ++;
+if((!key_jump_held &amp;&amp; jumpFrames &gt; 0) || jumpFrames == jumpMaxFrames){
+    if(jumpFrames == jumpMaxFrames){
+        vsp = -jumpspeed;
+    }
+    else{
+        vsp = -jumpspeed/2;
+    }
+    jumpFrames = 0;
+    if(global.SOUNDS == 1)
+        audio_play_sound(snd_jump, 1, false);
 }
 
 //Desplazamos al personaje (controlando colisiones)
@@ -556,6 +563,7 @@ if(place_meeting(x,y+vsp,obj_solid_terrain))
         y+=sign(vsp);
     }
     vsp = 0;
+    //jumpFrames = 0;
     status_knockback = false;
 }
 //Comprobación aparte para suelo atravesable
