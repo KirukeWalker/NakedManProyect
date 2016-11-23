@@ -25,19 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Chequeo para desbloqueables
-if(global.counter &lt; global.time_required[global.last_level]){
+            <string>//Chequeo para mejores tiempos
+if(global.counter &lt; global.best_times[global.last_level]){
+    global.best_times[global.last_level] = global.counter;
     //Y aquí pondremos para desbloqueables
+    ini_open("SystemNM.txt");
     switch(global.last_level){
         //ya iremos poniendo los casos
         case 1:
-        
+            ini_write_real("Unlockables", "timeOne", global.counter);
+        break;
+        case 2:
+            ini_write_real("Unlockables", "timeTwo", global.counter);
+        break;
+        case 3:
+            ini_write_real("Unlockables", "timeThree", global.counter);
+        break;
+        case 4:
+            ini_write_real("Unlockables", "timeFour", global.counter);
+        break;
+        case 5:
+            ini_write_real("Unlockables", "timeFive", global.counter);
         break;
     }
-}
-//Chequeo para mejores tiempos
-if(global.counter &lt; global.best_times[global.last_level]){
-    global.best_times[global.last_level] = global.counter;
+    ini_close();
 }
 
 </string>

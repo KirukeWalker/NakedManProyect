@@ -63,6 +63,7 @@ global.dorada2 = 0;
 global.last_level = 0;
 global.level_completed = 0;
     //Tiempos requeridos para desbloqueables
+        //Los retocaremos según veamos lo que se tarda
 global.time_required[1] = 200;  
 global.time_required[2] = 200;
 global.time_required[3] = 200;
@@ -112,12 +113,12 @@ if !file_exists("SystemNM.txt") {
         //Ya los codificaré más adelante
         //Este servirá también para las skins
     ini_write_real("Unlockables", "level completed", 0);
-        //Y los gorros ya aparte
-    ini_write_real("Unlockables", "flames", 0);
-    ini_write_real("Unlockables", "cream", 0);
-    ini_write_real("Unlockables", "umbrella", 0);
-    ini_write_real("Unlockables", "claus", 0);
-    ini_write_real("Unlockables", "cyborg", 0);
+        //Y los gorros ya aparte (pero con tiempos)
+    ini_write_real("Unlockables", "timeOne", 1000);
+    ini_write_real("Unlockables", "timeTwo", 1000);
+    ini_write_real("Unlockables", "timeThree", 1000);
+    ini_write_real("Unlockables", "timeFour", 1000);
+    ini_write_real("Unlockables", "timeFive", 1000);
         //Y la skin extra
     ini_write_real("Unlockables", "golden", 0);
     
@@ -168,6 +169,11 @@ if file_exists("SystemNM.txt"){
     window_set_fullscreen(global.FULLSCREEN);
     //Nuevas comprobaciones de desbloqueados
     global.level_completed = ini_read_real("Unlockables", "level completed", 0);
+    global.best_times[1] = ini_read_real("Unlockables", "timeOne", 1000);
+    global.best_times[2] = ini_read_real("Unlockables", "timeTwo", 1000);
+    global.best_times[3] = ini_read_real("Unlockables", "timeThree", 1000);
+    global.best_times[4] = ini_read_real("Unlockables", "timeFour", 1000);
+    global.best_times[5] = ini_read_real("Unlockables", "timeFive", 1000);
     ini_close();
 }
 //Cargamos la siguiente escena
