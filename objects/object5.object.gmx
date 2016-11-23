@@ -33,9 +33,9 @@
 grav = 1;         //gravity se usa para funciones
 hsp = 0;            //velocidad horizontal
 vsp = 0;            //velocidad vertical
-jumpspeed = 14;     //velocida de salto
+jumpspeed = 13;     //velocida de salto
 jumpFrames = 0;
-jumpMaxFrames = 4;
+jumpMaxFrames = 6;
 movespeed = 6;      //velocidad de movimiento
 actual_speed = 0;   //Variable para aceleración
 disparo = 0;
