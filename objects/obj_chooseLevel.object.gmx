@@ -131,9 +131,9 @@ if keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(0,gp_face2)
             <string>draw_set_halign(fa_middle);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_creditos_grande);
-draw_set_color(c_black);
+draw_set_color(c_white);
 
-draw_text(view_xview+40,view_yview+20,x);
+//draw_text(view_xview+40,view_yview+20,x);
 
 if (x==288){
     draw_sprite(spr_arrowright,-1,view_xview+600-20,view_yview+240)
@@ -155,43 +155,61 @@ draw_text(x+0*600,room_height/2+200,"LEVEL 1");
 
 draw_text(x+1*600,room_height/2+200,"LEVEL 2");
 //if global.Nivel2Acceso=1{
-if (global.level_completed &gt; 1){
+if (global.level_completed &gt;= 1){
     draw_sprite(spr_level2,1,x+1*600,room_height/2-22);
+        //Texto de mejor tiempo, aparece en la anterior
+    draw_text(x + 0 * 600 - 100, 20, "Best time: ");
+    draw_text(x + 0 * 600 + 100, 20, global.best_times[1]);
 }
 else draw_sprite(spr_levelblock,1,x+1*600,room_height/2-22)
 
 draw_text(x+2*600,room_height/2+200,"LEVEL 3");
 //if global.Nivel3Acceso=1{
-if (global.level_completed &gt; 2){
+if (global.level_completed &gt;= 2){
     draw_sprite(spr_level3,1,x+2*600,room_height/2-22);
+        //Texto de mejor tiempo, aparece en la anterior
+    draw_text(x + 1 * 600 - 100, 20, "Best time: ");
+    draw_text(x + 1 * 600 + 100, 20, global.best_times[2]);
 }
 else draw_sprite(spr_levelblock,1,x+2*600,room_height/2-22)
 
 draw_text(x+3*600,room_height/2+200,"LEVEL 4");
 //if global.Nivel4Acceso=1{
-if (global.level_completed &gt; 3){
+if (global.level_completed &gt;= 3){
     draw_sprite(spr_level4,1,x+3*600,room_height/2-22);
+        //Texto de mejor tiempo, aparece en la anterior
+    draw_text(x + 2 * 600 - 100, 20, "Best time: ");
+    draw_text(x + 2 * 600 + 100, 20, global.best_times[3]);
 }
 else draw_sprite(spr_levelblock,1,x+3*600,room_height/2-22)
 
 draw_text(x+4*600,room_height/2+200,"LEVEL 5");
 //if global.Nivel5Acceso=1{
-if (global.level_completed &gt; 4){
+if (global.level_completed &gt;= 4){
     draw_sprite(spr_level5,1,x+4*600,room_height/2-22);
+        //Texto de mejor tiempo, aparece en la anterior
+    draw_text(x + 3 * 600 - 100, 20, "Best time: ");
+    draw_text(x + 3 * 600 + 100, 20, global.best_times[4]);
 }
 else draw_sprite(spr_levelblock,1,x+4*600,room_height/2-22)
 
 draw_text(x+5*600,room_height/2+200,"LEVEL 6");
 //if global.Nivel6Acceso=1{
-if (global.level_completed &gt; 5){
+if (global.level_completed &gt;= 5){
     draw_sprite(spr_level6,1,x+5*600,room_height/2-22);
+        //Texto de mejor tiempo, aparece en la anterior
+    draw_text(x + 4 * 600 - 100, 20, "Best time: ");
+    draw_text(x + 4 * 600 + 100, 20, global.best_times[5]);
 }
 else draw_sprite(spr_levelblock,1,x+5*600,room_height/2-22)
 
 draw_text(x+6*600,room_height/2+200,"HARDCORE MODE");
 //if global.HarcorAcceso=1{
-if (global.level_completed &gt; 6){
+if (global.level_completed &gt;= 6){
     draw_sprite(spr_level5,1,x+6*600,room_height/2-22);
+        //Texto de mejor tiempo, aparece en la anterior
+    //draw_text(x + 5 * 600 - 100, 20, "Best time: ");
+    //draw_text(x + 5 * 600 + 100, 20, global.best_times[6]);
 }
 else draw_sprite(spr_levelblock,1,x+6*600,room_height/2-22)
 </string>
