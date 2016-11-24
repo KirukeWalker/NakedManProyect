@@ -35,6 +35,7 @@
       <sound>sound\snd_intro</sound>
       <sound>sound\snd_lavalboss</sound>
       <sound>sound\snd_beach</sound>
+      <sound>sound\snd_sea</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

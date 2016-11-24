@@ -92,12 +92,12 @@ noaudio=false;
     }
     //Nivel 2
     if ((room==Nivel_Playa1 || room==Nivel_Playa2) &amp;&amp; playa=0) {
-        audio_play_sound(snd_beach,1,true);
+        audio_play_sound(snd_sea,1,true);
         playa=1;
         }
         
     if !(room==Nivel_Playa1 || room==Nivel_Playa2) {
-        audio_stop_sound(snd_beach);
+        audio_stop_sound(snd_sea);
         playa=0;
     }
     //Aquí pondremos una de boss más adelante
