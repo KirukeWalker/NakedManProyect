@@ -35,7 +35,7 @@ hsp = 0;            //velocidad horizontal
 vsp = 0;            //velocidad vertical
 jumpspeed = 16;     //velocida de salto
 jumpFrames = 0;
-jumpMaxFrames = 4;
+jumpMaxFrames = 6;
 movespeed = 6;      //velocidad de movimiento
 actual_speed = 0;   //Variable para aceleración
 disparo = 0;
@@ -489,21 +489,26 @@ if((
     place_meeting(x,y+1,obj_mobile_platformH) ||
     place_meeting(x,y+1,obj_mobile_platformV)
     ) 
-    &amp;&amp; key_jump_held &gt; 0                         //Y que el boton de salto esté pulsado
+    &amp;&amp; key_jump &gt; 0                         //Y que el boton de salto esté pulsado
     &amp;&amp; status_dead = 0
     &amp;&amp; status_locked = false)
 {
-    //vsp = -jumpspeed/jumpMaxFrames;
-    jumpFrames ++;    
+    vsp = -jumpspeed;
+    //jumpFrames ++; 
+    jumpFrames = 0;
+    if(global.SOUNDS == 1)
+        audio_play_sound(snd_jump, 1, false);  
     
 }
 //Altura de salto variable
-    /*if(vsp &lt; 0 &amp;&amp; !key_jump_held) 
-        vsp = max(vsp, vsp/4);
-        //vsp = max(vsp, -jumpspeed/4);*/
+    //Con jumpFrames para poder usarlo con ventiladores
+jumpFrames++;
+if(vsp &lt; 0 &amp;&amp; !key_jump_held &amp;&amp; jumpFrames &lt; jumpMaxFrames) 
+    vsp = max(vsp, vsp/4);
+    //vsp = max(vsp, -jumpspeed/4);
         
 //Salto variable alternativo
-if((!key_jump_held &amp;&amp; jumpFrames &gt; 0) || jumpFrames == jumpMaxFrames){
+/*if((!key_jump_held &amp;&amp; jumpFrames &gt; 0) || jumpFrames == jumpMaxFrames){
     if(jumpFrames == jumpMaxFrames){
         vsp = -jumpspeed;
     }
@@ -513,7 +518,7 @@ if((!key_jump_held &amp;&amp; jumpFrames &gt; 0) || jumpFrames == jumpMaxFrames)
     jumpFrames = 0;
     if(global.SOUNDS == 1)
         audio_play_sound(snd_jump, 1, false);
-}
+}*/
 
 //Desplazamos al personaje (controlando colisiones)
 //Comprobamos suelo hielo

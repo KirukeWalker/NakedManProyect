@@ -27,14 +27,14 @@
     </sounds>
     <sounds name="Music">
       <sound>sound\snd_lava</sound>
+      <sound>sound\snd_lavaboss_test</sound>
       <sound>sound\snd_beach</sound>
       <sound>sound\snd_snow</sound>
       <sound>sound\snd_forest</sound>
-      <sound>sound\snd_lavalboss</sound>
       <sound>sound\snd_city</sound>
       <sound>sound\snd_credits</sound>
       <sound>sound\snd_intro</sound>
-      <sound>sound\snd_lavaboss_test</sound>
+      <sound>sound\snd_lavalboss</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -733,7 +733,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\Final_Level_2</room>
     <room>rooms\Introduccion</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -753,6 +752,7 @@
     <room>rooms\Room_FinalBoss4_New</room>
     <room>rooms\Room_FinalBoss4_S2</room>
     <room>rooms\Final_Level</room>
+    <room>rooms\Final_Level_2</room>
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_01</room>
     <room>rooms\god_room_02</room>
