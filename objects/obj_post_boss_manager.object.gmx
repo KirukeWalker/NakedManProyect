@@ -122,18 +122,18 @@ if(keyboard_check_released(vk_enter) || keyboard_check_released(vk_space) ||
             <string>//Mensaje de completación
 //draw_set_font(fnt_pruebas);
 draw_set_font(fnt_creditos_grande_negrita);
-draw_text(room_width/2, 100, "Level "/* + global.last_level*/);
-    draw_text(400, 100, global.last_level);
-draw_text(room_width/2, 200, "Completed");
+draw_text(room_width/2, 50, "Level "/* + global.last_level*/);
+    draw_text(400, 50, global.last_level);
+draw_text(room_width/2, 150, "Completed");
 //Comparación de tiempos
 draw_set_font(fnt_creditos_grande);
-draw_text(room_width/2, 300, "Your time: "/* + global.counter*/);
-    draw_text(400, 300, global.counter);
-draw_text(room_width/2, 350, "Best time: "/* + global.best_times[global.last_level]*/);
-    draw_text(400, 350, global.best_times[global.last_level]);
+draw_text(room_width/2, 250, "Your time: "/* + global.counter*/);
+    draw_text(450, 300, global.counter);
+draw_text(room_width/2, 300, "Best time: "/* + global.best_times[global.last_level]*/);
+    draw_text(450, 350, global.best_times[global.last_level]);
     
 //Mensaje para continuar
-draw_text(room_width/2, 400, "Press key to continue");
+draw_text(room_width/2, 350, "Press key to continue");
 
 
 /*___________________________________________

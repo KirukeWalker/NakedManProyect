@@ -28,13 +28,13 @@
     <sounds name="Music">
       <sound>sound\snd_lava</sound>
       <sound>sound\snd_lavaboss_test</sound>
-      <sound>sound\snd_beach</sound>
       <sound>sound\snd_snow</sound>
       <sound>sound\snd_forest</sound>
       <sound>sound\snd_city</sound>
       <sound>sound\snd_credits</sound>
       <sound>sound\snd_intro</sound>
       <sound>sound\snd_lavalboss</sound>
+      <sound>sound\snd_beach</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

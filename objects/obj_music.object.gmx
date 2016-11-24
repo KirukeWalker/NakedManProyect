@@ -77,7 +77,7 @@ noaudio=false;
         }
         
     if !(room==Nivel_1 || room==room_1_2) {
-        //audio_stop_sound(snd_lava);
+        audio_stop_sound(snd_lava);
         lava=0;
     }
     //Boss 1
@@ -152,12 +152,12 @@ noaudio=false;
     }
     //Nivel 5
     if ((room==Final_Level || room==Final_Level_2) &amp;&amp; city=0) {
-        audio_play_sound(snd_lava,1,true);
+        audio_play_sound(snd_city,1,true);
         city=1;
         }
         
     if !(room==Final_Level || room==Final_Level_2) {
-        audio_stop_sound(snd_lava);
+        audio_stop_sound(snd_city);
         city=0;
     }
     //Boss 5
