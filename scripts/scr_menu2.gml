@@ -45,7 +45,7 @@ switch(mpos)
         global.paraguas2 = 1;
         global.papanoel2 = 0;
         global.visor2 = 0;
-        global.hat = 2;
+        global.hat = 3;
         } 
     break;
     //Gorro papa noel
@@ -60,7 +60,7 @@ switch(mpos)
         global.paraguas2 = 0;
         global.papanoel2 = 1;
         global.visor2 = 0;
-        global.hat = 3;
+        global.hat = 4;
         } 
     break;
     //Gorro ciborg
@@ -75,7 +75,7 @@ switch(mpos)
         global.paraguas2 = 0;
         global.papanoel2 = 0;
         global.visor2 = 1;
-        global.hat = 4;
+        global.hat = 5;
         } 
     break;
     //Tunica
