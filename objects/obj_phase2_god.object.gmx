@@ -121,7 +121,12 @@ if(distance_to_point(next_xPosition, next_yPosition) &lt; 5 &amp;&amp; status ==
 //Concluir nivel
 if (finished == true &amp;&amp; closing == false){ 
     //global.muertes += 1;
-    obj_fade.fadeIn = false;
+    if(obj_fade.fadeIn == true){
+        //Guardamos tiempo
+        global.counter = object5.reloj;
+        global.stepCounter = object5.alarm[1];
+        obj_fade.fadeIn = false;
+    }
     obj_fade.alarm[1] = room_speed * 0.05;
     //instance_destroy();  
     closing = true; 

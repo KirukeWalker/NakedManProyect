@@ -241,6 +241,7 @@ if (global.vidaboss &lt;= 0)
     with(obj_chain_link) instance_destroy();
     with(obj_anchor) instance_destroy();
     global.counter = obj_nakedman_falling.reloj;
+    global.stepCounter = obj_nakedman_falling.alarm[3]
     global.last_level = 2;
     //global.muertes += 1;
     obj_fade_white.fadeIn = false;

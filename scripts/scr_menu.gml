@@ -14,7 +14,8 @@ switch(mpos){
     case 0: 
     {
         //Reseteamos el timer
-        global.counter = 0; 
+        global.counter = 0;
+        global.stepCounter = 30; 
         //if(global.cabezallamas = 0)  
         if(global.level_completed == 0) 
             room_goto(Nivel_1);

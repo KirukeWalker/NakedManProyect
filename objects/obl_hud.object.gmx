@@ -39,16 +39,26 @@ if(global.HD == true){
 if(global.TIMER == true){
     //Reborde negro
     draw_set_colour(c_black);
-    if(instance_exists(object5))
-        draw_text(view_xview + 301, view_yview + 31, object5.reloj);
-    if(instance_exists(obj_nakedman_falling))
-        draw_text(view_xview + 301, view_yview + 31, obj_nakedman_falling.reloj);
+    //Naked man normal
+    if(instance_exists(object5)){
+        draw_text(view_xview + 281, view_yview + 31, string(object5.reloj) + "' ");
+        draw_text(view_xview + 321, view_yview + 31, string(object5.alarm[1]) + "''");
+    }
+    //Naked man cayendo
+    if(instance_exists(obj_nakedman_falling)){
+        draw_text(view_xview + 281, view_yview + 31, string(obj_nakedman_falling.reloj) + "' ");
+        draw_text(view_xview + 321, view_yview + 31, string(obj_nakedman_falling.alarm[3]) + "''");
+    }
     //Base blanca
     draw_set_colour(c_white);
-    if(instance_exists(object5))
-        draw_text(view_xview + 300, view_yview + 30, object5.reloj);
-    if(instance_exists(obj_nakedman_falling))
-        draw_text(view_xview + 300, view_yview + 30, obj_nakedman_falling.reloj);
+    if(instance_exists(object5)){
+        draw_text(view_xview + 280, view_yview + 30, string(object5.reloj) + "' ");
+        draw_text(view_xview + 320, view_yview + 30, string(object5.alarm[1]) + "''");
+    }
+    if(instance_exists(obj_nakedman_falling)){
+        draw_text(view_xview + 280, view_yview + 30, string(obj_nakedman_falling.reloj) + "' ");
+        draw_text(view_xview + 320, view_yview + 30, string(obj_nakedman_falling.alarm[3]) + "''");
+    }
 }
 
 draw_set_font(fnt_creditos_peque);

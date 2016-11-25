@@ -100,6 +100,7 @@ if (global.vidaboss = 0)
     global.muertes += 1;
     obj_fade_white.fadeIn = false;
     global.counter = object5.reloj;
+    global.stepCounter = object5.alarm[1];
     global.last_level = 3;
     //obj_fade.alarm[1] = room_speed * 0.05; 
     checkpoint = true;

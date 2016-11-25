@@ -199,7 +199,12 @@ switch(status){
             obj_falling_tree.alarm[0] = 1;
             obj_falling_branch.alarm[0] = 1;
             //
-            obj_fade.fadeIn = false;
+            if(obj_fade.fadeIn == true){
+                //Guardamos tiempo
+                global.counter = object5.reloj;
+                global.stepCounter = object5.alarm[1];
+                obj_fade.fadeIn = false;
+            }
             obj_fade.fading_speed = 0.01;
             status = 4;
         }

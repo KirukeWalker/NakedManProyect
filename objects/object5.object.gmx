@@ -262,7 +262,7 @@ switch(global.hat){
 }
 //Seteamos cronómetro
 reloj = global.counter;
-alarm[1]=30;
+alarm[1]=global.stepCounter;
 cronometro = 0;
 switch (nivel)
 {

@@ -93,13 +93,18 @@ if(returning == false){
     player.direction = direction;
     player.speed = speed;
     //
-    ini_open("SystemNM.txt")
+    /*ini_open("SystemNM.txt")
     ini_key_delete("NhTPahPmx","KSgfhsRKWenv")
     ini_write_string("NhTPahPmx","KSgfhSRKWenv","njsESnsSAnQ")
-    ini_close()
+    ini_close()*/
     
-    global.muertes += 1;
-    obj_fade.fadeIn = false;
+    //global.muertes += 1;
+    if(obj_fade.fadeIn == true){
+        //Guardamos tiempo
+        global.counter = object5.reloj;
+        global.stepCounter = object5.alarm[1];
+        obj_fade.fadeIn = false;
+    }
     //obj_fade.alarm[1] = room_speed * 0.05;
 }
 </string>

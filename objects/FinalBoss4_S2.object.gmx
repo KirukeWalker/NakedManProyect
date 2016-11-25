@@ -71,6 +71,7 @@ switch(status){
                 global.level_completed = 4;
             }
             global.counter = object5.reloj;
+            global.stepCounter = object5.alarm[1];
             global.last_level = 4;
         }
     break;

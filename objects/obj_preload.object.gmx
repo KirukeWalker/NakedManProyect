@@ -31,6 +31,7 @@ global.offline = 1;
 global.skin = 0;
 global.hat = 0;
 global.counter = 0;         //Contador que alamcenará lo tardado en sucesivos niveles
+global.stepCounter = 30;
 global.muertes = 0;
 global.muertes_registro = 0;
 global.cagaprisas = 0;
