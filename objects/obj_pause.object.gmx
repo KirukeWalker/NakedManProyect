@@ -108,11 +108,13 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
     if (!pause) {
         pause = 1;
         if room == Nivel_Bosque || room == Nivel_Bosque_2{
-            part_system_destroy (obj_lluvia.rain)
+            //part_system_destroy (obj_lluvia.rain)
+            with(obj_lluvia) instance_destroy();
         }
         
         if room == Nivel_Nieve || room == Nivel_Nieve_2{
-            part_system_destroy (obj_snow.snow)
+            //part_system_destroy (obj_snow.snow)
+            with(obj_snow) instance_destroy();
         }
         /*if part_system_exists(obj_lluvia.rain) {
             part_system_destroy (obj_lluvia.rain)
@@ -122,6 +124,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
         }*/
         
         instance_deactivate_all(true);
+        //instance_activate_object(obj_snow);
         instance_create(view_xview+302,view_yview+340,obj_gamePausedMenu)
         instance_create(view_xview+304,view_yview+340-60,obj_Menu1Selector)
     }
@@ -129,7 +132,9 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
 
 if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp;&amp; pausepos=0 {
     pause = 0;
-    if room=Nivel_Bosque{
+    if (room == Nivel_Bosque || room == Nivel_Bosque_2)
+        instance_create(0, 0, obj_lluvia);
+    /*if room=Nivel_Bosque{
         rain = part_system_create();    //Creamos el generador de nieve
         part_system_depth(rain, -60);   //Lo ponemos a profunidad -60
         raintear = part_type_create();     //Creamos el tipo de particula
@@ -144,8 +149,10 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
                             room_width+100,80,-10,
                             ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
         part_emitter_stream(rain,rain_emitter,raintear,5);     //Emitimos las partículas de nieve
-    }
-    if room=Nivel_Nieve{
+    }*/
+    if (room == Nivel_Nieve || room == Nivel_Nieve_2)
+        instance_create(0, 0, obj_snow);
+    /*if room=Nivel_Nieve{
         snow = part_system_create();    //Creamos el generador de nieve
         part_system_depth(snow, -60);   //Lo ponemos a profunidad -60
         snowflake = part_type_create();     //Creamos el tipo de particula
@@ -160,7 +167,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
                             room_width+100,4000,-5,
                             ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
         part_emitter_stream(snow,snow_emitter,snowflake,5);     //Emitimos las partículas de nieve
-    }
+    }*/
     with(obj_gamePausedMenu) instance_destroy();
     with(obj_Menu1Selector) instance_destroy();
     pausepos=0;
