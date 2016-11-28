@@ -26,7 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>//Chequeo para mejores tiempos
-if(global.counter &lt; global.best_times[global.last_level]){
+lastTime = global.counter + ((30 - global.stepCounter) / 30);
+bestTime = global.best_times[global.last_level] + 
+    ((30 - global.best_stepTimes[global.last_level]) / 30);
+    
+if(lastTime &lt; bestTime){
     global.best_times[global.last_level] = global.counter;
     //Y aquí pondremos para desbloqueables
     ini_open("SystemNM.txt");
@@ -34,23 +38,31 @@ if(global.counter &lt; global.best_times[global.last_level]){
         //ya iremos poniendo los casos
         case 1:
             ini_write_real("Unlockables", "timeOne", global.counter);
+            ini_write_real("Unlockables", "stepTimeOne", global.stepCounter);
         break;
         case 2:
             ini_write_real("Unlockables", "timeTwo", global.counter);
+            ini_write_real("Unlockables", "stepTimeTwo", global.stepCounter);
         break;
         case 3:
             ini_write_real("Unlockables", "timeThree", global.counter);
+            ini_write_real("Unlockables", "stepTimeThree", global.stepCounter);
         break;
         case 4:
             ini_write_real("Unlockables", "timeFour", global.counter);
+            ini_write_real("Unlockables", "stepTimeFour", global.stepCounter);
         break;
         case 5:
             ini_write_real("Unlockables", "timeFive", global.counter);
+            ini_write_real("Unlockables", "stepTimeFive", global.stepCounter);
         break;
     }
     ini_close();
 }
 
+//Operacion adicional para el draw
+lastStepTime = int64((30 - global.stepCounter) * 3.3);
+bestStepTime = int64((30 - global.best_stepTimes[global.last_level]) * 3.3);
 </string>
           </argument>
         </arguments>
@@ -127,9 +139,11 @@ draw_text(room_width/2, 50, "Level " + string(global.last_level));
 draw_text(room_width/2, 150, "Completed");
 //Comparación de tiempos
 draw_set_font(fnt_creditos_grande);
-draw_text(room_width/2, 250, "Your time: " + string(global.counter));
+draw_text(room_width/2, 250, "Your time: " + string(global.counter) 
+    + "' " + string(lastStepTime) + "''");
     //draw_text(450, 300, global.counter);
-draw_text(room_width/2, 300, "Best time: " + string(global.best_times[global.last_level]));
+draw_text(room_width/2, 300, "Best time: " + string(global.best_times[global.last_level]) 
+    + "' " + string(bestStepTime) + "''");
     //draw_text(450, 350, global.best_times[global.last_level]);
     
 //Mensaje para continuar

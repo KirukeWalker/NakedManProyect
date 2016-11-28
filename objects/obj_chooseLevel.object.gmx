@@ -158,8 +158,8 @@ draw_text(x+1*600,room_height/2+200,"LEVEL 2");
 if (global.level_completed &gt;= 1){
     draw_sprite(spr_level2,1,x+1*600,room_height/2-22);
         //Texto de mejor tiempo, aparece en la anterior
-    draw_text(x + 0 * 600 - 100, 20, "Best time: ");
-    draw_text(x + 0 * 600 + 100, 20, global.best_times[1]);
+    draw_text(x + 0 * 600, 20, "Best time: " + string(global.best_times[1]) 
+        + "' " + string(int64((30 - global.best_stepTimes[1]) * 3.3)) + "''");
 }
 else draw_sprite(spr_levelblock,1,x+1*600,room_height/2-22)
 
@@ -168,8 +168,8 @@ draw_text(x+2*600,room_height/2+200,"LEVEL 3");
 if (global.level_completed &gt;= 2){
     draw_sprite(spr_level3,1,x+2*600,room_height/2-22);
         //Texto de mejor tiempo, aparece en la anterior
-    draw_text(x + 1 * 600 - 100, 20, "Best time: ");
-    draw_text(x + 1 * 600 + 100, 20, global.best_times[2]);
+    draw_text(x + 1 * 600, 20, "Best time: " + string(global.best_times[2]) 
+        + "' " + string(int64((30 - global.best_stepTimes[2]) * 3.3)) + "''");
 }
 else draw_sprite(spr_levelblock,1,x+2*600,room_height/2-22)
 
@@ -178,8 +178,8 @@ draw_text(x+3*600,room_height/2+200,"LEVEL 4");
 if (global.level_completed &gt;= 3){
     draw_sprite(spr_level4,1,x+3*600,room_height/2-22);
         //Texto de mejor tiempo, aparece en la anterior
-    draw_text(x + 2 * 600 - 100, 20, "Best time: ");
-    draw_text(x + 2 * 600 + 100, 20, global.best_times[3]);
+    draw_text(x + 2 * 600, 20, "Best time: " + string(global.best_times[3]) 
+        + "' " + string(int64((30 - global.best_stepTimes[3]) * 3.3)) + "''");
 }
 else draw_sprite(spr_levelblock,1,x+3*600,room_height/2-22)
 
@@ -188,8 +188,8 @@ draw_text(x+4*600,room_height/2+200,"LEVEL 5");
 if (global.level_completed &gt;= 4){
     draw_sprite(spr_level5,1,x+4*600,room_height/2-22);
         //Texto de mejor tiempo, aparece en la anterior
-    draw_text(x + 3 * 600 - 100, 20, "Best time: ");
-    draw_text(x + 3 * 600 + 100, 20, global.best_times[4]);
+    draw_text(x + 3 * 600, 20, "Best time: " + string(global.best_times[4]) 
+        + "' " + string(int64((30 - global.best_stepTimes[4]) * 3.3)) + "''");
 }
 else draw_sprite(spr_levelblock,1,x+4*600,room_height/2-22)
 
@@ -198,8 +198,8 @@ draw_text(x+5*600,room_height/2+200,"LEVEL 6");
 if (global.level_completed &gt;= 5){
     draw_sprite(spr_level6,1,x+5*600,room_height/2-22);
         //Texto de mejor tiempo, aparece en la anterior
-    draw_text(x + 4 * 600 - 100, 20, "Best time: ");
-    draw_text(x + 4 * 600 + 100, 20, global.best_times[5]);
+    draw_text(x + 4 * 600, 20, "Best time: " + string(global.best_times[5]) 
+        + "' " + string(int64((30 - global.best_stepTimes[5]) * 3.3)) + "''");
 }
 else draw_sprite(spr_levelblock,1,x+5*600,room_height/2-22)
 

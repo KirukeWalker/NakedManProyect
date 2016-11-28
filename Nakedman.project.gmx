@@ -588,7 +588,6 @@
       <object>objects\Volador</object>
       <object>objects\Melee</object>
       <object>objects\HeavenMelee</object>
-      <object>objects\FinalBoss1</object>
       <object>objects\FinalBoss1New</object>
       <object>objects\FinalBoss2</object>
       <object>objects\FinalBoss2_S2</object>
@@ -596,7 +595,6 @@
       <object>objects\FinalBoss3_Body</object>
       <object>objects\FinalBoss3_Test</object>
       <object>objects\FinalBoss3_Body_Test</object>
-      <object>objects\FinalBoss4</object>
       <object>objects\FinalBoss4_New</object>
       <object>objects\FinalBoss4_S2</object>
       <object>objects\obj_avalanch</object>
