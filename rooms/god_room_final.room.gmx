@@ -56,7 +56,8 @@
     <instance objName="obj_final_naked_man" x="128" y="192" name="inst_A8DF0F4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_black_naked_man" x="480" y="224" name="inst_EA80062C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_white" x="288" y="0" name="inst_F89BAEBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_glory_bar" x="224" y="0" name="inst_E1F6F4AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_glory_bar_anal" x="224" y="0" name="inst_BE4D5936" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obl_hud" x="320" y="0" name="inst_E6DDF0AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

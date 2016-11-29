@@ -107,6 +107,9 @@ if(keyboard_check_released(vk_enter) || keyboard_check_released(vk_space) ||
             room_goto(god_room_01);
         break;
         //Para el boss final ya veremos
+        case 6:
+            room_goto(Credits);
+        break;
     }  
 }
 </string>

@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>//Pintamos los corazones
-draw_sprite(spr_hearts,global.vida, view_xview+40, view_yview+20);
+    //A menos que sea la batalla final
+if(room != god_room_final)
+    draw_sprite(spr_hearts,global.vida, view_xview+40, view_yview+20);
 //Escribimos la puntuación o pussy mode
 draw_set_halign(fa_center);
 draw_set_color(c_white);
