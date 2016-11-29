@@ -28,6 +28,7 @@
             <string>//
 global.vida = 5;
 maxSpeed = 10;
+barInHand = true;
 </string>
           </argument>
         </arguments>
@@ -55,7 +56,7 @@ key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0)
 key_left = -(keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0) || (gamepad_button_check(0,gp_padl) || joystick_xpos(2) &lt; -0.2));     //Para detectar la flecha izquierda
 key_up = keyboard_check(vk_up)/* || (gamepad_axis_value(0,gp_axislv) &lt; 0) || (gamepad_button_check(0,gp_padu) || joystick_ypos(2) &lt; 0.2)*/;
 key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0) || (gamepad_button_check(0,gp_padd) || joystick_ypos(2) &gt; 0.2);
-key_shoot = keyboard_check('c') || (gamepad_button_check(0,gp_face1));
+key_shoot = keyboard_check_pressed(ord('C')) || (gamepad_button_check_pressed(0,gp_face1));
 
 //Movimiento vertical
 vMove = -key_up + key_down;
@@ -82,6 +83,19 @@ else{
 //Que no se salga
 x = clamp(x, sprite_width/2, room_width - sprite_width/2);
 y = clamp(y, sprite_height/2, room_height - sprite_height/2);
+
+//Dirección en la que mira
+    //Por ahora que mire siempre hacia el otro
+if(x - obj_black_naked_man.x != 0)
+    image_xscale = sign(obj_black_naked_man.x - x);
+    
+//Disparo
+if(key_shoot == true &amp;&amp; barInHand == true){
+    bar = instance_create(x, y, obj_throwable_bar);
+    bar.direction = 90 - (image_xscale * 90);
+    sprite_index = spr_final_naked_man_throwing;
+    barInHand = false;
+}
 </string>
           </argument>
         </arguments>
@@ -105,8 +119,8 @@ y = clamp(y, sprite_height/2, room_height - sprite_height/2);
           <argument>
             <kind>1</kind>
             <string>//
-draw_text(10, 10, string(vMove) + " " + string(vspeed));
-draw_text(10, 30, string(hMove) + " " + string(hspeed));
+//draw_text(10, 10, string(vMove) + " " + string(vspeed));
+//draw_text(10, 30, string(hMove) + " " + string(hspeed));
 </string>
           </argument>
         </arguments>

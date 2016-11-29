@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>//Le asignamos una velocidad
 speed = 20;
+rotation_speed = 10;
+returning = false;
+alarm_set(0, 15);
 </string>
           </argument>
         </arguments>
@@ -50,6 +53,7 @@ speed = 20;
           <argument>
             <kind>1</kind>
             <string>//Cambio de actitud cuando alcance su tiempo limite de vuelo directo
+returning = true;
 </string>
           </argument>
         </arguments>
@@ -74,6 +78,23 @@ speed = 20;
             <kind>1</kind>
             <string>//Hacemos que vaya rotando
 image_angle += 5;
+//
+if(returning == true){
+    direction_to_naked = point_direction(x, y, obj_final_naked_man.x, obj_final_naked_man.y);
+    //Rotate towards the player
+        //Ge the player´s position
+        if(direction_to_naked &gt; direction) 
+            turning_direction = 1;
+        else if(direction_to_naked &lt; direction)
+            turning_direction = -1;
+        else
+            turning_direction = 0;
+        //Here we control the jump between 0 and 360
+        if(abs(direction_to_naked - direction) &gt; 180)
+            turning_direction *= -1;
+        //And rotate towards the player
+        direction += turning_direction * rotation_speed;
+}
 </string>
           </argument>
         </arguments>
@@ -100,6 +121,34 @@ image_angle += 5;
     //De momento tal cual
     //Mas tarde igual le ponemos un alarm
 global.vida ++;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_final_naked_man">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+if(returning == true){
+    other.barInHand = true;
+    other.sprite_index = spr_final_naked_man;
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
