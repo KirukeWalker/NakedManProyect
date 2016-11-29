@@ -29,10 +29,35 @@
 global.vida = 5;
 maxSpeed = 10;
 barInHand = true;
+status_dead = 0;
 
 //Para el contador
 reloj = global.counter;
 alarm_set(0, global.stepCounter);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+instance_create(view_xview, view_yview, obj_gameoverimg);
 </string>
           </argument>
         </arguments>
@@ -105,7 +130,7 @@ if(hMove != 0){
         hspeed += hMove;
 }
 else{
-    if(abs(vspeed) &gt; 0)
+    if(abs(hspeed) &gt; 0)
         hspeed -= sign(hspeed);
 }
 
@@ -125,6 +150,17 @@ if(key_shoot == true &amp;&amp; barInHand == true){
     sprite_index = spr_final_naked_man_throwing;
     barInHand = false;
 }
+
+//Muerte
+if(global.vida &lt;= 0 &amp;&amp; status_dead == 0)
+{
+    if(global.SOUNDS == 1)
+        audio_play_sound(snd_die, 1, false);
+    alarm_set(1, 30);
+    status_dead = 1;   
+}
+//Control de vida negativa
+global.vida = max(global.vida, 0);
 </string>
           </argument>
         </arguments>

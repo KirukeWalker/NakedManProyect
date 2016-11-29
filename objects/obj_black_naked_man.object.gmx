@@ -5,9 +5,159 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+randomize();
+//
+movementSpeed = 10;
+action_to_do = 0;
+decided = false;
+charges_done = 0;
+
+//Puesta de alarma inicial para empezar a cambiar entre movimientos
+alarm_set(0, 60);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Decide que acción hacer
+    //Las acciones posibles porbablemente dependan de la vida
+    //De momento las dos primeras
+//action_to_do = irandom(1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+switch(action_to_do){
+    //Embestir
+    case 0:
+        //Primero, decidimos donde ir
+        if(decided == false){
+            location_number = instance_number(obj_charge_location);
+            next_location = instance_find(obj_charge_location, int64(random(location_number)));
+            direction = point_direction(x, y, next_location.x, next_location.y);
+            speed = movementSpeed + global.vida;
+            decided = true;
+        }
+        if(distance_to_point(next_location.x, next_location.y) &lt; 20){
+            speed = 0;
+            decided = false;
+            charges_done ++;
+            if(charges_done &gt; 5){
+                charges_done = 0;
+                action_to_do = irandom(1);
+            }
+        }          
+    break;
+    //Lanzamiento de "disco"
+    case 1:
+        //Primero, decidimos donde ir
+        if(decided == false){
+            location_number = instance_number(obj_charge_location);
+            next_location = instance_find(obj_charge_location, int64(random(location_number)));
+            direction = point_direction(x, y, next_location.x, next_location.y);
+            speed = movementSpeed + global.vida;
+            decided = true;
+        }
+        if(distance_to_point(next_location.x, next_location.y) &lt; 20){
+            speed = 0;
+            if(!instance_exists(obj_big_censor_bar)){
+                big_bar = instance_create(x, y, obj_big_censor_bar);
+            }
+        } 
+    break;
+    //Lluvia de barras
+    case 3:
+    
+    break;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_final_naked_man">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+if(action_to_do == 0)
+    global.vida --;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
