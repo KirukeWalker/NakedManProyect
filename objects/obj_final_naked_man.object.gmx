@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//
-global.vida = 5;
-maxSpeed = 10;
+global.vida = 10;
+maxSpeed = 15;
 barInHand = true;
 status_dead = 0;
 

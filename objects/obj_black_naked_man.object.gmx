@@ -41,7 +41,7 @@ alarm_set(0, 60);
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="2">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -63,7 +63,7 @@ bar = instance_create(x, y, obj_vertical_bar);
 
 //
 if(barraging = true)
-    alarm_set(2, 10);
+    alarm_set(1, 10);
 </string>
           </argument>
         </arguments>
@@ -122,11 +122,16 @@ switch(action_to_do){
             next_location = instance_find(obj_charge_location, int64(random(location_number)));
             direction = point_direction(x, y, next_location.x, next_location.y);
             speed = movementSpeed + global.vida;
+            sprite_index = spr_black_naked_man_charging;
+            image_angle = direction + 180;
+            image_xscale = 1;
             decided = true;
         }
         //
         if(distance_to_point(next_location.x, next_location.y) &lt; 20){
             speed = 0;
+            sprite_index =spr_black_naked_man;
+            image_angle = 0;
             decided = false;
             charges_done ++;
             if(charges_done &gt; 5){
@@ -148,6 +153,7 @@ switch(action_to_do){
         //
         if(distance_to_point(next_location.x, next_location.y) &lt; 20){
             speed = 0;
+            image_xscale = sign(x - room_width/2);
             if(!instance_exists(obj_big_censor_bar)){
                 big_bar = instance_create(x, y, obj_big_censor_bar);
             }
@@ -164,22 +170,25 @@ switch(action_to_do){
             decided = true;
         }
         //
-        if(distance_to_point(next_location.x, next_location.y) &lt; 20){
+        if(distance_to_point(next_location.x, next_location.y) &lt; 20 &amp;&amp; barraging == false){
             image_xscale = sign(room_width/2 - x);
             direction = 90 - (image_xscale * 90);
             speed = movementSpeed + global.vida;
             barraging = true;
-            alarm_set(2, 1);
+            alarm_set(1, 1);
         }
         //
         if(barraging == true){
-            if(instance_number(obj_vertical_bar) &gt; 3 &amp;&amp; 
-                distance_to_object(instance_nearest(x, y, obj_charge_location) &lt; 20)){
+            //if(instance_number(obj_vertical_bar) &gt; 3 &amp;&amp; 
+            //    distance_to_object(instance_nearest(x, y, obj_charge_location) &lt; 20)){
+            if(x &lt; 0 || x &gt; room_width){    
                 speed = 0;
                 barraging = false;
+                alarm_set(1, -1);
                 decided = false;
                 action_to_do = irandom(2);
             }
+            //}
         }
     break;
 }
@@ -208,7 +217,7 @@ switch(action_to_do){
             <string>//
 if(action_to_do == 0 &amp;&amp; other.alarm[2] &lt; 1){
     global.vida --;
-    other.alam[2] = 5;
+    other.alarm[2] = 30;
     if(global.SOUNDS)
         audio_play_sound(snd_knockback, 3, false);
 }

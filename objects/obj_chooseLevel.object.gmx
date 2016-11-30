@@ -208,8 +208,8 @@ draw_text(x+6*600,room_height/2+200,"HARDCORE MODE");
 if (global.level_completed &gt;= 6){
     draw_sprite(spr_level5,1,x+6*600,room_height/2-22);
         //Texto de mejor tiempo, aparece en la anterior
-    //draw_text(x + 5 * 600 - 100, 20, "Best time: ");
-    //draw_text(x + 5 * 600 + 100, 20, global.best_times[6]);
+    draw_text(x + 5 * 600, 20, "Best time: " + string(global.best_times[6]) 
+        + "' " + string(int64((30 - global.best_stepTimes[6]) * 3.3)) + "''");
 }
 else draw_sprite(spr_levelblock,1,x+6*600,room_height/2-22)
 </string>

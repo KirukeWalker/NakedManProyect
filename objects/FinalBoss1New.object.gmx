@@ -353,6 +353,7 @@ if (global.vidaboss == 0 &amp;&amp; last_round == true)
         ini_open("SystemNM.txt")
         //ini_key_delete("NhTPahPmx","MeFjgPFREndg")
         //ini_write_string("NhTPahPmx","MeFjgPfREndg","uFscFjgWfjE");
+        //ini_write_real(base64_encode("Unlockables"), base64_encode("level completed"), base64_encode(string(1)));
         ini_write_real("Unlockables", "level completed", 1);
         ini_close()
         global.level_completed = 1;

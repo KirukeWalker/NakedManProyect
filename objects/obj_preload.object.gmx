@@ -72,7 +72,7 @@ global.time_required[4] = 200;
 global.time_required[5] = 200;
     //Inicializamos los mejores tiempos
 for(i=1; i&lt;=5; i++){
-    global.best_times[i] = 10000;
+    global.best_times[i] = 1000;
     global.best_stepTimes[i] = 0;
 }
 //De menú y ajustes
@@ -90,6 +90,23 @@ globalvar checkpoint;
 checkpoint = false;
 global.muertes_registro = 0;
 global.movemenu=0;
+//Variables de strings codificadas
+/*codedTitle = base64_encode("Unlockables");
+codedParameters[0] = base64_encode("level completed");
+    //
+codedParameters[1] = base64_encode("timeOne");
+codedParameters[2] = base64_encode("timeTwo");
+codedParameters[3] = base64_encode("timeThree");
+codedParameters[4] = base64_encode("timeFour");
+codedParameters[5] = base64_encode("timeFive");
+codedParameters[6] = base64_encode("finalTime");
+    //
+codedParameters[7] = base64_encode("stepTimeOne");
+codedParameters[8] = base64_encode("stepTimeTwo");
+codedParameters[9] = base64_encode("stepTimeThree");
+codedParameters[10] = base64_encode("stepTimeFour");
+codedParameters[11] = base64_encode("stepTimeFive");
+codedParameters[12] = base64_encode("finalStepTime");*/
 if !file_exists("SystemNM.txt") {
     ini_open("SystemNM.txt") 
     //Codificadas
@@ -115,7 +132,14 @@ if !file_exists("SystemNM.txt") {
         //Ya los codificaré más adelante
         //Este servirá también para las skins
     ini_write_real("Unlockables", "level completed", 0);
+    //ini_write_real(codedTitle, codedParameters[0], base64_encode(string(0)));
         //Y los gorros ya aparte (pero con tiempos)
+    /*ini_write_real(codedTitle, codedParameters[1], base64_encode(string(1000)));
+    ini_write_real(codedTitle, codedParameters[2], base64_encode(string(1000)));
+    ini_write_real(codedTitle, codedParameters[3], base64_encode(string(1000)));
+    ini_write_real(codedTitle, codedParameters[4], base64_encode(string(1000)));
+    ini_write_real(codedTitle, codedParameters[5], base64_encode(string(1000)));
+    ini_write_real(codedTitle, codedParameters[6], base64_encode(string(1000)));*/
     ini_write_real("Unlockables", "timeOne", 1000);
     ini_write_real("Unlockables", "timeTwo", 1000);
     ini_write_real("Unlockables", "timeThree", 1000);
@@ -123,6 +147,12 @@ if !file_exists("SystemNM.txt") {
     ini_write_real("Unlockables", "timeFive", 1000);
     ini_write_real("Unlockables", "finalTime", 1000);
             //Y subtiempos
+    /*ini_write_real(codedTitle, codedParameters[7], base64_encode(string(0)));
+    ini_write_real(codedTitle, codedParameters[8], base64_encode(string(0)));
+    ini_write_real(codedTitle, codedParameters[9], base64_encode(string(0)));
+    ini_write_real(codedTitle, codedParameters[10], base64_encode(string(0)));
+    ini_write_real(codedTitle, codedParameters[11], base64_encode(string(0)));
+    ini_write_real(codedTitle, codedParameters[12], base64_encode(string(0)));*/
     ini_write_real("Unlockables", "stepTimeOne", 30);
     ini_write_real("Unlockables", "stepTimeTwo", 30);
     ini_write_real("Unlockables", "stepTimeThree", 30);
@@ -130,7 +160,7 @@ if !file_exists("SystemNM.txt") {
     ini_write_real("Unlockables", "stepTimeFive", 30);
     ini_write_real("Unlockables", "finalStepTime", 30);
         //Y la skin extra
-    ini_write_real("Unlockables", "golden", 0);
+    //ini_write_real("Unlockables", "golden", 0);
     
     ini_close();
 }
@@ -179,18 +209,31 @@ if file_exists("SystemNM.txt"){
     window_set_fullscreen(global.FULLSCREEN);
     //Nuevas comprobaciones de desbloqueados
     global.level_completed = ini_read_real("Unlockables", "level completed", 0);
+    //global.level_completed = base64_decode(ini_read_string(codedTitle, codedParameters[0], 0));
     global.best_times[1] = ini_read_real("Unlockables", "timeOne", 1000);
     global.best_times[2] = ini_read_real("Unlockables", "timeTwo", 1000);
     global.best_times[3] = ini_read_real("Unlockables", "timeThree", 1000);
     global.best_times[4] = ini_read_real("Unlockables", "timeFour", 1000);
     global.best_times[5] = ini_read_real("Unlockables", "timeFive", 1000);
     global.best_times[6] = ini_read_real("Unlockables", "finalTime", 1000);
+    /*global.best_times[1] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[1], 1000)));
+    global.best_times[2] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[2], 1000)));
+    global.best_times[3] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[3], 1000)));
+    global.best_times[4] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[4], 1000)));
+    global.best_times[5] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[5], 1000)));
+    global.best_times[6] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[6], 1000)));*/
     global.best_stepTimes[1] = ini_read_real("Unlockables", "stepTimeOne", 30);
     global.best_stepTimes[2] = ini_read_real("Unlockables", "stepTimeTwo", 30);
     global.best_stepTimes[3] = ini_read_real("Unlockables", "stepTimeThree", 30);
     global.best_stepTimes[4] = ini_read_real("Unlockables", "stepTimeFour", 30);
     global.best_stepTimes[5] = ini_read_real("Unlockables", "stepTimeFive", 30);
-    global.best_stepTimes[6] = ini_read_real("Unlockables", "finalStepTime", 30);
+    global.best_stepTimes[6] = ini_read_real("Unlockables", "finalStepTime", 30);   
+    /*global.best_stepTimes[1] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[7], 0)));
+    global.best_stepTimes[2] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[8], 0)));
+    global.best_stepTimes[3] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[9], 0)));
+    global.best_stepTimes[4] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[10], 0)));
+    global.best_stepTimes[5] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[11], 0)));
+    global.best_stepTimes[6] = int64(base64_decode(ini_read_string(codedTitle, codedParameters[12], 0)));*/
     ini_close();
 }
 //Cargamos la siguiente escena

@@ -26,10 +26,33 @@
           <argument>
             <kind>1</kind>
             <string>//Le asignamos una velocidad
-speed = 20;
+speed = 30;
 rotation_speed = 10;
 returning = false;
-alarm_set(0, 15);
+alarm_set(0, 12);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Para que no mate a black naked man de una ostia
 </string>
           </argument>
         </arguments>
@@ -120,9 +143,12 @@ if(returning == true){
             <string>//Cuando alcance al black naked man...
     //De momento tal cual
     //Mas tarde igual le ponemos un alarm
-global.vida ++;
-if(global.SOUNDS)
-    audio_play_sound(snd_damaged_enemy, 3, false);
+if(alarm_get(1) &lt; 1){
+    global.vida ++;
+    if(global.SOUNDS)
+        audio_play_sound(snd_damaged_enemy, 3, false);
+    alarm_set(1, 10);
+}
 </string>
           </argument>
         </arguments>

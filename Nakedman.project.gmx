@@ -456,6 +456,7 @@
       <sprite>sprites\spr_white_censor_bar</sprite>
       <sprite>sprites\spr_censor_bar</sprite>
       <sprite>sprites\spr_black_naked_man</sprite>
+      <sprite>sprites\spr_black_naked_man_charging</sprite>
     </sprites>
     <sprites name="Logos">
       <sprite>sprites\spr_4FF</sprite>
@@ -703,6 +704,7 @@
       <object>objects\stuff_deactivator</object>
       <object>objects\obj_guardado</object>
       <object>objects\obj_post_boss_manager</object>
+      <object>objects\obj_data_shower</object>
     </objects>
     <objects name="BossFinal Pruebas">
       <objects name="Phase 1">

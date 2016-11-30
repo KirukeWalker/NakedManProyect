@@ -81,7 +81,7 @@ instance_destroy();
             <string>//
 if(other.alarm[2] &lt; 1){
     global.vida --;
-    other.alarm[2] = 5;
+    other.alarm[2] = 30;
     if(global.SOUNDS)
         audio_play_sound(snd_knockback, 3, false);
 }

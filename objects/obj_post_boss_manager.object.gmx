@@ -32,11 +32,14 @@ bestTime = global.best_times[global.last_level] +
     
 if(lastTime &lt; bestTime){
     global.best_times[global.last_level] = global.counter;
+    global.best_stepTimes[global.last_level] = global.stepCounter;
     //Y aquí pondremos para desbloqueables
     ini_open("SystemNM.txt");
     switch(global.last_level){
         //ya iremos poniendo los casos
         case 1:
+            //ini_write_real(base64_encode("Unlockables"), base64_encode("timeOne"), base64_encode(string(global.counter)));
+            //ini_write_real(base64_encode("Unlockables"), base64_encode("stepTimeOne"), base64_encode(string(global.stepCounter)));
             ini_write_real("Unlockables", "timeOne", global.counter);
             ini_write_real("Unlockables", "stepTimeOne", global.stepCounter);
         break;

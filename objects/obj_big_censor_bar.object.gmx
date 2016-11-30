@@ -32,7 +32,7 @@ image_yscale = 5;
 direction = point_direction(x, y, room_width/2, room_height/2) - 85;
 speed = 20 + global.vida;
 //Ponemos alarma para que no se destruya al salir
-alarm_set(0, 10);
+alarm_set(0, 120);
 </string>
           </argument>
         </arguments>
@@ -56,7 +56,9 @@ alarm_set(0, 10);
           <argument>
             <kind>1</kind>
             <string>//
-
+obj_black_naked_man.decided = false;
+obj_black_naked_man.action_to_do = irandom(2);    //Luego ponemos para mas acciones
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -83,6 +85,13 @@ alarm_set(0, 10);
 image_angle += 30;
 //Ponemos la dirección para que rote por la pantalla
 direction = point_direction(x, y, room_width/2, room_height/2) - 85;
+
+//Por si se sale
+/*if(x &lt; 0 || y &lt; 0 || x &gt; room_width || y &gt; room_height){
+    obj_black_naked_man.decided = false;
+    obj_black_naked_man.action_to_do = irandom(2);    //Luego ponemos para mas acciones
+    instance_destroy();
+}*/
 </string>
           </argument>
         </arguments>
@@ -106,7 +115,7 @@ direction = point_direction(x, y, room_width/2, room_height/2) - 85;
           <argument>
             <kind>1</kind>
             <string>//
-if(alarm_get(0) &lt; 1){
+if(alarm_get(0) &lt; 100){
     other.decided = false;
     other.action_to_do = irandom(2);    //Luego ponemos para mas acciones
     instance_destroy();
@@ -136,7 +145,7 @@ if(alarm_get(0) &lt; 1){
             <string>//
 if(other.alarm[2] &lt; 1){
     global.vida --;
-    other.alarm[2] = 5;
+    other.alarm[2] = 30;
     if(global.SOUNDS)
         audio_play_sound(snd_knockback, 3, false);
 }
