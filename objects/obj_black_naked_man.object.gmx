@@ -32,9 +32,38 @@ movementSpeed = 10;
 action_to_do = 0;
 decided = false;
 charges_done = 0;
+barraging = false;
 
 //Puesta de alarma inicial para empezar a cambiar entre movimientos
 alarm_set(0, 60);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Alarma para la salva de barritas
+bar = instance_create(x, y, obj_vertical_bar);
+
+//
+if(barraging = true)
+    alarm_set(2, 10);
 </string>
           </argument>
         </arguments>
@@ -95,13 +124,14 @@ switch(action_to_do){
             speed = movementSpeed + global.vida;
             decided = true;
         }
+        //
         if(distance_to_point(next_location.x, next_location.y) &lt; 20){
             speed = 0;
             decided = false;
             charges_done ++;
             if(charges_done &gt; 5){
                 charges_done = 0;
-                action_to_do = irandom(1);
+                action_to_do = irandom(2);
             }
         }          
     break;
@@ -115,6 +145,7 @@ switch(action_to_do){
             speed = movementSpeed + global.vida;
             decided = true;
         }
+        //
         if(distance_to_point(next_location.x, next_location.y) &lt; 20){
             speed = 0;
             if(!instance_exists(obj_big_censor_bar)){
@@ -123,8 +154,33 @@ switch(action_to_do){
         } 
     break;
     //Lluvia de barras
-    case 3:
-    
+    case 2:
+        //Primero, decidimos donde ir
+        if(decided == false){
+            location_number = instance_number(obj_charge_location);
+            next_location = instance_find(obj_charge_location, int64(random(location_number)));
+            direction = point_direction(x, y, next_location.x, next_location.y);
+            speed = movementSpeed + global.vida;
+            decided = true;
+        }
+        //
+        if(distance_to_point(next_location.x, next_location.y) &lt; 20){
+            image_xscale = sign(room_width/2 - x);
+            direction = 90 - (image_xscale * 90);
+            speed = movementSpeed + global.vida;
+            barraging = true;
+            alarm_set(2, 1);
+        }
+        //
+        if(barraging == true){
+            if(instance_number(obj_vertical_bar) &gt; 3 &amp;&amp; 
+                distance_to_object(instance_nearest(x, y, obj_charge_location) &lt; 20)){
+                speed = 0;
+                barraging = false;
+                decided = false;
+                action_to_do = irandom(2);
+            }
+        }
     break;
 }
 </string>
@@ -150,8 +206,12 @@ switch(action_to_do){
           <argument>
             <kind>1</kind>
             <string>//
-if(action_to_do == 0)
+if(action_to_do == 0 &amp;&amp; other.alarm[2] &lt; 1){
     global.vida --;
+    other.alam[2] = 5;
+    if(global.SOUNDS)
+        audio_play_sound(snd_knockback, 3, false);
+}
 </string>
           </argument>
         </arguments>

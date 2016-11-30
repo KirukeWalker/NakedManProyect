@@ -108,7 +108,7 @@ direction = point_direction(x, y, room_width/2, room_height/2) - 85;
             <string>//
 if(alarm_get(0) &lt; 1){
     other.decided = false;
-    other.action_to_do = irandom(1);    //Luego ponemos para mas acciones
+    other.action_to_do = irandom(2);    //Luego ponemos para mas acciones
     instance_destroy();
 }
 </string>
@@ -134,7 +134,12 @@ if(alarm_get(0) &lt; 1){
           <argument>
             <kind>1</kind>
             <string>//
-global.vida --;
+if(other.alarm[2] &lt; 1){
+    global.vida --;
+    other.alarm[2] = 5;
+    if(global.SOUNDS)
+        audio_play_sound(snd_knockback, 3, false);
+}
 </string>
           </argument>
         </arguments>
