@@ -110,7 +110,7 @@ else if (fadeIn = false) {
     else{
         alpha = 1;
         //Siguiente cacho de texto
-        if(text &lt; 3){
+        if(text &lt; 2){
             text ++;
             fadeIn = true;
             alarm_set(0, 240);
@@ -153,15 +153,13 @@ switch(text){
         draw_text(room_width/2, 350, "4FreaksFiction");
     break;
     case 1:
-        draw_sprite(spr_USJ, 0, room_width/2, room_height/2);
-    break;
-    case 2:
-        draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
+         draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
         draw_text (room_width/2,y+80, "and they preyed upon us.");
         draw_text (room_width/2,y+120, "The few survivors had to");
         draw_text (room_width/2,y+160, "renounce to their shame to survive");
     break;
-    case 3:
+      
+    case 2:
         draw_text (room_width/2,y+40, "It's the duty of the Chosen Naked Man");
         draw_text (room_width/2,y+80, "to bring back The Clothes to their place.");
         draw_text (room_width/2,y+120, "");

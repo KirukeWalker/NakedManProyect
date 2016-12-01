@@ -740,7 +740,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
-    <room>rooms\god_room_final</room>
     <room>rooms\Introduccion</room>
     <room>rooms\Menu</room>
     <room>rooms\MenuNivel</room>
@@ -764,6 +763,7 @@
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\god_room_01</room>
     <room>rooms\god_room_02</room>
+    <room>rooms\god_room_final</room>
     <room>rooms\Continuara</room>
     <room>rooms\Menu2</room>
     <room>rooms\Credits</room>

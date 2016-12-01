@@ -229,7 +229,7 @@
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
-    <option_fullscreen>False</option_fullscreen>
+    <option_fullscreen>True</option_fullscreen>
     <option_gameguid>{B89A01ED-EC15-4418-B952-CC109C7F468E}</option_gameguid>
     <option_gameid>643957485</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
@@ -486,7 +486,7 @@
     <option_version_copyright>4FreaksFiction©</option_version_copyright>
     <option_version_description></option_version_description>
     <option_version_major>1</option_version_major>
-    <option_version_minor>1</option_version_minor>
+    <option_version_minor>0</option_version_minor>
     <option_version_product>Naked Man VS The Clothes</option_version_product>
     <option_version_release>0</option_version_release>
     <option_win8_advertising_appid></option_win8_advertising_appid>
@@ -565,7 +565,7 @@
     <option_windows_enable_steam>0</option_windows_enable_steam>
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>
     <option_windows_license>Configs\Default\windows\License.txt</option_windows_license>
-    <option_windows_mainor_version>1</option_windows_mainor_version>
+    <option_windows_mainor_version>0</option_windows_mainor_version>
     <option_windows_major_version>1</option_windows_major_version>
     <option_windows_nsis_file>Configs\Default\windows\RunnerInstaller.nsi</option_windows_nsis_file>
     <option_windows_product_info>Naked Man VS The Clothes</option_windows_product_info>
