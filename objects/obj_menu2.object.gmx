@@ -260,14 +260,14 @@ if  global.dorada2= 0 &amp;&amp;  global.quemaduras2= 0 &amp;&amp; global.capa2 
 
 //COSA6 
 if global.dorada2 = 1 &amp;&amp; global.dorada = 1{
-    draw_sprite(spr_run7,-1, view_xview+96,view_yview+430);
-    draw_sprite(spr_runBig7,-1, room_width/2, room_height/2);
+    draw_sprite(spr_run6,-1, view_xview+96,view_yview+430);
+    draw_sprite(spr_runBig6,-1, room_width/2, room_height/2);
     }
 if global.dorada2 = 0 &amp;&amp; global.dorada = 1{
-    draw_sprite(spr_idle7,-1,view_xview+96,view_yview+430);
+    draw_sprite(spr_idle6,-1,view_xview+96,view_yview+430);
     }
 if global.dorada = 0 {
-    draw_sprite(spr_skinBlack7,-1,view_xview+96,view_yview+430);
+    draw_sprite(spr_skinBlack6,-1,view_xview+96,view_yview+430);
     }
 //COSA7 
 if global.quemaduras2 = 1 &amp;&amp; global.quemaduras = 1{
@@ -326,14 +326,14 @@ if global.ciborg = 0 {
     }
 //COSA12
 if global.tunica2 = 1 &amp;&amp; global.tunica = 1{
-    draw_sprite(spr_run6,-1, view_xview+512,view_yview+430);
-    draw_sprite(spr_runBig6,-1, room_width/2, room_height/2);
+    draw_sprite(spr_run7,-1, view_xview+512,view_yview+430);
+    draw_sprite(spr_runBig7,-1, room_width/2, room_height/2);
     }
 if global.tunica2 = 0 &amp;&amp; global.tunica = 1{
-    draw_sprite(spr_idle6,-1,view_xview+512,view_yview+430);
+    draw_sprite(spr_idle7,-1,view_xview+512,view_yview+430);
     }
 if global.tunica = 0 {
-    draw_sprite(spr_skinBlack6,-1,view_xview+512,view_yview+430);
+    draw_sprite(spr_skinBlack7,-1,view_xview+512,view_yview+430);
     }
     
 //COSA1

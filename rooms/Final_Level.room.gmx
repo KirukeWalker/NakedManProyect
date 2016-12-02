@@ -2961,7 +2961,7 @@
     <instance objName="obj_suelo_pisableCiudad" x="2080" y="1440" name="inst_82FAA599" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2080" y="1472" name="inst_4865FDF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2080" y="1504" name="inst_8A713C90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="3456" y="1504" name="inst_F6891F68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="96" y="1920" name="inst_F6891F68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="3488" y="1568" name="inst_38B8DD68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="3456" y="1568" name="inst_2096C1DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="3424" y="1568" name="inst_4EECACD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
