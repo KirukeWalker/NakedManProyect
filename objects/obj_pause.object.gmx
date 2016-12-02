@@ -108,13 +108,17 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
     if (!pause) {
         pause = 1;
         if room == Nivel_Bosque || room == Nivel_Bosque_2{
+            part_system_automatic_update(obj_lluvia.rain, false);
+            part_system_automatic_draw(obj_lluvia.rain, false);
             //part_system_destroy (obj_lluvia.rain)
-            with(obj_lluvia) instance_destroy();
+            //with(obj_lluvia) instance_destroy();
         }
         
         if room == Nivel_Nieve || room == Nivel_Nieve_2{
+            part_system_automatic_update(obj_snow.snow, false);
+            part_system_automatic_draw(obj_snow.snow, false);
             //part_system_destroy (obj_snow.snow)
-            with(obj_snow) instance_destroy();
+            //with(obj_snow) instance_destroy();
         }
         /*if part_system_exists(obj_lluvia.rain) {
             part_system_destroy (obj_lluvia.rain)
@@ -132,42 +136,18 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
 
 if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp;&amp; pausepos=0 {
     pause = 0;
-    if (room == Nivel_Bosque || room == Nivel_Bosque_2)
-        instance_create(0, 0, obj_lluvia);
-    /*if room=Nivel_Bosque{
-        rain = part_system_create();    //Creamos el generador de nieve
-        part_system_depth(rain, -60);   //Lo ponemos a profunidad -60
-        raintear = part_type_create();     //Creamos el tipo de particula
-        part_type_shape(raintear,pt_shape_line);
-        part_type_orientation(raintear,0,0,0,0,1);
-        part_type_size(raintear,0.2,0.5,0,0);
-        part_type_speed(raintear,15,20,0.05,0);
-        part_type_direction(raintear,225,225,0,0);
-        part_type_life(raintear,50,400);
-        rain_emitter = part_emitter_create(rain);   //Creamos el emisor
-        part_emitter_region(rain,rain_emitter,-100,
-                            room_width+100,80,-10,
-                            ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
-        part_emitter_stream(rain,rain_emitter,raintear,5);     //Emitimos las partículas de nieve
-    }*/
-    if (room == Nivel_Nieve || room == Nivel_Nieve_2)
-        instance_create(0, 0, obj_snow);
-    /*if room=Nivel_Nieve{
-        snow = part_system_create();    //Creamos el generador de nieve
-        part_system_depth(snow, -60);   //Lo ponemos a profunidad -60
-        snowflake = part_type_create();     //Creamos el tipo de particula
-        part_type_shape(snowflake,pt_shape_square);
-        part_type_orientation(snowflake,0,0,0,0,1);
-        part_type_size(snowflake,0.01,0.05,0,0);
-        part_type_speed(snowflake,1,1.5,0.05,0);
-        part_type_direction(snowflake,270,270,0,4);
-        part_type_life(snowflake,1000,1500);
-        snow_emitter = part_emitter_create(snow);   //Creamos el emisor
-        part_emitter_region(snow,snow_emitter,0-100,
-                            room_width+100,4000,-5,
-                            ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
-        part_emitter_stream(snow,snow_emitter,snowflake,5);     //Emitimos las partículas de nieve
-    }*/
+    if (room == Nivel_Bosque || room == Nivel_Bosque_2){
+        instance_activate_object(obj_lluvia);
+        part_system_automatic_update(obj_lluvia.rain, true);
+        part_system_automatic_draw(obj_lluvia.rain, true);
+    }
+        
+    if (room == Nivel_Nieve || room == Nivel_Nieve_2){
+        instance_activate_object(obj_snow);
+        part_system_automatic_update(obj_snow.snow, true);
+        part_system_automatic_draw(obj_snow.snow, true);
+        
+    }
     with(obj_gamePausedMenu) instance_destroy();
     with(obj_Menu1Selector) instance_destroy();
     pausepos=0;

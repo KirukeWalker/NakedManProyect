@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>FPSMin=200;
+FPS=0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -65,9 +89,14 @@ if(global.TIMER == true){
     }
     //Base blanca
     draw_set_colour(c_white);
+    /*draw_text(view_xview+32,  view_yview +70, "FPS = " + string(fps_real)); //Mostramos FPS
+    FPS=fps_real;
+    if (FPS&lt;FPSMin) FPSMin=FPS;
+    draw_text(view_xview+32,  view_yview +110, "FPS = " + string(FPSMin));*/
     if(instance_exists(object5)){
         draw_text(view_xview + 280, view_yview + 30, string(object5.reloj) + "' ");
         draw_text(view_xview + 350, view_yview + 30, string(stepCounter) + "''");
+        
     }
     if(instance_exists(obj_nakedman_falling)){
         draw_text(view_xview + 280, view_yview + 30, string(obj_nakedman_falling.reloj) + "' ");
@@ -78,7 +107,7 @@ if(global.TIMER == true){
         draw_text(view_xview + 350, view_yview + 30, string(stepCounter) + "''");
     }
 }
-
+draw_text(32, 32, "FPS = " + string(fps_real));
 draw_set_font(fnt_creditos_peque);
 
 //Controlm de muertes

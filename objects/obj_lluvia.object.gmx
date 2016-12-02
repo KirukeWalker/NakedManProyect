@@ -38,9 +38,9 @@ part_type_life(raintear,50,400);
 
 rain_emitter = part_emitter_create(rain);   //Creamos el emisor
 part_emitter_region(rain,rain_emitter,0-100,
-                    room_width+100,-10,-5,
+                    room_width*2,room_height,0,
                     ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
-part_emitter_stream(rain,rain_emitter,raintear,20);     //Emitimos las partículas de nieve
+part_emitter_stream(rain,rain_emitter,raintear,50);     //Emitimos las partículas de nieve
 
 //Empezamos sonido de lluvia
 audio_play_sound(snd_rain, 10, true);
@@ -90,17 +90,21 @@ audio_play_sound(snd_rain, 10, true);
           <argument>
             <kind>1</kind>
             <string>//Actualizamos la posicion
-part_emitter_region(rain,rain_emitter,view_xview, view_xview + (view_hview*2.5),
+part_emitter_region(rain,rain_emitter,0-100,
+                    room_width*2,room_height,0,
+                    ps_shape_ellipse,ps_distr_linear); 
+/*part_emitter_region(rain,rain_emitter,view_xview, view_xview + (view_hview*2.5),
                     view_yview -10, view_yview,
-                    ps_shape_ellipse,ps_distr_linear);
+                    ps_shape_ellipse,ps_distr_linear);*/
+                    
 
 //Ajustamos la cantidad de lluvia
 if(object5.x &lt; 4000){
     rain_force = (4000 - object5.x) / 4000 * 20;
-    part_emitter_stream(rain,rain_emitter,raintear,rain_force);
+    part_emitter_stream(rain,rain_emitter,raintear,50);//rain_force
 }
 else{
-    part_emitter_stream(rain,rain_emitter,raintear,0);
+    part_emitter_stream(rain,rain_emitter,raintear,50);
     audio_stop_sound(snd_rain);
 }
 </string>

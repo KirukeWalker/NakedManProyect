@@ -37,10 +37,15 @@ part_type_direction(snowflake,270,270,0,4);
 part_type_life(snowflake,1000,1500);
 
 snow_emitter = part_emitter_create(snow);   //Creamos el emisor
-part_emitter_region(snow,snow_emitter,view_xview, view_xview + view_hview,
+/*part_emitter_region(snow,snow_emitter,view_xview - 50, view_xview + view_wview + 50,
                     view_yview - 10, view_yview,
-                    ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
-part_emitter_stream(snow,snow_emitter,snowflake,5);     //Emitimos las partículas de nieve
+                    ps_shape_ellipse,ps_distr_linear);*/ //Lo colocamos
+                    
+part_emitter_region(snow,snow_emitter,0, room_width,
+                    0, room_height,
+                    ps_shape_ellipse,ps_distr_linear);  
+                    
+part_emitter_stream(snow,snow_emitter,snowflake,20);     //Emitimos las partículas de nieve
 
 
 </string>
@@ -89,7 +94,11 @@ part_emitter_stream(snow,snow_emitter,snowflake,5);     //Emitimos las partícul
           <argument>
             <kind>1</kind>
             <string>//Actualizamos posición
-part_emitter_region(snow,snow_emitter,view_xview - 50, view_xview + view_wview + 50,
+part_emitter_region(snow,snow_emitter,0, room_width,
+                    0, room_height,
+                    ps_shape_ellipse,ps_distr_linear);  
+
+/*part_emitter_region(snow,snow_emitter,view_xview - 50, view_xview + view_wview + 50,
                     view_yview - 10, view_yview,
                     ps_shape_ellipse,ps_distr_linear); 
                     
