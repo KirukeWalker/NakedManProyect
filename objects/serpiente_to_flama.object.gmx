@@ -120,7 +120,7 @@ if(!place_meeting(x, y+1, obj_solid_terrain) &amp;&amp; !place_meeting(x, y+1, o
 if(image_index = 15 &amp;&amp; status_dead = 1) 
     instance_destroy();*/
 //Disparar
-if (distance_to_object(object5) &lt; 208 &amp;&amp; status_dead == 0)
+if (abs(object5.x-x) &lt; 208 &amp;&amp; abs(object5.y-y) &lt; 208 &amp;&amp; status_dead == 0)
 {
     //Comporbamos si acaba de localizar al prota
     if(sprite_index == estatico){

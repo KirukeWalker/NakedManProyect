@@ -81,7 +81,7 @@
     <instance objName="Terreno" x="544" y="352" name="inst_38AFDEFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="576" y="352" name="inst_DCB6E1AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="608" y="352" name="inst_71E900FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="4128" y="416" name="inst_7E44671B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="64" y="320" name="inst_7E44671B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="serpiente_to_flama" x="625" y="329" name="inst_99F6C706" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="672" y="384" name="inst_FBC89C9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="Terreno" x="672" y="416" name="inst_DFC255A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
@@ -99,7 +99,7 @@
     <instance objName="Terreno" x="1088" y="384" name="inst_4D2636D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Terreno" x="1152" y="320" name="inst_9315128A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="Terreno" x="1152" y="352" name="inst_1D5CF176" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="serpiente_to_flama" x="1010" y="295" name="inst_DA4F8233" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="serpiente_to_flama" x="1076" y="301" name="inst_DA4F8233" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="serpiente_to_flama" x="1204" y="228" name="inst_DB2A045E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade" x="32" y="32" name="inst_1024D8CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="64" y="32" name="inst_F4798264" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

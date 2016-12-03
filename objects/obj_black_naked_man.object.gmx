@@ -121,7 +121,7 @@ switch(action_to_do){
             location_number = instance_number(obj_charge_location);
             next_location = instance_find(obj_charge_location, int64(random(location_number)));
             direction = point_direction(x, y, next_location.x, next_location.y);
-            speed = movementSpeed + global.vida;
+            speed = movementSpeed;
             sprite_index = spr_black_naked_man_charging;
             image_angle = direction + 180;
             image_xscale = 1;
@@ -147,7 +147,7 @@ switch(action_to_do){
             location_number = instance_number(obj_charge_location);
             next_location = instance_find(obj_charge_location, int64(random(location_number)));
             direction = point_direction(x, y, next_location.x, next_location.y);
-            speed = movementSpeed + global.vida;
+            speed = movementSpeed;
             decided = true;
         }
         //
@@ -166,14 +166,14 @@ switch(action_to_do){
             location_number = instance_number(obj_charge_location);
             next_location = instance_find(obj_charge_location, int64(random(location_number)));
             direction = point_direction(x, y, next_location.x, next_location.y);
-            speed = movementSpeed + global.vida;
+            speed = movementSpeed;
             decided = true;
         }
         //
         if(distance_to_point(next_location.x, next_location.y) &lt; 20 &amp;&amp; barraging == false){
             image_xscale = sign(room_width/2 - x);
             direction = 90 - (image_xscale * 90);
-            speed = movementSpeed + global.vida;
+            speed = movementSpeed;
             barraging = true;
             alarm_set(1, 1);
         }
