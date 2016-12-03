@@ -201,7 +201,7 @@ if file_exists("SystemNM.txt"){
     else global.HarcorAcceso = 0;*/
     //Opciones
     global.MUSIC = ini_read_real("Settings", "music", 1);
-    global.SOUNDS = ini_read_real("Settings", "souns", 1);
+    global.SOUNDS = ini_read_real("Settings", "sounds", 1);
     global.FULLSCREEN = ini_read_real("Settings", "fullscreen", 0);
     global.TIMER = ini_read_real("Settings", "timer", 0);
     global.HD = ini_read_real("Settings", "hd", 0);

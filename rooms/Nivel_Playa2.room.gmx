@@ -1439,7 +1439,6 @@
     <instance objName="obj_suelo_marnopisable" x="3456" y="384" name="inst_00CE2115" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_marnopisable" x="3520" y="416" name="inst_6DF08944" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_marnopisable" x="3552" y="448" name="inst_05D22BC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_marnopisable" x="3776" y="448" name="inst_F14D4B9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_marnopisable" x="4032" y="384" name="inst_0ABCC1FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_mar" x="4032" y="320" name="inst_F3EA886B" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_mar" x="4192" y="64" name="inst_BAB19B51" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
@@ -1531,10 +1530,6 @@
     <instance objName="obj_esquina_mar" x="6912" y="320" name="inst_315FE53B" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_mar" x="7008" y="288" name="inst_2563EF90" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_marnopisable" x="5696" y="448" name="inst_11C7C60B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sueloMarDoble" x="3776" y="416" name="inst_C44AC9E0" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_sueloMarDoble" x="3776" y="416" name="inst_40AD562F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_sueloMarDoble" x="3776" y="384" name="inst_370BFC47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_suelo_mar_pisable3puntas" x="3776" y="352" name="inst_06C17B1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_sueloMarDoble" x="5696" y="320" name="inst_3BF54D58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_sueloMarDoble" x="5696" y="288" name="inst_AA5331CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_sueloMarDoble" x="5696" y="256" name="inst_F249DD69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -1582,6 +1577,7 @@
     <instance objName="serpiente_to_flama" x="1777" y="430" name="inst_E4CACC40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="serpiente_to_flama" x="5082" y="295" name="inst_E71BF922" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_background_displacerH" x="160" y="96" name="inst_1A96D392" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_mar_pisable" x="3776" y="448" name="inst_EA5804D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

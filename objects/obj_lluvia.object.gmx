@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rain = part_system_create();    //Creamos el generador de nieve
+            <string>
+rain = part_system_create();    //Creamos el generador de nieve
 part_system_depth(rain, -60);   //Lo ponemos a profunidad -60
 
 raintear = part_type_create();     //Creamos el tipo de particula
@@ -42,8 +43,7 @@ part_emitter_region(rain,rain_emitter,0-100,
                     ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
 part_emitter_stream(rain,rain_emitter,raintear,50);     //Emitimos las partículas de nieve
 
-//Empezamos sonido de lluvia
-audio_play_sound(snd_rain, 10, true);
+
 </string>
           </argument>
         </arguments>
@@ -67,6 +67,7 @@ audio_play_sound(snd_rain, 10, true);
           <argument>
             <kind>1</kind>
             <string>part_system_destroy(rain);
+audio_stop_sound(snd_rain);
 </string>
           </argument>
         </arguments>
@@ -104,8 +105,18 @@ if(object5.x &lt; 4000){
     part_emitter_stream(rain,rain_emitter,raintear,50);//rain_force
 }
 else{
-    part_emitter_stream(rain,rain_emitter,raintear,50);
     audio_stop_sound(snd_rain);
+    instance_destroy();
+}
+
+//Empezamos sonido de lluvia
+if(global.SOUNDS == 1)&amp;&amp; !audio_is_playing(snd_rain) {
+    audio_play_sound(snd_rain, 10, true);
+    
+}
+if(global.SOUNDS == 0)
+{
+   audio_stop_sound(snd_rain);
 }
 </string>
           </argument>

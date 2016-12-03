@@ -472,7 +472,7 @@ if(vsp &lt; 10){
     if(place_meeting(x, y, Agua)){
         terrainId = collision_line(x, y, x, y + 480, obj_solid_terrain, true, false);
         if(terrainId == noone){
-            grav = 0.2 +(2 * ((480 - distance_to_point(x, 480)) / 480));
+            grav = 0.2 +(1 * ((480 - distance_to_point(x, 480)) / 480));
         }
         else{
             grav = 0.2;

@@ -11,4 +11,7 @@ for(i = 45; i < 360; i += 90){
 }
 
 //
+if(global.SOUNDS == 1)
+{
 audio_play_sound(snd_destruction, 5, false);
+}

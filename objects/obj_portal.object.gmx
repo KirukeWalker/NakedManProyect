@@ -37,7 +37,7 @@ if(door.triggered == false){
     global.counter = other.reloj;
     global.stepCounter = other.alarm[1];
     //limpiamos furrufalla del bosque y la montaña
-    if room == Nivel_Bosque || room == Nivel_Bosque_2{
+    if room == Nivel_Bosque{
         part_system_destroy (obj_lluvia.rain)
     }
     
