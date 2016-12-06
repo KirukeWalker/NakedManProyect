@@ -506,7 +506,7 @@
     <instance objName="obj_pinchos" x="5248" y="160" name="inst_F72D3690" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_faller" x="5167" y="208" name="inst_D91057A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_runner" x="5120" y="416" name="inst_7053E6E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object5" x="128" y="416" name="inst_C8167D0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object5" x="5344" y="416" name="inst_C8167D0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="5472" y="448" name="inst_83416BE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="5504" y="448" name="inst_65C8B66C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_floor" x="5536" y="448" name="inst_AC17F57F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -631,7 +631,6 @@
     <instance objName="obj_EsquinaNieve" x="5344" y="256" name="inst_788B46EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_EsquinaNieve" x="5312" y="288" name="inst_58739862" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_EsquinaNieve" x="5280" y="320" name="inst_26F292B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_EsquinaNieve" x="5248" y="320" name="inst_77FF6C5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_EsquinaNieve" x="1792" y="320" name="inst_CC70E2E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_EsquinaNieve" x="1856" y="320" name="inst_54058007" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_nieveEsquinilla" x="1824" y="32" name="inst_E1A865F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
@@ -1011,7 +1010,6 @@
     <instance objName="obj_nieve_no_pisable" x="5728" y="64" name="inst_1DAEB72D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_no_pisable" x="5728" y="32" name="inst_BBB46981" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_no_pisable" x="5728" y="96" name="inst_F3DB5CC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_nieve_no_pisable" x="5408" y="128" name="inst_4954A9E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_no_pisable" x="5344" y="128" name="inst_55D9D4D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_no_pisable" x="5344" y="96" name="inst_12A61CF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_no_pisable" x="5344" y="32" name="inst_1998C343" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1151,6 +1149,9 @@
     <instance objName="obj_nieve_no_pisable" x="128" y="128" name="inst_6418C52C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nieve_no_pisable" x="128" y="160" name="inst_4CE1B69B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_background_displacerH" x="-32" y="0" name="inst_A81F4172" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_music" x="-64" y="0" name="inst_A5EDD050" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nieve_pisable" x="5248" y="320" name="inst_F8C86E2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_nieveEsquinilla" x="5440" y="128" name="inst_D5993971" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

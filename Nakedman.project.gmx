@@ -36,6 +36,11 @@
       <sound>sound\snd_lavalboss</sound>
       <sound>sound\snd_beach</sound>
       <sound>sound\snd_sea</sound>
+      <sound>sound\snd_boss3</sound>
+      <sound>sound\snd_boss4</sound>
+      <sound>sound\snd_boss5</sound>
+      <sound>sound\snd_cielo</sound>
+      <sound>sound\snd_faseFinal</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

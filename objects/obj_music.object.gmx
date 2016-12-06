@@ -123,19 +123,19 @@ noaudio=false;
     }
     //Esta la cambiaremos por una de boss
     if ((room==Room_FinalBoss3 || room == Room_FinalBoss3_Test) &amp;&amp; finalBoss3=0) {
-        audio_play_sound(snd_forest,1,true);
+        audio_play_sound(snd_boss3,1,true);
         finalBoss3=1;
         }
         
     if !(room==Room_FinalBoss3 || room == Room_FinalBoss3_Test) &amp;&amp; finalBoss3=1{
-        audio_stop_sound(snd_forest);
+        audio_stop_sound(snd_boss3);
         finalBoss3=0;
     }
     //Nivel 4
     if ((room==Nivel_Nieve || room==Nivel_Nieve_2) &amp;&amp; snow=0) {
         audio_play_sound(snd_snow,1,true);
         snow=1;
-        }
+    }
         
     if !(room==Nivel_Nieve || room==Nivel_Nieve_2) &amp;&amp; snow=1{
         audio_stop_sound(snd_snow);
@@ -143,12 +143,12 @@ noaudio=false;
     }
     //Aquí meteremos otra de boss
     if ((room==Room_FinalBoss4_New || room==Room_FinalBoss4_S2) &amp;&amp; finalBoss4=0) {
-        audio_play_sound(snd_snow,1,true);
+        audio_play_sound(snd_boss4,1,true);
         finalBoss4=1;
         }
         
     if !(room==Room_FinalBoss4_New || room==Room_FinalBoss4_S2) &amp;&amp; finalBoss4=1{
-        audio_stop_sound(snd_snow);
+        audio_stop_sound(snd_boss4);
         finalBoss4=0;
     }
     //Nivel 5
@@ -163,25 +163,36 @@ noaudio=false;
     }
     //Boss 5
     if (room==Room_FinalBoss5 &amp;&amp; finalBoss5=0) {
-        audio_play_sound(snd_city,1,true);
+        audio_play_sound(snd_boss5,1,true);
         finalBoss5=1;
         }
         
     if !(room==Room_FinalBoss5) &amp;&amp; finalBoss5=1{
-        audio_stop_sound(snd_city);
+        audio_stop_sound(snd_boss5);
         finalBoss5=0;
     }
-    //Boss Final
+    //Boss Final fase 1y2
         //De momento una para todo
-    if ((room==god_room_01 || room==god_room_02 || room==god_room_final) &amp;&amp; god=0) {
-        audio_play_sound(snd_snow,1,true);
+    if ((room==god_room_01 || room==god_room_02) &amp;&amp; god=0) {
+        audio_play_sound(snd_cielo,1,true);
         god=1;
         }
         
-    if !((room==god_room_01 || room==god_room_02 || room==god_room_final)) &amp;&amp; god=1{
-        audio_stop_sound(snd_snow);
+    if !(room==god_room_01 || room==god_room_02) &amp;&amp; god=1{
+        audio_stop_sound(snd_cielo);
         god=0;
-    }    
+    }  
+    //Boss Final fase 3  
+    if (room==god_room_final &amp;&amp; god=0) {
+        audio_play_sound(snd_faseFinal,1,true);
+        god=1;
+        }
+        
+    if !(room==god_room_final) &amp;&amp; god=1{
+        audio_stop_sound(snd_faseFinal);
+        god=0;
+    }
+    
     //Créditos
     if (room==Credits &amp;&amp; credits=0) {
         audio_play_sound(snd_credits,1,true);
