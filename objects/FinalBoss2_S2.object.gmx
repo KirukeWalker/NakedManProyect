@@ -106,6 +106,8 @@ else if(obj_nakedman_falling.status_dead == 0){ //Y si si, disparamos
     time_to_shoot = false;  
     if(global.SOUNDS == true)
         audio_play_sound(snd_boss2_chain_attack, 10, true);
+    if(global.vida &lt; 0 || obj_pause.pause == 1)
+    audio_stop_sound(snd_boss2_chain_attack);
 }
 
 </string>
@@ -131,10 +133,10 @@ else if(obj_nakedman_falling.status_dead == 0){ //Y si si, disparamos
           <argument>
             <kind>1</kind>
             <string>//Creamos las piuezas con alarma
-wall_piece_left1  = instance_create(0, 480, obj_suelo_mar_pisable);
-wall_piece_left2  = instance_create(32, 480, obj_suelo_mar_pisable);
-wall_piece_right1 = instance_create(608, 480, obj_suelo_mar_pisable);
-wall_piece_right2 = instance_create(640, 480, obj_suelo_mar_pisable);
+wall_piece_left1  = instance_create(0, 480, obj_suelo_marnopisable);
+wall_piece_left2  = instance_create(32, 480, suelo_mar_pisable_faseBossIzquierda);
+wall_piece_right1 = instance_create(608, 480, suelo_mar_pisable_faseBossDerecha);
+wall_piece_right2 = instance_create(640, 480, obj_suelo_marnopisable);
 //
 wall_piece_left1.vspeed = -8;
 wall_piece_left2.vspeed = -8;

@@ -335,6 +335,10 @@ if(instance_exists(obj_gameoverimg))
     obj_fade.fadeIn = false;
     obj_fade.alarm[1] = room_speed * 0.05;
     instance_destroy();  
+}*/
+
+if (global.vida &lt;=0){
+audio_stop_sound(snd_boss2_chain_attack);
 }
 </string>
           </argument>
