@@ -56,7 +56,7 @@ objective = object5;
 if(object_exists(objective))
     direction = point_direction(x, y, objective.x, objective.y);
 //Lo activamos solo una vez
-if(!audio_is_playing(snd_boss5_balls))
+if(!audio_is_playing(snd_boss5_balls)&amp;&amp;(global.SOUNDS == 1))
     audio_play_sound(snd_boss5_balls, 10, false);
 </string>
           </argument>

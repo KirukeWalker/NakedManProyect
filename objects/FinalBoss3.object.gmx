@@ -97,14 +97,15 @@ if (global.vidaboss = 0)
         global.level_completed = 3;
     }
     
-    global.muertes += 1;
-    obj_fade_white.fadeIn = false;
+    //global.muertes += 1;
+        //Guardamos el tiempo
     global.counter = object5.reloj;
     global.stepCounter = object5.alarm[1];
     global.last_level = 3;
-    //obj_fade.alarm[1] = room_speed * 0.05; 
-    checkpoint = true;
-    //instance_destroy();      
+    //obj_fade.fadeIn = false;
+    obj_fade_white.fadeIn = false;
+    //obj_fade.alarm[1] = room_speed * 0.05;
+    instance_destroy();   
 }
 </string>
           </argument>

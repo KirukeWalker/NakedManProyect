@@ -60,7 +60,9 @@ image_yscale = 64;
 //if(object_exists(objective))
     direction = point_direction(x, y, objective.x, objective.y);
 //
+if(global.SOUNDS == 1){
 audio_play_sound(snd_boss5_balls, 10, false);
+}
 </string>
           </argument>
         </arguments>

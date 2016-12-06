@@ -183,16 +183,16 @@
     <instance objName="obj_pinchos" x="128" y="640" name="inst_CCE10B7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="192" y="704" name="inst_DA1DD00E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="224" y="736" name="inst_174571FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="352" y="736" name="inst_E15287BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="352" y="768" name="inst_E15287BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos" x="384" y="704" name="inst_3426AFAA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="416" y="672" name="inst_1B049582" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="448" y="640" name="inst_8E78BF61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="480" y="608" name="inst_EFEBC66A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="512" y="576" name="inst_F5AB966A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="544" y="544" name="inst_0713356F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="352" y="800" name="inst_B1DE22C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="352" y="768" name="inst_1C39DE2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="352" y="832" name="inst_16DDE0B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="352" y="800" name="inst_B1DE22C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos" x="352" y="832" name="inst_1C39DE2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos" x="352" y="864" name="inst_16DDE0B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos" x="320" y="896" name="inst_D6905BA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="288" y="928" name="inst_A19CE9A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="256" y="960" name="inst_DEE756F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -238,7 +238,7 @@
     <instance objName="obj_pinchos" x="160" y="2080" name="inst_DB5D89C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="128" y="2112" name="inst_5161266D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="96" y="2144" name="inst_F5FC3471" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="352" y="864" name="inst_BAC96711" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="352" y="896" name="inst_BAC96711" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_nieve_pisable" x="32" y="1792" name="inst_246F5118" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_nieve_pisable" x="32" y="1824" name="inst_66BFC4D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_nieve_pisable" x="32" y="1856" name="inst_2A0D9089" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
@@ -370,12 +370,12 @@
     <instance objName="obj_pinchos" x="576" y="256" name="inst_7E30D636" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_pinchos" x="64" y="2368" name="inst_307A7222" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_pinchos" x="64" y="2400" name="inst_9C649942" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_pinchos" x="544" y="2432" name="inst_58AB4F1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="544" y="2464" name="inst_465CA071" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="544" y="2464" name="inst_58AB4F1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos" x="544" y="2496" name="inst_465CA071" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos" x="96" y="2432" name="inst_94652660" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_pinchos" x="96" y="2464" name="inst_CDBEDF71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_pinchos" x="512" y="2496" name="inst_73F43C07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="512" y="2528" name="inst_17FF0F21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos" x="512" y="2528" name="inst_73F43C07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos" x="512" y="2560" name="inst_17FF0F21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos" x="128" y="2496" name="inst_D03F1CCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_pinchos" x="128" y="2528" name="inst_01779A78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_pinchos" x="128" y="2560" name="inst_B654D870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -408,7 +408,6 @@
     <instance objName="obj_pinchos" x="96" y="3296" name="inst_55A695C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="192" y="3200" name="inst_13087983" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="64" y="3136" name="inst_4047126F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pinchos" x="32" y="3680" name="inst_1E23EA9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="448" y="3232" name="inst_0941810F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="288" y="3136" name="inst_46FDCC48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos" x="480" y="3072" name="inst_376C4A53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

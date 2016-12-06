@@ -60,16 +60,14 @@ if (fadeIn == true)
         alpha = 0;
     }
 }
-else if (fadeIn = false) {
+else if (fadeIn == false) {
     if(alpha &lt; 1){
         alpha += 0.05;
         //alarm[1] = room_speed * 0.05;
     }
-    else{
-        alpha = 1;
-        //room_goto_next();
+    if(alpha &gt;= 1){
         if(room != god_room_02)
-            room_goto(room_post_boss);
+            room_goto(room30);
         else
             room_goto_next();
     }

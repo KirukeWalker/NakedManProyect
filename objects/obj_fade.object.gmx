@@ -134,8 +134,10 @@ else if (fadeIn = false) {
     }
     else{
         alpha = 1;
-        if room=Continuara room_goto(Menu)
-        else room_goto_next();
+        //if(room != god_room_02)
+            //room_goto(room30);
+       //else
+            room_goto_next();
     }
 }
 </string>

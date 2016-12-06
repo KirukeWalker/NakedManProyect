@@ -30,7 +30,7 @@ global.vida = 3;
 vidaboss = 20; //Se usa después con global.vidaboss
 var mega_laser;
 rotation_speed = 1; //
-spam_rate = 30;     //
+spam_rate = 60;     //
 //
 status = 0;
 //
@@ -68,11 +68,15 @@ with(obj_rayos) instance_destroy();
             <kind>1</kind>
             <string>//Spameamos siguiente bolita
 //while(distance_
+if global.vida &gt; 0
+{
 xPos = random_range(10, 600);
 yPos = random_range(10, 430);
 ligthball = instance_create(xPos, yPos, obj_lightball_S2);
 //
 alarm_set(0, spam_rate);
+}
+
 </string>
           </argument>
         </arguments>

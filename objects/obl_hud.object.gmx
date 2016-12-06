@@ -107,8 +107,7 @@ if(global.TIMER == true){
         draw_text(view_xview + 350, view_yview + 30, string(stepCounter) + "''");
     }
 }
-draw_text(32, 32, "FPS = " + string(fps_real));
-draw_set_font(fnt_creditos_peque);
+
 
 //Controlm de muertes
 //draw_text(view_xview+80,view_yview+50,global.muertes);

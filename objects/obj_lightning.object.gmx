@@ -28,6 +28,7 @@
             <string>//
 triggered = false;
 fire_wall = noone;
+fire_deep = noone;
 flyer_stage = 0;
 
 //
@@ -88,6 +89,26 @@ if(object5.x &gt; 4000 &amp;&amp; triggered == false){
     alarm_set(0, 60);
     for(i = 0; i &lt; room_height; i += 32){
         fire_wall = instance_create(3416, i, obj_fire_wall);
+        fire_deep = instance_create(3384,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3352,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3320,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3288,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3256,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3224,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3192,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3160,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3128,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3096,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3064,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3032,i,obj_fire_wall_deep);
+        fire_deep = instance_create(3000,i,obj_fire_wall_deep);
+        fire_deep = instance_create(2968,i,obj_fire_wall_deep);
+        fire_deep = instance_create(2936,i,obj_fire_wall_deep);
+        fire_deep = instance_create(2904,i,obj_fire_wall_deep);
+        fire_deep = instance_create(2872,i,obj_fire_wall_deep);
+        fire_deep = instance_create(2840,i,obj_fire_wall_deep);
+        fire_deep = instance_create(2808,i,obj_fire_wall_deep);
+        fire_deep = instance_create(2776,i,obj_fire_wall_deep);
     }
     //De momento limpiamos los que estaban aqui
     with(Volador) instance_destroy();
