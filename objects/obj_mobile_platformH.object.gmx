@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>dir = 1;
-movespeed = 3;
+movespeed = 4.5;
 hsp = 0;
 
 </string>
