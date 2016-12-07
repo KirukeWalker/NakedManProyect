@@ -779,6 +779,60 @@
     <instance objName="obj_suelo_marnopisable" x="992" y="512" name="inst_40E147A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_marnopisable" x="992" y="480" name="inst_D232C783" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_background_displacerV" x="96" y="192" name="inst_98695333" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="0" y="448" name="inst_B848BF1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="32" y="448" name="inst_43BCF3D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="64" y="448" name="inst_7D4FBF1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="96" y="448" name="inst_82A20214" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="128" y="448" name="inst_F92C026E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="128" y="480" name="inst_E396999A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="96" y="480" name="inst_1827BFD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="64" y="480" name="inst_9E5DF056" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="32" y="480" name="inst_4176251C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="0" y="480" name="inst_C79F8325" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="32" y="480" name="inst_BF94A42C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="64" y="480" name="inst_02A270AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="96" y="480" name="inst_948D22BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="128" y="480" name="inst_BEF1BA4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="160" y="480" name="inst_445C2DE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="192" y="480" name="inst_3FE1C36B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="192" y="512" name="inst_CD069C64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="224" y="512" name="inst_91E73EA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="224" y="544" name="inst_3DDB9600" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="256" y="544" name="inst_D625BC0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="224" y="544" name="inst_74E69600" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="192" y="544" name="inst_D78C3271" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="160" y="544" name="inst_4195BE94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="128" y="544" name="inst_3647A1E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="96" y="544" name="inst_C3ADEA6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="64" y="544" name="inst_BE8857DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="32" y="544" name="inst_C0FBF960" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="0" y="544" name="inst_EA5FA28E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="0" y="544" name="inst_E582C422" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="0" y="512" name="inst_31DE75E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="32" y="512" name="inst_CC0D4E12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="64" y="512" name="inst_5380A632" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="96" y="512" name="inst_953E369D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="128" y="512" name="inst_82B39ECA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="160" y="512" name="inst_C4A7C4DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="192" y="512" name="inst_9477EE97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="256" y="576" name="inst_D91F7FDB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="224" y="576" name="inst_E6833B59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="192" y="576" name="inst_C61C1046" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="160" y="576" name="inst_5C6BE23E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="128" y="576" name="inst_AEAA3AA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="96" y="576" name="inst_E296D36D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="64" y="576" name="inst_B5B0D306" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="32" y="576" name="inst_8D5E45CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="0" y="576" name="inst_22FB3B00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="256" y="608" name="inst_9F3AC36E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="224" y="608" name="inst_AA784858" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="192" y="608" name="inst_3E905F19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="160" y="608" name="inst_CDDCE360" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="128" y="608" name="inst_BA8D2437" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="96" y="608" name="inst_D5030DA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="64" y="608" name="inst_D0FE16C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="32" y="608" name="inst_7FDBE0AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_marnopisable" x="0" y="608" name="inst_3CD2C36E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
