@@ -107,14 +107,14 @@ if(pause == 1 &amp;&amp; !instance_exists(obj_blackScreen)){
 if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
     if (!pause) {
         pause = 1;
-        if room == Nivel_Bosque || room == Nivel_Bosque_2{
+        if ((room=Nivel_Bosque || room=Nivel_Bosque_2)&amp;&amp; instance_exists(obj_lluvia)){
             part_system_automatic_update(obj_lluvia.rain, false);
             part_system_automatic_draw(obj_lluvia.rain, false);
             //part_system_destroy (obj_lluvia.rain)
             //with(obj_lluvia) instance_destroy();
         }
         
-        if room == Nivel_Nieve || room == Nivel_Nieve_2{
+        if (room=Nivel_Nieve || room=Nivel_Nieve_2 || room=Room_FinalBoss4_New || room=Room_FinalBoss4_S2){
             part_system_automatic_update(obj_snow.snow, false);
             part_system_automatic_draw(obj_snow.snow, false);
             //part_system_destroy (obj_snow.snow)
@@ -136,13 +136,15 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
 
 if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp;&amp; pausepos=0 {
     pause = 0;
-    if (room == Nivel_Bosque || room == Nivel_Bosque_2){
+    if ((room=Nivel_Bosque || room=Nivel_Bosque_2)){
         instance_activate_object(obj_lluvia);
-        part_system_automatic_update(obj_lluvia.rain, true);
-        part_system_automatic_draw(obj_lluvia.rain, true);
+        if instance_exists(obj_lluvia){
+            part_system_automatic_update(obj_lluvia.rain, true);
+            part_system_automatic_draw(obj_lluvia.rain, true);
+        }
     }
         
-    if (room == Nivel_Nieve || room == Nivel_Nieve_2){
+    if (room=Nivel_Nieve || room=Nivel_Nieve_2 || room=Room_FinalBoss4_New || room=Room_FinalBoss4_S2){
         instance_activate_object(obj_snow);
         part_system_automatic_update(obj_snow.snow, true);
         part_system_automatic_draw(obj_snow.snow, true);
