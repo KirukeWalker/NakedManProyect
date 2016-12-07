@@ -31,6 +31,39 @@
 //Inicia contador de auto destrucción
 alarm_set(0, 3);
 alarm_set(1, 1);
+
+//Llum
+size = 350;
+aumentar = true;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (aumentar = true) {
+    size += 10;
+    }
+if (aumentar = false) {
+    size -= 10;
+    }
 </string>
           </argument>
         </arguments>
@@ -84,6 +117,36 @@ instance_destroy();
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_blend_mode(bm_subtract);
+surface_set_target(light);
+draw_ellipse_colour(x-size/2-view_xview+20, y-size/2-view_yview,
+                    x+size/2-view_xview, y+size/2-view_yview,
+                    c_orange,c_black,false);
+
+surface_reset_target();
+draw_set_blend_mode(bm_normal);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -104,6 +167,14 @@ instance_destroy();
             <string>//Si no se ha salido por arriba crea la siguiente parte
 //if(y &gt; 0 &amp;&amp; alarm[0] != 0)
     //columna = instance_create(x, y+32, obj_fire_column);
+    
+if size = 350 {
+    aumentar = true
+    }
+if size = 500 {
+    aumentar = false
+    }
+alarm[2] = 1;
 </string>
           </argument>
         </arguments>

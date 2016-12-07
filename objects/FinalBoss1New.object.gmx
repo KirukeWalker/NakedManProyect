@@ -62,6 +62,37 @@ block[5].image_angle = 270;
     2 - 
 */
 status = 0;
+
+size = 50;
+aumentar = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (aumentar = true) {
+    size += 25;
+    }
+if (aumentar = false) {
+    size -= 25;
+    }
 </string>
           </argument>
         </arguments>
@@ -115,6 +146,36 @@ if(shoot_counter &gt; 4){
     
     platform_fire_created = false;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_blend_mode(bm_subtract);
+surface_set_target(light);
+draw_ellipse_colour(x-size/2-view_xview+20, y-size/2-view_yview,
+                    x+size/2-view_xview, y+size/2-view_yview,
+                    c_orange,c_black,false);
+
+surface_reset_target();
+draw_set_blend_mode(bm_normal);
 </string>
           </argument>
         </arguments>
@@ -368,10 +429,26 @@ if (global.vidaboss == 0 &amp;&amp; last_round == true)
 }
 
 //Control de sprites
-if(hspeed != 0)
+if(hspeed != 0){
     sprite_index = spr_boss1_move;
-else if(vspeed != 0)
+    if size = 50 {
+        aumentar = true
+    }
+    if size = 200 {
+        aumentar = false
+    }
+    alarm[1] = 1;
+    }
+else if(vspeed != 0){
     sprite_index = spr_boss1_jump;
+        if size = 50 {
+        aumentar = true
+    }
+    if size = 200 {
+        aumentar = false
+    }
+    alarm[1] = 1;
+    }
 else
     sprite_index = spr_boss1_idle;
 </string>
