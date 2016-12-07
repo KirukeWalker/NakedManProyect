@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>//
 global.vida = 10;
-maxSpeed = 15;
+maxSpeed = 12;
 barInHand = true;
 status_dead = 0;
+
 
 //Para el contador
 reloj = global.counter;
@@ -131,12 +132,13 @@ alarm_set(0, 30);
             <string>//Get the players imput
 key_right = keyboard_check(vk_right) || (gamepad_axis_value(0,gp_axislh) &gt; 0) || (gamepad_button_check(0,gp_padr) || joystick_xpos(2) &gt; 0.2);   //Para detectar la flecha derecha
 key_left = -(keyboard_check(vk_left) || (gamepad_axis_value(0,gp_axislh) &lt; 0) || (gamepad_button_check(0,gp_padl) || joystick_xpos(2) &lt; -0.2));     //Para detectar la flecha izquierda
-key_up = keyboard_check(vk_up) || (gamepad_axis_value(0,gp_axislv) &lt; 0) || (gamepad_button_check(0,gp_padu) || joystick_ypos(2) &lt; 0.2);
+key_up = -keyboard_check(vk_up) || (gamepad_axis_value(0,gp_axislv) &lt; 0) || (gamepad_button_check(0,gp_padu) || joystick_ypos(2) &lt; -0.2);
 key_down = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) &gt; 0) || (gamepad_button_check(0,gp_padd) || joystick_ypos(2) &gt; 0.2);
 key_shoot = keyboard_check_pressed(ord('C')) || (gamepad_button_check_pressed(0,gp_face1));
 
 //Movimiento vertical
 vMove = -key_up + key_down;
+
 if(vMove != 0){
     if(abs(vspeed + vMove) &lt; maxSpeed)
         vspeed += vMove;

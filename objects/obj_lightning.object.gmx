@@ -113,7 +113,9 @@ if(object5.x &gt; 4000 &amp;&amp; triggered == false){
     //De momento limpiamos los que estaban aqui
     with(Volador) instance_destroy();
     //Y que suene
+    if(global.SOUNDS == 1){
     audio_play_sound(snd_thunder, 10, false);
+    }
     audio_stop_sound(snd_rain);
 }
 //Make the camera follow the firewall
