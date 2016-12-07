@@ -43,7 +43,7 @@ snow_emitter = part_emitter_create(snow);   //Creamos el emisor
                     
 part_emitter_region(snow,snow_emitter,0, room_width,
                     0, room_height,
-                    ps_shape_ellipse,ps_distr_linear);  
+                    ps_shape_rectangle,ps_distr_linear);  
                     
 part_emitter_stream(snow,snow_emitter,snowflake,20);     //Emitimos las partículas de nieve
 
@@ -96,7 +96,7 @@ part_emitter_stream(snow,snow_emitter,snowflake,20);     //Emitimos las partícu
             <string>//Actualizamos posición
 part_emitter_region(snow,snow_emitter,0, room_width,
                     0, room_height,
-                    ps_shape_ellipse,ps_distr_linear);  
+                    ps_shape_rectangle,ps_distr_linear);  
 
 /*part_emitter_region(snow,snow_emitter,view_xview - 50, view_xview + view_wview + 50,
                     view_yview - 10, view_yview,

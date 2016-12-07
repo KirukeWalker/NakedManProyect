@@ -37,13 +37,13 @@ if(door.triggered == false){
     global.counter = other.reloj;
     global.stepCounter = other.alarm[1];
     //limpiamos furrufalla del bosque y la montaña
-    if room == Nivel_Bosque{
+    /*if room == Nivel_Bosque{
         part_system_destroy (obj_lluvia.rain)
     }
     
     if room == Nivel_Nieve || room == Nivel_Nieve_2{
         part_system_destroy (obj_snow.snow)
-    }
+    }*/
 }
 //Y luego entra naked man
 else if(door.image_index == door.image_number - 1 &amp;&amp; door.image_speed &gt; 0){

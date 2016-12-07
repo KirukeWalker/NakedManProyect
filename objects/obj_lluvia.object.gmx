@@ -38,9 +38,9 @@ part_type_direction(raintear,225,225,0,0);
 part_type_life(raintear,50,400);
 
 rain_emitter = part_emitter_create(rain);   //Creamos el emisor
-part_emitter_region(rain,rain_emitter,0-100,
-                    room_width*2,room_height,0,
-                    ps_shape_ellipse,ps_distr_linear);  //Lo colocamos
+part_emitter_region(rain,rain_emitter,0,
+                    room_width*2,0,room_height,
+                    ps_shape_rectangle,ps_distr_linear);  //Lo colocamos
 part_emitter_stream(rain,rain_emitter,raintear,50);     //Emitimos las partículas de nieve
 
 
@@ -91,9 +91,9 @@ audio_stop_sound(snd_rain);
           <argument>
             <kind>1</kind>
             <string>//Actualizamos la posicion
-part_emitter_region(rain,rain_emitter,0-100,
-                    room_width*2,room_height,0,
-                    ps_shape_ellipse,ps_distr_linear); 
+part_emitter_region(rain,rain_emitter,0,
+                    room_width*2,0,room_height,
+                    ps_shape_rectangle,ps_distr_linear); 
 /*part_emitter_region(rain,rain_emitter,view_xview, view_xview + (view_hview*2.5),
                     view_yview -10, view_yview,
                     ps_shape_ellipse,ps_distr_linear);*/
