@@ -360,14 +360,14 @@ if global.botecrema = 0 {
     }
 //COSA3
 if global.paraguas2 = 1 &amp;&amp; global.paraguas = 1{
-    draw_sprite(spr_hat3,-1, view_xview+96,view_yview+205);
+    draw_sprite(spr_hat3,-1, view_xview+96+3,view_yview+205);
     draw_sprite(spr_hat_runBig3,-1,room_width/2, room_height/2);
     }
 if global.paraguas2 = 0 &amp;&amp; global.paraguas = 1{
-    draw_sprite(spr_hat_idle3,-1,view_xview+96,view_yview+205);
+    draw_sprite(spr_hat_idle3,-1,view_xview+96+3,view_yview+205);
     }
 if global.paraguas = 0 {
-    draw_sprite(spr_hat_black3,-1,view_xview+96,view_yview+205);
+    draw_sprite(spr_hat_black3,-1,view_xview+96+3,view_yview+205);
     }
 //COSA4 - 
 if global.papanoel2 = 1 &amp;&amp; global.papanoel = 1{
