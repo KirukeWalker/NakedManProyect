@@ -51,7 +51,7 @@ ready=true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ((gamepad_button_check_pressed(0,gp_padr) || keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) &amp;&amp; x&lt;=288 &amp;&amp; x&gt;-3312 &amp;&amp; ready=true){
+            <string>if ((gamepad_button_check_pressed(0,gp_padr) || keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) &amp;&amp; x&lt;=288 &amp;&amp; x&gt;(-3312+600) &amp;&amp; ready=true){
     right=1;
     left=0;
     ready=false;
@@ -59,7 +59,7 @@ ready=true;
         audio_play_sound(snd_menu_cursor, 10, false);
 }
 
-if ((gamepad_button_check_pressed(0,gp_padl) || keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) &amp;&amp; x&gt;=-3312 &amp;&amp; x&lt;288 &amp;&amp; ready=true){
+if ((gamepad_button_check_pressed(0,gp_padl) || keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) &amp;&amp; x&gt;=(-3312+600) &amp;&amp; x&lt;288 &amp;&amp; ready=true){
     right=0;
     left=1;
     ready=false;
@@ -138,11 +138,11 @@ draw_set_color(c_white);
 if (x==288){
     draw_sprite(spr_arrowright,-1,view_xview+600-20,view_yview+240)
 }
-else if(x&lt;288 &amp;&amp; x&gt;-3312+200){
+else if(x&lt;288 &amp;&amp; x&gt;-3312+200+600){
     draw_sprite(spr_arrowright,-1,view_xview+600-20,view_yview+240)
     draw_sprite(spr_arrowleft,-1,view_xview+20,view_yview+240)
 }
-else if(x==-3312){
+else if(x==-3312+600){
     draw_sprite(spr_arrowleft,-1,view_xview+20,view_yview+240)
 }
 
@@ -203,7 +203,7 @@ if (global.level_completed &gt;= 5){
 }
 else draw_sprite(spr_levelblock,1,x+5*600,room_height/2-22)
 
-draw_text(x+6*600,room_height/2+200,"HARDCORE MODE");
+/*draw_text(x+6*600,room_height/2+200,"HARDCORE MODE");
 //if global.HarcorAcceso=1{
 if (global.level_completed &gt;= 6){
     draw_sprite(spr_level5,1,x+6*600,room_height/2-22);
