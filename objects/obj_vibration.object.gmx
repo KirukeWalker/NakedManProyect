@@ -75,7 +75,7 @@
           <argument>
             <kind>1</kind>
             <string>if vibrationOff=true{
-    if instance_exists(object5)instance_exists(obj_nakedman_falling){
+    if instance_exists(object5){
         if (object5.status_knockback==true || global.vida&lt;=0 || object5.collide=true ){
             gamepad_set_vibration(0,1,1);
             vibrationOff=false;

@@ -106,7 +106,7 @@ else if(obj_nakedman_falling.status_dead == 0){ //Y si si, disparamos
     time_to_shoot = false;  
     if(global.SOUNDS == true)
         audio_play_sound(snd_boss2_chain_attack, 10, true);
-    if(global.vida &lt; 0 || obj_pause.pause == 1)
+    if(global.vida &lt; 0 || obj_pause.pause == 1 || global.vidaboss &lt;= 0)
     audio_stop_sound(snd_boss2_chain_attack);
 }
 
