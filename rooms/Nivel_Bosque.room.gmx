@@ -1050,6 +1050,7 @@
     <instance objName="obj_suelo_bosque" x="7008" y="448" name="inst_E36DB884" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_door" x="6912" y="448" name="inst_F4329A17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal" x="6912" y="416" name="inst_646BFEAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vibration" x="-64" y="416" name="inst_C4FD49B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

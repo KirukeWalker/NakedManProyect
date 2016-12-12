@@ -448,6 +448,7 @@
     <instance objName="obj_esquina_volcan" x="3776" y="352" name="inst_24FB7DD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="Terreno" x="3776" y="384" name="inst_16DE187C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_miniesquina_volcan" x="3840" y="352" name="inst_F37877AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="obj_vibration" x="192" y="32" name="inst_F95013A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -175,6 +175,7 @@
     <instance objName="obj_sueloBosque_noPisable" x="0" y="448" name="inst_3D2A5190" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fade_white" x="320" y="32" name="inst_30555804" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_terrain" x="320" y="64" name="inst_083B8502" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vibration" x="352" y="32" name="inst_9D8726E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

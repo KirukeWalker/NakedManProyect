@@ -871,6 +871,7 @@
     <instance objName="obj_esquina_mar" x="3584" y="224" name="inst_D9680015" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_esquina_mar" x="4256" y="480" name="inst_9FA11F56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_background_displacerH" x="64" y="192" name="inst_2B529DC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vibration" x="64" y="224" name="inst_A1901667" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

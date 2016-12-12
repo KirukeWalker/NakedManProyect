@@ -536,6 +536,7 @@
     <instance objName="obj_fire_wall_deep" x="-192" y="224" name="inst_AF8AB738" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fire_wall_deep" x="-192" y="256" name="inst_C03C06CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_music" x="1152" y="480" name="inst_979C9D2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vibration" x="224" y="736" name="inst_8D1A9C93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

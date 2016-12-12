@@ -368,6 +368,7 @@
     <instance objName="obj_nieve_pisable" x="896" y="2784" name="inst_F1771FFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_EsquinaNieve" x="64" y="2816" name="inst_31478089" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
     <instance objName="obj_nieveEsquinilla" x="928" y="2656" name="inst_181BE84A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_vibration" x="1056" y="3936" name="inst_3B771ACF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="288" y="3904" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_0C78A4FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

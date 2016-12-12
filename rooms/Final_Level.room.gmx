@@ -238,6 +238,7 @@
     <instance objName="obj_pinchos_ciudad_derecha" x="1376" y="384" name="inst_7638542D" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="1248" y="32" name="inst_EDC45C4E" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="1696" y="32" name="inst_12DEFB8C" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vibration" x="192" y="480" name="inst_0FEFE9F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

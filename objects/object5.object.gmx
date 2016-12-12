@@ -49,6 +49,7 @@ status_locked = false;
 complete_death = 0;
 status_sliding = false; //El personahe se desliza
 gamepad_set_axis_deadzone(0,0.7)
+collide=false;
 //Para los suckers
 suckers_sucking = 0;
 
@@ -839,6 +840,7 @@ if(invincible == false &amp;&amp; status_dead == false){
 if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){            
     script_execute(scr_knockback);
 }
+collide=true;
 </string>
           </argument>
         </arguments>

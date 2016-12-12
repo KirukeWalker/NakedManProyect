@@ -103,6 +103,7 @@
     <instance objName="obj_nubes" x="896" y="768" name="inst_FB306186" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nubes" x="1152" y="512" name="inst_9E826331" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nubes" x="1152" y="768" name="inst_F3D12339" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vibration" x="128" y="32" name="inst_B2ADC20B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

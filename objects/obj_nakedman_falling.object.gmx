@@ -33,6 +33,7 @@ invincible = false;
 status_dead = 0;
 gamepad_set_axis_deadzone(0,0.7);
 can_switch = true;
+collide=false;
 
 //Positions for the battle
 positionY[0] = 100;
@@ -249,7 +250,8 @@ else{
           <argument>
             <kind>1</kind>
             <string>//Colision con enemigos
-if(invincible == false &amp;&amp; status_dead == 0){            
+if(invincible == false &amp;&amp; status_dead == 0){    
+    collide=true;     
     //script_execute(scr_knockback);
     global.vida --;
     audio_play_sound(snd_knockback, 1, false);
