@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>audio_play_sound(snd_rain, 10, true);
 rain = part_system_create();    //Creamos el generador de nieve
 part_system_depth(rain, -60);   //Lo ponemos a profunidad -60
 
@@ -110,13 +110,13 @@ else{
 }
 
 //Empezamos sonido de lluvia
-if(global.SOUNDS == 1)&amp;&amp; !audio_is_playing(snd_rain) {
+/*if(global.SOUNDS == true)&amp;&amp; !audio_is_playing(snd_rain) {
     audio_play_sound(snd_rain, 10, true);
     
 }
-if(global.SOUNDS == 0)
+if(global.SOUNDS == false)
 {
-   audio_stop_sound(snd_rain);
+   audio_pause_sound(snd_rain);
 }
 </string>
           </argument>

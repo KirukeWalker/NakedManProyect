@@ -126,7 +126,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
         if part_system_exists(obj_lluvia.snow) {
             part_system_destroy (obj_snow.snow)
         }*/
-        
+        audio_pause_all();
         instance_deactivate_all(true);
         //instance_activate_object(obj_snow);
         instance_create(view_xview+302,view_yview+340,obj_gamePausedMenu)
@@ -155,7 +155,42 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
     pausepos=0;
     instance_activate_all();
     if global.MUSIC=true{
-        audio_resume_all();
+        audio_resume_sound(snd_lava);
+        audio_resume_sound(snd_lavaboss_test);
+        audio_resume_sound(snd_snow);
+        audio_resume_sound(snd_forest);
+        audio_resume_sound(snd_city);
+        audio_resume_sound(snd_credits);
+        audio_resume_sound(snd_intro);
+        audio_resume_sound(snd_lavalboss);
+        audio_resume_sound(snd_beach);
+        audio_resume_sound(snd_sea);
+        audio_resume_sound(snd_boss3);
+        audio_resume_sound(snd_boss4);
+        audio_resume_sound(snd_boss5);
+        audio_resume_sound(snd_cielo);
+        audio_resume_sound(snd_faseFinal);
+           
+    }
+    if global.SOUNDS=true{
+        audio_resume_sound(snd_rain);
+        audio_resume_sound(snd_jump);
+        audio_resume_sound(snd_shoot);
+        audio_resume_sound(snd_die);
+        audio_resume_sound(snd_knockback);
+        audio_resume_sound(snd_menu_cursor);
+        audio_resume_sound(snd_menu_selection);
+        audio_resume_sound(snd_damaged_enemy);
+        audio_resume_sound(snd_boss1_hitting_wall);
+        audio_resume_sound(snd_boss1_rising_lava);
+        audio_resume_sound(snd_boss2_chain_attack);
+        audio_resume_sound(snd_boss5_laser_preparing);
+        audio_resume_sound(snd_boss5_laser_shooting);
+        audio_resume_sound(snd_boss5_balls);
+        audio_resume_sound(snd_thunder);
+        audio_resume_sound(snd_woosh);
+        audio_resume_sound(snd_destruction);
+        
     }
 }
 
@@ -168,9 +203,6 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey
 if !instance_exists(obj_blackScreen) &amp;&amp; key_okey 
     &amp;&amp; pause=1 &amp;&amp; pausepos=2 {
     audio_stop_all();
-    if global.MUSIC=true{
-        audio_play_sound(snd_intro,1,true);
-    }
     room_goto(Menu);
 }
 

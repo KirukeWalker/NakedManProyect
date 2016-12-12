@@ -61,7 +61,7 @@ noaudio=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.MUSIC=true{
+            <string>if global.MUSIC=true &amp;&amp; !instance_exists(obj_blackScreen){
     //Menú
     if (room==Menu || room==MenuNivel || room==Menu2) &amp;&amp; intro=0{
         audio_play_sound(snd_intro,1,true);

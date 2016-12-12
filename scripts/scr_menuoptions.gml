@@ -3,12 +3,10 @@ switch(optionspos){
     case 0: 
         if global.MUSIC=true{
             global.MUSIC=false; 
-            audio_pause_all();
             ini_write_real("Settings", "music", 0);
         }
         else{ 
             global.MUSIC=true;
-            audio_resume_all();
             ini_write_real("Settings", "music", 1);
         }
         break;
