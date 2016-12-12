@@ -190,7 +190,11 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
         audio_resume_sound(snd_thunder);
         audio_resume_sound(snd_woosh);
         audio_resume_sound(snd_destruction);
-        
+        audio_resume_sound(snd_boss1_fire);
+        audio_resume_sound(snd_magma);
+        audio_resume_sound(snd_underwater);
+        audio_resume_sound(snd_wind);
+        //audio_resume_sound();
     }
 }
 

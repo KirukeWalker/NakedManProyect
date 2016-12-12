@@ -122,6 +122,7 @@ if(last_round == false)
 else
     pointer.y = 480;
 fireball = instance_create(x + (30 * direction_looking), y, obj_fireball);
+
 shooting = false;
 shoot_counter ++;
 //Finalizar ronda disparos y pasar a otro estado

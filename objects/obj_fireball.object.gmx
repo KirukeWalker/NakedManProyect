@@ -36,7 +36,9 @@ steps_done = 0;
 in_lava = false;
 size = 150;
 aumentar = true;
-
+if (global.SOUNDS==true){
+    audio_play_sound(snd_boss1_fire,5,false);
+}
 </string>
           </argument>
         </arguments>
