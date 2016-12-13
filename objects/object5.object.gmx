@@ -188,7 +188,7 @@ switch(global.hat){
         hat_shoot_right = spr_hat_shoot1_right;
         hat_swim_left = spr_hat_swim1_left;
         hat_swim_right = spr_hat_swim1_right;
-        hat_lone = spr_hat1;
+        hat_lone = spr_hat_idle1_right2;
     break;
     //Crema
     case 2:
@@ -204,7 +204,7 @@ switch(global.hat){
         hat_shoot_right = spr_hat_shoot2_right;
         hat_swim_left = spr_hat_swim2_left;
         hat_swim_right = spr_hat_swim2_right;
-        hat_lone = spr_hat2;
+        hat_lone = spr_hat_idle2_right2;
     break;
     //Sombrilla
     case 3:
@@ -220,7 +220,7 @@ switch(global.hat){
         hat_shoot_right = spr_hat_shoot3_right;
         hat_swim_left = spr_hat_swim3_left;
         hat_swim_right = spr_hat_swim3_right;
-        hat_lone = spr_hat3;
+        hat_lone = spr_hat_idle3_right2;
     break;
     //Navidad
     case 4:
@@ -236,7 +236,7 @@ switch(global.hat){
         hat_shoot_right = spr_hat_shoot4_right;
         hat_swim_left = spr_hat_swim4_left;
         hat_swim_right = spr_hat_swim4_right;
-        hat_lone = spr_hat4;
+        hat_lone = spr_hat_idle4_right2;
     break;
     //Ciborg
     case 5:
@@ -252,7 +252,7 @@ switch(global.hat){
         hat_shoot_right = spr_hat_shoot5_right;
         hat_swim_left = spr_hat_swim5_left;
         hat_swim_right = spr_hat_swim5_right;
-        hat_lone = spr_hat5;
+        hat_lone = spr_hat_idle5_right2;
         //Propios de este
         hat_enter = spr_hat5_enter;
         hat_death = spr_hat5_death;

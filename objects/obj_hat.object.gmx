@@ -26,9 +26,61 @@
           <argument>
             <kind>1</kind>
             <string>//Follow the player
-x = object5.x;
-y = object5.y;
-image_xscale = object5.image_xscale;
+if instance_exists(obj_door){
+    if obj_door.triggered==true{
+            x = object5.x-5;
+            y = object5.y;
+            image_xscale = object5.image_xscale;
+    }
+    else{
+        if(room == Nivel_Playa1 || room == Nivel_Playa2 || room == Room_FinalBoss2){
+            if hspeed&gt;0{
+                x = object5.x+20;
+                y = object5.y;
+                image_xscale = object5.image_xscale;
+            }
+            else if hspeed&lt;0{
+                x = object5.x-20;
+                y = object5.y;
+                image_xscale = object5.image_xscale;
+            }
+            else {
+                x = object5.x;
+                y = object5.y;
+                image_xscale = object5.image_xscale;
+            }
+        }
+        else {
+            x = object5.x;
+            y = object5.y;
+            image_xscale = object5.image_xscale;
+        } 
+    }
+}
+else{
+    if(room == Nivel_Playa1 || room == Nivel_Playa2 || room == Room_FinalBoss2){
+        if hspeed&gt;0{
+            x = object5.x+20;
+            y = object5.y;
+            image_xscale = object5.image_xscale;
+        }
+        else if hspeed&lt;0{
+            x = object5.x-20;
+            y = object5.y;
+            image_xscale = object5.image_xscale;
+        }
+        else {
+            x = object5.x;
+            y = object5.y;
+            image_xscale = object5.image_xscale;
+        }
+    }
+    else {
+        x = object5.x;
+        y = object5.y;
+        image_xscale = object5.image_xscale;
+    }
+}
 </string>
           </argument>
         </arguments>
