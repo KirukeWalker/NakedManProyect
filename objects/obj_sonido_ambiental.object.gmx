@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>rayos=false;
+vent=false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -31,6 +55,56 @@
 if(global.SOUNDS == true) &amp;&amp; !audio_is_playing(snd_underwater) &amp;&amp; instance_exists(Agua){
     audio_play_sound(snd_underwater, 10, true);
 }
+/*//Sonido ventiladores
+if (global.SOUNDS == true) &amp;&amp; instance_exists(obj_ventiladores){
+    while ((obj_ventiladores.x&gt;view_xview &amp;&amp; obj_ventiladores.x&lt;view_xview+608) &amp;&amp; 
+        vent==false){
+        vent=true;
+    }
+}
+//Sonido rayos
+if (global.SOUNDS == true) &amp;&amp; instance_exists(obj_rayos){
+    while ((obj_rayos_whoo.x&gt;=view_xview &amp;&amp; obj_rayos_whoo.x&lt;=view_xview+608) &amp;&amp;
+        rayos==false){
+        rayos=true;
+    }
+}
+
+if rayos=true &amp;&amp; !audio_is_playing(snd_rayos){
+  audio_play_sound(snd_rayos,1,false)
+  }
+
+if rayos=false audio_stop_sound(snd_rayos);
+
+if vent=true &amp;&amp; !audio_is_playing(snd_vents){
+  audio_play_sound(snd_vents,1,false)
+  }
+
+if vent=false audio_stop_sound(snd_vents)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(view_xview+40,view_yview+40,vent)
+//draw_text(view_xview+80,view_yview+40,rayos)
 </string>
           </argument>
         </arguments>

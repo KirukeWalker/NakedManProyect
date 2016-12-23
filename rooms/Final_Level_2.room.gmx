@@ -268,6 +268,70 @@
     <instance objName="obj_acido" x="2176" y="448" name="inst_6F441CD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_acido" x="2208" y="448" name="inst_DF0538CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_vibration" x="160" y="480" name="inst_72B86DA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="288" y="384" name="inst_C478E892" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="288" y="384" name="inst_DC12A558" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="320" y="384" name="inst_A18CA28A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="352" y="384" name="inst_38CFDACD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="384" y="384" name="inst_DD3D8197" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="416" y="384" name="inst_465393B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="448" y="384" name="inst_9994E088" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="480" y="384" name="inst_0955F193" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="640" y="384" name="inst_3AB95E4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="672" y="384" name="inst_B8C21993" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="736" y="384" name="inst_E2CF6E5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="704" y="384" name="inst_5CF045F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="768" y="384" name="inst_5E2E4926" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="800" y="384" name="inst_83598B6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="832" y="384" name="inst_7904E870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="512" y="32" name="inst_1F11FB37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="544" y="32" name="inst_226B2E9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="576" y="32" name="inst_FE079F0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="608" y="32" name="inst_E1F3B170" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="992" y="384" name="inst_6A7DBB78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1024" y="384" name="inst_069B4845" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1056" y="384" name="inst_53899A2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1088" y="384" name="inst_46EA8DDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1120" y="384" name="inst_49F3B07C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1152" y="384" name="inst_DD64BB2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1184" y="384" name="inst_4BFBF4C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1248" y="224" name="inst_A221A68C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1440" y="384" name="inst_F67CB260" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1472" y="384" name="inst_2205AC16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1504" y="384" name="inst_1E958F15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1536" y="384" name="inst_27F694D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1568" y="384" name="inst_D4A6F828" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1600" y="384" name="inst_21067EE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1632" y="384" name="inst_9C683E2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1728" y="224" name="inst_BB51BFDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1920" y="384" name="inst_F6EBC245" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1952" y="384" name="inst_1B456CFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="1984" y="384" name="inst_50263E10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2016" y="384" name="inst_A93B4525" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2048" y="384" name="inst_A3C0F3A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2080" y="384" name="inst_B5072C5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2112" y="384" name="inst_1CAD3C86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2208" y="192" name="inst_7F1AD437" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2432" y="384" name="inst_D95337B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2464" y="384" name="inst_9A4347AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2496" y="384" name="inst_3CCBADD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2528" y="384" name="inst_8F47830C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2560" y="384" name="inst_5386EBD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2592" y="384" name="inst_01F7A004" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2624" y="384" name="inst_F7E1A941" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2688" y="64" name="inst_2E2C1799" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2720" y="64" name="inst_123464E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2752" y="64" name="inst_70D78535" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2784" y="64" name="inst_1F560C37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2816" y="64" name="inst_7EA2F362" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2848" y="64" name="inst_77BDA34A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2880" y="64" name="inst_568918CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2912" y="64" name="inst_B2BC9252" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2944" y="64" name="inst_5A1EBE3E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="2976" y="64" name="inst_D7769184" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="3008" y="64" name="inst_553E37DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="3040" y="64" name="inst_F3C67B0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="3072" y="64" name="inst_5EABF296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rayos_whoo" x="3104" y="64" name="inst_F1E2944F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -36,7 +36,8 @@ snow=0;
 finalBoss4=0;
 city=0;
 finalBoss5=0;
-god=0;
+finalgod=0;
+finalgod2=0
 credits=0;
 noaudio=false;
 </string>
@@ -96,7 +97,8 @@ noaudio=false;
         audio_play_sound(snd_sea,1,true);
         playa=1;
         }
-        
+     
+           
     if !(room==Nivel_Playa1 || room==Nivel_Playa2)  &amp;&amp; playa=1{
         audio_stop_sound(snd_sea);
         playa=0;
@@ -173,24 +175,24 @@ noaudio=false;
     }
     //Boss Final fase 1y2
         //De momento una para todo
-    if ((room==god_room_01 || room==god_room_02) &amp;&amp; god=0) {
+    if ((room==god_room_01 || room==god_room_02) &amp;&amp; finalgod=0) {
         audio_play_sound(snd_cielo,1,true);
-        god=1;
+        finalgod=1;
         }
         
-    if !(room==god_room_01 || room==god_room_02) &amp;&amp; god=1{
+    if !(room==god_room_01 || room==god_room_02) &amp;&amp; finalgod=1{
         audio_stop_sound(snd_cielo);
-        god=0;
+        finalgod=0;
     }  
     //Boss Final fase 3  
-    if (room==god_room_final &amp;&amp; god=0) {
+    if (room==god_room_final &amp;&amp; finalgod2=0) {
         audio_play_sound(snd_faseFinal,1,true);
-        god=1;
+        finalgod2=1;
         }
         
-    if !(room==god_room_final) &amp;&amp; god=1{
+    if !(room==god_room_final) &amp;&amp; finalgod2=1{
         audio_stop_sound(snd_faseFinal);
-        god=0;
+        finalgod2=0;
     }
     
     //Créditos

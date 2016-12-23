@@ -173,6 +173,8 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
            
     }
     if global.SOUNDS=true{
+        audio_resume_sound(snd_rayos);
+        audio_resume_sound(snd_vents);
         audio_resume_sound(snd_rain);
         audio_resume_sound(snd_jump);
         audio_resume_sound(snd_shoot);

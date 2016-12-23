@@ -8,6 +8,7 @@
   <sounds name="sound">
     <sounds name="Sound Effects">
       <sound>sound\snd_wind</sound>
+      <sound>sound\snd_scream_prueba</sound>
       <sound>sound\snd_magma</sound>
       <sound>sound\snd_underwater</sound>
       <sound>sound\snd_jump</sound>
@@ -28,6 +29,8 @@
       <sound>sound\snd_thunder</sound>
       <sound>sound\snd_woosh</sound>
       <sound>sound\snd_destruction</sound>
+      <sound>sound\snd_rayos</sound>
+      <sound>sound\snd_vents</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\snd_lava</sound>
@@ -478,6 +481,7 @@
       <sprite>sprites\spr_4FF</sprite>
       <sprite>sprites\spr_USJ</sprite>
     </sprites>
+    <sprite>sprites\spr_rayos_whoo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\brg_1</background>
@@ -600,6 +604,7 @@
       <object>objects\obj_teleporter</object>
       <object>objects\obj_geiser</object>
       <object>objects\obj_falling_floor</object>
+      <object>objects\obj_rayos_whoo</object>
       <object>objects\obj_fragment</object>
     </objects>
     <objects name="Enemigos">
@@ -786,8 +791,8 @@
     <room>rooms\god_room_01</room>
     <room>rooms\god_room_02</room>
     <room>rooms\god_room_final</room>
-    <room>rooms\Menu2</room>
     <room>rooms\Credits</room>
+    <room>rooms\Menu2</room>
     <room>rooms\room30</room>
   </rooms>
   <help>
