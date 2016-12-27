@@ -26,7 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>//Follow the player
-if instance_exists(obj_door){
+if instance_exists(obj_final_naked_man){
+        x = obj_final_naked_man.x;
+        y = obj_final_naked_man.y;
+}
+else if instance_exists(obj_door){
     if obj_door.triggered==true{
             x = object5.x-5;
             y = object5.y;

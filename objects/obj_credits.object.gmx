@@ -67,7 +67,7 @@ else {
     }
 
     
-if (obj_credits.y &lt; view_yview-2170) || keyboard_check(vk_escape) || (gamepad_button_check(0,gp_face2)){
+if (obj_credits.y &lt; view_yview-2570-10) || keyboard_check(vk_escape) || (gamepad_button_check(0,gp_face2)){
     room_goto(Menu);
     }
     
@@ -101,117 +101,120 @@ draw_set_color(c_white);
 
 
 draw_set_font(fnt_creditos_grande_negrita);
-draw_text(x,y,"CREDITS");
+draw_text(x,y,"");
 
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+120,"A");
+draw_text(x,y+120-40,"A");
 
 
-draw_sprite(spr_4FF,0,x,y+280);
+draw_sprite(spr_4FF,0,x,y+280-40);
 
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+400,"4FREAKSFICTION");
+draw_text(x,y+400-40,"4FREAKSFICTION");
 
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+450,"PRODUCTION");
+draw_text(x,y+450-40,"PRODUCTION");
 
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+590,"THE CREW");
+draw_text(x,y+590-40,"THE CREW");
 //+50
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+640,"Jorge Chueca - Pixel by pixel");
+draw_text(x,y+640-40,"Jorge Chueca - Pixel by pixel");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+670,"Sergio Jimeno - The beauty behind the code");
+draw_text(x,y+670-40,"Sergio Jimeno - The beauty behind the code");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+700,"Kike Martínez –- The 'Co' in 'Coordination'");
+draw_text(x,y+700-40,"Kike Martinez –- The 'Co' in 'Coordination'");
 //+160
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+860,"THIS WOULDN'T HAVE BEEN#POSSIBLE WITHOUT");
+draw_text(x,y+860-40,"THIS WOULDN'T HAVE BEEN#POSSIBLE WITHOUT");
 //+50+50
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+960,"Martín Cativiela - This works thanx to you");
+draw_text(x,y+960-40,"Martin Cativiela - This works thanx to you");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+990,"Cristina Berrocal - Your enthusiasm is our reference");
+draw_text(x,y+990-40,"Cristina Berrocal - Your enthusiasm is our reference");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x-140,y+1020,"Andrea Wilson#Thibault Crespin");
+draw_text(x-140,y+1020-40,"Andrea Wilson#Thibault Crespin");
 //+50+50
 draw_set_font(fnt_creditos_peque);
-draw_text(x+110,y+1035,"–- You gave music to our dream");
+draw_text(x+110,y+1035-40,"–- You gave music to our dream");
 //+50
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+1090,"THANX FOR ALL, FROM HEART");
+draw_text(x,y+1090-40,"THANX FOR ALL, FROM HEART");
 //+160
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+1250,"GURUS OF OUR JOURNEY");
+draw_text(x,y+1250-40,"GURUS OF OUR JOURNEY");
 //+50
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1300,"Luis Carlos Correas &amp;amp; The San Jorge University");
+draw_text(x,y+1300-40,"Luis Carlos Correas &amp; The San Jorge University");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1330,"Eduardo Jimenez (Eclipse Games)");
+draw_text(x,y+1330-40,"Eduardo Jimenez (Eclipse Games)");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1360,"Toni Ros (Eclipse Games)");
+draw_text(x,y+1360-40,"Toni Ros (Eclipse Games)");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1390,"Daniel Blasco (Kraken Empire)");
+draw_text(x,y+1390-40,"Daniel Blasco (Kraken Empire)");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1420,"Antonio Iglesias (Kraken Empire)");
+draw_text(x,y+1420-40,"Antonio Iglesias (Kraken Empire)");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1450,"Juan Castillo (Mechanical Boss)");
+draw_text(x,y+1450-40,"Juan Castillo (Mechanical Boss)");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1480,"Ismael Escuín (Mechanical Boss)");
+draw_text(x,y+1480-40,"Ismael Escuin (Mechanical Boss)");
 //+50
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+1530,"IN AND OUT OF CLASS,#THANK'S FOR ALL YOUR HELP");
+draw_text(x,y+1530-40,"IN AND OUT OF CLASS,#THANK'S FOR ALL YOUR HELP");
 //+210
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+1790,"FELLAS THAT TESTED OUR GAME#AND PATIENCE");
+draw_text(x,y+1790-40,"FELLAS THAT TESTED OUR GAME#AND PATIENCE");
 //+50+50
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1890,"ALBERTO ABAD");
+draw_text(x,y+1890-40,"ALBERTO ABAD");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1920,"ANSELMO BERNAL");
+draw_text(x,y+1890-10,"ALEJANDRO RAMIRO");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1950,"GONZALO GÁMIZ");
+draw_text(x,y+1920+30-40,"ANSELMO BERNAL");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+1980,"GONZALO GARCÍA");
+draw_text(x,y+1950+30-40,"GONZALO GAMIZ");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+2010,"JANO NÚÑEZ");
+draw_text(x,y+1980+30-40,"GONZALO GARCIA");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+2040,"KIKE CUBERO");
+draw_text(x,y+2010+30-40,"JANO NUNEZ");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+2070,"PABLO ARTIGA");
+draw_text(x,y+2040+30-40,"KIKE CUBERO");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+2100,"PEPE ELIPE");
+draw_text(x,y+2070+30-40,"PABLO ARTIGA");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+2130,"JAVIER MARTÍNEZ");
+draw_text(x,y+2100+30-40,"PEPE ELIPE");
 //+30
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+2160,"LOS CANTEROS");
+draw_text(x,y+2130+30-40,"JAVIER MARTINEZ");
+//+30
+draw_set_font(fnt_creditos_peque);
+draw_text(x,y+2160+30-40,"LOS CANTEROS");
 //+50
 draw_set_font(fnt_creditos_grande);
-draw_text(x,y+2210,"ITHE GAME IS FINALLY OUT#SORRY");
+draw_text(x,y+2190+30-40,"THE GAME IS FINALLY OUT#SORRY");
 //+210
 draw_set_font(fnt_creditos_peque);
-draw_text(x,y+2470,"AND YOU,#THE PLAYER");
+draw_text(x,y+2400+30-40,"AND YOU,#THE PLAYER");
 
-draw_sprite(spr_heart,0,x,y+2470+300);
+draw_sprite(spr_heart,0,x,y+2520+30-40);
 
 //draw_set_font(fnt_creditos_grande_negrita);
 //draw_text(x,y+1980+160,"THE PLAYER");

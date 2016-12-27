@@ -82,8 +82,8 @@
             alarm[0]=10
         }
     }
-    if instance_exists(obj_nakedman_falling){
-        if(global.vida&lt;=0 || obj_nakedman_falling.collide=true){
+    if instance_exists(obj_final_naked_man){
+        if(global.vida&lt;=0 || obj_final_naked_man.collide=true){
             gamepad_set_vibration(0,1,1);
             vibrationOff=false;
             alarm[0]=10

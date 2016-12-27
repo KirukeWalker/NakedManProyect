@@ -278,7 +278,6 @@
     <instance objName="obj_rayos_whoo" x="1632" y="32" name="inst_3B51C6A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos_whoo" x="1664" y="32" name="inst_DC46D079" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos_whoo" x="1696" y="32" name="inst_0C463428" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ventiladores" x="96" y="160" name="inst_D8D0A051" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

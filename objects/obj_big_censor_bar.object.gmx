@@ -144,10 +144,12 @@ if(alarm_get(0) &lt; 100){
             <kind>1</kind>
             <string>//
 if(other.alarm[2] &lt; 1){
+    obj_final_naked_man.collide=true;
     global.vida --;
     other.alarm[2] = 30;
     if(global.SOUNDS)
         audio_play_sound(snd_knockback, 3, false);
+    obj_final_naked_man.collide=false;
 }
 </string>
           </argument>
