@@ -132,6 +132,7 @@ if (global.vidaboss == 0)
     ini_close()*/
     global.muertes += 1;
     //obj_fade_white.fadeIn = false;
+
     if(obj_fade_white.fadeIn == true){
         //Guardamos tiempo
         global.counter = object5.reloj;

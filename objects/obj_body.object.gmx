@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>4</depth>
   <persistent>0</persistent>
-  <parentName>obj_big_god</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
