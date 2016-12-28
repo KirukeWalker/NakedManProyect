@@ -110,9 +110,6 @@ else{
 }
 
 //Empezamos sonido de lluvia
-if(global.SOUNDS == true)&amp;&amp; !audio_is_playing(snd_rain) {
-    audio_play_sound(snd_rain, 10, true);  
-}
 </string>
           </argument>
         </arguments>

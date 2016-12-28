@@ -55,6 +55,18 @@ vent=false;
 if(global.SOUNDS == true) &amp;&amp; !audio_is_playing(snd_underwater) &amp;&amp; instance_exists(Agua){
     audio_play_sound(snd_underwater, 10, true);
 }
+if(global.SOUNDS == true)&amp;&amp; !audio_is_playing(snd_wind) &amp;&amp; instance_exists(obj_snow){
+    audio_play_sound(snd_wind, 10, true);  
+}
+if(global.SOUNDS == true)&amp;&amp; !audio_is_playing(snd_rain) &amp;&amp; instance_exists(obj_lluvia){
+    audio_play_sound(snd_rain, 10, true);  
+}
+if room==room30{
+    audio_stop_sound(snd_magma);
+    audio_stop_sound(snd_underwater);
+    audio_stop_sound(snd_wind);
+    audio_stop_sound(snd_rain);
+}
 /*//Sonido ventiladores
 if (global.SOUNDS == true) &amp;&amp; instance_exists(obj_ventiladores){
     while ((obj_ventiladores.x&gt;view_xview &amp;&amp; obj_ventiladores.x&lt;view_xview+608) &amp;&amp; 

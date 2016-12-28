@@ -10,7 +10,6 @@ switch(optionspos){
             audio_pause_sound(snd_forest);
             audio_pause_sound(snd_city);
             audio_pause_sound(snd_credits);
-            audio_pause_sound(snd_intro);
             audio_pause_sound(snd_lavalboss);
             audio_pause_sound(snd_beach);
             audio_pause_sound(snd_sea);
@@ -23,7 +22,7 @@ switch(optionspos){
         }
         else{ 
             global.MUSIC=true;
-            audio_resume_sound(snd_lava);
+            /*audio_resume_sound(snd_lava);
             audio_resume_sound(snd_lavaboss_test);
             audio_resume_sound(snd_snow);
             audio_resume_sound(snd_forest);
@@ -37,7 +36,7 @@ switch(optionspos){
             audio_resume_sound(snd_boss4);
             audio_resume_sound(snd_boss5);
             audio_resume_sound(snd_cielo);
-            audio_resume_sound(snd_faseFinal);
+            audio_resume_sound(snd_faseFinal);*/
             ini_write_real("Settings", "music", 1);
         }
         break;

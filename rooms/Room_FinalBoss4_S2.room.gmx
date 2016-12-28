@@ -159,6 +159,7 @@
     <instance objName="obj_esquinilla_doble" x="576" y="480" name="inst_FE27061F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_esquinilla_doble" x="576" y="320" name="inst_058FAD20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_vibration" x="128" y="736" name="inst_4B38F0F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_snow" x="160" y="736" name="inst_270B281D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

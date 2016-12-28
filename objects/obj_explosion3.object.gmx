@@ -47,7 +47,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!instance_exists(obj_head) &amp;&amp; !instance_exists(obj_black_naked_man2)){ 
+            <string>if (!instance_exists(obj_head) &amp;&amp; !instance_exists(obj_black_naked_man2))&amp;&amp;room!=Room_FinalBoss4_S2{ 
     instance_create(x,y,obj_black_naked_man2)
 }
 
@@ -74,6 +74,18 @@
           <argument>
             <kind>1</kind>
             <string>//with obj_head instance_destroy();
+if room==Room_FinalBoss4_S2 {
+    obj_fade_white.fadeIn = false;
+    if(global.level_completed &lt; 4){
+        ini_open("SystemNM.txt");
+        ini_write_real("Unlockables", "level completed", 4);
+        ini_close();
+        global.level_completed = 4;
+    }
+    global.counter = object5.reloj;
+    global.stepCounter = object5.alarm[1];
+    global.last_level = 4;
+}
 instance_destroy();
 </string>
           </argument>

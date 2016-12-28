@@ -98,9 +98,7 @@ part_emitter_region(snow,snow_emitter,0, room_width,
                     0, room_height,
                     ps_shape_rectangle,ps_distr_linear);  
                     
-if(global.SOUNDS == true)&amp;&amp; !audio_is_playing(snd_wind) {
-    audio_play_sound(snd_wind, 10, true);  
-}
+
 
 /*part_emitter_region(snow,snow_emitter,view_xview - 50, view_xview + view_wview + 50,
                     view_yview - 10, view_yview,
