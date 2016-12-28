@@ -31,6 +31,7 @@
       <sound>sound\snd_destruction</sound>
       <sound>sound\snd_rayos</sound>
       <sound>sound\snd_vents</sound>
+      <sound>sound\snd_poof</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\snd_lava</sound>
@@ -339,6 +340,8 @@
       <sprite>sprites\spr_boss_interactor</sprite>
       <sprite>sprites\spr_fireball</sprite>
       <sprite>sprites\spr_explosion</sprite>
+      <sprite>sprites\spr_explosion2</sprite>
+      <sprite>sprites\spr_explosion3</sprite>
       <sprite>sprites\spr_fire_up</sprite>
       <sprite>sprites\spr_fire_side</sprite>
       <sprite>sprites\spr_fire_down</sprite>
@@ -663,6 +666,8 @@
       <object>objects\obj_fire_wall_deep</object>
       <object>objects\obj_ascending_fire</object>
       <object>objects\obj_explosion</object>
+      <object>objects\obj_explosion2</object>
+      <object>objects\obj_explosion3</object>
     </objects>
     <objects name="Utilidades">
       <objects name="Objetos de nivel">
@@ -737,6 +742,7 @@
         <object>objects\obj_phase2_god</object>
       </objects>
       <objects name="Phase 2">
+        <object>objects\obj_black_naked_man2</object>
         <object>objects\obj_big_god</object>
         <object>objects\obj_body</object>
         <object>objects\obj_arm</object>
@@ -766,6 +772,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preload</room>
+    <room>rooms\god_room_02</room>
+    <room>rooms\god_room_final</room>
     <room>rooms\Credits</room>
     <room>rooms\Introduccion</room>
     <room>rooms\Menu</room>
@@ -790,8 +798,6 @@
     <room>rooms\Room_FinalBoss5</room>
     <room>rooms\Interludio</room>
     <room>rooms\god_room_01</room>
-    <room>rooms\god_room_02</room>
-    <room>rooms\god_room_final</room>
     <room>rooms\Menu2</room>
     <room>rooms\room30</room>
   </rooms>

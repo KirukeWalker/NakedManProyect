@@ -595,20 +595,26 @@ if (move != 0 &amp;&amp;
 }
 //Disparo en codigo
 if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2)  || joystick_check_button(2, 2))  {
-    if(disparo = 0 &amp;&amp; status_dead = 0) {
-        if(global.SOUNDS == 1)
-            audio_play_sound(snd_shoot, 1, false);
-        proyectil = instance_create(x,y+3,obj_cacota);
-        proyectil.speed = 15;
-        proyectil.direction = 90-(90*image_xscale);
-        proyectil.image_xscale = image_xscale;
-        disparo = 1;
-        //No se detiene si está en el aire
-        if(place_meeting(x, y + 1, obj_solid_terrain))
-            actual_speed = 0;
-        alarm[0] = 15;
+    if (room!=god_room_02 || instance_exists(obj_nubes)){
+        if(disparo = 0 &amp;&amp; status_dead = 0) {
+            if(global.SOUNDS == 1)
+                audio_play_sound(snd_shoot, 1, false);
+            proyectil = instance_create(x,y+3,obj_cacota);
+            proyectil.hspeed = 15;
+            proyectil.direction = 90-(90*image_xscale);
+            proyectil.image_xscale = image_xscale;
+            disparo = 1;
+            if room=god_room_01 {
+                proyectil.vspeed = 2;
+            }
+            //No se detiene si está en el aire
+            if(place_meeting(x, y + 1, obj_solid_terrain)) actual_speed = 0;
+            alarm[0] = 15;
+        }
     }
 }
+if disparo==1 &amp;&amp; place_meeting(x, y + 1, obj_suelo_hojas) status_locked=true;
+else status_locked=false;
 //Animaciones (ahora al gorro también)
 //if(vsp == 0)
 if(place_meeting(x, y + 1, obj_solid_terrain) || 
@@ -678,8 +684,10 @@ if(status_locked == false){
         global.vida = 0;
     //if (place_meeting (x,y,obj_pinchos)) 
         //global.vida = 0;
-    if (y &gt; room_height &amp;&amp; status_locked == false) 
-        global.vida = 0;
+    if (y &gt; room_height &amp;&amp; status_locked == false){
+        if (!instance_exists(obj_head) || !instance_exists(obj_black_naked_man2)){global.vida = 0} 
+        else {};
+    }
 }
 //Control de negativos
 if (global.vida &lt; 0) 

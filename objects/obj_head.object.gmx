@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Variable
-global.vidaboss = 30;
+            <string>alarms=true
+arrived=false;
+multiplier=1;
+//Variable
+global.vidaboss = 30; //30
     //Relacionado con la vida
 damage_received = 0;
 //original_y = y;
@@ -35,6 +38,84 @@ stage = 0;
 //Put the healthbar
 health_bar = instance_create(150, 50, obj_healthbar_anal);
 
+
+alarms2=false
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(x,y+68+50,obj_explosion3);
+if (global.SOUNDS=true) audio_play_sound(snd_poof,5,false);
+with(obj_body) instance_destroy();
+alarms2=true
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(x+208,y+129+20,obj_explosion3);
+instance_create(x-208,y+129+20,obj_explosion3);
+if (global.SOUNDS=true) audio_play_sound(snd_poof,5,false);
+with (obj_arm) instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if arrived=true multiplier-=0.005;
+alarm[1]=10;
 </string>
           </argument>
         </arguments>
@@ -58,6 +139,7 @@ health_bar = instance_create(150, 50, obj_healthbar_anal);
           <argument>
             <kind>1</kind>
             <string>//Single punch alarm
+if (global.vidaboss &gt; 0){
     //Los creamos de dos en dos
     //Izquierdo
     left_punch = instance_create(-30, random(room_height), obj_punch);
@@ -70,6 +152,7 @@ health_bar = instance_create(150, 50, obj_healthbar_anal);
     rigth_punch.image_angle += 180;
     //
     alarm_set(0, 60);
+}
 </string>
           </argument>
         </arguments>
@@ -126,19 +209,54 @@ switch(stage){
 //Morir
 if (global.vidaboss == 0)
 { 
+    if (arrived=false &amp;&amp; object5.x&lt;(view_xview + view_wview * 0.5)) object5.x+=1;
+    if (arrived=false &amp;&amp; object5.x&gt;(view_xview + view_wview * 0.5)) object5.x-=1;
+    stage=2;
+    if (alarm[1] == -1) {
+        alarm[1] = 10;
+    }
+    if instance_exists(object5) object5.status_locked=true;
     /*ini_open("SystemNM.txt")
     ini_key_delete("NhTPahPmx","TibsGhsbEhuU")
     ini_write_string("NhTPahPmx","TibsGHsbEhuU","KjjyFtLTgjY")
     ini_close()*/
     global.muertes += 1;
     //obj_fade_white.fadeIn = false;
-
-    if(obj_fade_white.fadeIn == true){
+    for (i=0;i &lt; instance_number(obj_nubes);i++){
+        nube[i] = instance_find(obj_nubes,i);
+    }
+    for (i=0;i &lt; instance_number(obj_nubes);i++){
+        instance_create(nube[i].x+64,nube[i].y+16,obj_explosion2);
+        if ((i==1 || i==5 || i==10 || i==15) &amp;&amp; global.SOUNDS=true) audio_play_sound(snd_poof,5,false);
+    }
+    with(obj_nubes) instance_destroy();
+    if alarms=true {
+        alarm[2]=30;
+        alarm[3]=60;
+        alarms=false;
+    }
+    if arrived=false move_towards_point((view_xview + view_wview * 0.5), room_height-150,6);
+    if (y&gt;(room_height-151) &amp;&amp; x&lt;(view_xview + view_wview * 0.5)+3 &amp;&amp; x&gt;(view_xview + view_wview * 0.5)-3) arrived=true;
+    if (arrived==true){
+        x=(view_xview + view_wview * 0.5);
+        y=room_height-150;
+        if (alarms2=true &amp;&amp; y==room_height-150){
+            obj_head.image_xscale=obj_head.image_xscale*multiplier
+            obj_head.image_yscale=obj_head.image_yscale*multiplier
+        }
+    }
+    if multiplier==(1-(0.005*13)) {
+        instance_create(x,y,obj_explosion3);
+        if (global.SOUNDS=true) audio_play_sound(snd_poof,5,false);
+        stage=3;
+        instance_destroy();
+    }
+    /*if(obj_fade_white.fadeIn == true &amp;&amp; multiplier=240 &amp;&amp; global.vida&gt;0){
         //Guardamos tiempo
         global.counter = object5.reloj;
         global.stepCounter = object5.alarm[1];
         obj_fade.fadeIn = false;
-    }
+    }*/
 }
 </string>
           </argument>

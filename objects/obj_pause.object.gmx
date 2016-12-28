@@ -107,6 +107,7 @@ if(pause == 1 &amp;&amp; !instance_exists(obj_blackScreen)){
 if !instance_exists(obj_blackScreen) &amp;&amp; key_pause {
     if (!pause) {
         pause = 1;
+        gamepad_set_vibration(0,0,0);
         if ((room=Nivel_Bosque || room=Nivel_Bosque_2)&amp;&amp; instance_exists(obj_lluvia)){
             part_system_automatic_update(obj_lluvia.rain, false);
             part_system_automatic_draw(obj_lluvia.rain, false);
@@ -196,6 +197,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
         audio_resume_sound(snd_magma);
         audio_resume_sound(snd_underwater);
         audio_resume_sound(snd_wind);
+        audio_resume_sound(snd_poof);
         //audio_resume_sound();
     }
 }

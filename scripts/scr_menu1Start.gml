@@ -1,6 +1,6 @@
 switch(scriptStep){
     case 0:
-    if n==0 audio_play_sound(snd_woosh, 1, false);
+    if (n==0 && global.SOUNDS==true) audio_play_sound(snd_woosh, 1, false);
     if (n<400){
         obj_pressStart.y+=40;
         n+=40;
@@ -19,7 +19,7 @@ switch(scriptStep){
     
     case 2:
     if (n<480){
-        if n==160 audio_play_sound(snd_woosh, 1, false);
+        if (n==160 && global.SOUNDS==true) audio_play_sound(snd_woosh, 1, false);
         obj_Menu1.y-=40;
         n+=40;
     }

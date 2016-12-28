@@ -75,7 +75,12 @@ if(x &gt; room_height + 50)
           <argument>
             <kind>1</kind>
             <string>//Destruye las nubes en su camino
-script_execute(scr_generate_fragments, other);
+//script_execute(scr_generate_fragments, other);
+cloud=instance_create(other.x+64,other.y+16,obj_explosion);
+if global.SOUNDS=true audio_play_sound(snd_poof,5,false);
+cloud.hspeed=1;
+cloud.image_xscale=cloud.image_xscale*2
+cloud.image_yscale=cloud.image_yscale*2
 with(other) instance_destroy();
 </string>
           </argument>
