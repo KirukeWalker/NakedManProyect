@@ -456,9 +456,9 @@ else if(status_dead == 1 || status_locked == true)
 else 
     move = key_left + key_right;        //Aplicamos los valores de las teclas de dirección
 //Acelaración
-if(move != 0 &amp;&amp; abs(actual_speed) &lt;= movespeed &amp;&amp; 
-    (disparo == 0 || !place_meeting(x, y + 1, obj_solid_terrain))) 
+if(move != 0 &amp;&amp; abs(actual_speed) &lt;= movespeed &amp;&amp; (disparo == 0 || (!place_meeting(x, y + 1, obj_solid_terrain) &amp;&amp; !place_meeting(x, y + 1, obj_suelo_hojas))))  {
     actual_speed += 1;
+}
 else if(actual_speed != 0)  
     actual_speed -= 1;
 //Movimiento con la aceleración actual
@@ -608,13 +608,13 @@ if keyboard_check(ord('C')) || (gamepad_button_check(0,gp_face2)  || joystick_ch
                 proyectil.vspeed = 2;
             }
             //No se detiene si está en el aire
-            if(place_meeting(x, y + 1, obj_solid_terrain)) actual_speed = 0;
+            if(place_meeting(x, y + 1, obj_solid_terrain)||place_meeting(x, y + 1, obj_suelo_hojas)) actual_speed = 0;
             alarm[0] = 15;
         }
     }
 }
-if disparo==1 &amp;&amp; place_meeting(x, y + 1, obj_suelo_hojas) status_locked=true;
-else status_locked=false;
+//if disparo==1 &amp;&amp; place_meeting(x, y + 1, obj_suelo_hojas) &amp;&amp; key_jump==0 status_locked=true;
+//else {status_locked=false disparo=0;}
 //Animaciones (ahora al gorro también)
 //if(vsp == 0)
 if(place_meeting(x, y + 1, obj_solid_terrain) || 
