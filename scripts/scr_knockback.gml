@@ -14,3 +14,5 @@ if collide_izquierda=true{
 if collide_derecha=true{
     move = (-image_xscale)*image_xscale;
 }
+
+

@@ -741,18 +741,23 @@ if ((cronometro = 5) &amp;&amp; (reloj&lt;60) &amp;&amp; (place_meeting(x,y,obj_
     ini_close();
     }
     
-//Colision con enemigos
-if (place_meeting(x+2,y,obj_hazard) || place_meeting(x-2,y,obj_hazard)){
-    if (place_meeting(x+2,y,obj_hazard)) collide_derecha=true 
-    else collide_derecha=false
-    if (place_meeting(x-2,y,obj_hazard)) collide_izquierda=true 
-    else collide_izquierda=false
-    if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){            
-        script_execute(scr_knockback);
+//Colision con enemigos place_meeting
+if (instance_place(x+2,y,obj_hazard) || instance_place(x-2,y,obj_hazard)){
+    if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){  
+        if (instance_place(x+2,y,obj_hazard)) &amp;&amp; collide_izquierda=false {
+            collide_derecha=true 
+            collide_izquierda=false
+            script_execute(scr_knockback);
+        }
+        else if (instance_place(x-2,y,obj_hazard)) &amp;&amp; collide_derecha=false{
+            collide_izquierda=true 
+            collide_derecha=false
+            script_execute(scr_knockback);
+        }           
+        collide_izquierda=false 
+        collide_derecha=false
     }
     collide=true;
-    collide_izquierda=false;
-    collide_derecha=false;
 }
 </string>
           </argument>
