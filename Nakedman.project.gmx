@@ -145,6 +145,8 @@
         <sprite>sprites\spr_total_death1</sprite>
         <sprite>sprites\spr_enter1</sprite>
         <sprite>sprites\spr_swim1</sprite>
+        <sprite>sprites\spr_final_nakedman_1</sprite>
+        <sprite>sprites\spr_final_nakedman_throwing_1</sprite>
       </sprites>
       <sprites name="Skin2">
         <sprite>sprites\spr_idle2</sprite>
@@ -159,6 +161,8 @@
         <sprite>sprites\spr_total_death2</sprite>
         <sprite>sprites\spr_enter2</sprite>
         <sprite>sprites\spr_swim2</sprite>
+        <sprite>sprites\spr_final_nakedman_2</sprite>
+        <sprite>sprites\spr_final_nakedman_throwing_2</sprite>
       </sprites>
       <sprites name="Skin3">
         <sprite>sprites\spr_runBig3</sprite>
@@ -173,6 +177,9 @@
         <sprite>sprites\spr_total_death3</sprite>
         <sprite>sprites\spr_enter3</sprite>
         <sprite>sprites\spr_swim3</sprite>
+        <sprite>sprites\spr_final_nakedman_3</sprite>
+        <sprite>sprites\spr_final_nakedman_throwing_3</sprite>
+        <sprite>sprites\spr_hoja</sprite>
       </sprites>
       <sprites name="Skin4">
         <sprite>sprites\spr_runBig4</sprite>
@@ -187,6 +194,9 @@
         <sprite>sprites\spr_total_death4</sprite>
         <sprite>sprites\spr_enter4</sprite>
         <sprite>sprites\spr_swim4</sprite>
+        <sprite>sprites\spr_final_nakedman_4</sprite>
+        <sprite>sprites\spr_final_nakedman_throwing_4</sprite>
+        <sprite>sprites\spr_carrot</sprite>
       </sprites>
       <sprites name="Skin5">
         <sprite>sprites\spr_idle5</sprite>
@@ -201,6 +211,8 @@
         <sprite>sprites\spr_total_death5</sprite>
         <sprite>sprites\spr_enter5</sprite>
         <sprite>sprites\spr_swim5</sprite>
+        <sprite>sprites\spr_final_nakedman_5</sprite>
+        <sprite>sprites\spr_final_nakedman_throwing_5</sprite>
       </sprites>
       <sprites name="Skin6">
         <sprite>sprites\spr_idle6</sprite>
@@ -215,6 +227,9 @@
         <sprite>sprites\spr_total_death6</sprite>
         <sprite>sprites\spr_enter6</sprite>
         <sprite>sprites\spr_swim6</sprite>
+        <sprite>sprites\spr_final_nakedman_6</sprite>
+        <sprite>sprites\spr_final_nakedman_throwing_6</sprite>
+        <sprite>sprites\spr_goldBar</sprite>
       </sprites>
       <sprites name="Skin7">
         <sprite>sprites\spr_runBig7</sprite>
@@ -229,6 +244,9 @@
         <sprite>sprites\spr_total_death7</sprite>
         <sprite>sprites\spr_enter7</sprite>
         <sprite>sprites\spr_swim7</sprite>
+        <sprite>sprites\spr_final_nakedman_7</sprite>
+        <sprite>sprites\spr_final_nakedman_throwing_7</sprite>
+        <sprite>sprites\spr_bible</sprite>
       </sprites>
       <sprites name="Hat1">
         <sprite>sprites\spr_hat_idle1_right</sprite>
