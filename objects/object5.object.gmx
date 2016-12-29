@@ -759,6 +759,22 @@ if (instance_place(x+2,y,obj_hazard) || instance_place(x-2,y,obj_hazard)){
     }
     collide=true;
 }
+if distance_to_object(obj_sneksot)&lt;10{
+    if obj_sneksot.x&gt;x{
+        collide_derecha=true 
+        collide_izquierda=false
+    }
+    else{
+        collide_izquierda=true 
+        collide_derecha=false
+    }
+    if(invincible == false &amp;&amp; status_dead == 0 &amp;&amp; status_locked == false){  
+        if (instance_place(x,y,obj_sneksot)) script_execute(scr_knockback);
+    }           
+    collide_izquierda=false 
+    collide_derecha=false
+    collide=true;
+}
 </string>
           </argument>
         </arguments>
