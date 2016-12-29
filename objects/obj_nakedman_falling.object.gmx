@@ -254,10 +254,10 @@ if(invincible == false &amp;&amp; status_dead == 0){
     collide=true;     
     //script_execute(scr_knockback);
     global.vida --;
-    audio_play_sound(snd_knockback, 1, false);
+     if global.SOUNDS==true audio_play_sound(snd_knockback, 1, false);
     if(global.vida &lt;= 0){
         status_dead = 1;
-        audio_play_sound(snd_die, 1, false);
+         if global.SOUNDS==true audio_play_sound(snd_die, 1, false);
     }
     else{
         invincible = true;
