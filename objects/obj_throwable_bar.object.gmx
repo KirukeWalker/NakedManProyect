@@ -30,6 +30,30 @@ speed = 30;
 rotation_speed = 10;
 returning = false;
 alarm_set(0, 12);
+switch(global.skin){
+    //Con hoja
+    case 3:
+        sprite_index = spr_hoja;
+    break;
+    
+    //Muñeco nieve
+    case 4:
+        sprite_index = spr_carrot;
+    break;
+    
+    //Con dorado
+    case 6:
+        sprite_index = spr_goldBar;
+    break;
+    
+    //Con túnica
+    case 7:
+        sprite_index = spr_bible;
+    break;
+    
+    default:
+        sprite_index = spr_censor_bar;
+}
 </string>
           </argument>
         </arguments>
@@ -174,7 +198,6 @@ if(alarm_get(1) &lt; 1){
             <string>//
 if(returning == true){
     other.barInHand = true;
-    other.sprite_index = spr_final_naked_man;
     instance_destroy();
 }
 </string>

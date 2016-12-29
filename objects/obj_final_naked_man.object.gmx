@@ -41,42 +41,42 @@ hincremento=5;
 switch(global.skin){
     //Estándar
     case 0:
-        fall = spr_fall;
+        fall = spr_final_naked_man;
     break;
     
     //Quemado
     case 1:
-        fall = spr_fall1;
+        fall = spr_final_nakedman_1;
     break;
     
     //Con capa
     case 2:
-        fall = spr_fall2;
+        fall = spr_final_nakedman_2;
     break;
     
     //Con hoja
     case 3:
-        fall = spr_fall3;
+        fall = spr_final_nakedman_3;
     break;
     
     //Muñeco nieve
     case 4:
-        fall = spr_fall4;
+        fall = spr_final_nakedman_4;
     break;
     
     //Robot, o algo parecido
     case 5:
-        fall = spr_fall5;
+        fall = spr_final_nakedman_5;
     break;
     
     //Con dorado
     case 6:
-        fall = spr_fall6;
+        fall = spr_final_nakedman_6;
     break;
     
     //Con túnica
     case 7:
-        fall = spr_fall7;
+        fall = spr_final_nakedman_7;
     break;
 }
 //Create a object for the hat
@@ -277,7 +277,47 @@ if(x - obj_black_naked_man.x != 0)
 if(key_shoot == true &amp;&amp; barInHand == true){
     bar = instance_create(x, y, obj_throwable_bar);
     bar.direction = 90 - (image_xscale * 90);
-    sprite_index = spr_final_naked_man_throwing;
+    switch(global.skin){
+    //Estándar
+        case 0:
+            sprite_index = spr_final_naked_man_throwing;
+        break;
+        
+        //Quemado
+        case 1:
+            sprite_index = spr_final_nakedman_throwing_1;
+        break;
+        
+        //Con capa
+        case 2:
+            sprite_index = spr_final_nakedman_throwing_2;
+        break;
+        
+        //Con hoja
+        case 3:
+            sprite_index = spr_final_nakedman_throwing_3;
+        break;
+        
+        //Muñeco nieve
+        case 4:
+            sprite_index = spr_final_nakedman_throwing_4;
+        break;
+        
+        //Robot, o algo parecido
+        case 5:
+            sprite_index = spr_final_nakedman_throwing_5;
+        break;
+        
+        //Con dorado
+        case 6:
+            sprite_index = spr_final_nakedman_throwing_6;
+        break;
+        
+        //Con túnica
+        case 7:
+            sprite_index = spr_final_nakedman_throwing_7;
+        break;
+    }
     barInHand = false;
 }
 
@@ -298,7 +338,7 @@ if (alarm[3] == -1) {
 }
 
 //Control de animaciones
-sprite_index=fall;
+if !instance_exists(obj_throwable_bar) sprite_index=fall;
 if (x - obj_black_naked_man.x &lt; 0){
         if(instance_exists(obj_hat))
             hat.sprite_index = hat_fall_right;

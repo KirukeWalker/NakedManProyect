@@ -80,6 +80,10 @@ switch (nivel)
         sprite_index = spr_manoplas5;
         break;
     }
+    case "Final_Level_02": {
+        sprite_index = spr_manoplas5;
+        break;
+    }
 }      
 </string>
           </argument>

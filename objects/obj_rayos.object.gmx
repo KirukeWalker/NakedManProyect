@@ -123,7 +123,9 @@ if size = 80 {
     }
 
 if !audio_is_playing(snd_rayos){
-    if x&gt;view_xview &amp;&amp; x&lt;view_xview+608 audio_play_sound(snd_rayos,1,false);
+    if (x&gt;view_xview &amp;&amp; x&lt;view_xview+608) &amp;&amp; global.SOUNDS==true {
+        audio_play_sound(snd_rayos,1,false);
+    }
     else audio_stop_sound(snd_rayos)
 }
 </string>

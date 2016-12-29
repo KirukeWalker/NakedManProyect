@@ -51,16 +51,16 @@ x = room_width/2;
             <kind>1</kind>
             <string>direction = 90;
 
-if ((global.cagaprisas = 0) &amp;&amp; (obj_credits.y &lt; view_yview-200)) {
+if ((global.cagaprisas = 0) &amp;&amp; (obj_credits.y &lt; view_yview-2570)) {
         ini_open("SystemNM.txt")
         ini_key_delete("NhTPahPmx","FDtldthSVDJg")
         ini_write_string("NhTPahPmx","FDtldtHSVDJg","GVdGnjfSnkd");
         ini_close();
         }
         
-if keyboard_check(vk_down) || (gamepad_button_check(0,gp_face1)) || (gamepad_button_check(0,gp_padd)) {
-        global.cagaprisas = 1;
-        speed = 10;
+if keyboard_check(vk_down) || (gamepad_button_check(0,gp_padd)) {
+    global.cagaprisas = 1;
+    speed = 10;
 }
 else {
     speed = 2;

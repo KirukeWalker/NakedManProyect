@@ -227,7 +227,6 @@
     <instance objName="obj_suelo_pisableCiudad" x="2752" y="288" name="inst_A53F7A52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2784" y="288" name="inst_0E59445A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door" x="2752" y="288" name="inst_014802B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Terreno" x="2880" y="416" name="inst_2D0FF445" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_portal" x="2752" y="256" name="inst_C98CE803" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="448" y="384" name="inst_46FF9BE9" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="544" y="384" name="inst_BEDAA100" locked="0" code="" scaleX="-1" scaleY="-1" colour="4294967295" rotation="0"/>

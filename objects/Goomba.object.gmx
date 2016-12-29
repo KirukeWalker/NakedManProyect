@@ -73,6 +73,11 @@ switch (nivel)
         skin = spr_goomba5;
         break;
     }
+    //Ciudad
+    case "Final_Level_02": {
+        skin = spr_goomba5;
+        break;
+    }
 }
 sprite_index = skin;
 //Cogemos el ancho de la skin

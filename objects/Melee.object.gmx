@@ -104,6 +104,14 @@ switch (nivel)
         moverse = spr_melee5;
         break;
     }  
+    
+    case "Final_Level_2": 
+    {
+        disparando = spr_melee_attack5;
+        muerte = spr_melee_death4;      //Falta la chupa muriéndose
+        moverse = spr_melee5;
+        break;
+    }  
 }
 //Se la asignamos antes de empezar
 sprite_index = moverse;
@@ -194,7 +202,7 @@ if(image_index = sprite_length-1 &amp;&amp; status_dead = 1)
 //Si no está bajo el agua
 if(!place_meeting(x, y, Agua)){
     //Atacar
-    if ((distance_to_object (object5) &lt; 30 &amp;&amp; object5.status_dead = 0) 
+    if ((distance_to_object (object5) &lt; 15 &amp;&amp; object5.status_dead = 0) 
         &amp;&amp; status_dead = 0) 
     {
         sprite_index = disparando;
