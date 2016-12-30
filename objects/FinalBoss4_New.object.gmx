@@ -79,12 +79,9 @@ switch(status){
     case 2:
         //Caida y muerte
         if (y &gt; 500){
-            if(obj_fade.fadeIn == true){
-                //Guardamos tiempo
-                global.counter = object5.reloj;
-                global.stepCounter = object5.alarm[1];
-                obj_fade.fadeIn = false;
-            }
+            global.counter = object5.reloj;
+            global.stepCounter = object5.alarm[1];
+            if !instance_exists(obj_avalanch2) instance_create(view_xview[0],view_yview[0],obj_avalanch2);
         }
         //Llega y te jodes
         if (x &gt; 5816)

@@ -65,10 +65,10 @@ global.last_level = 0;
 global.level_completed = 0;
     //Tiempos requeridos para desbloqueables
         //Los retocaremos según veamos lo que se tarda
-global.time_required[1] = 200;  
-global.time_required[2] = 200;
-global.time_required[3] = 200;
-global.time_required[4] = 200;
+global.time_required[1] = 125;  
+global.time_required[2] = 125;
+global.time_required[3] = 215;
+global.time_required[4] = 95;
 global.time_required[5] = 200;
     //Inicializamos los mejores tiempos
 for(i=1; i&lt;=5; i++){

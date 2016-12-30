@@ -66,10 +66,10 @@ else if (fadeIn == false) {
         //alarm[1] = room_speed * 0.05;
     }
     if(alpha &gt;= 1){
-        if room==Room_FinalBoss4_S2 &amp;&amp; instance_exists(obj_snow){ 
+        if (room==Room_FinalBoss4_S2 || room==Room_FinalBoss4_New) &amp;&amp; instance_exists(obj_snow){ 
             part_system_destroy(obj_snow.snow)
         }
-        if(room != god_room_02)
+        if(room != god_room_02 &amp;&amp; room!=Room_FinalBoss4_New)
             room_goto(room30);
         else
             room_goto_next();

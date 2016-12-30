@@ -64,7 +64,13 @@ health_bar_ = instance_create(100, 50, obj_healthbar_anal);
             <kind>1</kind>
             <string>//Comprobamos paredes
 //Horizontales
-if(place_meeting(x + (move_speed * h_direction), y, obj_suelo_bosque))
+if ((place_meeting(x, y + (move_speed * v_direction), obj_suelo_bosque)) &amp;&amp; (place_meeting(x + (move_speed * h_direction), y, obj_suelo_bosque))){
+    v_direction *= -1;
+    image_yscale *= -1;
+    h_direction *= -1;
+    image_xscale *= -1;
+}
+else if(place_meeting(x + (move_speed * h_direction), y, obj_suelo_bosque))
 {
     while(!place_meeting(x + h_direction, y, obj_suelo_bosque))
         x += h_direction;

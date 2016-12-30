@@ -55,7 +55,7 @@ else{
           <argument>
             <kind>1</kind>
             <string>//Lo matamos desde aqui
-if(vspeed &gt; 0)
+if(vspeed &gt; 0) &amp;&amp; object5.arrived==false
     global.vida = 0;
 </string>
           </argument>

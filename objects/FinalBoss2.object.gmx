@@ -159,17 +159,21 @@ if(status == -1){
         //Empieza la pelea
         //health_bar_frame = instance_create(448, 608, obj_healthbar_frame);
         health_bar = instance_create(448, 608, obj_healthbar_anal);
-        status = 0;
+        status = 27;
         alarm[0] = 60;
     }
+}
+if status==27 {
+    if(block1.x!=352){
+        block1.x -= 16;
+        block2.x -= 16;
+    }
+    if block1.x==352 status=0;
 }
 //Actitud normal
 if(status == 0){
     //Cierre de los bloques
-    if(block1.x &gt; 352){
-        block1.x -= 16;
-        block2.x -= 16;
-    }
+    
     //Comprobamos posición del prota para el encaramiento
     if(x &lt; instance_position(x, y, object5)) 
         looking_left = true;
@@ -312,7 +316,7 @@ if(status == 7){
     //Nada de momento
 }
 //Matar al rpota si llega a los bordes
-if(status &gt; -1){
+if(status &gt; -1 &amp;&amp; status&lt;6){
     if( object5.x &lt; 288 || 
         object5.x &gt; 960 || 
         object5.y &gt; 1120)

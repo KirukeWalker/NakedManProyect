@@ -54,17 +54,19 @@ alarm_set(0, 6);
           <argument>
             <kind>1</kind>
             <string>//Control de caida de bloques
-for(i = 0; i &lt; length; i++){
-    block = instance_create(xPosition - (i * 32), -32-(irandom(3)*8), obj_snow_block);
+if object5.arrived==false &amp;&amp; !instance_exists(obj_avalanch2){
+    for(i = 0; i &lt; length; i++){
+        block = instance_create(xPosition - (i * 32), -32-(irandom(3)*8), obj_snow_block);
+    }
+    //
+    xPosition += 32;
+    //
+    if(length &lt; 448 / 32)
+        length ++;
+        
+    //
+    alarm_set(0, irandom_range(6, 8));
 }
-//
-xPosition += 32;
-//
-if(length &lt; 448 / 32)
-    length ++;
-    
-//
-alarm_set(0, irandom_range(6, 8));
 </string>
           </argument>
         </arguments>

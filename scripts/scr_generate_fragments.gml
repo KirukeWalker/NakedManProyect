@@ -13,5 +13,5 @@ for(i = 45; i < 360; i += 90){
 //
 if(global.SOUNDS == true)
 {
-audio_play_sound(snd_destruction, 5, false);
+audio_play_sound(snd_destruction, 10, false);
 }

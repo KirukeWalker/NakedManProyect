@@ -49,7 +49,8 @@ FPS=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Pintamos los corazones
+            <string>//draw_text(view_xview+50,view_yview+80,FinalBoss4_New.running_speed)
+//Pintamos los corazones
     //A menos que sea la batalla final
 if(room != god_room_final)
     draw_sprite(spr_hearts,global.vida, view_xview+40, view_yview+20);

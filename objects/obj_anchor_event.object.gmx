@@ -103,6 +103,7 @@ if(returning == false){
         //Guardamos tiempo
         global.counter = object5.reloj;
         global.stepCounter = object5.alarm[1];
+        audio_stop_sound(snd_boss2_chain_attack);
         obj_fade.fadeIn = false;
     }
     //obj_fade.alarm[1] = room_speed * 0.05;
