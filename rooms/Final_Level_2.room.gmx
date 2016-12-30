@@ -92,13 +92,11 @@
     <instance objName="obj_rayos" x="736" y="416" name="inst_6C2E6A28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="770" y="416" name="inst_260B8219" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="1248" y="64" name="inst_5D373B98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_rayos" x="1248" y="320" name="inst_97C4F3D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_rayos" x="1248" y="352" name="inst_B56D7D53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_rayos" x="1248" y="384" name="inst_73D3B887" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_rayos" x="1248" y="96" name="inst_B56D7D53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_rayos" x="1248" y="128" name="inst_73D3B887" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="1248" y="416" name="inst_28E0CDDA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_suelo_pisableCiudad" x="1280" y="256" name="inst_AFA361CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="1280" y="288" name="inst_17547F0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="1280" y="320" name="inst_B6F7BDAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="1280" y="128" name="inst_17547F0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="1280" y="96" name="inst_B6F7BDAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1280" y="352" name="inst_F89B99CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1280" y="384" name="inst_C91F307A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1280" y="416" name="inst_169755A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -111,7 +109,6 @@
     <instance objName="obj_suelo_pisableCiudad" x="1760" y="384" name="inst_1FD82679" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1760" y="416" name="inst_32F1CF18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1760" y="448" name="inst_2038E462" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="1760" y="96" name="inst_843546E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1760" y="64" name="inst_32B29EDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1760" y="32" name="inst_798D6F68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1760" y="0" name="inst_95196F54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -120,7 +117,6 @@
     <instance objName="obj_rayos" x="1536" y="416" name="inst_282FC1E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="1568" y="416" name="inst_DF52F680" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="1728" y="64" name="inst_1CEDD547" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_rayos" x="1728" y="96" name="inst_4D3389E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="1728" y="320" name="inst_B0F08BE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="1728" y="352" name="inst_82AF5013" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="1728" y="384" name="inst_D95CE276" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -131,7 +127,6 @@
     <instance objName="obj_jetstream_sam" x="1984" y="224" name="inst_23C01852" locked="0" code="" scaleX="0.213333338499069" scaleY="0.38400000333786" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="2208" y="64" name="inst_AD71973C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="2208" y="96" name="inst_C52CE19C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_rayos" x="2208" y="288" name="inst_B6F58655" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="2208" y="320" name="inst_316A5CD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="2208" y="352" name="inst_85764BA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_rayos" x="2208" y="384" name="inst_63288B85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -140,7 +135,6 @@
     <instance objName="obj_suelo_pisableCiudad" x="2240" y="32" name="inst_C25E047B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2240" y="64" name="inst_C489B085" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2240" y="96" name="inst_37B9DB75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="2240" y="224" name="inst_36548FFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2240" y="256" name="inst_A15A8CF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2240" y="288" name="inst_AA478E97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2240" y="320" name="inst_B3C6945E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -153,25 +147,22 @@
     <instance objName="obj_rayos" x="2016" y="416" name="inst_3009B297" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="2048" y="416" name="inst_5B801924" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Volador" x="2258" y="179" name="inst_634AF7E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Volador" x="1297" y="180" name="inst_9773CEB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Volador" x="1295" y="261" name="inst_9773CEB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Volador" x="1775" y="176" name="inst_7900FC7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="1312" y="256" name="inst_0962020E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="1312" y="352" name="inst_0962020E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="1792" y="256" name="inst_975BB82D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="2272" y="224" name="inst_05D63EC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="2272" y="256" name="inst_05D63EC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_jetstream_sam" x="2496" y="224" name="inst_45F601DE" locked="0" code="" scaleX="0.213333338499069" scaleY="0.38400000333786" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2720" y="128" name="inst_1C1A1A29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2752" y="128" name="inst_A1FF4CDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="2784" y="128" name="inst_FD5E39F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="2816" y="128" name="inst_BB1FB9C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_suelo_pisableCiudad" x="2848" y="128" name="inst_32AAC930" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="2784" y="128" name="inst_32AAC930" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2880" y="128" name="inst_90C9444D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2912" y="128" name="inst_EC57D4A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2944" y="128" name="inst_7CD3032B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="2976" y="128" name="inst_9718E2B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="3008" y="128" name="inst_8D928E55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_suelo_pisableCiudad" x="3040" y="128" name="inst_0264E775" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door" x="3008" y="128" name="inst_FB591A04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_portal" x="3008" y="96" name="inst_E021B086" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door" x="2976" y="128" name="inst_FB591A04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos" x="2752" y="32" name="inst_A6DC79C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_rayos" x="2784" y="32" name="inst_B3492209" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
     <instance objName="obj_rayos" x="2816" y="32" name="inst_F1BC6B9A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
@@ -194,16 +185,16 @@
     <instance objName="obj_pinchos_ciudad_izquierda" x="1600" y="416" name="inst_DDB53F20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos_ciudad_izquierda" x="2080" y="416" name="inst_9D47D964" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pinchos_ciudad_izquierda" x="2720" y="32" name="inst_B0D44361" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_pinchos_ciudad_derecha" x="3104" y="32" name="inst_B7F83C09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_pinchos_ciudad_izquierda" x="1248" y="288" name="inst_03E38E1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos_ciudad_derecha" x="2112" y="32" name="inst_B7F83C09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_pinchos_ciudad_izquierda" x="1248" y="384" name="inst_03E38E1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_izquierda" x="1728" y="288" name="inst_8738605C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_pinchos_ciudad_izquierda" x="2208" y="256" name="inst_187BA1DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos_ciudad_izquierda" x="2208" y="288" name="inst_187BA1DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_izquierda" x="1248" y="32" name="inst_1E7A01CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_izquierda" x="1728" y="32" name="inst_4012B3B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_izquierda" x="2208" y="32" name="inst_05E2DDBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="1248" y="448" name="inst_7ECC371D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_pinchos_ciudad_derecha" x="1248" y="96" name="inst_86D128D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_pinchos_ciudad_derecha" x="1728" y="128" name="inst_7FC4982C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos_ciudad_derecha" x="1248" y="160" name="inst_86D128D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_pinchos_ciudad_derecha" x="1728" y="96" name="inst_7FC4982C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="2208" y="128" name="inst_CFD37771" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="1728" y="448" name="inst_D908C5D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_pinchos_ciudad_derecha" x="2208" y="448" name="inst_6BB2D56D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
@@ -332,6 +323,18 @@
     <instance objName="obj_rayos_whoo" x="3040" y="64" name="inst_F3C67B0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos_whoo" x="3072" y="64" name="inst_5EABF296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rayos_whoo" x="3104" y="64" name="inst_F1E2944F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="2304" y="256" name="inst_2B42146D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="2336" y="256" name="inst_B021B1C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="2368" y="256" name="inst_13CE7476" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="serpiente_to_flama" x="2387" y="233" name="inst_817A16B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Melee" x="3040" y="96" name="inst_A319D7BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_suelo_pisableCiudad" x="1792" y="224" name="inst_0A73FD3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pinchos_ciudad_izquierda" x="1952" y="32" name="inst_B7D354FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_rayos" x="1984" y="32" name="inst_6C46304F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_rayos" x="2016" y="32" name="inst_80B73B10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_rayos" x="2048" y="32" name="inst_0107EDA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_rayos" x="1984" y="32" name="inst_EAD3F43C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_rayos" x="2080" y="32" name="inst_0913102B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
