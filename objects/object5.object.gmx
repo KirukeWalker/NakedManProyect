@@ -52,6 +52,7 @@ gamepad_set_axis_deadzone(0,0.7)
 collide=false;
 collide_izquierda=false;
 collide_derecha=false;
+diosss=false; //Variable que comprueba el final de primera fase de boss3
 //Para los suckers
 suckers_sucking = 0;
 
@@ -577,6 +578,7 @@ if(place_meeting(x,y+vsp,obj_solid_terrain))
 //Comprobación aparte para suelo atravesable
 if(place_meeting(x,y+vsp,obj_suelo_hojas) &amp;&amp; 
 !place_meeting(x,y,obj_suelo_hojas) &amp;&amp;
+diosss=false &amp;&amp;
 vsp &gt;= 0 &amp;&amp; key_down = 0)
 { 
     while(!place_meeting(x, y+sign(vsp), obj_suelo_hojas))
@@ -678,6 +680,11 @@ else
             hat.sprite_index = hat_fall_right;
     }
 }
+if instance_exists(FinalBoss3_Test) {
+    if FinalBoss3_Test.status=4{
+        diosss=true;
+    }
+}
 //Control de muerte
 if(status_locked == false){
     if (position_meeting (x,y,Lava)) 
@@ -687,7 +694,7 @@ if(status_locked == false){
     //if (place_meeting (x,y,obj_pinchos)) 
         //global.vida = 0;
     if (y &gt; room_height &amp;&amp; status_locked == false){
-        if (!instance_exists(obj_head) || !instance_exists(obj_black_naked_man2)){global.vida = 0} 
+        if (!instance_exists(obj_head) || !instance_exists(obj_black_naked_man2) ||  !instance_exists(obj_anchor_event) || (diosss=false)){global.vida = 0} 
         else {};
     }
 }
@@ -782,7 +789,7 @@ if (instance_place(x+2,y,obj_hazard) || instance_place(x-2,y,obj_hazard)){
           <argument>
             <kind>1</kind>
             <string>//
-global.vida = 0;
+if diosss==false global.vida = 0;
 </string>
           </argument>
         </arguments>

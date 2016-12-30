@@ -192,6 +192,8 @@ switch(status){
         //Tiramos el arbol cuando muera
         if(global.vidaboss &lt;= 0){
             player.status_locked = true;
+            player.sprite_index=player.fall
+            player.vsp=0.01;
             //Stop spamming them
             alarm_set(0, -1);
             alarm_set(1, -1);
@@ -211,7 +213,11 @@ switch(status){
     break;
     //Die
     case 4:
+        speed=5;
         obj_ascending_fire.y += 1;
+        player.vsp=1;
+        player.sprite_index=player.fall
+        player.image_speed=0.5;
     break;
 }
 //Way to chase the player
