@@ -110,7 +110,7 @@ else if (fadeIn = false) {
     else{
         alpha = 1;
         //Siguiente cacho de texto
-        if(text &lt; 2){
+        if(text &lt; 3){
             text ++;
             fadeIn = true;
             alarm_set(0, 240);
@@ -148,18 +148,28 @@ draw_set_colour (c_white);
 //Escribimos icono o texto según la slide
 switch(text){
     case 0:
+        draw_set_font (fnt_creditos_peque);
+        draw_text(room_width/2, room_height/2-(104+30+20), "Available on");
+        draw_text(room_width/2, room_height/2+(104+30), "Vote us now!");
+        draw_sprite(spr_greenlight, 0, room_width/2, room_height/2);
+        break;
+        
+    case 1:
         draw_sprite(spr_4FF, 0, room_width/2, room_height/2-50);
         draw_set_font (fnt_creditos_grande_negrita);
         draw_text(room_width/2, 350, "4FreaksFiction");
     break;
-    case 1:
-         draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
+    
+    case 2:
+        draw_set_font (fnt_creditos_peque);
+        draw_text (room_width/2,y+40, "One day, The Clothes rebelled");
         draw_text (room_width/2,y+80, "and they preyed upon us.");
         draw_text (room_width/2,y+120, "The few survivors had to");
         draw_text (room_width/2,y+160, "renounce to their shame to survive");
     break;
       
-    case 2:
+    case 3:
+        draw_set_font (fnt_creditos_peque);
         draw_text (room_width/2,y+40, "It's the duty of the Chosen Naked Man");
         draw_text (room_width/2,y+80, "to bring back The Clothes to their place.");
         draw_text (room_width/2,y+120, "");

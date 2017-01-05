@@ -31,6 +31,7 @@
       <sound>sound\snd_destruction</sound>
       <sound>sound\snd_rayos</sound>
       <sound>sound\snd_vents</sound>
+      <sound>sound\snd_laser_tocho</sound>
       <sound>sound\snd_poof</sound>
     </sounds>
     <sounds name="Music">
@@ -501,6 +502,7 @@
     <sprites name="Logos">
       <sprite>sprites\spr_4FF</sprite>
       <sprite>sprites\spr_USJ</sprite>
+      <sprite>sprites\spr_greenlight</sprite>
     </sprites>
     <sprite>sprites\spr_rayos_whoo</sprite>
   </sprites>

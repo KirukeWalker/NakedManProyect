@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if audio_is_playing(snd_boss2_chain_attack) audio_stop_sound(snd_boss2_chain_attack);
+            <string>audio_stop_all();
 
 //Chequeo para mejores tiempos
 lastTime = global.counter + ((30 - global.stepCounter) / 30);

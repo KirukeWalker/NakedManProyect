@@ -198,6 +198,7 @@ if !instance_exists(obj_blackScreen) &amp;&amp; key_okey &amp;&amp; pause=1 &amp
         audio_resume_sound(snd_underwater);
         audio_resume_sound(snd_wind);
         audio_resume_sound(snd_poof);
+        audio_resume_sound(snd_laser_tocho);
         //audio_resume_sound();
     }
 }

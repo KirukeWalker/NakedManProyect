@@ -30,7 +30,7 @@ global.vida = 3;
 vidaboss = 20; //Se usa después con global.vidaboss
 var mega_laser;
 rotation_speed = 1; //
-spam_rate = 60;     //
+spam_rate = 45;     //
 //
 status = 0;
 //
