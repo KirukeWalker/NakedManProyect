@@ -22,6 +22,7 @@ switch(optionspos){
         }
         else{ 
             global.MUSIC=true;
+            if room==Menu audio_resume_sound(snd_intro);
             /*audio_resume_sound(snd_lava);
             audio_resume_sound(snd_lavaboss_test);
             audio_resume_sound(snd_snow);
